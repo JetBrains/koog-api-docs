@@ -1,0 +1,31 @@
+# Ignore Gradle build output
+/build/
+/.gradle/
+
+# Ignore Dokka generated documentation if not tracked
+/docs/
+
+# Kotlin/Java specific ignores
+*.class
+*.jar
+*.war
+*.ear
+
+# IntelliJ IDEA / Android Studio project files
+*.iml
+.idea/
+*.ipr
+*.iws
+out/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Ignore user-specific files
+.gradle/
+local.properties
