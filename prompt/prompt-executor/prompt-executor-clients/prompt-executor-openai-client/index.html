@@ -1,0 +1,145 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>prompt-executor-openai-client</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../../index.html">
+                    koog-agents
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.2.1
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/jvmMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" id="content" pageids="prompt-executor-openai-client::////PointingToDeclaration//1331649456">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>prompt-executor-openai-client</span></span></h1>
+    <div class="platform-hinted UnderCoverText with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/jvmMain" data-toggle=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><p class="paragraph">A client implementation for executing prompts using OpenAI's GPT models with support for images and audio.</p><h3 class="">Overview</h3><p class="paragraph">This module provides a client implementation for the OpenAI API, allowing you to execute prompts using GPT models. It handles authentication, request formatting, response parsing, and multimodal content encoding specific to OpenAI's API requirements.</p><h3 class="">Supported Models</h3><h4 class="">Reasoning Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Context</th><th>Input Support</th><th>Output Support</th><th>Pricing (per 1M tokens)</th></tr></thead><tbody><tr><td>GPT-4o Mini</td><td>Medium</td><td>128K</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$1.1-$</p>4.4</td></tr><tr><td>o3-mini</td><td>Medium</td><td>200K</td><td>Text, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$1.1-$</p>4.4</td></tr><tr><td>o1-mini</td><td>Slow</td><td>128K</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$1.1-$</p>4.4</td></tr><tr><td>o3</td><td>Slowest</td><td>200K</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$10-$</p>40</td></tr><tr><td>o1</td><td>Slowest</td><td>200K</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$15-$</p>60</td></tr></tbody></table><h4 class="">Chat Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Context</th><th>Input Support</th><th>Output Support</th><th>Pricing (per 1M tokens)</th></tr></thead><tbody><tr><td>GPT-4o</td><td>Medium</td><td>128K</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$2.5-$</p>10</td></tr><tr><td>GPT-4.1</td><td>Medium</td><td>1M</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$2-$</p>8</td></tr></tbody></table><h4 class="">Audio Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Context</th><th>Input Support</th><th>Output Support</th><th>Pricing (per 1M tokens)</th></tr></thead><tbody><tr><td>GPT-4o Mini Audio</td><td>Fast</td><td>128K</td><td>Text, Audio, Tools</td><td>Text, Audio, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$0.15-$</p>0.6/<p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$10-$</p>20</td></tr><tr><td>GPT-4o Audio</td><td>Medium</td><td>128K</td><td>Text, Audio, Tools</td><td>Text, Audio, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$2.5-$</p>10/<p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$40-$</p>80</td></tr></tbody></table><h4 class="">Cost-Optimized Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Context</th><th>Input Support</th><th>Output Support</th><th>Pricing (per 1M tokens)</th></tr></thead><tbody><tr><td>o4-mini</td><td>Medium</td><td>200K</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$1.1-$</p>4.4</td></tr><tr><td>GPT-4.1-nano</td><td>Very fast</td><td>1M</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$0.1-$</p>0.4</td></tr><tr><td>GPT-4.1-mini</td><td>Fast</td><td>1M</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$0.4-$</p>1.6</td></tr></tbody></table><h4 class="">Embedding Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Dimensions</th><th>Input Support</th><th>Pricing (per 1M tokens)</th></tr></thead><tbody><tr><td>text-embedding-3-small</td><td>Medium</td><td>1536</td><td>Text</td><td>$0.02</td></tr><tr><td>text-embedding-3-large</td><td>Slow</td><td>3072</td><td>Text</td><td>$0.13</td></tr><tr><td>text-embedding-ada-002</td><td>Slow</td><td>1536</td><td>Text</td><td>$0.1</td></tr></tbody></table><h3 class="">Media Content Support</h3><table><thead><tr><th>Content Type</th><th>Supported Formats</th><th>Max Size</th><th>Notes</th></tr></thead><tbody><tr><td>Images</td><td>PNG, JPEG, WebP, GIF</td><td>20MB</td><td>Base64 encoded or URL</td></tr><tr><td>Audio</td><td>WAV, MP3</td><td>25MB</td><td>Base64 encoded only (audio models)</td></tr><tr><td>Documents</td><td>PDF</td><td>20MB</td><td>Base64 encoded only (vision models)</td></tr><tr><td>Video</td><td>❌ Not supported</td><td>-</td><td>-</td></tr></tbody></table><p class="paragraph"><strong>Important Details:</strong></p><ul><li><p class="paragraph"><strong>Images</strong>: Both URL and base64 supported</p></li><li><p class="paragraph"><strong>Audio</strong>: Only WAV and MP3 formats, base64 only</p></li><li><p class="paragraph"><strong>PDF Documents</strong>: Only PDF format, requires vision capability</p></li><li><p class="paragraph"><strong>Model Requirements</strong>: Audio needs Audio capability, PDF needs Vision.Image capability</p></li></ul><h3 class="">Using in your project</h3><p class="paragraph">Add the dependency to your project:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.prompt:prompt-executor-openai-client:$version")<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Configure the client with your API key:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val openaiClient = OpenAILLMClient(<br>    apiKey = "your-openai-api-key",<br>)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Example of usage</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">suspend fun main() {<br>    val client = OpenAILLMClient(<br>        apiKey = System.getenv("OPENAI_API_KEY"),<br>    )<br><br>    // Text-only example<br>    val response = client.execute(<br>        prompt = prompt {<br>            system("You are helpful assistant")<br>            user("What time is it now?")<br>        },<br>        model = OpenAIModels.Chat.GPT4o<br>    )<br><br>    println(response)<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Multimodal Examples</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Image analysis<br>val imageResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("What do you see in this image?")<br>            image("/path/to/image.jpg")<br>        }<br>    },<br>    model = OpenAIModels.Chat.GPT4o<br>)<br><br>// Audio transcription (requires audio models)<br>val audioData = File("/path/to/audio.wav").readBytes()<br>val transcriptionResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Transcribe this audio")<br>            audio(audioData, "wav")<br>        }<br>    },<br>    model = OpenAIModels.Audio.GPT4oAudio<br>)<br><br>// PDF document processing (requires vision models)<br>val pdfResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Summarize this PDF document")<br>            document("/path/to/document.pdf")<br>        }<br>    },<br>    model = OpenAIModels.Chat.GPT4o<br>)<br><br>// Embedding example<br>val embedding = client.embed(<br>    text = "This is a sample text for embedding",<br>    model = OpenAIModels.Embeddings.TextEmbeddingAda3Small<br>)<br><br>// Mixed content (image + PDF)<br>val mixedResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Compare this image with the PDF:")<br>            image("/path/to/chart.png")<br>            document("/path/to/report.pdf")<br>            text("What insights can you provide?")<br>        }<br>    },<br>    model = OpenAIModels.Chat.GPT4o<br>)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-dependent-content" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/jvmMain"><p class="paragraph">A client implementation for executing prompts using OpenAI's GPT models with support for images and audio.</p><h3 class="">Overview</h3><p class="paragraph">This module provides a client implementation for the OpenAI API, allowing you to execute prompts using GPT models. It handles authentication, request formatting, response parsing, and multimodal content encoding specific to OpenAI's API requirements.</p><h3 class="">Supported Models</h3><h4 class="">Reasoning Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Context</th><th>Input Support</th><th>Output Support</th><th>Pricing (per 1M tokens)</th></tr></thead><tbody><tr><td>GPT-4o Mini</td><td>Medium</td><td>128K</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$1.1-$</p>4.4</td></tr><tr><td>o3-mini</td><td>Medium</td><td>200K</td><td>Text, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$1.1-$</p>4.4</td></tr><tr><td>o1-mini</td><td>Slow</td><td>128K</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$1.1-$</p>4.4</td></tr><tr><td>o3</td><td>Slowest</td><td>200K</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$10-$</p>40</td></tr><tr><td>o1</td><td>Slowest</td><td>200K</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$15-$</p>60</td></tr></tbody></table><h4 class="">Chat Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Context</th><th>Input Support</th><th>Output Support</th><th>Pricing (per 1M tokens)</th></tr></thead><tbody><tr><td>GPT-4o</td><td>Medium</td><td>128K</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$2.5-$</p>10</td></tr><tr><td>GPT-4.1</td><td>Medium</td><td>1M</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$2-$</p>8</td></tr></tbody></table><h4 class="">Audio Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Context</th><th>Input Support</th><th>Output Support</th><th>Pricing (per 1M tokens)</th></tr></thead><tbody><tr><td>GPT-4o Mini Audio</td><td>Fast</td><td>128K</td><td>Text, Audio, Tools</td><td>Text, Audio, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$0.15-$</p>0.6/<p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$10-$</p>20</td></tr><tr><td>GPT-4o Audio</td><td>Medium</td><td>128K</td><td>Text, Audio, Tools</td><td>Text, Audio, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$2.5-$</p>10/<p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$40-$</p>80</td></tr></tbody></table><h4 class="">Cost-Optimized Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Context</th><th>Input Support</th><th>Output Support</th><th>Pricing (per 1M tokens)</th></tr></thead><tbody><tr><td>o4-mini</td><td>Medium</td><td>200K</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$1.1-$</p>4.4</td></tr><tr><td>GPT-4.1-nano</td><td>Very fast</td><td>1M</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$0.1-$</p>0.4</td></tr><tr><td>GPT-4.1-mini</td><td>Fast</td><td>1M</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@3d4d5431 paragraph">$0.4-$</p>1.6</td></tr></tbody></table><h4 class="">Embedding Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Dimensions</th><th>Input Support</th><th>Pricing (per 1M tokens)</th></tr></thead><tbody><tr><td>text-embedding-3-small</td><td>Medium</td><td>1536</td><td>Text</td><td>$0.02</td></tr><tr><td>text-embedding-3-large</td><td>Slow</td><td>3072</td><td>Text</td><td>$0.13</td></tr><tr><td>text-embedding-ada-002</td><td>Slow</td><td>1536</td><td>Text</td><td>$0.1</td></tr></tbody></table><h3 class="">Media Content Support</h3><table><thead><tr><th>Content Type</th><th>Supported Formats</th><th>Max Size</th><th>Notes</th></tr></thead><tbody><tr><td>Images</td><td>PNG, JPEG, WebP, GIF</td><td>20MB</td><td>Base64 encoded or URL</td></tr><tr><td>Audio</td><td>WAV, MP3</td><td>25MB</td><td>Base64 encoded only (audio models)</td></tr><tr><td>Documents</td><td>PDF</td><td>20MB</td><td>Base64 encoded only (vision models)</td></tr><tr><td>Video</td><td>❌ Not supported</td><td>-</td><td>-</td></tr></tbody></table><p class="paragraph"><strong>Important Details:</strong></p><ul><li><p class="paragraph"><strong>Images</strong>: Both URL and base64 supported</p></li><li><p class="paragraph"><strong>Audio</strong>: Only WAV and MP3 formats, base64 only</p></li><li><p class="paragraph"><strong>PDF Documents</strong>: Only PDF format, requires vision capability</p></li><li><p class="paragraph"><strong>Model Requirements</strong>: Audio needs Audio capability, PDF needs Vision.Image capability</p></li></ul><h3 class="">Using in your project</h3><p class="paragraph">Add the dependency to your project:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.prompt:prompt-executor-openai-client:$version")<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Configure the client with your API key:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val openaiClient = OpenAILLMClient(<br>    apiKey = "your-openai-api-key",<br>)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Example of usage</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">suspend fun main() {<br>    val client = OpenAILLMClient(<br>        apiKey = System.getenv("OPENAI_API_KEY"),<br>    )<br><br>    // Text-only example<br>    val response = client.execute(<br>        prompt = prompt {<br>            system("You are helpful assistant")<br>            user("What time is it now?")<br>        },<br>        model = OpenAIModels.Chat.GPT4o<br>    )<br><br>    println(response)<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Multimodal Examples</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Image analysis<br>val imageResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("What do you see in this image?")<br>            image("/path/to/image.jpg")<br>        }<br>    },<br>    model = OpenAIModels.Chat.GPT4o<br>)<br><br>// Audio transcription (requires audio models)<br>val audioData = File("/path/to/audio.wav").readBytes()<br>val transcriptionResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Transcribe this audio")<br>            audio(audioData, "wav")<br>        }<br>    },<br>    model = OpenAIModels.Audio.GPT4oAudio<br>)<br><br>// PDF document processing (requires vision models)<br>val pdfResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Summarize this PDF document")<br>            document("/path/to/document.pdf")<br>        }<br>    },<br>    model = OpenAIModels.Chat.GPT4o<br>)<br><br>// Embedding example<br>val embedding = client.embed(<br>    text = "This is a sample text for embedding",<br>    model = OpenAIModels.Embeddings.TextEmbeddingAda3Small<br>)<br><br>// Mixed content (image + PDF)<br>val mixedResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Compare this image with the PDF:")<br>            image("/path/to/chart.png")<br>            document("/path/to/report.pdf")<br>            text("What insights can you provide?")<br>        }<br>    },<br>    model = OpenAIModels.Chat.GPT4o<br>)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>    </div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="1568371287%2FPackages%2F1331649456" anchor-label="ai.koog.prompt.executor.clients.openai" id="1568371287%2FPackages%2F1331649456" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain,:prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/jvmMain"></a>
+    <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain,:prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain,:prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.executor.clients.openai/index.html">ai.koog.prompt.executor.clients.openai</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1568371287%2FPackages%2F1331649456"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Copyright © 2000-2025 JetBrains s.r.o.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

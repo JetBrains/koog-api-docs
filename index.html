@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>All modules</title>
+    <link href="images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
+<link href="styles/style.css" rel="Stylesheet">
+<link href="styles/main.css" rel="Stylesheet">
+<link href="styles/prism.css" rel="Stylesheet">
+<link href="styles/logo-styles.css" rel="Stylesheet">
+<link href="styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="index.html">
+                    koog-agents
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+0.2.1        </div>
+        <div class="navigation-controls">
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" id="content" pageIds="koog-agents::.ext/allModules///PointingToDeclaration//0">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h2 class="">All modules:</h2>
+    <div class="table"><a data-name="1052858703%2FMain%2F0" anchor-label="agents-core" id="1052858703%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="agents/agents-core/index.html">agents-core</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1052858703%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Core library for building and executing AI agents with a graph-based architecture.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-2133368397%2FMain%2F0" anchor-label="agents-ext" id="-2133368397%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="agents/agents-ext/index.html">agents-ext</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2133368397%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Extends <code class="lang-kotlin">agents-core</code> module with tools, as well as utilities for building graphs and strategies.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="166033177%2FMain%2F0" anchor-label="agents-features-common" id="166033177%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="agents/agents-features/agents-features-common/index.html">agents-features-common</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="166033177%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Provides common infrastructure and utilities for implementing agent features, including configuration, messaging, and I/O capabilities.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-950696153%2FMain%2F0" anchor-label="agents-features-event-handler" id="-950696153%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="agents/agents-features/agents-features-event-handler/index.html">agents-features-event-handler</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-950696153%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Provides <code class="lang-kotlin">EventHandler</code> feature that allows to listen and react to events in the agent execution.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1982490819%2FMain%2F0" anchor-label="agents-features-memory" id="1982490819%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="agents/agents-features/agents-features-memory/index.html">agents-features-memory</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1982490819%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Provides <code class="lang-kotlin">AgentMemory</code> feature that allows to store and persist facts from LLM history between agent runs and even between multiple agents</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-560074329%2FMain%2F0" anchor-label="agents-features-tokenizer" id="-560074329%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="agents/agents-features/agents-features-tokenizer/index.html">agents-features-tokenizer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-560074329%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Provides implementation of the <code class="lang-kotlin">MessageTokenizer</code> feature for AI Agents</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="541406649%2FMain%2F0" anchor-label="agents-features-trace" id="541406649%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="agents/agents-features/agents-features-trace/index.html">agents-features-trace</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="541406649%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Provides implementation of the <code class="lang-kotlin">Tracing</code> feature for AI Agents</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1280569434%2FMain%2F0" anchor-label="agents-mcp" id="1280569434%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="agents/agents-mcp/index.html">agents-mcp</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1280569434%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A module provides integration with <a href="https://modelcontextprotocol.io">Model Context Protocol (MCP)</a> servers. The main components of the MCP integration in Koog are:</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-370005060%2FMain%2F0" anchor-label="agents-test" id="-370005060%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="agents/agents-test/index.html">agents-test</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-370005060%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Comprehensive testing utilities for AI agents, providing mocking capabilities and validation tools for agent behavior.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1590678137%2FMain%2F0" anchor-label="agents-tools" id="1590678137%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="agents/agents-tools/index.html">agents-tools</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1590678137%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A module that provides a framework for defining, describing, and executing tools that can be used by AI agents to interact with the environment.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1994012573%2FMain%2F0" anchor-label="agents-utils" id="-1994012573%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="agents/agents-utils/index.html">agents-utils</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1994012573%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Provides utilities used across other modules.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="225509835%2FMain%2F0" anchor-label="embeddings-base" id="225509835%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="embeddings/embeddings-base/index.html">embeddings-base</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="225509835%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A foundational module that provides core interfaces and data structures for representing and comparing text and code embeddings.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1275953863%2FMain%2F0" anchor-label="embeddings-llm" id="-1275953863%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="embeddings/embeddings-llm/index.html">embeddings-llm</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1275953863%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A module that provides functionality for generating and comparing embeddings using remote LLM services.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="920600882%2FMain%2F0" anchor-label="prompt-cache-files" id="920600882%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-cache/prompt-cache-files/index.html">prompt-cache-files</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="920600882%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A file-based implementation of the PromptCache interface for storing prompt execution results in the file system.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1610756928%2FMain%2F0" anchor-label="prompt-cache-model" id="-1610756928%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-cache/prompt-cache-model/index.html">prompt-cache-model</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1610756928%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Core interfaces and models for caching prompt execution results with an in-memory implementation.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-126631250%2FMain%2F0" anchor-label="prompt-cache-redis" id="-126631250%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-cache/prompt-cache-redis/index.html">prompt-cache-redis</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-126631250%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A Redis-based implementation of the PromptCache interface for storing prompt execution results in a Redis database.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="690350360%2FMain%2F0" anchor-label="prompt-executor-anthropic-client" id="690350360%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-executor/prompt-executor-clients/prompt-executor-anthropic-client/index.html">prompt-executor-anthropic-client</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="690350360%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A client implementation for executing prompts using Anthropic's Claude models with support for images and documents.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1909413314%2FMain%2F0" anchor-label="prompt-executor-cached" id="1909413314%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-executor/prompt-executor-cached/index.html">prompt-executor-cached</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1909413314%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A caching wrapper for PromptExecutor that stores and retrieves responses to avoid redundant LLM calls.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1036837142%2FMain%2F0" anchor-label="prompt-executor-clients" id="1036837142%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-executor/prompt-executor-clients/index.html">prompt-executor-clients</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1036837142%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment"></span></div>
+        </div>
+      </div>
+<a data-name="-1259113633%2FMain%2F0" anchor-label="prompt-executor-google-client" id="-1259113633%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-executor/prompt-executor-clients/prompt-executor-google-client/index.html">prompt-executor-google-client</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1259113633%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A client implementation for executing prompts using Google Gemini models with comprehensive multimodal support.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="371026174%2FMain%2F0" anchor-label="prompt-executor-llms" id="371026174%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-executor/prompt-executor-llms/index.html">prompt-executor-llms</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="371026174%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Implementations of PromptExecutor for executing prompts with Large Language Models (LLMs).</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1169052330%2FMain%2F0" anchor-label="prompt-executor-llms-all" id="1169052330%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-executor/prompt-executor-llms-all/index.html">prompt-executor-llms-all</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1169052330%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A comprehensive module that provides unified access to multiple LLM providers (OpenAI, Anthropic, OpenRouter) for prompt execution.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="2124208725%2FMain%2F0" anchor-label="prompt-executor-model" id="2124208725%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-executor/prompt-executor-model/index.html">prompt-executor-model</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2124208725%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">Core interfaces and models for executing prompts against language models.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="75467340%2FMain%2F0" anchor-label="prompt-executor-ollama-client" id="75467340%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-executor/prompt-executor-clients/prompt-executor-ollama-client/index.html">prompt-executor-ollama-client</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="75467340%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A client implementation for executing prompts using local Ollama models with limited multimodal support.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1873197336%2FMain%2F0" anchor-label="prompt-executor-openai-client" id="1873197336%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-executor/prompt-executor-clients/prompt-executor-openai-client/index.html">prompt-executor-openai-client</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1873197336%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A client implementation for executing prompts using OpenAI's GPT models with support for images and audio.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1941721927%2FMain%2F0" anchor-label="prompt-executor-openrouter-client" id="-1941721927%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-executor/prompt-executor-clients/prompt-executor-openrouter-client/index.html">prompt-executor-openrouter-client</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1941721927%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A client implementation for executing prompts using OpenRouter's API to access various LLM providers with multimodal support.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="271045329%2FMain%2F0" anchor-label="prompt-llm" id="271045329%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-llm/index.html">prompt-llm</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="271045329%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A module that provides abstractions and implementations for working with Large Language Models (LLMs) from various providers.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1373219499%2FMain%2F0" anchor-label="prompt-markdown" id="-1373219499%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-markdown/index.html">prompt-markdown</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1373219499%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A utility module for creating and manipulating Markdown content with a fluent builder API.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-525799723%2FMain%2F0" anchor-label="prompt-model" id="-525799723%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-model/index.html">prompt-model</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-525799723%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A core module that defines data models and parameters for controlling language model behavior.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1615488331%2FMain%2F0" anchor-label="prompt-structure" id="1615488331%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-structure/index.html">prompt-structure</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1615488331%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A module for defining, parsing, and formatting structured data in various formats.</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="1146244135%2FMain%2F0" anchor-label="prompt-tokenizer" id="1146244135%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-tokenizer/index.html">prompt-tokenizer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1146244135%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A module that provides interfaces and implementations for tokenizing text and counting tokens when working with Large Language Models (LLMs).</p>
+            </span></div>
+        </div>
+      </div>
+<a data-name="-1855199001%2FMain%2F0" anchor-label="prompt-xml" id="-1855199001%2FMain%2F0" data-filterable-set=""></a>
+      <div class="table-row">
+        <div class="main-subrow ">
+          <div class="w-100"><span class="inline-flex">
+              <div><a href="prompt/prompt-xml/index.html">prompt-xml</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1855199001%2FMain%2F0"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div><span class="brief-comment">
+              <p class="paragraph">A utility module for creating and manipulating XML content with a fluent builder API.</p>
+            </span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

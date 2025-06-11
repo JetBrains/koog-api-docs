@@ -1,0 +1,396 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ai.koog.agents.testing.feature</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    koog-agents
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.2.1
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":agents:agents-test/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-test/commonMain" data-filter=":agents:agents-test/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="agents-test::ai.koog.agents.testing.feature////PointingToDeclaration//786885392">
+  <div class="breadcrumbs"><a href="../index.html">agents-test</a><span class="delimiter">/</span><span class="current">ai.koog.agents.testing.feature</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="190860925%2FClasslikes%2F786885392" anchor-label="AIAgentContextMockBuilder" id="190860925%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-i-agent-context-mock-builder/index.html"><span>AIAgent</span><wbr><span>Context</span><wbr><span>Mock</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="190860925%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/TestOnly///PointingToDeclaration/"><span class="token annotation builtin">TestOnly</span></span></div></div><span class="token keyword">class </span><a href="-a-i-agent-context-mock-builder/index.html">AIAgentContextMockBuilder</a> : <a href="-a-i-agent-context-mock-builder-base/index.html">AIAgentContextMockBuilderBase</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1405636268%2FClasslikes%2F786885392" anchor-label="AIAgentContextMockBuilderBase" id="1405636268%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-i-agent-context-mock-builder-base/index.html"><span>AIAgent</span><wbr><span>Context</span><wbr><span>Mock</span><wbr><span>Builder</span><wbr><span><span>Base</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1405636268%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/TestOnly///PointingToDeclaration/"><span class="token annotation builtin">TestOnly</span></span></div></div><span class="token keyword">interface </span><a href="-a-i-agent-context-mock-builder-base/index.html">AIAgentContextMockBuilderBase</a> : <a href="../../../agents/agents-core/ai.koog.agents.core.dsl.builder/-base-builder/index.html">BaseBuilder</a><span class="token operator">&lt;</span><a href="../../../agents/agents-core/ai.koog.agents.core.agent.context/-a-i-agent-context-base/index.html">AIAgentContextBase</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1879691587%2FClasslikes%2F786885392" anchor-label="AssertionResult" id="-1879691587%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-assertion-result/index.html"><span>Assertion</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1879691587%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/TestOnly///PointingToDeclaration/"><span class="token annotation builtin">TestOnly</span></span></div></div><span class="token keyword">sealed </span><span class="token keyword">interface </span><a href="-assertion-result/index.html">AssertionResult</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1516281494%2FClasslikes%2F786885392" anchor-label="DummyAgentContext" id="-1516281494%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-dummy-agent-context/index.html"><span>Dummy</span><wbr><span>Agent</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1516281494%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-dummy-agent-context/index.html">DummyAgentContext</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><a href="-a-i-agent-context-mock-builder/index.html">AIAgentContextMockBuilder</a></span></span><span class="token punctuation">)</span> : <a href="../../../agents/agents-core/ai.koog.agents.core.agent.context/-a-i-agent-context-base/index.html">AIAgentContextBase</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="613422135%2FClasslikes%2F786885392" anchor-label="EdgeAssertion" id="613422135%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-edge-assertion/index.html"><span>Edge</span><wbr><span><span>Assertion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="613422135%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/TestOnly///PointingToDeclaration/"><span class="token annotation builtin">TestOnly</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-edge-assertion/index.html">EdgeAssertion</a><span class="token operator">&lt;</span><a href="-edge-assertion/index.html">Input</a><span class="token punctuation">, </span><a href="-edge-assertion/index.html">Output</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>node<span class="token operator">: </span><a href="-node-reference/index.html">NodeReference</a><span class="token operator">&lt;</span><a href="-edge-assertion/index.html">Input</a><span class="token punctuation">, </span><a href="-edge-assertion/index.html">Output</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>context<span class="token operator">: </span><a href="../../../agents/agents-core/ai.koog.agents.core.agent.context/-a-i-agent-context-base/index.html">AIAgentContextBase</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>output<span class="token operator">: </span><a href="-edge-assertion/index.html">Output</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>expectedNode<span class="token operator">: </span><a href="-node-reference/index.html">NodeReference</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="827240157%2FClasslikes%2F786885392" anchor-label="GraphAssertions" id="827240157%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-graph-assertions/index.html"><span>Graph</span><wbr><span><span>Assertions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="827240157%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/TestOnly///PointingToDeclaration/"><span class="token annotation builtin">TestOnly</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-graph-assertions/index.html">GraphAssertions</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>start<span class="token operator">: </span><a href="-node-reference/-start/index.html">NodeReference.Start</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>finish<span class="token operator">: </span><a href="-node-reference/-finish/index.html">NodeReference.Finish</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>nodes<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="-node-reference/index.html">NodeReference</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>nodeOutputAssertions<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-node-output-assertion/index.html">NodeOutputAssertion</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>edgeAssertions<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-edge-assertion/index.html">EdgeAssertion</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>unconditionalEdgeAssertions<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-unconditional-edge-assertion/index.html">UnconditionalEdgeAssertion</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>reachabilityAssertions<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-reachability-assertion/index.html">ReachabilityAssertion</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>subgraphAssertions<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="-sub-graph-assertions/index.html">SubGraphAssertions</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1066846813%2FClasslikes%2F786885392" anchor-label="NodeOutputAssertion" id="1066846813%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-node-output-assertion/index.html"><span>Node</span><wbr><span>Output</span><wbr><span><span>Assertion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1066846813%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/TestOnly///PointingToDeclaration/"><span class="token annotation builtin">TestOnly</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-node-output-assertion/index.html">NodeOutputAssertion</a><span class="token operator">&lt;</span><a href="-node-output-assertion/index.html">Input</a><span class="token punctuation">, </span><a href="-node-output-assertion/index.html">Output</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>node<span class="token operator">: </span><a href="-node-reference/index.html">NodeReference</a><span class="token operator">&lt;</span><a href="-node-output-assertion/index.html">Input</a><span class="token punctuation">, </span><a href="-node-output-assertion/index.html">Output</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>context<span class="token operator">: </span><a href="-dummy-agent-context/index.html">DummyAgentContext</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>input<span class="token operator">: </span><a href="-node-output-assertion/index.html">Input</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>expectedOutput<span class="token operator">: </span><a href="-node-output-assertion/index.html">Output</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-691892461%2FClasslikes%2F786885392" anchor-label="NodeReference" id="-691892461%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-node-reference/index.html"><span>Node</span><wbr><span><span>Reference</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-691892461%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/TestOnly///PointingToDeclaration/"><span class="token annotation builtin">TestOnly</span></span></div></div><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="-node-reference/index.html">NodeReference</a><span class="token operator">&lt;</span><a href="-node-reference/index.html">Input</a><span class="token punctuation">, </span><a href="-node-reference/index.html">Output</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1080161967%2FClasslikes%2F786885392" anchor-label="ReachabilityAssertion" id="-1080161967%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-reachability-assertion/index.html"><span>Reachability</span><wbr><span><span>Assertion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1080161967%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/TestOnly///PointingToDeclaration/"><span class="token annotation builtin">TestOnly</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-reachability-assertion/index.html">ReachabilityAssertion</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>from<span class="token operator">: </span><a href="-node-reference/index.html">NodeReference</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>to<span class="token operator">: </span><a href="-node-reference/index.html">NodeReference</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1457793671%2FClasslikes%2F786885392" anchor-label="SubGraphAssertions" id="1457793671%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sub-graph-assertions/index.html"><span>Sub</span><wbr><span>Graph</span><wbr><span><span>Assertions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1457793671%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/TestOnly///PointingToDeclaration/"><span class="token annotation builtin">TestOnly</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-sub-graph-assertions/index.html">SubGraphAssertions</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>subgraphRef<span class="token operator">: </span><a href="-node-reference/-subgraph-node/index.html">NodeReference.SubgraphNode</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>graphAssertions<span class="token operator">: </span><a href="-graph-assertions/index.html">GraphAssertions</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1368909452%2FClasslikes%2F786885392" anchor-label="Testing" id="1368909452%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-testing/index.html"><span><span>Testing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1368909452%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/TestOnly///PointingToDeclaration/"><span class="token annotation builtin">TestOnly</span></span></div></div><span class="token keyword">class </span><a href="-testing/index.html">Testing</a></div><div class="brief "><p class="paragraph">Provides functionality for testing graph-related stages in an AI agent pipeline.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-751748498%2FClasslikes%2F786885392" anchor-label="UnconditionalEdgeAssertion" id="-751748498%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-unconditional-edge-assertion/index.html"><span>Unconditional</span><wbr><span>Edge</span><wbr><span><span>Assertion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-751748498%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.jetbrains.annotations/TestOnly///PointingToDeclaration/"><span class="token annotation builtin">TestOnly</span></span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-unconditional-edge-assertion/index.html">UnconditionalEdgeAssertion</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>node<span class="token operator">: </span><a href="-node-reference/index.html">NodeReference</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>expectedNode<span class="token operator">: </span><a href="-node-reference/index.html">NodeReference</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1078464482%2FFunctions%2F786885392" anchor-label="assistantMessage" id="1078464482%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="assistant-message.html"><span>assistant</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1078464482%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-testing/-config/-subgraph-assertions-builder/index.html">Testing.Config.SubgraphAssertionsBuilder</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="assistant-message.html"><span class="token function">assistantMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">finishReason<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../prompt/prompt-model/ai.koog.prompt.message/-message/-assistant/index.html">Message.Assistant</a></div><div class="brief "><p class="paragraph">Creates an assistant message with the provided text and finish reason.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-84955534%2FFunctions%2F786885392" anchor-label="graph" id="-84955534%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="graph.html"><span><span>graph</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-84955534%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-testing/-config/index.html">Testing.Config</a><span class="token punctuation">.</span><a href="graph.html"><span class="token function">graph</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">test<span class="token operator">: </span><a href="-testing/-config/index.html">Testing.Config</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the Testing feature for graph testing.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="838648765%2FFunctions%2F786885392" anchor-label="testGraph" id="838648765%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="test-graph.html"><span>test</span><wbr><span><span>Graph</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="838648765%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../../agents/agents-core/ai.koog.agents.core.agent/-a-i-agent/-feature-context/index.html">AIAgent.FeatureContext</a><span class="token punctuation">.</span><a href="test-graph.html"><span class="token function">testGraph</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">test<span class="token operator">: </span><a href="-testing/-config/-subgraph-assertions-builder/index.html">Testing.Config.SubgraphAssertionsBuilder</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Installs the Testing feature with graph testing enabled and executes the provided test block.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-799635351%2FFunctions%2F786885392" anchor-label="toolCallMessage" id="-799635351%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tool-call-message.html"><span>tool</span><wbr><span>Call</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-799635351%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="tool-call-message.html">Args</a><span class="token operator"> : </span><a href="../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/-args/index.html">Tool.Args</a><span class="token operator">&gt; </span><a href="-testing/-config/-subgraph-assertions-builder/index.html">Testing.Config.SubgraphAssertionsBuilder</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="tool-call-message.html"><span class="token function">toolCallMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tool<span class="token operator">: </span><a href="../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="tool-call-message.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">args<span class="token operator">: </span><a href="tool-call-message.html">Args</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../prompt/prompt-model/ai.koog.prompt.message/-message/-tool/-call/index.html">Message.Tool.Call</a></div><div class="brief "><p class="paragraph">Creates a <code class="lang-kotlin">Message.Tool.Call</code> instance for the given tool and its arguments.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1269747284%2FFunctions%2F786885392" anchor-label="toolResult" id="1269747284%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tool-result.html"><span>tool</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1269747284%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="tool-result.html"><span class="token function">toolResult</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tool<span class="token operator">: </span><a href="../../../agents/agents-tools/ai.koog.agents.core.tools/-simple-tool/index.html">SimpleTool</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">result<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../agents/agents-core/ai.koog.agents.core.environment/-received-tool-result/index.html">ReceivedToolResult</a></div><div class="brief "><p class="paragraph">Constructs a <code class="lang-kotlin">ReceivedToolResult</code> object using the provided tool and result string.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="tool-result.html">Result</a><span class="token operator"> : </span><a href="../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-result/index.html">ToolResult</a><span class="token operator">&gt; </span><a href="tool-result.html"><span class="token function">toolResult</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tool<span class="token operator">: </span><a href="../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><a href="tool-result.html">Result</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">result<span class="token operator">: </span><a href="tool-result.html">Result</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../agents/agents-core/ai.koog.agents.core.environment/-received-tool-result/index.html">ReceivedToolResult</a></div><div class="brief "><p class="paragraph">Converts a tool and its corresponding result into a <code class="lang-kotlin">ReceivedToolResult</code> object.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1177619584%2FFunctions%2F786885392" anchor-label="withTesting" id="1177619584%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="with-testing.html"><span>with</span><wbr><span><span>Testing</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1177619584%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../../agents/agents-core/ai.koog.agents.core.agent/-a-i-agent/-feature-context/index.html">AIAgent.FeatureContext</a><span class="token punctuation">.</span><a href="with-testing.html"><span class="token function">withTesting</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="-testing/-config/index.html">Testing.Config</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Enables and configures the Testing feature for a Kotlin AI Agent instance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Copyright © 2000-2025 JetBrains s.r.o.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

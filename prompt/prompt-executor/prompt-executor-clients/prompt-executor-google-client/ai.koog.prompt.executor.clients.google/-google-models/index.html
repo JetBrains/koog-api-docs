@@ -1,0 +1,378 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>GoogleModels</title>
+<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../../../../index.html">
+                    koog-agents
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.2.1
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-executor-google-client::ai.koog.prompt.executor.clients.google/GoogleModels///PointingToDeclaration//-415523102">
+  <div class="breadcrumbs"><a href="../../index.html">prompt-executor-google-client</a><span class="delimiter">/</span><a href="../index.html">ai.koog.prompt.executor.clients.google</a><span class="delimiter">/</span><span class="current">GoogleModels</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Google</span><wbr><span><span>Models</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">GoogleModels</a> : <a href="../../../../../../prompt/prompt-executor/prompt-executor-clients/ai.koog.prompt.executor.clients/-l-l-model-definitions/index.html">LLModelDefinitions</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/JetBrains/koog/tree/main/prompt/prompt-executor/prompt-executor-clients/prompt-executor-google-client/src/commonMain/kotlin/ai/koog/prompt/executor/clients/google/GoogleModels.kt#L30">source</a>)</span></span></div><p class="paragraph">Google Gemini models and their capabilities. See https://ai.google.dev/gemini-api/docs for more information.</p><table><thead><tr><th>Name</th><th>Speed</th><th>Price (per 1M tokens)</th><th>Input</th><th>Output</th></tr></thead><tbody><tr><td><a href="-gemini2_0-flash.html">Gemini2_0Flash</a></td><td>Fast</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.10-$</p>0.70 / $0.40</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr><tr><td><a href="-gemini2_0-flash001.html">Gemini2_0Flash001</a></td><td>Fast</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.10-$</p>0.70 / $0.40</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr><tr><td><a href="-gemini2_0-flash-lite.html">Gemini2_0FlashLite</a></td><td>Very fast</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.075 / $</p>0.30</td><td>Audio, Image, Video, Text, Tools</td><td>Text</td></tr><tr><td><a href="-gemini1_5-pro.html">Gemini1_5Pro</a></td><td>Medium</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$1.25-$</p>2.50 / <p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$5.00-$</p>10.00</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr><tr><td><a href="-gemini1_5-pro-latest.html">Gemini1_5ProLatest</a></td><td>Medium</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$1.25-$</p>2.50 / <p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$5.00-$</p>10.00</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr><tr><td><a href="-gemini1_5-pro001.html">Gemini1_5Pro001</a></td><td>Medium</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$1.25-$</p>2.50 / <p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$5.00-$</p>10.00</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr><tr><td><a href="-gemini1_5-pro002.html">Gemini1_5Pro002</a></td><td>Medium</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$1.25-$</p>2.50 / <p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$5.00-$</p>10.00</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr><tr><td><a href="-gemini1_5-flash.html">Gemini1_5Flash</a></td><td>Fast</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.075-$</p>0.15 / <p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.30-$</p>0.60</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr><tr><td><a href="-gemini1_5-flash-latest.html">Gemini1_5FlashLatest</a></td><td>Fast</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.075-$</p>0.15 / <p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.30-$</p>0.60</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr><tr><td><a href="-gemini1_5-flash001.html">Gemini1_5Flash001</a></td><td>Fast</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.075-$</p>0.15 / <p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.30-$</p>0.60</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr><tr><td><a href="-gemini1_5-flash002.html">Gemini1_5Flash002</a></td><td>Fast</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.075-$</p>0.15 / <p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.30-$</p>0.60</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr><tr><td><a href="-gemini1_5-flash8-b.html">Gemini1_5Flash8B</a></td><td>Very fast</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.0375-$</p>0.075 / <p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.15-$</p>0.30</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr><tr><td><a href="-gemini1_5-flash8-b-latest.html">Gemini1_5Flash8BLatest</a></td><td>Very fast</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.0375-$</p>0.075 / <p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.15-$</p>0.30</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr><tr><td><a href="-gemini2_5-pro-preview0506.html">Gemini2_5ProPreview0506</a></td><td>Slow</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$1.25-$</p>2.50 / <p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$10.00-$</p>15.00²</td><td>Audio, Image, Video, Text, Tools</td><td>Text</td></tr><tr><td><a href="-gemini2_5-flash-preview0417.html">Gemini2_5FlashPreview0417</a></td><td>Medium</td><td><p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.15-$</p>1.00 / <p class="org.jetbrains.dokka.pages.commenttable@41dc8077 paragraph">$0.60-$</p>3.50³</td><td>Audio, Image, Video, Text, Tools</td><td>Text, Tools</td></tr></tbody></table></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1477039130%2FProperties%2F-415523102" anchor-label="Gemini1_5Flash" id="-1477039130%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini1_5-flash.html"><span>Gemini1_</span><wbr><span>5Flash</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1477039130%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini1_5-flash.html">Gemini1_5Flash</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Gemini 1.5 Flash is a fast and efficient multimodal model.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2111581667%2FProperties%2F-415523102" anchor-label="Gemini1_5Flash001" id="2111581667%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini1_5-flash001.html"><span>Gemini1_</span><wbr><span>5Flash001</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2111581667%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini1_5-flash001.html">Gemini1_5Flash001</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Specific version of Gemini 1.5 Flash</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2142601474%2FProperties%2F-415523102" anchor-label="Gemini1_5Flash002" id="2142601474%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini1_5-flash002.html"><span>Gemini1_</span><wbr><span>5Flash002</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2142601474%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini1_5-flash002.html">Gemini1_5Flash002</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Specific version of Gemini 1.5 Flash</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1640505892%2FProperties%2F-415523102" anchor-label="Gemini1_5Flash8B" id="-1640505892%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini1_5-flash8-b.html"><span>Gemini1_</span><wbr><span>5Flash8B</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1640505892%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini1_5-flash8-b.html">Gemini1_5Flash8B</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Gemini 1.5 Flash 8B is a smaller, more efficient variant of Gemini 1.5 Flash.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1528778707%2FProperties%2F-415523102" anchor-label="Gemini1_5Flash8B001" id="-1528778707%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini1_5-flash8-b001.html"><span>Gemini1_</span><wbr><span><span>5Flash8B001</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1528778707%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini1_5-flash8-b001.html">Gemini1_5Flash8B001</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Specific version of Gemini 1.5 Flash 8B</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="782084309%2FProperties%2F-415523102" anchor-label="Gemini1_5Flash8BLatest" id="782084309%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini1_5-flash8-b-latest.html"><span>Gemini1_</span><wbr><span><span>5Flash8BLatest</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="782084309%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini1_5-flash8-b-latest.html">Gemini1_5Flash8BLatest</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Latest version of Gemini 1.5 Flash 8B</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1461205153%2FProperties%2F-415523102" anchor-label="Gemini1_5FlashLatest" id="-1461205153%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini1_5-flash-latest.html"><span>Gemini1_</span><wbr><span>5Flash</span><wbr><span><span>Latest</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1461205153%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini1_5-flash-latest.html">Gemini1_5FlashLatest</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Latest version of Gemini 1.5 Flash</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-21317111%2FProperties%2F-415523102" anchor-label="Gemini1_5Pro" id="-21317111%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini1_5-pro.html"><span>Gemini1_</span><wbr><span>5Pro</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-21317111%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini1_5-pro.html">Gemini1_5Pro</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Gemini 1.5 Pro is a capable multimodal model with strong reasoning capabilities.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1053505312%2FProperties%2F-415523102" anchor-label="Gemini1_5Pro001" id="-1053505312%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini1_5-pro001.html"><span>Gemini1_</span><wbr><span>5Pro001</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1053505312%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini1_5-pro001.html">Gemini1_5Pro001</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Specific version of Gemini 1.5 Pro</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1022485505%2FProperties%2F-415523102" anchor-label="Gemini1_5Pro002" id="-1022485505%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini1_5-pro002.html"><span>Gemini1_</span><wbr><span>5Pro002</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1022485505%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini1_5-pro002.html">Gemini1_5Pro002</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Specific version of Gemini 1.5 Pro</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-855380158%2FProperties%2F-415523102" anchor-label="Gemini1_5ProLatest" id="-855380158%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini1_5-pro-latest.html"><span>Gemini1_</span><wbr><span>5ProLatest</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-855380158%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini1_5-pro-latest.html">Gemini1_5ProLatest</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Latest version of Gemini 1.5 Pro</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1119748446%2FProperties%2F-415523102" anchor-label="Gemini2_0Flash" id="-1119748446%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini2_0-flash.html"><span>Gemini2_</span><wbr><span>0Flash</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1119748446%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini2_0-flash.html">Gemini2_0Flash</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Gemini 2.0 Flash is a fast, efficient model for a wide range of tasks. It's optimized for speed and efficiency.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1065578073%2FProperties%2F-415523102" anchor-label="Gemini2_0Flash001" id="-1065578073%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini2_0-flash001.html"><span>Gemini2_</span><wbr><span>0Flash001</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1065578073%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini2_0-flash001.html">Gemini2_0Flash001</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Specific version of Gemini 2.0 Flash</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1240644844%2FProperties%2F-415523102" anchor-label="Gemini2_0FlashLite" id="-1240644844%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini2_0-flash-lite.html"><span>Gemini2_</span><wbr><span>0FlashLite</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1240644844%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini2_0-flash-lite.html">Gemini2_0FlashLite</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Gemini 2.0 Flash-Lite is the smallest and most efficient model in the Gemini 2.0 family. Optimized for low-latency applications.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="787390453%2FProperties%2F-415523102" anchor-label="Gemini2_0FlashLite001" id="787390453%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini2_0-flash-lite001.html"><span>Gemini2_</span><wbr><span>0Flash</span><wbr><span><span>Lite001</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="787390453%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini2_0-flash-lite001.html">Gemini2_0FlashLite001</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Specific version of Gemini 2.0 Flash-Lite</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-838963519%2FProperties%2F-415523102" anchor-label="Gemini2_5FlashPreview0417" id="-838963519%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini2_5-flash-preview0417.html"><span>Gemini2_</span><wbr><span>5Flash</span><wbr><span><span>Preview0417</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-838963519%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini2_5-flash-preview0417.html">Gemini2_5FlashPreview0417</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Gemini 2.5 Flash Preview 04-17 is one of the Gemini 2.5 Flash preview versions. It offers a balance of speed and capability.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-438424579%2FProperties%2F-415523102" anchor-label="Gemini2_5ProPreview0506" id="-438424579%2FProperties%2F-415523102" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini2_5-pro-preview0506.html"><span>Gemini2_</span><wbr><span>5Pro</span><wbr><span><span>Preview0506</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-438424579%2FProperties%2F-415523102"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-google-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini2_5-pro-preview0506.html">Gemini2_5ProPreview0506</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Gemini 2.5 Pro Preview 05-06 is one of the Gemini 2.5 Pro preview versions. It offers advanced capabilities for complex tasks.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Copyright © 2000-2025 JetBrains s.r.o.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

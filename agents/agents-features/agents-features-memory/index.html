@@ -1,0 +1,264 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>agents-features-memory</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    koog-agents
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.2.1
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":agents:agents-features:agents-features-memory/commonMain">common</button>
+                <button class="platform-tag platform-selector js-like" data-active="" data-filter=":agents:agents-features:agents-features-memory/jsMain">js</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":agents:agents-features:agents-features-memory/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-features:agents-features-memory/commonMain" data-filter=":agents:agents-features:agents-features-memory/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option js-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-features:agents-features-memory/jsMain" data-filter=":agents:agents-features:agents-features-memory/jsMain">
+                                <span class="checkbox--icon"></span>
+                                js
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-features:agents-features-memory/jvmMain" data-filter=":agents:agents-features:agents-features-memory/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" id="content" pageids="agents-features-memory::////PointingToDeclaration//633503875">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>agents-features-memory</span></span></h1>
+    <div class="platform-hinted UnderCoverText with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-features:agents-features-memory/commonMain" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain" data-active="" data-toggle=":agents:agents-features:agents-features-memory/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-features:agents-features-memory/jsMain" data-filterable-set=":agents:agents-features:agents-features-memory/jsMain" data-toggle=":agents:agents-features:agents-features-memory/jsMain">js</button><button class="platform-bookmark" data-filterable-current=":agents:agents-features:agents-features-memory/jvmMain" data-filterable-set=":agents:agents-features:agents-features-memory/jvmMain" data-toggle=":agents:agents-features:agents-features-memory/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-memory/commonMain"><p class="paragraph">Provides <code class="lang-kotlin">AgentMemory</code> feature that allows to store and persist facts from LLM history between agent runs and even between multiple agents</p><h3 class="">Overview</h3><p class="paragraph">The agents-features-memory module provides memory capabilities for AI agents, allowing them to store, retrieve, and share information between conversations and even between different agents. This enables agents to maintain context, remember user preferences, and build knowledge over time.</p><p class="paragraph">Key features include:</p><ul><li><p class="paragraph">Storage and retrieval of facts with concepts and values</p></li><li><p class="paragraph">Memory organization with subjects and scopes</p></li><li><p class="paragraph">Secure storage with encryption options</p></li><li><p class="paragraph">Memory sharing between agents</p></li><li><p class="paragraph">Automatic fact detection from agent history</p></li></ul><h3 class="">Using in your project</h3><p class="paragraph">To use the memory feature in your project, add the following dependency:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.agents:agents-features-memory:$version")<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Then, install the AgentMemory feature when creating your agent:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val myAgent = AIAgents(<br>    // other configuration parameters<br>) {<br>    install(AgentMemory) {<br>        memoryProvider = LocalFileMemoryProvider(<br>            config = LocalMemoryConfig("my-memory"),<br>            storage = SimpleStorage(JVMFileSystemProvider),<br>            root = Path("memory/data")<br>        )<br>        featureName = "my-feature"<br>        organizationName = "my-organization"<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Using in unit tests</h3><p class="paragraph">For testing agents with memory capabilities, you can use an in-memory storage implementation:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Create an in-memory storage for testing<br>val testMemoryProvider = LocalFileMemoryProvider(<br>    config = LocalMemoryConfig("test-memory"),<br>    storage = SimpleStorage(InMemoryFileSystemProvider),<br>    root = Path("test/memory")<br>)<br><br>// Create a test agent with memory<br>val testAgent = AIAgents(<br>    // other test configuration<br>) {<br>    install(AgentMemory) {<br>        memoryProvider = testMemoryProvider<br>        featureName = "test-feature"<br>    }<br><br>    // Enable testing mode<br>    withTesting()<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This approach allows you to test memory operations without writing to the actual file system.</p><h3 class="">Example of usage</h3><p class="paragraph">Here's an example of using memory in an agent strategy graph:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Define concepts for storing information<br>val projectStructureConcept = Concept(<br>    "project-structure", <br>    "Structure of the project, including modules and important files", <br>    FactType.MULTIPLE<br>)<br><br>val userPreferencesConcept = Concept(<br>    "user-preferences", <br>    "User's preferred settings and configurations", <br>    FactType.SINGLE<br>)<br><br>// Create a strategy with memory operations<br>val strategy = strategyGraph&lt;Unit, String&gt; {<br>    // Node to load facts from memory<br>    val loadFromMemory by nodeLoadFromMemory(<br>        concepts = listOf(projectStructureConcept, userPreferencesConcept)<br>    )<br><br>    // Node to process user request<br>    val processRequest by nodeLLM&lt;Unit, String&gt; {<br>        // LLM processing logic<br>    }<br><br>    // Node to save facts to memory<br>    val saveProjectInfo by nodeSaveToMemory(<br>        projectStructureConcept,<br>        subject = MemorySubjects.Project,<br>        scope = MemoryScopeType.PRODUCT<br>    )<br><br>    // Connect the nodes<br>    start - loadFromMemory - processRequest - saveProjectInfo - end<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This example demonstrates loading facts from memory, processing a request, and saving updated information back to memory.</p></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-features:agents-features-memory/jsMain"><p class="paragraph">Provides <code class="lang-kotlin">AgentMemory</code> feature that allows to store and persist facts from LLM history between agent runs and even between multiple agents</p><h3 class="">Overview</h3><p class="paragraph">The agents-features-memory module provides memory capabilities for AI agents, allowing them to store, retrieve, and share information between conversations and even between different agents. This enables agents to maintain context, remember user preferences, and build knowledge over time.</p><p class="paragraph">Key features include:</p><ul><li><p class="paragraph">Storage and retrieval of facts with concepts and values</p></li><li><p class="paragraph">Memory organization with subjects and scopes</p></li><li><p class="paragraph">Secure storage with encryption options</p></li><li><p class="paragraph">Memory sharing between agents</p></li><li><p class="paragraph">Automatic fact detection from agent history</p></li></ul><h3 class="">Using in your project</h3><p class="paragraph">To use the memory feature in your project, add the following dependency:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.agents:agents-features-memory:$version")<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Then, install the AgentMemory feature when creating your agent:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val myAgent = AIAgents(<br>    // other configuration parameters<br>) {<br>    install(AgentMemory) {<br>        memoryProvider = LocalFileMemoryProvider(<br>            config = LocalMemoryConfig("my-memory"),<br>            storage = SimpleStorage(JVMFileSystemProvider),<br>            root = Path("memory/data")<br>        )<br>        featureName = "my-feature"<br>        organizationName = "my-organization"<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Using in unit tests</h3><p class="paragraph">For testing agents with memory capabilities, you can use an in-memory storage implementation:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Create an in-memory storage for testing<br>val testMemoryProvider = LocalFileMemoryProvider(<br>    config = LocalMemoryConfig("test-memory"),<br>    storage = SimpleStorage(InMemoryFileSystemProvider),<br>    root = Path("test/memory")<br>)<br><br>// Create a test agent with memory<br>val testAgent = AIAgents(<br>    // other test configuration<br>) {<br>    install(AgentMemory) {<br>        memoryProvider = testMemoryProvider<br>        featureName = "test-feature"<br>    }<br><br>    // Enable testing mode<br>    withTesting()<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This approach allows you to test memory operations without writing to the actual file system.</p><h3 class="">Example of usage</h3><p class="paragraph">Here's an example of using memory in an agent strategy graph:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Define concepts for storing information<br>val projectStructureConcept = Concept(<br>    "project-structure", <br>    "Structure of the project, including modules and important files", <br>    FactType.MULTIPLE<br>)<br><br>val userPreferencesConcept = Concept(<br>    "user-preferences", <br>    "User's preferred settings and configurations", <br>    FactType.SINGLE<br>)<br><br>// Create a strategy with memory operations<br>val strategy = strategyGraph&lt;Unit, String&gt; {<br>    // Node to load facts from memory<br>    val loadFromMemory by nodeLoadFromMemory(<br>        concepts = listOf(projectStructureConcept, userPreferencesConcept)<br>    )<br><br>    // Node to process user request<br>    val processRequest by nodeLLM&lt;Unit, String&gt; {<br>        // LLM processing logic<br>    }<br><br>    // Node to save facts to memory<br>    val saveProjectInfo by nodeSaveToMemory(<br>        projectStructureConcept,<br>        subject = MemorySubjects.Project,<br>        scope = MemoryScopeType.PRODUCT<br>    )<br><br>    // Connect the nodes<br>    start - loadFromMemory - processRequest - saveProjectInfo - end<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This example demonstrates loading facts from memory, processing a request, and saving updated information back to memory.</p></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-features:agents-features-memory/jvmMain"><p class="paragraph">Provides <code class="lang-kotlin">AgentMemory</code> feature that allows to store and persist facts from LLM history between agent runs and even between multiple agents</p><h3 class="">Overview</h3><p class="paragraph">The agents-features-memory module provides memory capabilities for AI agents, allowing them to store, retrieve, and share information between conversations and even between different agents. This enables agents to maintain context, remember user preferences, and build knowledge over time.</p><p class="paragraph">Key features include:</p><ul><li><p class="paragraph">Storage and retrieval of facts with concepts and values</p></li><li><p class="paragraph">Memory organization with subjects and scopes</p></li><li><p class="paragraph">Secure storage with encryption options</p></li><li><p class="paragraph">Memory sharing between agents</p></li><li><p class="paragraph">Automatic fact detection from agent history</p></li></ul><h3 class="">Using in your project</h3><p class="paragraph">To use the memory feature in your project, add the following dependency:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.agents:agents-features-memory:$version")<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Then, install the AgentMemory feature when creating your agent:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val myAgent = AIAgents(<br>    // other configuration parameters<br>) {<br>    install(AgentMemory) {<br>        memoryProvider = LocalFileMemoryProvider(<br>            config = LocalMemoryConfig("my-memory"),<br>            storage = SimpleStorage(JVMFileSystemProvider),<br>            root = Path("memory/data")<br>        )<br>        featureName = "my-feature"<br>        organizationName = "my-organization"<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Using in unit tests</h3><p class="paragraph">For testing agents with memory capabilities, you can use an in-memory storage implementation:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Create an in-memory storage for testing<br>val testMemoryProvider = LocalFileMemoryProvider(<br>    config = LocalMemoryConfig("test-memory"),<br>    storage = SimpleStorage(InMemoryFileSystemProvider),<br>    root = Path("test/memory")<br>)<br><br>// Create a test agent with memory<br>val testAgent = AIAgents(<br>    // other test configuration<br>) {<br>    install(AgentMemory) {<br>        memoryProvider = testMemoryProvider<br>        featureName = "test-feature"<br>    }<br><br>    // Enable testing mode<br>    withTesting()<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This approach allows you to test memory operations without writing to the actual file system.</p><h3 class="">Example of usage</h3><p class="paragraph">Here's an example of using memory in an agent strategy graph:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Define concepts for storing information<br>val projectStructureConcept = Concept(<br>    "project-structure", <br>    "Structure of the project, including modules and important files", <br>    FactType.MULTIPLE<br>)<br><br>val userPreferencesConcept = Concept(<br>    "user-preferences", <br>    "User's preferred settings and configurations", <br>    FactType.SINGLE<br>)<br><br>// Create a strategy with memory operations<br>val strategy = strategyGraph&lt;Unit, String&gt; {<br>    // Node to load facts from memory<br>    val loadFromMemory by nodeLoadFromMemory(<br>        concepts = listOf(projectStructureConcept, userPreferencesConcept)<br>    )<br><br>    // Node to process user request<br>    val processRequest by nodeLLM&lt;Unit, String&gt; {<br>        // LLM processing logic<br>    }<br><br>    // Node to save facts to memory<br>    val saveProjectInfo by nodeSaveToMemory(<br>        projectStructureConcept,<br>        subject = MemorySubjects.Project,<br>        scope = MemoryScopeType.PRODUCT<br>    )<br><br>    // Connect the nodes<br>    start - loadFromMemory - processRequest - saveProjectInfo - end<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This example demonstrates loading facts from memory, processing a request, and saving updated information back to memory.</p></div>    </div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="918921277%2FPackages%2F-1040330603" anchor-label="ai.koog.agents.memory.config" id="918921277%2FPackages%2F-1040330603" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-memory/commonMain" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.memory.config/index.html">ai.koog.agents.memory.config</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="918921277%2FPackages%2F-1040330603"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1602876193%2FPackages%2F-1040330603" anchor-label="ai.koog.agents.memory.feature" id="-1602876193%2FPackages%2F-1040330603" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-memory/commonMain" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.memory.feature/index.html">ai.koog.agents.memory.feature</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1602876193%2FPackages%2F-1040330603"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1492291845%2FPackages%2F-1040330603" anchor-label="ai.koog.agents.memory.feature.history" id="1492291845%2FPackages%2F-1040330603" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-memory/commonMain" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.memory.feature.history/index.html">ai.koog.agents.memory.feature.history</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1492291845%2FPackages%2F-1040330603"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-377226078%2FPackages%2F-1040330603" anchor-label="ai.koog.agents.memory.feature.nodes" id="-377226078%2FPackages%2F-1040330603" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-memory/commonMain" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.memory.feature.nodes/index.html">ai.koog.agents.memory.feature.nodes</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-377226078%2FPackages%2F-1040330603"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="157964562%2FPackages%2F633503875" anchor-label="ai.koog.agents.memory.model" id="157964562%2FPackages%2F633503875" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain,:agents:agents-features:agents-features-memory/jsMain,:agents:agents-features:agents-features-memory/jvmMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-memory/commonMain,:agents:agents-features:agents-features-memory/jsMain,:agents:agents-features:agents-features-memory/jvmMain" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain,:agents:agents-features:agents-features-memory/jsMain,:agents:agents-features:agents-features-memory/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.memory.model/index.html">ai.koog.agents.memory.model</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="157964562%2FPackages%2F633503875"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+              <div class="platform-tag js-like">js</div>
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1448035787%2FPackages%2F-1253539894" anchor-label="ai.koog.agents.memory.providers" id="1448035787%2FPackages%2F-1253539894" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain,:agents:agents-features:agents-features-memory/jvmMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-memory/commonMain,:agents:agents-features:agents-features-memory/jvmMain" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain,:agents:agents-features:agents-features-memory/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.memory.providers/index.html">ai.koog.agents.memory.providers</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1448035787%2FPackages%2F-1253539894"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1889089500%2FPackages%2F-1253539894" anchor-label="ai.koog.agents.memory.storage" id="-1889089500%2FPackages%2F-1253539894" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain,:agents:agents-features:agents-features-memory/jvmMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-memory/commonMain,:agents:agents-features:agents-features-memory/jvmMain" data-filterable-set=":agents:agents-features:agents-features-memory/commonMain,:agents:agents-features:agents-features-memory/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.memory.storage/index.html">ai.koog.agents.memory.storage</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1889089500%2FPackages%2F-1253539894"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Copyright © 2000-2025 JetBrains s.r.o.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>agents-core</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../index.html">
+                    koog-agents
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.2.1
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":agents:agents-core/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":agents:agents-core/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/commonMain" data-filter=":agents:agents-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/jvmMain" data-filter=":agents:agents-core/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" id="content" pageids="agents-core::////PointingToDeclaration//1538185032">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>agents-core</span></span></h1>
+    <div class="platform-hinted UnderCoverText with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmMain" data-filterable-set=":agents:agents-core/jvmMain" data-toggle=":agents:agents-core/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><p class="paragraph">Core library for building and executing AI agents with a graph-based architecture.</p><h3 class="">Overview</h3><p class="paragraph">The agents-core module provides the fundamental components for creating, configuring, and executing AI agents. It implements a graph-based architecture where agents are represented as state machines with nodes and edges. Each node processes inputs and produces outputs, and the execution flows through the graph based on conditional edges.</p><p class="paragraph">Key features include:</p><ul><li><p class="paragraph">Agent definition and configuration</p></li><li><p class="paragraph">Graph-based execution model</p></li><li><p class="paragraph">Exception handling for common agent issues</p></li><li><p class="paragraph">Event subscription for monitoring agent execution</p></li><li><p class="paragraph">Integration with LLM services</p></li><li><p class="paragraph">Tool registration and execution</p></li></ul><h3 class="">Using in your project</h3><p class="paragraph">To use the agents-core module in your project, add the following dependency:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.agents:agents-core:$version")<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Then, you can create an AI agent by following these steps:</p><ol><li><p class="paragraph">Define the tools your agent will use</p></li><li><p class="paragraph">Register the tools with a tool registry</p></li><li><p class="paragraph">Select the appropriate agent type</p></li><li><p class="paragraph">Configure the agent with the necessary parameters</p></li><li><p class="paragraph">Subscribe to agent events if needed</p></li><li><p class="paragraph">Run the agent with the desired input</p></li></ol><h3 class="">Using in unit tests</h3><p class="paragraph">The agents-core module provides utilities for testing AI agents, including:</p><ul><li><p class="paragraph">Mocking LLM responses for deterministic behavior</p></li><li><p class="paragraph">Mocking tool calls and their results</p></li><li><p class="paragraph">Testing graph structure and node connections</p></li><li><p class="paragraph">Validating agent behavior in different scenarios</p></li></ul><p class="paragraph">To enable testing mode on an agent, use the <code class="lang-kotlin">withTesting()</code> function within the agent constructor block:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">AIAgent(<br>    // constructor arguments<br>) {<br>    withTesting()<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Example of usage</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Create a tool registry<br>val toolRegistry = ToolRegistry { }<br><br>// Register tools<br>toolRegistry.register(CalculatorTool)<br>toolRegistry.register(SearchTool)<br><br>// Configure the agent<br>val agentConfig = AgentConfig(<br>    maxAgentIterations = 10,<br>    // other configuration parameters<br>)<br><br>// Create the agent<br>val agent = AIAgent(<br>    promptExecutor = llmExecutor,<br>    toolRegistry = toolRegistry,<br>    strategy = simpleSingleRunStrategy(),<br>    eventHandler = eventHandler,<br>    agentConfig = agentConfig<br>)<br><br>// Run the agent<br>val result = agent.execute("Calculate the square root of 16")</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmMain"><p class="paragraph">Core library for building and executing AI agents with a graph-based architecture.</p><h3 class="">Overview</h3><p class="paragraph">The agents-core module provides the fundamental components for creating, configuring, and executing AI agents. It implements a graph-based architecture where agents are represented as state machines with nodes and edges. Each node processes inputs and produces outputs, and the execution flows through the graph based on conditional edges.</p><p class="paragraph">Key features include:</p><ul><li><p class="paragraph">Agent definition and configuration</p></li><li><p class="paragraph">Graph-based execution model</p></li><li><p class="paragraph">Exception handling for common agent issues</p></li><li><p class="paragraph">Event subscription for monitoring agent execution</p></li><li><p class="paragraph">Integration with LLM services</p></li><li><p class="paragraph">Tool registration and execution</p></li></ul><h3 class="">Using in your project</h3><p class="paragraph">To use the agents-core module in your project, add the following dependency:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.agents:agents-core:$version")<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Then, you can create an AI agent by following these steps:</p><ol><li><p class="paragraph">Define the tools your agent will use</p></li><li><p class="paragraph">Register the tools with a tool registry</p></li><li><p class="paragraph">Select the appropriate agent type</p></li><li><p class="paragraph">Configure the agent with the necessary parameters</p></li><li><p class="paragraph">Subscribe to agent events if needed</p></li><li><p class="paragraph">Run the agent with the desired input</p></li></ol><h3 class="">Using in unit tests</h3><p class="paragraph">The agents-core module provides utilities for testing AI agents, including:</p><ul><li><p class="paragraph">Mocking LLM responses for deterministic behavior</p></li><li><p class="paragraph">Mocking tool calls and their results</p></li><li><p class="paragraph">Testing graph structure and node connections</p></li><li><p class="paragraph">Validating agent behavior in different scenarios</p></li></ul><p class="paragraph">To enable testing mode on an agent, use the <code class="lang-kotlin">withTesting()</code> function within the agent constructor block:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">AIAgent(<br>    // constructor arguments<br>) {<br>    withTesting()<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Example of usage</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Create a tool registry<br>val toolRegistry = ToolRegistry { }<br><br>// Register tools<br>toolRegistry.register(CalculatorTool)<br>toolRegistry.register(SearchTool)<br><br>// Configure the agent<br>val agentConfig = AgentConfig(<br>    maxAgentIterations = 10,<br>    // other configuration parameters<br>)<br><br>// Create the agent<br>val agent = AIAgent(<br>    promptExecutor = llmExecutor,<br>    toolRegistry = toolRegistry,<br>    strategy = simpleSingleRunStrategy(),<br>    eventHandler = eventHandler,<br>    agentConfig = agentConfig<br>)<br><br>// Run the agent<br>val result = agent.execute("Calculate the square root of 16")</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>    </div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="-740393588%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.agent" id="-740393588%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.agent/index.html">ai.koog.agents.core.agent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-740393588%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1705124376%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.agent.config" id="-1705124376%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.agent.config/index.html">ai.koog.agents.core.agent.config</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1705124376%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="62577165%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.agent.context" id="62577165%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.agent.context/index.html">ai.koog.agents.core.agent.context</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="62577165%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1988085577%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.agent.entity" id="1988085577%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.agent.entity/index.html">ai.koog.agents.core.agent.entity</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1988085577%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-852278220%2FPackages%2F1538185032" anchor-label="ai.koog.agents.core.agent.session" id="-852278220%2FPackages%2F1538185032" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.agent.session/index.html">ai.koog.agents.core.agent.session</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-852278220%2FPackages%2F1538185032"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-59133812%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.annotation" id="-59133812%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.annotation/index.html">ai.koog.agents.core.annotation</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-59133812%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-424915215%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.dsl.builder" id="-424915215%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.dsl.builder/index.html">ai.koog.agents.core.dsl.builder</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-424915215%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-341476971%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.dsl.extension" id="-341476971%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.dsl.extension/index.html">ai.koog.agents.core.dsl.extension</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-341476971%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-121645222%2FPackages%2F1538185032" anchor-label="ai.koog.agents.core.environment" id="-121645222%2FPackages%2F1538185032" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.environment/index.html">ai.koog.agents.core.environment</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-121645222%2FPackages%2F1538185032"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-123983914%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.exception" id="-123983914%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.exception/index.html">ai.koog.agents.core.exception</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-123983914%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1620563197%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.feature" id="1620563197%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.feature/index.html">ai.koog.agents.core.feature</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1620563197%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1110718041%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.feature.handler" id="1110718041%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.feature.handler/index.html">ai.koog.agents.core.feature.handler</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1110718041%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-1207273288%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.feature.model" id="-1207273288%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.feature.model/index.html">ai.koog.agents.core.feature.model</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1207273288%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-895992782%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.feature.remote.client.config" id="-895992782%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.feature.remote.client.config/index.html">ai.koog.agents.core.feature.remote.client.config</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-895992782%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="44060602%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.feature.remote.server.config" id="44060602%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.feature.remote.server.config/index.html">ai.koog.agents.core.feature.remote.server.config</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="44060602%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1761317040%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.model" id="1761317040%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.model/index.html">ai.koog.agents.core.model</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1761317040%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="457020809%2FPackages%2F643085981" anchor-label="ai.koog.agents.core.model.message" id="457020809%2FPackages%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+    <div class="table-row" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.core.model.message/index.html">ai.koog.agents.core.model.message</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="457020809%2FPackages%2F643085981"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Copyright © 2000-2025 JetBrains s.r.o.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
