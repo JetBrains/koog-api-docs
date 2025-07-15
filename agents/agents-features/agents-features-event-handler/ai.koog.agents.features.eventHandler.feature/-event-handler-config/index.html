@@ -1,0 +1,581 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>EventHandlerConfig</title>
+<link href="../../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../../../index.html">
+                    koog-agents
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.3.0
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":agents:agents-features:agents-features-event-handler/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-features:agents-features-event-handler/commonMain" data-filter=":agents:agents-features:agents-features-event-handler/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-features-event-handler::ai.koog.agents.features.eventHandler.feature/EventHandlerConfig///PointingToDeclaration//-1417255257">
+  <div class="breadcrumbs"><a href="../../index.html">agents-features-event-handler</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.features.eventHandler.feature</a><span class="delimiter">/</span><span class="current">EventHandlerConfig</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Event</span><wbr><span>Handler</span><wbr><span><span>Config</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">EventHandlerConfig</a> : <a href="../../../../../agents/agents-features/agents-features-common/ai.koog.agents.features.common.config/-feature-config/index.html">FeatureConfig</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/JetBrains/koog/tree/main/agents/agents-features/agents-features-event-handler/src/commonMain/kotlin/ai/koog/agents/features/eventHandler/feature/EventHandlerConfig.kt#L42">source</a>)</span></span></div><p class="paragraph">Configuration class for the EventHandler feature.</p><p class="paragraph">This class provides a way to configure handlers for various events that occur during the execution of an agent. These events include agent lifecycle events, strategy events, node events, LLM call events, and tool call events.</p><p class="paragraph">Each handler is a property that can be assigned a lambda function to be executed when the corresponding event occurs.</p><p class="paragraph">Example usage:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">handleEvents {<br>    onToolCall { stage, tool, toolArgs -&gt;<br>        println("Tool called: ${tool.name} with args $toolArgs")<br>    }<br><br>    onAgentFinished { strategyName, result -&gt;<br>        println("Agent finished with result: $result")<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-963689208%2FConstructors%2F-1417255257" anchor-label="EventHandlerConfig" id="-963689208%2FConstructors%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-event-handler-config.html"><span>Event</span><wbr><span>Handler</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-963689208%2FConstructors%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-1116714732%2FProperties%2F-1417255257" anchor-label="messageProcessor" id="-1116714732%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1116714732%2FProperties%2F-1417255257"><span>message</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1116714732%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-1116714732%2FProperties%2F-1417255257">messageProcessor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../../agents/agents-features/agents-features-common/ai.koog.agents.features.common.message/-feature-message-processor/index.html">FeatureMessageProcessor</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1606836460%2FProperties%2F-1417255257" anchor-label="onAfterLLMCall" id="1606836460%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-after-l-l-m-call.html"><span>on</span><wbr><span>After</span><wbr><span><span>LLMCall</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1606836460%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-after-l-l-m-call.html"><strike>onAfterLLMCall</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>prompt<span class="token operator">: </span><a href="../../../../../prompt/prompt-model/ai.koog.prompt.dsl/-prompt/index.html">Prompt</a><span class="token punctuation">, </span>tools<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>model<span class="token operator">: </span><a href="../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a><span class="token punctuation">, </span>responses<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>sessionUuid<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.uuid/-uuid/index.html">Uuid</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">A deprecated property to handle events triggered after a response is received from the language model (LLM).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-182335359%2FProperties%2F-1417255257" anchor-label="onAfterNode" id="-182335359%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-after-node.html"><span>on</span><wbr><span>After</span><wbr><span><span>Node</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-182335359%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-after-node.html"><strike>onAfterNode</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>node<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent.entity/-a-i-agent-node-base/index.html">AIAgentNodeBase</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span>context<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent.context/-a-i-agent-context-base/index.html">AIAgentContextBase</a><span class="token punctuation">, </span>input<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">, </span>output<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">A deprecated variable used to define a handler that is called after a node in the agent's execution graph has been processed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="262499592%2FProperties%2F-1417255257" anchor-label="onAgentFinished" id="262499592%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-agent-finished.html"><span>on</span><wbr><span>Agent</span><wbr><span><span>Finished</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262499592%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-agent-finished.html"><strike>onAgentFinished</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>strategyName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>result<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">A deprecated handler invoked when an agent finishes execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-710626915%2FProperties%2F-1417255257" anchor-label="onAgentRunError" id="-710626915%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-agent-run-error.html"><span>on</span><wbr><span>Agent</span><wbr><span>Run</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-710626915%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-agent-run-error.html"><strike>onAgentRunError</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>strategyName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>sessionUuid<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.uuid/-uuid/index.html">Uuid</a><span class="token operator">?</span><span class="token punctuation">, </span>throwable<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">A deprecated variable used to define a handler that is called when an error occurs during agent execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1800845952%2FProperties%2F-1417255257" anchor-label="onBeforeAgentStarted" id="1800845952%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-before-agent-started.html"><span>on</span><wbr><span>Before</span><wbr><span>Agent</span><wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1800845952%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-before-agent-started.html"><strike>onBeforeAgentStarted</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>strategy<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent.entity/-a-i-agent-strategy/index.html">AIAgentStrategy</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span>agent<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent/-a-i-agent/index.html">AIAgent</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">A handler invoked before an AI agent is started.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-341049645%2FProperties%2F-1417255257" anchor-label="onBeforeLLMCall" id="-341049645%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-before-l-l-m-call.html"><span>on</span><wbr><span>Before</span><wbr><span><span>LLMCall</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-341049645%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-before-l-l-m-call.html"><strike>onBeforeLLMCall</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>prompt<span class="token operator">: </span><a href="../../../../../prompt/prompt-model/ai.koog.prompt.dsl/-prompt/index.html">Prompt</a><span class="token punctuation">, </span>tools<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token operator">&gt;</span><span class="token punctuation">, </span>model<span class="token operator">: </span><a href="../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a><span class="token punctuation">, </span>sessionUuid<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.uuid/-uuid/index.html">Uuid</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">Deprecated variable used to define a handler that is invoked before a call is made to the language model.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1749044218%2FProperties%2F-1417255257" anchor-label="onBeforeNode" id="1749044218%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-before-node.html"><span>on</span><wbr><span>Before</span><wbr><span><span>Node</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1749044218%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-before-node.html"><strike>onBeforeNode</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>node<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent.entity/-a-i-agent-node-base/index.html">AIAgentNodeBase</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span>context<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent.context/-a-i-agent-context-base/index.html">AIAgentContextBase</a><span class="token punctuation">, </span>input<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">A handler invoked before a node in the agent's execution graph is processed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="715232022%2FProperties%2F-1417255257" anchor-label="onStrategyFinished" id="715232022%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-strategy-finished.html"><span>on</span><wbr><span>Strategy</span><wbr><span><span>Finished</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="715232022%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-strategy-finished.html"><strike>onStrategyFinished</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>strategy<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent.entity/-a-i-agent-strategy/index.html">AIAgentStrategy</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span>result<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">A deprecated variable that defines a handler to be invoked when a strategy finishes execution. Replaced by the <code class="lang-kotlin">onStrategyFinished(handler)</code> method to provide a more structured and extensible approach.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1417313649%2FProperties%2F-1417255257" anchor-label="onStrategyStarted" id="1417313649%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-strategy-started.html"><span>on</span><wbr><span>Strategy</span><wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1417313649%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-strategy-started.html"><strike>onStrategyStarted</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>strategy<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent.entity/-a-i-agent-strategy/index.html">AIAgentStrategy</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">A suspendable handler invoked when a strategy starts execution in the AI Agent workflow.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1734906075%2FProperties%2F-1417255257" anchor-label="onToolCall" id="-1734906075%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-tool-call.html"><span>on</span><wbr><span>Tool</span><wbr><span><span>Call</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1734906075%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-tool-call.html"><strike>onToolCall</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>tool<span class="token operator">: </span><a href="../../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span>toolArgs<span class="token operator">: </span><a href="../../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-args/index.html">ToolArgs</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">A deprecated variable for appending a handler called when a tool is about to be invoked.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-694979285%2FProperties%2F-1417255257" anchor-label="onToolCallFailure" id="-694979285%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-tool-call-failure.html"><span>on</span><wbr><span>Tool</span><wbr><span>Call</span><wbr><span><span>Failure</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-694979285%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-tool-call-failure.html"><strike>onToolCallFailure</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>tool<span class="token operator">: </span><a href="../../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span>toolArgs<span class="token operator">: </span><a href="../../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-args/index.html">ToolArgs</a><span class="token punctuation">, </span>throwable<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-throwable/index.html">Throwable</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">Defines a handler invoked when a tool call fails due to an exception.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-173810808%2FProperties%2F-1417255257" anchor-label="onToolCallResult" id="-173810808%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-tool-call-result.html"><span>on</span><wbr><span>Tool</span><wbr><span>Call</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-173810808%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-tool-call-result.html"><strike>onToolCallResult</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>tool<span class="token operator">: </span><a href="../../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span>toolArgs<span class="token operator">: </span><a href="../../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-args/index.html">ToolArgs</a><span class="token punctuation">, </span>result<span class="token operator">: </span><a href="../../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-result/index.html">ToolResult</a><span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">Deprecated variable representing a handler invoked when a tool call is completed successfully. The handler is a suspend function with parameters for the tool, its arguments, and the result of the tool call.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1074628040%2FProperties%2F-1417255257" anchor-label="onToolValidationError" id="1074628040%2FProperties%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-tool-validation-error.html"><span>on</span><wbr><span>Tool</span><wbr><span>Validation</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1074628040%2FProperties%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="on-tool-validation-error.html"><strike>onToolValidationError</strike></a><span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>tool<span class="token operator">: </span><a href="../../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span>toolArgs<span class="token operator">: </span><a href="../../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-args/index.html">ToolArgs</a><span class="token punctuation">, </span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></div><div class="brief "><p class="paragraph">A deprecated variable representing the handler invoked when a validation error occurs during a tool call. Use <code class="lang-kotlin">onToolValidationError(handler)</code> instead to register error handling logic.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="543827003%2FFunctions%2F-1417255257" anchor-label="addMessageProcessor" id="543827003%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#543827003%2FFunctions%2F-1417255257"><span>add</span><wbr><span>Message</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="543827003%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#543827003%2FFunctions%2F-1417255257"><span class="token function">addMessageProcessor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">processor<span class="token operator">: </span><a href="../../../../../agents/agents-features/agents-features-common/ai.koog.agents.features.common.message/-feature-message-processor/index.html">FeatureMessageProcessor</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1389511279%2FFunctions%2F-1417255257" anchor-label="onAfterLLMCall" id="1389511279%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-after-l-l-m-call.html"><span>on</span><wbr><span>After</span><wbr><span><span>LLMCall</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1389511279%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-after-l-l-m-call.html"><span class="token function">onAfterLLMCall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-after-l-l-m-call-context/index.html">AfterLLMCallContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called after a response is received from the language model.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1578275214%2FFunctions%2F-1417255257" anchor-label="onAfterNode" id="1578275214%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-after-node.html"><span>on</span><wbr><span>After</span><wbr><span><span>Node</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1578275214%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-after-node.html"><span class="token function">onAfterNode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-node-after-execute-context/index.html">NodeAfterExecuteContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called after a node in the agent's execution graph has been processed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1934931249%2FFunctions%2F-1417255257" anchor-label="onAgentBeforeClose" id="-1934931249%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-agent-before-close.html"><span>on</span><wbr><span>Agent</span><wbr><span>Before</span><wbr><span><span>Close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1934931249%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-agent-before-close.html"><span class="token function">onAgentBeforeClose</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-agent-before-close-context/index.html">AgentBeforeCloseContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends a handler called before an agent is closed. This allows for additional behavior to be executed prior to the agent being closed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1283573367%2FFunctions%2F-1417255257" anchor-label="onAgentFinished" id="1283573367%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-agent-finished.html"><span>on</span><wbr><span>Agent</span><wbr><span><span>Finished</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1283573367%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-agent-finished.html"><span class="token function">onAgentFinished</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-agent-finished-context/index.html">AgentFinishedContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called when an agent finishes execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1595937633%2FFunctions%2F-1417255257" anchor-label="onAgentRunError" id="1595937633%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-agent-run-error.html"><span>on</span><wbr><span>Agent</span><wbr><span>Run</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1595937633%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-agent-run-error.html"><span class="token function">onAgentRunError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-agent-run-error-context/index.html">AgentRunErrorContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called when an error occurs during agent execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-863186413%2FFunctions%2F-1417255257" anchor-label="onBeforeAgentStarted" id="-863186413%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-before-agent-started.html"><span>on</span><wbr><span>Before</span><wbr><span>Agent</span><wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-863186413%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-before-agent-started.html"><span class="token function">onBeforeAgentStarted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-agent-start-context/index.html">AgentStartContext</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called when an agent is started.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1483304525%2FFunctions%2F-1417255257" anchor-label="onBeforeLLMCall" id="1483304525%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-before-l-l-m-call.html"><span>on</span><wbr><span>Before</span><wbr><span><span>LLMCall</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1483304525%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-before-l-l-m-call.html"><span class="token function">onBeforeLLMCall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-before-l-l-m-call-context/index.html">BeforeLLMCallContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called before a call is made to the language model.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="897424844%2FFunctions%2F-1417255257" anchor-label="onBeforeNode" id="897424844%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-before-node.html"><span>on</span><wbr><span>Before</span><wbr><span><span>Node</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="897424844%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-before-node.html"><span class="token function">onBeforeNode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-node-before-execute-context/index.html">NodeBeforeExecuteContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called before a node in the agent's execution graph is processed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-465895693%2FFunctions%2F-1417255257" anchor-label="onStrategyFinished" id="-465895693%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-strategy-finished.html"><span>on</span><wbr><span>Strategy</span><wbr><span><span>Finished</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-465895693%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-strategy-finished.html"><span class="token function">onStrategyFinished</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-strategy-finish-context/index.html">StrategyFinishContext</a><span class="token operator">&lt;</span><a href="../-event-handler/index.html">EventHandler</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called when a strategy finishes execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-579117287%2FFunctions%2F-1417255257" anchor-label="onStrategyStarted" id="-579117287%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-strategy-started.html"><span>on</span><wbr><span>Strategy</span><wbr><span><span>Started</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-579117287%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-strategy-started.html"><span class="token function">onStrategyStarted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-strategy-start-context/index.html">StrategyStartContext</a><span class="token operator">&lt;</span><a href="../-event-handler/index.html">EventHandler</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called when a strategy starts execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1127311247%2FFunctions%2F-1417255257" anchor-label="onToolCall" id="1127311247%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-tool-call.html"><span>on</span><wbr><span>Tool</span><wbr><span><span>Call</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1127311247%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-tool-call.html"><span class="token function">onToolCall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-tool-call-context/index.html">ToolCallContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called when a tool is about to be called.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1129214147%2FFunctions%2F-1417255257" anchor-label="onToolCallFailure" id="-1129214147%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-tool-call-failure.html"><span>on</span><wbr><span>Tool</span><wbr><span>Call</span><wbr><span><span>Failure</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1129214147%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-tool-call-failure.html"><span class="token function">onToolCallFailure</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-tool-call-failure-context/index.html">ToolCallFailureContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called when a tool call fails with an exception.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="16559343%2FFunctions%2F-1417255257" anchor-label="onToolCallResult" id="16559343%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-tool-call-result.html"><span>on</span><wbr><span>Tool</span><wbr><span>Call</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="16559343%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-tool-call-result.html"><span class="token function">onToolCallResult</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-tool-call-result-context/index.html">ToolCallResultContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called when a tool call completes successfully.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1963926775%2FFunctions%2F-1417255257" anchor-label="onToolValidationError" id="1963926775%2FFunctions%2F-1417255257" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-features:agents-features-event-handler/commonMain" data-filterable-set=":agents:agents-features:agents-features-event-handler/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-tool-validation-error.html"><span>on</span><wbr><span>Tool</span><wbr><span>Validation</span><wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1963926775%2FFunctions%2F-1417255257"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-event-handler/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-tool-validation-error.html"><span class="token function">onToolValidationError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">handler<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>eventContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-tool-validation-error-context/index.html">ToolValidationErrorContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Append handler called when a validation error occurs during a tool call.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Copyright © 2000-2025 JetBrains s.r.o.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

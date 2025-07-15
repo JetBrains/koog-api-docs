@@ -1,0 +1,378 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>OpenRouterModels</title>
+<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../../../../index.html">
+                    koog-agents
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.3.0
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-executor-openrouter-client::ai.koog.prompt.executor.clients.openrouter/OpenRouterModels///PointingToDeclaration//1191109704">
+  <div class="breadcrumbs"><a href="../../index.html">prompt-executor-openrouter-client</a><span class="delimiter">/</span><a href="../index.html">ai.koog.prompt.executor.clients.openrouter</a><span class="delimiter">/</span><span class="current">OpenRouterModels</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Open</span><wbr><span>Router</span><wbr><span><span>Models</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">OpenRouterModels</a> : <a href="../../../../../../prompt/prompt-executor/prompt-executor-clients/ai.koog.prompt.executor.clients/-l-l-model-definitions/index.html">LLModelDefinitions</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/JetBrains/koog/tree/main/prompt/prompt-executor/prompt-executor-clients/prompt-executor-openrouter-client/src/commonMain/kotlin/ai/koog/prompt/executor/clients/openrouter/OpenRouterModels.kt#L12">source</a>)</span></span></div><p class="paragraph">OpenRouter models Models available through the OpenRouter API</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-688911233%2FProperties%2F1191109704" anchor-label="Claude3Haiku" id="-688911233%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-claude3-haiku.html"><span><span>Claude3Haiku</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-688911233%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-claude3-haiku.html">Claude3Haiku</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the Claude v3 Haiku model provided through the OpenRouter platform.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1249838750%2FProperties%2F1191109704" anchor-label="Claude3Opus" id="-1249838750%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-claude3-opus.html"><span><span>Claude3Opus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1249838750%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-claude3-opus.html">Claude3Opus</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the Claude 3 Opus model provided by Anthropic through OpenRouter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1638497110%2FProperties%2F1191109704" anchor-label="Claude3Sonnet" id="1638497110%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-claude3-sonnet.html"><span><span>Claude3Sonnet</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1638497110%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-claude3-sonnet.html">Claude3Sonnet</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents a predefined language model configuration for the "Claude 3 Sonnet" model.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1928307079%2FProperties%2F1191109704" anchor-label="Claude3VisionHaiku" id="1928307079%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-claude3-vision-haiku.html"><span>Claude3Vision</span><wbr><span><span>Haiku</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1928307079%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-claude3-vision-haiku.html">Claude3VisionHaiku</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the Claude 3 Vision model provided via OpenRouter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1882628954%2FProperties%2F1191109704" anchor-label="Claude3VisionOpus" id="1882628954%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-claude3-vision-opus.html"><span>Claude3Vision</span><wbr><span><span>Opus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1882628954%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-claude3-vision-opus.html">Claude3VisionOpus</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the Claude 3 Vision model provided via OpenRouter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1167886158%2FProperties%2F1191109704" anchor-label="Claude3VisionSonnet" id="1167886158%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-claude3-vision-sonnet.html"><span>Claude3Vision</span><wbr><span><span>Sonnet</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1167886158%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-claude3-vision-sonnet.html">Claude3VisionSonnet</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the Claude 3 Vision Sonnet model provided by Anthropic, accessible through OpenRouter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="691454529%2FProperties%2F1191109704" anchor-label="Gemini14Pro" id="691454529%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini14-pro.html"><span><span>Gemini14Pro</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="691454529%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini14-pro.html">Gemini14Pro</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the Google Gemini 1.5 Pro language model accessed through the OpenRouter provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="947506783%2FProperties%2F1191109704" anchor-label="Gemini15Flash" id="947506783%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-gemini15-flash.html"><span><span>Gemini15Flash</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="947506783%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-gemini15-flash.html">Gemini15Flash</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the Gemini 1.5 Flash language model provided via the OpenRouter platform.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-238134637%2FProperties%2F1191109704" anchor-label="GPT35Turbo" id="-238134637%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t35-turbo.html"><span><span>GPT35Turbo</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-238134637%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t35-turbo.html">GPT35Turbo</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the GPT-3.5-Turbo language model provided by the OpenRouter platform.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-454942789%2FProperties%2F1191109704" anchor-label="GPT4" id="-454942789%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t4.html"><span><span>GPT4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-454942789%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t4.html">GPT4</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the GPT-4 model hosted on OpenRouter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="223850992%2FProperties%2F1191109704" anchor-label="GPT4o" id="223850992%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t4o.html"><span><span>GPT4o</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="223850992%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t4o.html">GPT4o</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT4o represents an instance of the GPT-4 model obtained via the OpenRouter provider. It is pre-configured with the specified identifier and capabilities.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-535465407%2FProperties%2F1191109704" anchor-label="GPT4Turbo" id="-535465407%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t4-turbo.html"><span><span>GPT4Turbo</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-535465407%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t4-turbo.html">GPT4Turbo</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents an instance of the GPT-4 Turbo model hosted via OpenRouter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1791103514%2FProperties%2F1191109704" anchor-label="Llama3" id="-1791103514%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-llama3.html"><span><span>Llama3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1791103514%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-llama3.html">Llama3</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the Llama3 model configuration provided by OpenRouter. This model is identified by the unique ID "meta/llama-3-70b" and supports the standard set of language model capabilities.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-431439668%2FProperties%2F1191109704" anchor-label="Llama3Instruct" id="-431439668%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-llama3-instruct.html"><span><span>Llama3Instruct</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-431439668%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-llama3-instruct.html">Llama3Instruct</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the Llama 3 model with 70 billion parameters designed for instruction tuning. This model is provided via the OpenRouter provider and is configured with standard capabilities.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1841963829%2FProperties%2F1191109704" anchor-label="Mistral7B" id="-1841963829%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mistral7-b.html"><span><span>Mistral7B</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1841963829%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-mistral7-b.html">Mistral7B</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the Mistral 7B language model.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-452714522%2FProperties%2F1191109704" anchor-label="Mixtral8x7B" id="-452714522%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mixtral8x7-b.html"><span><span>Mixtral8x7B</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-452714522%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-mixtral8x7-b.html">Mixtral8x7B</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the Mixtral 8x7B language model configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1972296261%2FProperties%2F1191109704" anchor-label="Phi4Reasoning" id="-1972296261%2FProperties%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-phi4-reasoning.html"><span><span>Phi4Reasoning</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1972296261%2FProperties%2F1191109704"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-phi4-reasoning.html">Phi4Reasoning</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Free model for testing and development</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Copyright © 2000-2025 JetBrains s.r.o.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

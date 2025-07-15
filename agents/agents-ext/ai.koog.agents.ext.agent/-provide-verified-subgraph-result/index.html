@@ -1,0 +1,277 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ProvideVerifiedSubgraphResult</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../../index.html">
+                    koog-agents
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.3.0
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":agents:agents-ext/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-ext/commonMain" data-filter=":agents:agents-ext/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-ext::ai.koog.agents.ext.agent/ProvideVerifiedSubgraphResult///PointingToDeclaration//-919062777">
+  <div class="breadcrumbs"><a href="../../index.html">agents-ext</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.ext.agent</a><span class="delimiter">/</span><span class="current">ProvideVerifiedSubgraphResult</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Provide</span><wbr><span>Verified</span><wbr><span>Subgraph</span><wbr><span><span>Result</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-ext/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">ProvideVerifiedSubgraphResult</a> : <a href="../-provide-subgraph-result/index.html">ProvideSubgraphResult</a><span class="token operator">&lt;</span><a href="../-verified-subgraph-result/index.html">VerifiedSubgraphResult</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/JetBrains/koog/tree/main/agents/agents-ext/src/commonMain/kotlin/ai/koog/agents/ext/agent/AIAgentSubgraphExt.kt#L108">source</a>)</span></span></div><p class="paragraph">Represents a concrete implementation of <a href="../-provide-subgraph-result/index.html">ProvideSubgraphResult</a> specialized to handle verified subgraph results.</p><p class="paragraph"><code class="lang-kotlin">ProvideVerifiedSubgraphResult</code> invokes and validates the execution of a task represented by a subgraph, and returns a <code class="lang-kotlin">VerifiedSubgraphResult</code> object containing the results of the verification. It provides metadata and parameter definitions required for using the tool.</p><p class="paragraph">This object is designed to ensure a subgraph task has been executed correctly and to capture any potential issues with the execution. The verification result attributes include:</p><ul><li><p class="paragraph">Whether the execution was successful (<code class="lang-kotlin">correct</code>)</p></li><li><p class="paragraph">A descriptive message explaining the result or issues (<code class="lang-kotlin">message</code>)</p></li></ul><p class="paragraph">The tool metadata is encapsulated through a <code class="lang-kotlin">ToolDescriptor</code>, defining the tool name, purpose, and required parameters ("correct" and "message").</p><p class="paragraph">It serializes and deserializes <code class="lang-kotlin">VerifiedSubgraphResult</code> instances for input and output using the appropriate <code class="lang-kotlin">KSerializer</code>.</p><p class="paragraph">Functions:</p><ul><li><p class="paragraph"><code class="lang-kotlin">execute</code>: Processes and returns the received <code class="lang-kotlin">VerifiedSubgraphResult</code> object as the output without modification.</p></li></ul><p class="paragraph">Properties:</p><ul><li><p class="paragraph"><code class="lang-kotlin">argsSerializer</code>: The serializer used to process the <code class="lang-kotlin">VerifiedSubgraphResult</code>.</p></li><li><p class="paragraph"><code class="lang-kotlin">descriptor</code>: The metadata describing this tool, including its name, functionality, and parameters.</p></li></ul></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="361794120%2FProperties%2F-919062777" anchor-label="argsSerializer" id="361794120%2FProperties%2F-919062777" data-filterable-set=":agents:agents-ext/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-ext/commonMain" data-filterable-set=":agents:agents-ext/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="args-serializer.html"><span>args</span><wbr><span><span>Serializer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="361794120%2FProperties%2F-919062777"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-ext/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="args-serializer.html">argsSerializer</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><a href="../-verified-subgraph-result/index.html">VerifiedSubgraphResult</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1247364568%2FProperties%2F-919062777" anchor-label="descriptor" id="-1247364568%2FProperties%2F-919062777" data-filterable-set=":agents:agents-ext/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-ext/commonMain" data-filterable-set=":agents:agents-ext/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="descriptor.html"><span><span>descriptor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1247364568%2FProperties%2F-919062777"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-ext/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="descriptor.html">descriptor</a><span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1765466602%2FProperties%2F-919062777" anchor-label="name" id="1765466602%2FProperties%2F-919062777" data-filterable-set=":agents:agents-ext/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-ext/commonMain" data-filterable-set=":agents:agents-ext/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.ext.tool/-say-to-user/index.html#1765466602%2FProperties%2F-919062777"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1765466602%2FProperties%2F-919062777"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-ext/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../ai.koog.agents.ext.tool/-say-to-user/index.html#1765466602%2FProperties%2F-919062777">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1718412576%2FFunctions%2F-919062777" anchor-label="decodeArgs" id="1718412576%2FFunctions%2F-919062777" data-filterable-set=":agents:agents-ext/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-ext/commonMain" data-filterable-set=":agents:agents-ext/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.ext.tool/-say-to-user/index.html#1718412576%2FFunctions%2F-919062777"><span>decode</span><wbr><span><span>Args</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1718412576%2FFunctions%2F-919062777"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-ext/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.agents.ext.tool/-say-to-user/index.html#1718412576%2FFunctions%2F-919062777"><span class="token function">decodeArgs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rawArgs<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-object/index.html">JsonObject</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-verified-subgraph-result/index.html">VerifiedSubgraphResult</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1028751939%2FFunctions%2F-919062777" anchor-label="encodeArgs" id="1028751939%2FFunctions%2F-919062777" data-filterable-set=":agents:agents-ext/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-ext/commonMain" data-filterable-set=":agents:agents-ext/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1028751939%2FFunctions%2F-919062777"><span>encode</span><wbr><span><span>Args</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1028751939%2FFunctions%2F-919062777"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-ext/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#1028751939%2FFunctions%2F-919062777"><span class="token function">encodeArgs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">args<span class="token operator">: </span><a href="../-verified-subgraph-result/index.html">VerifiedSubgraphResult</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-object/index.html">JsonObject</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="604938703%2FFunctions%2F-919062777" anchor-label="encodeArgsToString" id="604938703%2FFunctions%2F-919062777" data-filterable-set=":agents:agents-ext/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-ext/commonMain" data-filterable-set=":agents:agents-ext/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#604938703%2FFunctions%2F-919062777"><span>encode</span><wbr><span>Args</span><wbr><span>To</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="604938703%2FFunctions%2F-919062777"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-ext/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#604938703%2FFunctions%2F-919062777"><span class="token function">encodeArgsToString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">args<span class="token operator">: </span><a href="../-verified-subgraph-result/index.html">VerifiedSubgraphResult</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1571068303%2FFunctions%2F-919062777" anchor-label="encodeResultToString" id="1571068303%2FFunctions%2F-919062777" data-filterable-set=":agents:agents-ext/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-ext/commonMain" data-filterable-set=":agents:agents-ext/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1571068303%2FFunctions%2F-919062777"><span>encode</span><wbr><span>Result</span><wbr><span>To</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1571068303%2FFunctions%2F-919062777"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-ext/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#1571068303%2FFunctions%2F-919062777"><span class="token function">encodeResultToString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">result<span class="token operator">: </span><a href="../-verified-subgraph-result/index.html">VerifiedSubgraphResult</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-263745971%2FFunctions%2F-919062777" anchor-label="encodeResultToStringUnsafe" id="-263745971%2FFunctions%2F-919062777" data-filterable-set=":agents:agents-ext/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-ext/commonMain" data-filterable-set=":agents:agents-ext/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.ext.tool/-say-to-user/index.html#-263745971%2FFunctions%2F-919062777"><span>encode</span><wbr><span>Result</span><wbr><span>To</span><wbr><span>String</span><wbr><span><span>Unsafe</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-263745971%2FFunctions%2F-919062777"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-ext/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.agents.ext.tool/-say-to-user/index.html#-263745971%2FFunctions%2F-919062777"><span class="token function">encodeResultToStringUnsafe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">result<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-result/index.html">ToolResult</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-440504223%2FFunctions%2F-919062777" anchor-label="execute" id="-440504223%2FFunctions%2F-919062777" data-filterable-set=":agents:agents-ext/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-ext/commonMain" data-filterable-set=":agents:agents-ext/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-440504223%2FFunctions%2F-919062777"><span><span>execute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-440504223%2FFunctions%2F-919062777"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-ext/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="index.html#-440504223%2FFunctions%2F-919062777"><span class="token function">execute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">args<span class="token operator">: </span><a href="../-verified-subgraph-result/index.html">VerifiedSubgraphResult</a><span class="token punctuation">, </span></span><span class="parameter ">enabler<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-direct-tool-calls-enabler/index.html">DirectToolCallsEnabler</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-verified-subgraph-result/index.html">VerifiedSubgraphResult</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1414612066%2FFunctions%2F-919062777" anchor-label="executeUnsafe" id="-1414612066%2FFunctions%2F-919062777" data-filterable-set=":agents:agents-ext/commonMain"></a>
+          <div class="table-row" data-filterable-current=":agents:agents-ext/commonMain" data-filterable-set=":agents:agents-ext/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.ext.tool/-say-to-user/index.html#-1414612066%2FFunctions%2F-919062777"><span>execute</span><wbr><span><span>Unsafe</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1414612066%2FFunctions%2F-919062777"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-ext/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../ai.koog.agents.ext.tool/-say-to-user/index.html#-1414612066%2FFunctions%2F-919062777"><span class="token function">executeUnsafe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">args<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">enabler<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-direct-tool-calls-enabler/index.html">DirectToolCallsEnabler</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-verified-subgraph-result/index.html">VerifiedSubgraphResult</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Copyright © 2000-2025 JetBrains s.r.o.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

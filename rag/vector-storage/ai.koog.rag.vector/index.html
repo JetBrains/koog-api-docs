@@ -1,0 +1,348 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ai.koog.rag.vector</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../index.html">
+                    koog-agents
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.3.0
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":rag:vector-storage/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":rag:vector-storage/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":rag:vector-storage/commonMain" data-filter=":rag:vector-storage/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":rag:vector-storage/jvmMain" data-filter=":rag:vector-storage/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageids="vector-storage::ai.koog.rag.vector////PointingToDeclaration//-1162451514">
+  <div class="breadcrumbs"><a href="../index.html">vector-storage</a><span class="delimiter">/</span><span class="current">ai.koog.rag.vector</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-598897644%2FClasslikes%2F2080897054" anchor-label="DocumentEmbedder" id="-598897644%2FClasslikes%2F2080897054" data-filterable-set=":rag:vector-storage/commonMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/commonMain" data-filterable-set=":rag:vector-storage/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-document-embedder/index.html"><span>Document</span><wbr><span><span>Embedder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-598897644%2FClasslikes%2F2080897054"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-document-embedder/index.html">DocumentEmbedder</a><span class="token operator">&lt;</span><a href="-document-embedder/index.html">Document</a><span class="token operator">&gt;</span> : <a href="../../../embeddings/embeddings-base/ai.koog.embeddings.base/-embedder/index.html">Embedder</a></div><div class="brief "><p class="paragraph">Represents an interface for embedding documents into vector representations. Implementations of this interface should define how specific document types are processed and converted into embeddings for downstream applications.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1648591991%2FClasslikes%2F2080897054" anchor-label="EmbeddingBasedDocumentStorage" id="1648591991%2FClasslikes%2F2080897054" data-filterable-set=":rag:vector-storage/commonMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/commonMain" data-filterable-set=":rag:vector-storage/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-embedding-based-document-storage/index.html"><span>Embedding</span><wbr><span>Based</span><wbr><span>Document</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1648591991%2FClasslikes%2F2080897054"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-embedding-based-document-storage/index.html">EmbeddingBasedDocumentStorage</a><span class="token operator">&lt;</span><a href="-embedding-based-document-storage/index.html">Document</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">embedder<span class="token operator">: </span><a href="-document-embedder/index.html">DocumentEmbedder</a><span class="token operator">&lt;</span><a href="-embedding-based-document-storage/index.html">Document</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="-vector-storage/index.html">VectorStorage</a><span class="token operator">&lt;</span><a href="-embedding-based-document-storage/index.html">Document</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="../../../rag/rag-base/ai.koog.rag.base/-ranked-document-storage/index.html">RankedDocumentStorage</a><span class="token operator">&lt;</span><a href="-embedding-based-document-storage/index.html">Document</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A document storage implementation that utilizes embeddings for document ranking and retrieval. This class combines a document embedder for generating vector representations and a storage mechanism capable of associating documents with their respective embeddings. It provides ranking capabilities by measuring similarity between query embeddings and stored document embeddings.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-821967636%2FClasslikes%2F2080897054" anchor-label="FileDocumentEmbeddingStorage" id="-821967636%2FClasslikes%2F2080897054" data-filterable-set=":rag:vector-storage/commonMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/commonMain" data-filterable-set=":rag:vector-storage/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-file-document-embedding-storage/index.html"><span>File</span><wbr><span>Document</span><wbr><span>Embedding</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-821967636%2FClasslikes%2F2080897054"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-file-document-embedding-storage/index.html">FileDocumentEmbeddingStorage</a><span class="token operator">&lt;</span><a href="-file-document-embedding-storage/index.html">Document</a><span class="token punctuation">, </span><a href="-file-document-embedding-storage/index.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">embedder<span class="token operator">: </span><a href="-document-embedder/index.html">DocumentEmbedder</a><span class="token operator">&lt;</span><a href="-file-document-embedding-storage/index.html">Document</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">documentProvider<span class="token operator">: </span><a href="../../../rag/rag-base/ai.koog.rag.base.files/-document-provider/index.html">DocumentProvider</a><span class="token operator">&lt;</span><a href="-file-document-embedding-storage/index.html">Path</a><span class="token punctuation">, </span><a href="-file-document-embedding-storage/index.html">Document</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">fs<span class="token operator">: </span><a href="../../../rag/rag-base/ai.koog.rag.base.files/-file-system-provider/-read-write/index.html">FileSystemProvider.ReadWrite</a><span class="token operator">&lt;</span><a href="-file-document-embedding-storage/index.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">root<span class="token operator">: </span><a href="-file-document-embedding-storage/index.html">Path</a></span></span><span class="token punctuation">)</span> : <a href="-embedding-based-document-storage/index.html">EmbeddingBasedDocumentStorage</a><span class="token operator">&lt;</span><a href="-file-document-embedding-storage/index.html">Document</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A file-based implementation of document embedding storage.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-539593345%2FClasslikes%2F2080897054" anchor-label="FileVectorStorage" id="-539593345%2FClasslikes%2F2080897054" data-filterable-set=":rag:vector-storage/commonMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/commonMain" data-filterable-set=":rag:vector-storage/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-file-vector-storage/index.html"><span>File</span><wbr><span>Vector</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-539593345%2FClasslikes%2F2080897054"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-file-vector-storage/index.html">FileVectorStorage</a><span class="token operator">&lt;</span><a href="-file-vector-storage/index.html">Document</a><span class="token punctuation">, </span><a href="-file-vector-storage/index.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">documentReader<span class="token operator">: </span><a href="../../../rag/rag-base/ai.koog.rag.base.files/-document-provider/index.html">DocumentProvider</a><span class="token operator">&lt;</span><a href="-file-vector-storage/index.html">Path</a><span class="token punctuation">, </span><a href="-file-vector-storage/index.html">Document</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">fs<span class="token operator">: </span><a href="../../../rag/rag-base/ai.koog.rag.base.files/-file-system-provider/-read-write/index.html">FileSystemProvider.ReadWrite</a><span class="token operator">&lt;</span><a href="-file-vector-storage/index.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">root<span class="token operator">: </span><a href="-file-vector-storage/index.html">Path</a></span></span><span class="token punctuation">)</span> : <a href="-vector-storage/index.html">VectorStorage</a><span class="token operator">&lt;</span><a href="-file-vector-storage/index.html">Document</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">FileVectorStorage is a class that manages the storage and retrieval of documents and their corresponding vector embeddings within a file system. It uses a DocumentProvider to handle document content and a FileSystemProvider to interact with the file system for storing and reading data.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="852669986%2FClasslikes%2F2080897054" anchor-label="InMemoryDocumentEmbeddingStorage" id="852669986%2FClasslikes%2F2080897054" data-filterable-set=":rag:vector-storage/commonMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/commonMain" data-filterable-set=":rag:vector-storage/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-in-memory-document-embedding-storage/index.html"><span>In</span><wbr><span>Memory</span><wbr><span>Document</span><wbr><span>Embedding</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="852669986%2FClasslikes%2F2080897054"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-in-memory-document-embedding-storage/index.html">InMemoryDocumentEmbeddingStorage</a><span class="token operator">&lt;</span><a href="-in-memory-document-embedding-storage/index.html">Document</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">embedder<span class="token operator">: </span><a href="-document-embedder/index.html">DocumentEmbedder</a><span class="token operator">&lt;</span><a href="-in-memory-document-embedding-storage/index.html">Document</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-embedding-based-document-storage/index.html">EmbeddingBasedDocumentStorage</a><span class="token operator">&lt;</span><a href="-in-memory-document-embedding-storage/index.html">Document</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">An in-memory implementation of document embedding storage.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1206373493%2FClasslikes%2F2080897054" anchor-label="InMemoryTextDocumentEmbeddingStorage" id="1206373493%2FClasslikes%2F2080897054" data-filterable-set=":rag:vector-storage/commonMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/commonMain" data-filterable-set=":rag:vector-storage/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-in-memory-text-document-embedding-storage/index.html"><span>In</span><wbr><span>Memory</span><wbr><span>Text</span><wbr><span>Document</span><wbr><span>Embedding</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1206373493%2FClasslikes%2F2080897054"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-in-memory-text-document-embedding-storage/index.html">InMemoryTextDocumentEmbeddingStorage</a><span class="token operator">&lt;</span><a href="-in-memory-text-document-embedding-storage/index.html">Document</a><span class="token punctuation">, </span><a href="-in-memory-text-document-embedding-storage/index.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">embedder<span class="token operator">: </span><a href="../../../embeddings/embeddings-base/ai.koog.embeddings.base/-embedder/index.html">Embedder</a><span class="token punctuation">, </span></span><span class="parameter ">documentReader<span class="token operator">: </span><a href="../../../rag/rag-base/ai.koog.rag.base.files/-document-provider/index.html">DocumentProvider</a><span class="token operator">&lt;</span><a href="-in-memory-text-document-embedding-storage/index.html">Path</a><span class="token punctuation">, </span><a href="-in-memory-text-document-embedding-storage/index.html">Document</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-in-memory-document-embedding-storage/index.html">InMemoryDocumentEmbeddingStorage</a><span class="token operator">&lt;</span><a href="-in-memory-text-document-embedding-storage/index.html">Document</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Implementation of an in-memory storage solution for text document embeddings.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1617963529%2FClasslikes%2F2080897054" anchor-label="InMemoryVectorStorage" id="1617963529%2FClasslikes%2F2080897054" data-filterable-set=":rag:vector-storage/commonMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/commonMain" data-filterable-set=":rag:vector-storage/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-in-memory-vector-storage/index.html"><span>In</span><wbr><span>Memory</span><wbr><span>Vector</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1617963529%2FClasslikes%2F2080897054"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-in-memory-vector-storage/index.html">InMemoryVectorStorage</a><span class="token operator">&lt;</span><a href="-in-memory-vector-storage/index.html">Document</a><span class="token operator">&gt;</span> : <a href="-vector-storage/index.html">VectorStorage</a><span class="token operator">&lt;</span><a href="-in-memory-vector-storage/index.html">Document</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A concrete implementation of <a href="-vector-storage/index.html">VectorStorage</a> that stores documents and their associated vector payloads in memory.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1207096737%2FClasslikes%2F-1198708456" anchor-label="JVMFileDocumentEmbeddingStorage" id="-1207096737%2FClasslikes%2F-1198708456" data-filterable-set=":rag:vector-storage/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/jvmMain" data-filterable-set=":rag:vector-storage/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-j-v-m-file-document-embedding-storage/index.html"><span>JVMFile</span><wbr><span>Document</span><wbr><span>Embedding</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1207096737%2FClasslikes%2F-1198708456"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":rag:vector-storage/jvmMain" data-filterable-set=":rag:vector-storage/jvmMain" data-active="" data-toggle=":rag:vector-storage/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-j-v-m-file-document-embedding-storage/index.html">JVMFileDocumentEmbeddingStorage</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">embedder<span class="token operator">: </span><a href="-document-embedder/index.html">DocumentEmbedder</a><span class="token operator">&lt;</span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">root<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html">Path</a></span></span><span class="token punctuation">)</span> : <a href="-file-document-embedding-storage/index.html">FileDocumentEmbeddingStorage</a><span class="token operator">&lt;</span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html">Path</a><span class="token punctuation">, </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html">Path</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A file-system-based storage implementation for managing and embedding documents represented by file paths.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="781449708%2FClasslikes%2F-1198708456" anchor-label="JVMFileVectorStorage" id="781449708%2FClasslikes%2F-1198708456" data-filterable-set=":rag:vector-storage/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/jvmMain" data-filterable-set=":rag:vector-storage/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-j-v-m-file-vector-storage/index.html"><span>JVMFile</span><wbr><span>Vector</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="781449708%2FClasslikes%2F-1198708456"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":rag:vector-storage/jvmMain" data-filterable-set=":rag:vector-storage/jvmMain" data-active="" data-toggle=":rag:vector-storage/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-j-v-m-file-vector-storage/index.html">JVMFileVectorStorage</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">root<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html">Path</a></span></span><span class="token punctuation">)</span> : <a href="-file-vector-storage/index.html">FileVectorStorage</a><span class="token operator">&lt;</span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html">Path</a><span class="token punctuation">, </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html">Path</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A JVM-specific implementation of <a href="-file-vector-storage/index.html">FileVectorStorage</a> for managing the storage of documents and associated vector embeddings on a file system.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="923519706%2FClasslikes%2F-1198708456" anchor-label="JVMTextDocumentEmbedder" id="923519706%2FClasslikes%2F-1198708456" data-filterable-set=":rag:vector-storage/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/jvmMain" data-filterable-set=":rag:vector-storage/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-j-v-m-text-document-embedder/index.html"><span>JVMText</span><wbr><span>Document</span><wbr><span><span>Embedder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="923519706%2FClasslikes%2F-1198708456"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":rag:vector-storage/jvmMain" data-filterable-set=":rag:vector-storage/jvmMain" data-active="" data-toggle=":rag:vector-storage/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-j-v-m-text-document-embedder/index.html">JVMTextDocumentEmbedder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">embedder<span class="token operator">: </span><a href="../../../embeddings/embeddings-base/ai.koog.embeddings.base/-embedder/index.html">Embedder</a></span></span><span class="token punctuation">)</span> : <a href="-text-document-embedder/index.html">TextDocumentEmbedder</a><span class="token operator">&lt;</span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html">Path</a><span class="token punctuation">, </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html">Path</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A specialization of <a href="-text-document-embedder/index.html">TextDocumentEmbedder</a> designed for embedding and processing text documents in JVM-based file systems. It leverages a <a href="../../../rag/rag-base/ai.koog.rag.base.files/-j-v-m-document-provider/index.html">JVMDocumentProvider</a> to read content from <code class="lang-kotlin">Path</code> objects and uses an <code class="lang-kotlin">Embedder</code> for generating and comparing vector embeddings of the text content.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="833227442%2FClasslikes%2F-1198708456" anchor-label="JVMTextFileDocumentEmbeddingStorage" id="833227442%2FClasslikes%2F-1198708456" data-filterable-set=":rag:vector-storage/jvmMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/jvmMain" data-filterable-set=":rag:vector-storage/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-j-v-m-text-file-document-embedding-storage/index.html"><span>JVMText</span><wbr><span>File</span><wbr><span>Document</span><wbr><span>Embedding</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="833227442%2FClasslikes%2F-1198708456"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":rag:vector-storage/jvmMain" data-filterable-set=":rag:vector-storage/jvmMain" data-active="" data-toggle=":rag:vector-storage/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-j-v-m-text-file-document-embedding-storage/index.html">JVMTextFileDocumentEmbeddingStorage</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">embedder<span class="token operator">: </span><a href="../../../embeddings/embeddings-base/ai.koog.embeddings.base/-embedder/index.html">Embedder</a><span class="token punctuation">, </span></span><span class="parameter ">root<span class="token operator">: </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html">Path</a></span></span><span class="token punctuation">)</span> : <a href="-text-file-document-embedding-storage/index.html">TextFileDocumentEmbeddingStorage</a><span class="token operator">&lt;</span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html">Path</a><span class="token punctuation">, </span><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/nio/file/Path.html">Path</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A JVM-specific implementation of <code class="lang-kotlin">TextFileDocumentEmbeddingStorage</code> tailored for text document embedding and storage within a file system. This class utilizes a <code class="lang-kotlin">JVMDocumentProvider</code> to handle document reading and manages embeddings using a provided <code class="lang-kotlin">Embedder</code>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="515261031%2FClasslikes%2F2080897054" anchor-label="TextDocumentEmbedder" id="515261031%2FClasslikes%2F2080897054" data-filterable-set=":rag:vector-storage/commonMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/commonMain" data-filterable-set=":rag:vector-storage/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-text-document-embedder/index.html"><span>Text</span><wbr><span>Document</span><wbr><span><span>Embedder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="515261031%2FClasslikes%2F2080897054"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-text-document-embedder/index.html">TextDocumentEmbedder</a><span class="token operator">&lt;</span><a href="-text-document-embedder/index.html">Document</a><span class="token punctuation">, </span><a href="-text-document-embedder/index.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">documentReader<span class="token operator">: </span><a href="../../../rag/rag-base/ai.koog.rag.base.files/-document-provider/index.html">DocumentProvider</a><span class="token operator">&lt;</span><a href="-text-document-embedder/index.html">Path</a><span class="token punctuation">, </span><a href="-text-document-embedder/index.html">Document</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">embedder<span class="token operator">: </span><a href="../../../embeddings/embeddings-base/ai.koog.embeddings.base/-embedder/index.html">Embedder</a></span></span><span class="token punctuation">)</span> : <a href="-document-embedder/index.html">DocumentEmbedder</a><span class="token operator">&lt;</span><a href="-text-document-embedder/index.html">Document</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A class that provides functionality for embedding text documents and comparing their embeddings.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="813995711%2FClasslikes%2F2080897054" anchor-label="TextFileDocumentEmbeddingStorage" id="813995711%2FClasslikes%2F2080897054" data-filterable-set=":rag:vector-storage/commonMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/commonMain" data-filterable-set=":rag:vector-storage/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-text-file-document-embedding-storage/index.html"><span>Text</span><wbr><span>File</span><wbr><span>Document</span><wbr><span>Embedding</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="813995711%2FClasslikes%2F2080897054"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-text-file-document-embedding-storage/index.html">TextFileDocumentEmbeddingStorage</a><span class="token operator">&lt;</span><a href="-text-file-document-embedding-storage/index.html">Document</a><span class="token punctuation">, </span><a href="-text-file-document-embedding-storage/index.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">embedder<span class="token operator">: </span><a href="../../../embeddings/embeddings-base/ai.koog.embeddings.base/-embedder/index.html">Embedder</a><span class="token punctuation">, </span></span><span class="parameter ">documentProvider<span class="token operator">: </span><a href="../../../rag/rag-base/ai.koog.rag.base.files/-document-provider/index.html">DocumentProvider</a><span class="token operator">&lt;</span><a href="-text-file-document-embedding-storage/index.html">Path</a><span class="token punctuation">, </span><a href="-text-file-document-embedding-storage/index.html">Document</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">fs<span class="token operator">: </span><a href="../../../rag/rag-base/ai.koog.rag.base.files/-file-system-provider/-read-write/index.html">FileSystemProvider.ReadWrite</a><span class="token operator">&lt;</span><a href="-text-file-document-embedding-storage/index.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">root<span class="token operator">: </span><a href="-text-file-document-embedding-storage/index.html">Path</a></span></span><span class="token punctuation">)</span> : <a href="-file-document-embedding-storage/index.html">FileDocumentEmbeddingStorage</a><span class="token operator">&lt;</span><a href="-text-file-document-embedding-storage/index.html">Document</a><span class="token punctuation">, </span><a href="-text-file-document-embedding-storage/index.html">Path</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A file-based implementation of document storage utilizing embeddings for ranking and retrieval.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="126375395%2FClasslikes%2F2080897054" anchor-label="VectorStorage" id="126375395%2FClasslikes%2F2080897054" data-filterable-set=":rag:vector-storage/commonMain"></a>
+          <div class="table-row" data-filterable-current=":rag:vector-storage/commonMain" data-filterable-set=":rag:vector-storage/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vector-storage/index.html"><span>Vector</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="126375395%2FClasslikes%2F2080897054"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:vector-storage/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-vector-storage/index.html">VectorStorage</a><span class="token operator">&lt;</span><a href="-vector-storage/index.html">Document</a><span class="token operator">&gt;</span> : <a href="../../../rag/rag-base/ai.koog.rag.base/-document-storage-with-payload/index.html">DocumentStorageWithPayload</a><span class="token operator">&lt;</span><a href="-vector-storage/index.html">Document</a><span class="token punctuation">, </span><a href="../../../embeddings/embeddings-base/ai.koog.embeddings.base/-vector/index.html">Vector</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Interface for managing storage and retrieval of documents along with their vector embeddings. This interface extends the <a href="../../../rag/rag-base/ai.koog.rag.base/-document-storage-with-payload/index.html">DocumentStorageWithPayload</a> interface and specializes it by using vectors (embeddings) as the associated payload for documents.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Copyright © 2000-2025 JetBrains s.r.o.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>prompt-executor-openrouter-client</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../../index.html">
+                    koog-agents
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.3.0
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" id="content" pageids="prompt-executor-openrouter-client::////PointingToDeclaration//1191109704">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>prompt-executor-openrouter-client</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"><p class="paragraph">A client implementation for executing prompts using OpenRouter's API to access various LLM providers with multimodal support.</p><h3 class="">Overview</h3><p class="paragraph">This module provides a client implementation for the OpenRouter API, allowing you to execute prompts using multiple LLM providers through a single interface. OpenRouter gives access to models from different providers including OpenAI, Anthropic, Google, and others. The client supports multimodal content including images, audio, and documents.</p><h3 class="">Supported Models</h3><h4 class="">Free/Testing Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Input Support</th><th>Output Support</th><th>Notes</th></tr></thead><tbody><tr><td>Phi4 Reasoning</td><td>Fast</td><td>Text, Tools</td><td>Text, Tools</td><td>Free for testing</td></tr></tbody></table><h4 class="">OpenAI Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Input Support</th><th>Output Support</th><th>Pricing</th></tr></thead><tbody><tr><td>GPT-4</td><td>Medium</td><td>Text, Tools</td><td>Text, Tools</td><td>Variable</td></tr><tr><td>GPT-4o</td><td>Fast</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>Variable</td></tr><tr><td>GPT-4 Turbo</td><td>Fast</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>Variable</td></tr><tr><td>GPT-3.5 Turbo</td><td>Very Fast</td><td>Text, Tools</td><td>Text, Tools</td><td>Variable</td></tr></tbody></table><h4 class="">Anthropic Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Input Support</th><th>Output Support</th><th>Pricing</th></tr></thead><tbody><tr><td>Claude 3 Opus</td><td>Medium</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>Variable</td></tr><tr><td>Claude 3 Sonnet</td><td>Fast</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>Variable</td></tr><tr><td>Claude 3 Haiku</td><td>Very Fast</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>Variable</td></tr><tr><td>Claude 3 Vision Opus</td><td>Medium</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>Variable</td></tr><tr><td>Claude 3 Vision Sonnet</td><td>Fast</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>Variable</td></tr><tr><td>Claude 3 Vision Haiku</td><td>Very Fast</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>Variable</td></tr></tbody></table><h4 class="">Google Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Input Support</th><th>Output Support</th><th>Pricing</th></tr></thead><tbody><tr><td>Gemini 1.5 Pro</td><td>Medium</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>Variable</td></tr><tr><td>Gemini 1.5 Flash</td><td>Fast</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>Variable</td></tr></tbody></table><h4 class="">Meta Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Input Support</th><th>Output Support</th><th>Pricing</th></tr></thead><tbody><tr><td>Llama 3 70B</td><td>Medium</td><td>Text, Tools</td><td>Text, Tools</td><td>Variable</td></tr><tr><td>Llama 3 70B Instruct</td><td>Medium</td><td>Text, Tools</td><td>Text, Tools</td><td>Variable</td></tr></tbody></table><h4 class="">Mistral Models</h4><table><thead><tr><th>Model</th><th>Speed</th><th>Input Support</th><th>Output Support</th><th>Pricing</th></tr></thead><tbody><tr><td>Mistral 7B</td><td>Fast</td><td>Text, Tools</td><td>Text, Tools</td><td>Variable</td></tr><tr><td>Mixtral 8x7B</td><td>Medium</td><td>Text, Tools</td><td>Text, Tools</td><td>Variable</td></tr></tbody></table><h3 class="">Media Content Support</h3><table><thead><tr><th>Content Type</th><th>Supported Formats</th><th>Max Size</th><th>Notes</th></tr></thead><tbody><tr><td>Images</td><td>PNG, JPEG, WebP, GIF</td><td>No limit enforced</td><td>URL or base64 encoded</td></tr><tr><td>Audio</td><td>❌ Not supported</td><td>-</td><td>No models have audio capability</td></tr><tr><td>Documents</td><td>PDF only</td><td>No limit enforced</td><td>Base64 encoded only</td></tr><tr><td>Video</td><td>❌ Not supported</td><td>-</td><td>-</td></tr></tbody></table><p class="paragraph"><strong>Important Notes:</strong></p><ul><li><p class="paragraph"><strong>Audio</strong>: While the client has audio processing code, no models in OpenRouterModels.kt are configured with   <code class="lang-kotlin">LLMCapability.Audio</code></p></li><li><p class="paragraph"><strong>Documents</strong>: Only PDF files are supported despite client having document capability checks</p></li><li><p class="paragraph"><strong>Size limits</strong>: No size validation is enforced in the current implementation</p></li></ul><h3 class="">Using in your project</h3><p class="paragraph">Add the dependency to your project:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.prompt:prompt-executor-openrouter-client:$version")<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Configure the client with your API key:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val openRouterClient = OpenRouterLLMClient(<br>    apiKey = "your-openrouter-api-key",<br>)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Using in tests</h3><p class="paragraph">For testing, you can use a mock implementation:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mockOpenRouterClient = MockOpenRouterClient(<br>    responses = listOf("Mocked response 1", "Mocked response 2")<br>)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Example of usage</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">suspend fun main() {<br>    val client = OpenRouterLLMClient(<br>        apiKey = System.getenv("OPENROUTER_API_KEY"),<br>    )<br><br>    // Text-only example<br>    val response = client.execute(<br>        prompt = prompt {<br>            system("You are helpful assistant")<br>            user("What time is it now?")<br>        },<br>        model = OpenRouterModels.Claude3Sonnet<br>    )<br><br>    println(response)<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Multimodal Examples</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Image analysis with GPT-4o<br>val imageResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("What do you see in this image?")<br>            image("/path/to/image.jpg")<br>        }<br>    },<br>    model = OpenRouterModels.GPT4o<br>)<br><br>// Document processing with Claude<br>val documentResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Summarize this document")<br>            document("/path/to/document.pdf")<br>        }<br>    },<br>    model = OpenRouterModels.Claude3Sonnet<br>)<br><br>// Note: Audio processing is not supported as no models have LLMCapability.Audio<br>// The following example would fail at runtime:<br>/*<br>val audioData = File("/path/to/audio.mp3").readBytes()<br>val audioResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Transcribe this audio")<br>            audio(audioData, "mp3")<br>        }<br>    },<br>    model = OpenRouterModels.GPT4o // This model lacks Audio capability<br>)<br>*/<br><br>// Mixed content with image and document<br>val mixedResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Analyze this image and document:")<br>            image("/path/to/chart.png")<br>            document("/path/to/report.pdf") // Only PDF supported<br>            text("What insights can you provide?")<br>        }<br>    },<br>    model = OpenRouterModels.Claude3Sonnet<br>)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="154138552%2FPackages%2F1191109704" anchor-label="ai.koog.prompt.executor.clients.openrouter" id="154138552%2FPackages%2F1191109704" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain"></a>
+    <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openrouter-client/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.executor.clients.openrouter/index.html">ai.koog.prompt.executor.clients.openrouter</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="154138552%2FPackages%2F1191109704"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Copyright © 2000-2025 JetBrains s.r.o.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

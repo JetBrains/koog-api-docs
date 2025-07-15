@@ -1,0 +1,292 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>OllamaModelCard</title>
+<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../../../../index.html">
+                    koog-agents
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.3.0
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-executor-ollama-client::ai.koog.prompt.executor.ollama.client/OllamaModelCard///PointingToDeclaration//-848347435">
+  <div class="breadcrumbs"><a href="../../index.html">prompt-executor-ollama-client</a><span class="delimiter">/</span><a href="../index.html">ai.koog.prompt.executor.ollama.client</a><span class="delimiter">/</span><span class="current">OllamaModelCard</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Ollama</span><wbr><span>Model</span><wbr><span><span>Card</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">OllamaModelCard</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/JetBrains/koog/tree/main/prompt/prompt-executor/prompt-executor-clients/prompt-executor-ollama-client/src/commonMain/kotlin/ai/koog/prompt/executor/ollama/client/OllamaModelCard.kt#L24">source</a>)</span></span></div><p class="paragraph">Represents metadata and configuration details about an Ollama model card. This class contains descriptive properties about the model, such as its name, family of models it belongs to, capabilities it supports, and specific technical attributes like parameter count and size.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1285326962%2FProperties%2F-848347435" anchor-label="capabilities" id="1285326962%2FProperties%2F-848347435" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="capabilities.html"><span><span>capabilities</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1285326962%2FProperties%2F-848347435"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="capabilities.html">capabilities</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-m-capability/index.html">LLMCapability</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A list of capabilities supported by the model, represented as instances of the <code class="lang-kotlin">LLMCapability</code> class. This provides details on functionalities such as tools , embeddings, and specific processing abilities.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="910794141%2FProperties%2F-848347435" anchor-label="contextLength" id="910794141%2FProperties%2F-848347435" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="context-length.html"><span>context</span><wbr><span><span>Length</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="910794141%2FProperties%2F-848347435"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="context-length.html">contextLength</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The maximum context length supported by the model, defining how much text input the model can process at once.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-121324107%2FProperties%2F-848347435" anchor-label="embeddingLength" id="-121324107%2FProperties%2F-848347435" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="embedding-length.html"><span>embedding</span><wbr><span><span>Length</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-121324107%2FProperties%2F-848347435"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="embedding-length.html">embeddingLength</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The size of the embedding vector produced by the model, if applicable.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1178161190%2FProperties%2F-848347435" anchor-label="families" id="1178161190%2FProperties%2F-848347435" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="families.html"><span><span>families</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1178161190%2FProperties%2F-848347435"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="families.html">families</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">A list of family classifications the model belongs to, providing additional grouping information.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1708197692%2FProperties%2F-848347435" anchor-label="family" id="-1708197692%2FProperties%2F-848347435" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="family.html"><span><span>family</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1708197692%2FProperties%2F-848347435"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="family.html">family</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The family classification of the model, typically indicating related models or versions.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-96771523%2FProperties%2F-848347435" anchor-label="name" id="-96771523%2FProperties%2F-848347435" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-96771523%2FProperties%2F-848347435"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The name of the model.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-265619987%2FProperties%2F-848347435" anchor-label="nameWithoutTag" id="-265619987%2FProperties%2F-848347435" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../name-without-tag.html"><span>name</span><wbr><span>Without</span><wbr><span><span>Tag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-265619987%2FProperties%2F-848347435"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html">OllamaModelCard</a><span class="token punctuation">.</span><a href="../name-without-tag.html">nameWithoutTag</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Returns the model name without any associated tags. This property extracts and provides a clean version of the <code class="lang-kotlin">name</code> property from the <code class="lang-kotlin">OllamaModelCard</code> by removing any tags or additional decorations.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="45957250%2FProperties%2F-848347435" anchor-label="parameterCount" id="45957250%2FProperties%2F-848347435" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="parameter-count.html"><span>parameter</span><wbr><span><span>Count</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="45957250%2FProperties%2F-848347435"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="parameter-count.html">parameterCount</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The number of parameters in the model, indicating its complexity or capacity.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="542571023%2FProperties%2F-848347435" anchor-label="quantizationLevel" id="542571023%2FProperties%2F-848347435" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="quantization-level.html"><span>quantization</span><wbr><span><span>Level</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="542571023%2FProperties%2F-848347435"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="quantization-level.html">quantizationLevel</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The quantization level of the model, describing any compression or optimization techniques applied to the model weights.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="946924935%2FProperties%2F-848347435" anchor-label="size" id="946924935%2FProperties%2F-848347435" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="size.html"><span><span>size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="946924935%2FProperties%2F-848347435"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="size.html">size</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">The size of the model, often represented in bytes or other units relevant to deployment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="775674386%2FFunctions%2F-848347435" anchor-label="toLLModel" id="775674386%2FFunctions%2F-848347435" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../to-l-l-model.html"><span>to</span><wbr><span><span>LLModel</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="775674386%2FFunctions%2F-848347435"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-ollama-client/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">OllamaModelCard</a><span class="token punctuation">.</span><a href="../to-l-l-model.html"><span class="token function">toLLModel</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Converts an instance of <code class="lang-kotlin">OllamaModelCard</code> to an <code class="lang-kotlin">LLModel</code> representation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Copyright © 2000-2025 JetBrains s.r.o.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

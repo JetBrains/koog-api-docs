@@ -1,0 +1,630 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>MarkdownContentBuilder</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+<a class="library-name--link" href="../../../../index.html">
+                    koog-agents
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.3.0
+        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":prompt:prompt-markdown/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-markdown/commonMain" data-filter=":prompt:prompt-markdown/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    koog-agents
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-markdown::ai.koog.prompt.markdown/MarkdownContentBuilder///PointingToDeclaration//168680109">
+  <div class="breadcrumbs"><a href="../../index.html">prompt-markdown</a><span class="delimiter">/</span><a href="../index.html">ai.koog.prompt.markdown</a><span class="delimiter">/</span><span class="current">MarkdownContentBuilder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Markdown</span><wbr><span>Content</span><wbr><span><span>Builder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">MarkdownContentBuilder</a> : <a href="../../../../prompt/prompt-model/ai.koog.prompt.text/-text-content-builder/index.html">TextContentBuilder</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/JetBrains/koog/tree/main/prompt/prompt-markdown/src/commonMain/kotlin/ai/koog/prompt/markdown/Markdown.kt#L28">source</a>)</span></span></div><p class="paragraph">A dedicated builder for creating markdown content. Wraps <a href="../../../../prompt/prompt-model/ai.koog.prompt.text/-text-content-builder/index.html">TextContentBuilder</a> and provides markdown-specific functionality for generating well-formatted Markdown documents programmatically.</p><p class="paragraph">Example usage:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val document = markdown {<br>    h1("Hello, Markdown!")<br>    +"This is a paragraph of text."<br><br>    h2("Features")<br>    bulleted {<br>        item("Easy to use")<br>        item("Type-safe")<br>        item("Extensible")<br>    }<br><br>    link("Learn more", "https://example.com")<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-433290608%2FConstructors%2F168680109" anchor-label="MarkdownContentBuilder" id="-433290608%2FConstructors%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-markdown-content-builder.html"><span>Markdown</span><wbr><span>Content</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-433290608%2FConstructors%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="743346449%2FClasslikes%2F168680109" anchor-label="LineContext" id="743346449%2FClasslikes%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-line-context/index.html"><span>Line</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="743346449%2FClasslikes%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-line-context/index.html">LineContext</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.text/-text-content-builder/index.html">TextContentBuilder</a><span class="token operator"> = </span>TextContentBuilder()</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Context for building a single line of markdown with mixed formatting elements. Used within the <a href="line.html">line</a> method to create complex inline formatting.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1114543685%2FClasslikes%2F168680109" anchor-label="ListContext" id="-1114543685%2FClasslikes%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-list-context/index.html"><span>List</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1114543685%2FClasslikes%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">inner </span><span class="token keyword">class </span><a href="-list-context/index.html">ListContext</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bullet<span class="token operator">: </span><span class="token punctuation">(</span>counter<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Context for building structured lists (bulleted, numbered).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="873358149%2FProperties%2F168680109" anchor-label="caret" id="873358149%2FProperties%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#873358149%2FProperties%2F168680109"><span><span>caret</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="873358149%2FProperties%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#873358149%2FProperties%2F168680109">caret</a><span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.text/-text-content-builder-base/-caret/index.html">TextContentBuilderBase.Caret</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1355493838%2FFunctions%2F168680109" anchor-label="blockquote" id="-1355493838%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="blockquote.html"><span><span>blockquote</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1355493838%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="blockquote.html"><span class="token function">blockquote</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a blockquote to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="892707624%2FFunctions%2F168680109" anchor-label="bold" id="892707624%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="bold.html"><span><span>bold</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="892707624%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="bold.html"><span class="token function">bold</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a bold text (<strong>text</strong>) to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-109007966%2FFunctions%2F168680109" anchor-label="br" id="-109007966%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-109007966%2FFunctions%2F168680109"><span><span>br</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-109007966%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-109007966%2FFunctions%2F168680109"><span class="token function">br</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2088147531%2FFunctions%2F168680109" anchor-label="build" id="2088147531%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2088147531%2FFunctions%2F168680109"><span><span>build</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2088147531%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="index.html#2088147531%2FFunctions%2F168680109"><span class="token function">build</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="922209804%2FFunctions%2F168680109" anchor-label="bulleted" id="922209804%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="bulleted.html"><span><span>bulleted</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="922209804%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="bulleted.html"><span class="token function">bulleted</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="-list-context/index.html">MarkdownContentBuilder.ListContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a bulleted list with a block structure.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1286359184%2FFunctions%2F168680109" anchor-label="code" id="1286359184%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="code.html"><span><span>code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1286359184%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="code.html"><span class="token function">code</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">code<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a code span (<code class="lang-kotlin">code</code>) to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="716834384%2FFunctions%2F168680109" anchor-label="codeblock" id="716834384%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="codeblock.html"><span><span>codeblock</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="716834384%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="codeblock.html"><span class="token function">codeblock</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">code<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">language<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a code block with optional language specification to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-311004820%2FFunctions%2F168680109" anchor-label="h1" id="-311004820%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="h1.html"><span><span>h1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-311004820%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="h1.html"><span class="token function">h1</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a level 1 header (# Header) to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1233688403%2FFunctions%2F168680109" anchor-label="h2" id="-1233688403%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="h2.html"><span><span>h2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1233688403%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="h2.html"><span class="token function">h2</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a level 2 header (## Header) to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2138595310%2FFunctions%2F168680109" anchor-label="h3" id="2138595310%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="h3.html"><span><span>h3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2138595310%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="h3.html"><span class="token function">h3</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a level 3 header (### Header) to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1215911727%2FFunctions%2F168680109" anchor-label="h4" id="1215911727%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="h4.html"><span><span>h4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1215911727%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="h4.html"><span class="token function">h4</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a level 4 header (#### Header) to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="293228144%2FFunctions%2F168680109" anchor-label="h5" id="293228144%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="h5.html"><span><span>h5</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="293228144%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="h5.html"><span class="token function">h5</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a level 5 header (##### Header) to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-629455439%2FFunctions%2F168680109" anchor-label="h6" id="-629455439%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="h6.html"><span><span>h6</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-629455439%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="h6.html"><span class="token function">h6</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a level 6 header (###### Header) to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-965765801%2FFunctions%2F168680109" anchor-label="header" id="-965765801%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="header.html"><span><span>header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-965765801%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="header.html"><span class="token function">header</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">level<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a markdown header to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1423000575%2FFunctions%2F168680109" anchor-label="horizontalRule" id="-1423000575%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="horizontal-rule.html"><span>horizontal</span><wbr><span><span>Rule</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1423000575%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="horizontal-rule.html"><span class="token function">horizontalRule</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a horizontal rule (---) to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-457750677%2FFunctions%2F168680109" anchor-label="image" id="-457750677%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="image.html"><span><span>image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-457750677%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="image.html"><span class="token function">image</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">alt<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds an image () to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1148224621%2FFunctions%2F168680109" anchor-label="italic" id="-1148224621%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="italic.html"><span><span>italic</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1148224621%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="italic.html"><span class="token function">italic</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds an italic text (<i>text</i>) to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-845216637%2FFunctions%2F168680109" anchor-label="line" id="-845216637%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="line.html"><span><span>line</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-845216637%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="line.html"><span class="token function">line</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="-line-context/index.html">MarkdownContentBuilder.LineContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Creates a single line of markdown content with mixed formatting. Useful for creating complex inline formatting combinations.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-382635262%2FFunctions%2F168680109" anchor-label="link" id="-382635262%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="link.html"><span><span>link</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-382635262%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="link.html"><span class="token function">link</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a link (<a href="link.html">text</a>) to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-981841%2FFunctions%2F168680109" anchor-label="markdown" id="-981841%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../markdown.html"><span><span>markdown</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-981841%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.text/-text-content-builder-base/index.html">TextContentBuilderBase</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../markdown.html"><span class="token function">markdown</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">init<span class="token operator">: </span><a href="index.html">MarkdownContentBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Extension function to add markdown content to a TextContentBuilder.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-700921964%2FFunctions%2F168680109" anchor-label="newline" id="-700921964%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-700921964%2FFunctions%2F168680109"><span><span>newline</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-700921964%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-700921964%2FFunctions%2F168680109"><span class="token function">newline</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="257973125%2FFunctions%2F168680109" anchor-label="not" id="257973125%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#257973125%2FFunctions%2F168680109"><span><span>not</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="257973125%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="index.html#257973125%2FFunctions%2F168680109"><span class="token function">not</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-130473883%2FFunctions%2F168680109" anchor-label="numbered" id="-130473883%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="numbered.html"><span><span>numbered</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-130473883%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="numbered.html"><span class="token function">numbered</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><a href="-list-context/index.html">MarkdownContentBuilder.ListContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a numbered list with a block structure.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1772507685%2FFunctions%2F168680109" anchor-label="padding" id="-1772507685%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1772507685%2FFunctions%2F168680109"><span><span>padding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1772507685%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-1772507685%2FFunctions%2F168680109"><span class="token function">padding</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">padding<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">body<span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.text/-text-content-builder/index.html">TextContentBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-61251458%2FFunctions%2F168680109" anchor-label="strikethrough" id="-61251458%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="strikethrough.html"><span><span>strikethrough</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-61251458%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="strikethrough.html"><span class="token function">strikethrough</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a strikethrough text (<strike>text</strike>) to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1494341573%2FFunctions%2F168680109" anchor-label="table" id="-1494341573%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="table.html"><span><span>table</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1494341573%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="table.html"><span class="token function">table</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">headers<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">rows<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">alignments<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-table-alignment/index.html">TableAlignment</a><span class="token operator">&gt;</span><span class="token operator"> = </span>List(headers.size) { TableAlignment.LEFT }</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a table to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="872102143%2FFunctions%2F168680109" anchor-label="text" id="872102143%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#872102143%2FFunctions%2F168680109"><span><span>text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="872102143%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#872102143%2FFunctions%2F168680109"><span class="token function">text</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1681020867%2FFunctions%2F168680109" anchor-label="textWithNewLine" id="-1681020867%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1681020867%2FFunctions%2F168680109"><span>text</span><wbr><span>With</span><wbr><span>New</span><wbr><span><span>Line</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1681020867%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-1681020867%2FFunctions%2F168680109"><span class="token function">textWithNewLine</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2047209435%2FFunctions%2F168680109" anchor-label="unaryPlus" id="2047209435%2FFunctions%2F168680109" data-filterable-set=":prompt:prompt-markdown/commonMain"></a>
+          <div class="table-row" data-filterable-current=":prompt:prompt-markdown/commonMain" data-filterable-set=":prompt:prompt-markdown/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2047209435%2FFunctions%2F168680109"><span>unary</span><wbr><span><span>Plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2047209435%2FFunctions%2F168680109"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-markdown/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="index.html#2047209435%2FFunctions%2F168680109"><span class="token function">unaryPlus</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>Copyright © 2000-2025 JetBrains s.r.o.</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
