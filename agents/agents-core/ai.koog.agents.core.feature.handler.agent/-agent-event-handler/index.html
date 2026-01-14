@@ -1,0 +1,255 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AgentEventHandler</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.0-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/commonMain" data-filter=":agents:agents-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-core::ai.koog.agents.core.feature.handler.agent/AgentEventHandler///PointingToDeclaration//643085981">
+  <div class="breadcrumbs"><a href="../../index.html">agents-core</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.core.feature.handler.agent</a><span class="delimiter">/</span><span class="current">AgentEventHandler</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Agent</span><wbr><span>Event</span><wbr><span><span>Handler</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">AgentEventHandler</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/main/agents/agents-core/src/commonMain/kotlin/ai/koog/agents/core/feature/handler/agent/AgentEventHandler.kt#L11">source</a>)</span></span></div><p class="paragraph">Feature implementation for agent and strategy interception.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-509370909%2FConstructors%2F643085981" anchor-label="AgentEventHandler" id="-509370909%2FConstructors%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-event-handler.html"><span>Agent</span><wbr><span>Event</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-509370909%2FConstructors%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-299859362%2FProperties%2F643085981" anchor-label="agentClosingHandler" id="-299859362%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="agent-closing-handler.html"><span>agent</span><wbr><span>Closing</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-299859362%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="agent-closing-handler.html">agentClosingHandler</a><span class="token operator">: </span><a href="../-agent-closing-handler/index.html">AgentClosingHandler</a></div><div class="brief "><p class="paragraph">A handler that is triggered before an agent is closed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1067853428%2FProperties%2F643085981" anchor-label="agentCompletedHandler" id="1067853428%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="agent-completed-handler.html"><span>agent</span><wbr><span>Completed</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1067853428%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="agent-completed-handler.html">agentCompletedHandler</a><span class="token operator">: </span><a href="../-agent-completed-handler/index.html">AgentCompletedHandler</a></div><div class="brief "><p class="paragraph">Defines a handler invoked when an agent execution is completed. This handler processes the outcome of the agent's operation, allowing for custom behavior upon completion.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-451522478%2FProperties%2F643085981" anchor-label="agentEnvironmentTransformingHandler" id="-451522478%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="agent-environment-transforming-handler.html"><span>agent</span><wbr><span>Environment</span><wbr><span>Transforming</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-451522478%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="agent-environment-transforming-handler.html">agentEnvironmentTransformingHandler</a><span class="token operator">: </span><a href="../-agent-environment-transforming-handler/index.html">AgentEnvironmentTransformingHandler</a></div><div class="brief "><p class="paragraph">Configurable transformer used to manipulate or modify an instance of AgentEnvironment. Allows customization of the environment during agent creation or updates by applying the provided transformation logic.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1615907102%2FProperties%2F643085981" anchor-label="agentExecutionFailedHandler" id="1615907102%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="agent-execution-failed-handler.html"><span>agent</span><wbr><span>Execution</span><wbr><span>Failed</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1615907102%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="agent-execution-failed-handler.html">agentExecutionFailedHandler</a><span class="token operator">: </span><a href="../-agent-execution-failed-handler/index.html">AgentExecutionFailedHandler</a></div><div class="brief "><p class="paragraph">A handler invoked when an error occurs during an agent's execution. This handler allows custom logic to be executed in response to execution errors.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1995854077%2FProperties%2F643085981" anchor-label="agentStartingHandler" id="1995854077%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="agent-starting-handler.html"><span>agent</span><wbr><span>Starting</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1995854077%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="agent-starting-handler.html">agentStartingHandler</a><span class="token operator">: </span><a href="../-agent-starting-handler/index.html">AgentStartingHandler</a></div><div class="brief "><p class="paragraph">A handler invoked before an agent is started. This can be used to perform custom logic such as initialization or validation before the agent begins execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="347531793%2FFunctions%2F643085981" anchor-label="handleAgentStarting" id="347531793%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="handle-agent-starting.html"><span>handle</span><wbr><span>Agent</span><wbr><span><span>Starting</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="347531793%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="handle-agent-starting.html"><span class="token function">handleAgentStarting</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../-agent-starting-context/index.html">AgentStartingContext</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Handles the logic to be executed before an agent starts.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1413679543%2FFunctions%2F643085981" anchor-label="transformEnvironment" id="1413679543%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="transform-environment.html"><span>transform</span><wbr><span><span>Environment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1413679543%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="transform-environment.html"><span class="token function">transformEnvironment</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../-agent-environment-transforming-context/index.html">AgentEnvironmentTransformingContext</a><span class="token punctuation">, </span></span><span class="parameter ">environment<span class="token operator">: </span><a href="../../ai.koog.agents.core.environment/-a-i-agent-environment/index.html">AIAgentEnvironment</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ai.koog.agents.core.environment/-a-i-agent-environment/index.html">AIAgentEnvironment</a></div><div class="brief "><p class="paragraph">Transforms the provided AgentEnvironment using the configured environment transformer.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
