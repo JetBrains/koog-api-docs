@@ -1,0 +1,270 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>TraceFeatureMessageFileWriter</title>
+<link href="../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-features:agents-features-trace/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-features:agents-features-trace/commonMain" data-filter=":agents:agents-features:agents-features-trace/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-features-trace::ai.koog.agents.features.tracing.writer/TraceFeatureMessageFileWriter///PointingToDeclaration//-164293163">
+  <div class="breadcrumbs"><a href="../../index.html">agents-features-trace</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.features.tracing.writer</a><span class="delimiter">/</span><span class="current">TraceFeatureMessageFileWriter</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Trace</span><wbr><span>Feature</span><wbr><span>Message</span><wbr><span>File</span><wbr><span><span>Writer</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-trace/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">TraceFeatureMessageFileWriter</a><span class="token operator">&lt;</span><a href="index.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">targetPath<span class="token operator">: </span><a href="index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">sinkOpener<span class="token operator">: </span><span class="token punctuation">(</span><a href="index.html">Path</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="kotlinx.io/Sink///PointingToDeclaration/">Sink</span><span class="token punctuation">, </span></span><span class="parameter ">format<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.message/-feature-message/index.html">FeatureMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.writer/-feature-message-file-writer/index.html">FeatureMessageFileWriter</a><span class="token operator">&lt;</span><a href="index.html">Path</a><span class="token operator">&gt; </span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/agents/agents-features/agents-features-trace/src/commonMain/kotlin/ai/koog/agents/features/tracing/writer/TraceFeatureMessageFileWriter.kt#L45">source</a>)</span></span></div><p class="paragraph">A message processor that writes trace events to a file.</p><p class="paragraph">This writer captures all trace events and writes them to a specified file using the provided file system. It formats each event type differently to provide clear and readable logs.</p><p class="paragraph">Tracing to files is particularly useful for:</p><ul><li><p class="paragraph">Persistent logging that survives application restarts</p></li><li><p class="paragraph">Detailed analysis of agent behavior after execution</p></li><li><p class="paragraph">Sharing trace logs with other developers or systems</p></li></ul><p class="paragraph">Example usage:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val agent = AIAgent(...) {<br>    install(Tracing) {<br>        // Write trace events to a file<br>        addMessageProcessor(TraceFeatureMessageFileWriter(<br>            sinkOpener = fileSystem::sink,<br>            targetPath = "agent-traces.log"<br>        ))<br><br>        // Optionally provide custom formatting<br>        addMessageProcessor(TraceFeatureMessageFileWriter(<br>            sinkOpener = fileSystem::sink,<br>            targetPath = "custom-traces.log",<br>            format = { message -&gt;<br>                "[TRACE] ${message::class.simpleName}"<br>            }<br>        ))<br>    }<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h4 class="tableheader">Parameters</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>Path</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The type representing file paths in the file system</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>target</span><wbr><span><span>Path</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The path where feature messages will be written.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>sink</span><wbr><span><span>Opener</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Returns a <span data-unresolved-link="kotlinx.io/Sink///PointingToDeclaration/">Sink</span> for writing to the file, this class manages its lifecycle.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>format</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Optional custom formatter for trace events</p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="152046001%2FConstructors%2F-164293163" anchor-label="TraceFeatureMessageFileWriter" id="152046001%2FConstructors%2F-164293163" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-trace-feature-message-file-writer.html"><span>Trace</span><wbr><span>Feature</span><wbr><span>Message</span><wbr><span>File</span><wbr><span><span>Writer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="152046001%2FConstructors%2F-164293163"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-trace/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">targetPath<span class="token operator">: </span><a href="index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">sinkOpener<span class="token operator">: </span><span class="token punctuation">(</span><a href="index.html">Path</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="kotlinx.io/Sink///PointingToDeclaration/">Sink</span><span class="token punctuation">, </span></span><span class="parameter ">format<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.message/-feature-message/index.html">FeatureMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-2065285661%2FProperties%2F-164293163" anchor-label="isOpen" id="-2065285661%2FProperties%2F-164293163" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-2065285661%2FProperties%2F-164293163"><span>is</span><wbr><span><span>Open</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2065285661%2FProperties%2F-164293163"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-trace/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="index.html#-2065285661%2FProperties%2F-164293163">isOpen</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-state-flow/index.html">StateFlow</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2070999367%2FProperties%2F-164293163" anchor-label="messageFilter" id="2070999367%2FProperties%2F-164293163" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-trace-feature-message-remote-writer/index.html#2070999367%2FProperties%2F-164293163"><span>message</span><wbr><span><span>Filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2070999367%2FProperties%2F-164293163"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-trace/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-trace-feature-message-remote-writer/index.html#2070999367%2FProperties%2F-164293163">messageFilter</a><span class="token operator">: </span><span class="token punctuation">(</span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.message/-feature-message/index.html">FeatureMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="960378977%2FProperties%2F-164293163" anchor-label="targetPath" id="960378977%2FProperties%2F-164293163" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#960378977%2FProperties%2F-164293163"><span>target</span><wbr><span><span>Path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="960378977%2FProperties%2F-164293163"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-trace/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#960378977%2FProperties%2F-164293163">targetPath</a><span class="token operator">: </span><a href="index.html">Path</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1154355381%2FFunctions%2F-164293163" anchor-label="close" id="-1154355381%2FFunctions%2F-164293163" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1154355381%2FFunctions%2F-164293163"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1154355381%2FFunctions%2F-164293163"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-trace/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="index.html#-1154355381%2FFunctions%2F-164293163"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="182098791%2FFunctions%2F-164293163" anchor-label="initialize" id="182098791%2FFunctions%2F-164293163" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#182098791%2FFunctions%2F-164293163"><span><span>initialize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="182098791%2FFunctions%2F-164293163"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-trace/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="index.html#182098791%2FFunctions%2F-164293163"><span class="token function">initialize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2077188339%2FFunctions%2F-164293163" anchor-label="onMessage" id="2077188339%2FFunctions%2F-164293163" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-trace-feature-message-remote-writer/index.html#2077188339%2FFunctions%2F-164293163"><span>on</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2077188339%2FFunctions%2F-164293163"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-trace/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-trace-feature-message-remote-writer/index.html#2077188339%2FFunctions%2F-164293163"><span class="token function">onMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.message/-feature-message/index.html">FeatureMessage</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1368635717%2FFunctions%2F-164293163" anchor-label="setMessageFilter" id="-1368635717%2FFunctions%2F-164293163" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-trace-feature-message-remote-writer/index.html#-1368635717%2FFunctions%2F-164293163"><span>set</span><wbr><span>Message</span><wbr><span><span>Filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1368635717%2FFunctions%2F-164293163"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-trace/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-trace-feature-message-remote-writer/index.html#-1368635717%2FFunctions%2F-164293163"><span class="token function">setMessageFilter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filter<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.message/-feature-message/index.html">FeatureMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1060568125%2FFunctions%2F-164293163" anchor-label="toFileString" id="-1060568125%2FFunctions%2F-164293163" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-trace/commonMain" data-filterable-set=":agents:agents-features:agents-features-trace/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-file-string.html"><span>to</span><wbr><span>File</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1060568125%2FFunctions%2F-164293163"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-trace/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.message/-feature-message/index.html">FeatureMessage</a><span class="token punctuation">.</span><a href="to-file-string.html"><span class="token function">toFileString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ai.koog.prompt.executor.llms.all</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-executor:prompt-executor-llms-all/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-llms-all/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-llms-all/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain" data-filter=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="prompt-executor-llms-all::ai.koog.prompt.executor.llms.all////PointingToDeclaration//-234921110">
+  <div class="breadcrumbs"><a href="../index.html">prompt-executor-llms-all</a><span class="delimiter">/</span><span class="current">ai.koog.prompt.executor.llms.all</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1635977278%2FClasslikes%2F144583288" anchor-label="DefaultMultiLLMPromptExecutor" id="1635977278%2FClasslikes%2F144583288" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-llms-all/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-default-multi-l-l-m-prompt-executor/index.html"><span>Default</span><wbr><span>Multi</span><wbr><span>LLMPrompt</span><wbr><span><span>Executor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1635977278%2FClasslikes%2F144583288"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-default-multi-l-l-m-prompt-executor/index.html">DefaultMultiLLMPromptExecutor</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">openAIClient<span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-clients/prompt-executor-openai-client/ai.koog.prompt.executor.clients.openai/-open-a-i-l-l-m-client/index.html">OpenAILLMClient</a><span class="token punctuation">, </span></span><span class="parameter ">anthropicClient<span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-clients/prompt-executor-anthropic-client/ai.koog.prompt.executor.clients.anthropic/-anthropic-l-l-m-client/index.html">AnthropicLLMClient</a><span class="token punctuation">, </span></span><span class="parameter ">googleClient<span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-clients/prompt-executor-google-client/ai.koog.prompt.executor.clients.google/-google-l-l-m-client/index.html">GoogleLLMClient</a></span></span><span class="token punctuation">)</span> : <a href="../../../../prompt/prompt-executor/prompt-executor-llms/ai.koog.prompt.executor.llms/-multi-l-l-m-prompt-executor/index.html">MultiLLMPromptExecutor</a></div><div class="brief "><p class="paragraph">Implementation of <a href="../../../../prompt/prompt-executor/prompt-executor-llms/ai.koog.prompt.executor.llms/-multi-l-l-m-prompt-executor/index.html">MultiLLMPromptExecutor</a> that supports OpenAI, Anthropic, and Google providers.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1694797598%2FFunctions%2F144583288" anchor-label="simpleAnthropicExecutor" id="1694797598%2FFunctions%2F144583288" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-llms-all/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="simple-anthropic-executor.html"><span>simple</span><wbr><span>Anthropic</span><wbr><span><span>Executor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1694797598%2FFunctions%2F144583288"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="simple-anthropic-executor.html"><span class="token function">simpleAnthropicExecutor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">apiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-llms/ai.koog.prompt.executor.llms/-single-l-l-m-prompt-executor/index.html">SingleLLMPromptExecutor</a></div><div class="brief "><p class="paragraph">Creates an instance of <code class="lang-kotlin">SingleLLMPromptExecutor</code> with an <code class="lang-kotlin">AnthropicLLMClient</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-608593351%2FFunctions%2F144583288" anchor-label="simpleAzureOpenAIExecutor" id="-608593351%2FFunctions%2F144583288" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-llms-all/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="simple-azure-open-a-i-executor.html"><span>simple</span><wbr><span>Azure</span><wbr><span>Open</span><wbr><span><span>AIExecutor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-608593351%2FFunctions%2F144583288"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="simple-azure-open-a-i-executor.html"><span class="token function">simpleAzureOpenAIExecutor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">baseUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">version<span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-clients/prompt-executor-openai-client/ai.koog.prompt.executor.clients.openai.azure/-azure-open-a-i-service-version/index.html">AzureOpenAIServiceVersion</a><span class="token punctuation">, </span></span><span class="parameter ">apiToken<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-llms/ai.koog.prompt.executor.llms/-single-l-l-m-prompt-executor/index.html">SingleLLMPromptExecutor</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="simple-azure-open-a-i-executor.html"><span class="token function">simpleAzureOpenAIExecutor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">resourceName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">deploymentName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">version<span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-clients/prompt-executor-openai-client/ai.koog.prompt.executor.clients.openai.azure/-azure-open-a-i-service-version/index.html">AzureOpenAIServiceVersion</a><span class="token punctuation">, </span></span><span class="parameter ">apiToken<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-llms/ai.koog.prompt.executor.llms/-single-l-l-m-prompt-executor/index.html">SingleLLMPromptExecutor</a></div><div class="brief "><p class="paragraph">Creates an instance of <code class="lang-kotlin">SingleLLMPromptExecutor</code> with an <code class="lang-kotlin">OpenAILLMClient</code> configured for Azure OpenAI.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1634825029%2FFunctions%2F20318590" anchor-label="simpleBedrockExecutor" id="-1634825029%2FFunctions%2F20318590" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="simple-bedrock-executor.html"><span>simple</span><wbr><span>Bedrock</span><wbr><span><span>Executor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1634825029%2FFunctions%2F20318590"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="simple-bedrock-executor.html"><span class="token function">simpleBedrockExecutor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">awsAccessKeyId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">awsSecretAccessKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">awsSessionToken<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">settings<span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-clients/prompt-executor-bedrock-client/ai.koog.prompt.executor.clients.bedrock/-bedrock-client-settings/index.html">BedrockClientSettings</a><span class="token operator"> = </span>BedrockClientSettings()</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-llms/ai.koog.prompt.executor.llms/-single-l-l-m-prompt-executor/index.html">SingleLLMPromptExecutor</a></div><div class="brief "><p class="paragraph">Creates an instance of <code class="lang-kotlin">SingleLLMPromptExecutor</code> with a <code class="lang-kotlin">BedrockLLMClient</code>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-212124190%2FFunctions%2F20318590" anchor-label="simpleBedrockExecutorWithBearerToken" id="-212124190%2FFunctions%2F20318590" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="simple-bedrock-executor-with-bearer-token.html"><span>simple</span><wbr><span>Bedrock</span><wbr><span>Executor</span><wbr><span>With</span><wbr><span>Bearer</span><wbr><span><span>Token</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-212124190%2FFunctions%2F20318590"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-llms-all/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="simple-bedrock-executor-with-bearer-token.html"><span class="token function">simpleBedrockExecutorWithBearerToken</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">bedrockApiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">settings<span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-clients/prompt-executor-bedrock-client/ai.koog.prompt.executor.clients.bedrock/-bedrock-client-settings/index.html">BedrockClientSettings</a><span class="token operator"> = </span>BedrockClientSettings()</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-llms/ai.koog.prompt.executor.llms/-single-l-l-m-prompt-executor/index.html">SingleLLMPromptExecutor</a></div><div class="brief "><p class="paragraph">Creates an instance of <code class="lang-kotlin">SingleLLMPromptExecutor</code> with a <code class="lang-kotlin">BedrockLLMClient</code>. Uses the provided Bedrock API key to create a <span data-unresolved-link="aws.smithy.kotlin.runtime.http.auth/BearerTokenProvider///PointingToDeclaration/">aws.smithy.kotlin.runtime.http.auth.BearerTokenProvider</span>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1867262179%2FFunctions%2F144583288" anchor-label="simpleGoogleAIExecutor" id="1867262179%2FFunctions%2F144583288" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-llms-all/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="simple-google-a-i-executor.html"><span>simple</span><wbr><span>Google</span><wbr><span><span>AIExecutor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1867262179%2FFunctions%2F144583288"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="simple-google-a-i-executor.html"><span class="token function">simpleGoogleAIExecutor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">apiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-llms/ai.koog.prompt.executor.llms/-single-l-l-m-prompt-executor/index.html">SingleLLMPromptExecutor</a></div><div class="brief "><p class="paragraph">Creates an instance of <code class="lang-kotlin">SingleLLMPromptExecutor</code> with an <code class="lang-kotlin">GoogleLLMClient</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1071445210%2FFunctions%2F144583288" anchor-label="simpleMistralAIExecutor" id="1071445210%2FFunctions%2F144583288" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-llms-all/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="simple-mistral-a-i-executor.html"><span>simple</span><wbr><span>Mistral</span><wbr><span><span>AIExecutor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1071445210%2FFunctions%2F144583288"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="simple-mistral-a-i-executor.html"><span class="token function">simpleMistralAIExecutor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">apiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-llms/ai.koog.prompt.executor.llms/-single-l-l-m-prompt-executor/index.html">SingleLLMPromptExecutor</a></div><div class="brief "><p class="paragraph">Creates an instance of <code class="lang-kotlin">SingleLLMPromptExecutor</code> with a <code class="lang-kotlin">MistralAILLMClient</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1831781840%2FFunctions%2F144583288" anchor-label="simpleOllamaAIExecutor" id="1831781840%2FFunctions%2F144583288" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-llms-all/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="simple-ollama-a-i-executor.html"><span>simple</span><wbr><span>Ollama</span><wbr><span><span>AIExecutor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1831781840%2FFunctions%2F144583288"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="simple-ollama-a-i-executor.html"><span class="token function">simpleOllamaAIExecutor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">baseUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">"http://localhost:11434"</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-llms/ai.koog.prompt.executor.llms/-single-l-l-m-prompt-executor/index.html">SingleLLMPromptExecutor</a></div><div class="brief "><p class="paragraph">Creates an instance of <code class="lang-kotlin">SingleLLMPromptExecutor</code> with an <code class="lang-kotlin">OllamaClient</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1164253964%2FFunctions%2F144583288" anchor-label="simpleOpenAIExecutor" id="-1164253964%2FFunctions%2F144583288" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-llms-all/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="simple-open-a-i-executor.html"><span>simple</span><wbr><span>Open</span><wbr><span><span>AIExecutor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1164253964%2FFunctions%2F144583288"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="simple-open-a-i-executor.html"><span class="token function">simpleOpenAIExecutor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">apiToken<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-llms/ai.koog.prompt.executor.llms/-single-l-l-m-prompt-executor/index.html">SingleLLMPromptExecutor</a></div><div class="brief "><p class="paragraph">Creates a <code class="lang-kotlin">SingleLLMPromptExecutor</code> instance configured to use the OpenAI client.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1740722827%2FFunctions%2F144583288" anchor-label="simpleOpenRouterExecutor" id="-1740722827%2FFunctions%2F144583288" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-llms-all/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-llms-all/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="simple-open-router-executor.html"><span>simple</span><wbr><span>Open</span><wbr><span>Router</span><wbr><span><span>Executor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1740722827%2FFunctions%2F144583288"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-llms-all/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="simple-open-router-executor.html"><span class="token function">simpleOpenRouterExecutor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">apiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-llms/ai.koog.prompt.executor.llms/-single-l-l-m-prompt-executor/index.html">SingleLLMPromptExecutor</a></div><div class="brief "><p class="paragraph">Creates an instance of <code class="lang-kotlin">SingleLLMPromptExecutor</code> with an <code class="lang-kotlin">OpenRouterLLMClient</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

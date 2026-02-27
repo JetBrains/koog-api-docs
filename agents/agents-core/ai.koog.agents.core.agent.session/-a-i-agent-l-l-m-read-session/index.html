@@ -1,0 +1,386 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AIAgentLLMReadSession</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/commonMain" data-filter=":agents:agents-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-core::ai.koog.agents.core.agent.session/AIAgentLLMReadSession///PointingToDeclaration//643085981">
+  <div class="breadcrumbs"><a href="../../index.html">agents-core</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.core.agent.session</a><span class="delimiter">/</span><span class="current">AIAgentLLMReadSession</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>AIAgent</span><wbr><span>LLMRead</span><wbr><span><span>Session</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">AIAgentLLMReadSession</a> : <a href="../-a-i-agent-l-l-m-session/index.html">AIAgentLLMSession</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/agents/agents-core/src/commonMain/kotlin/ai/koog/agents/core/agent/session/AIAgentLLMReadSession.kt#L23">source</a>)</span></span></div><p class="paragraph">Represents a session for interacting with a language model (LLM) in a read-only context within an AI agent setup. This session is configured with a set of tools, an executor for handling prompt execution, a prompt definition, a language model, and specific session configurations.</p><h4 class="tableheader">Parameters</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>tools</span></span></u></div></span></div><div><div class="title"><p class="paragraph">A list of tool descriptors that define the tools available for this session.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>executor</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The <code class="lang-kotlin">PromptExecutor</code> responsible for handling execution of prompts within this session.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>prompt</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The <code class="lang-kotlin">Prompt</code> object specifying the input messages and parameters for the session.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>model</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The language model instance to be used for processing prompts in this session.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>response</span><wbr><span><span>Processor</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The response processor instance to be used for post-processing responses.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>config</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The configuration settings for the AI agent session.</p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-1376039942%2FProperties%2F643085981" anchor-label="model" id="-1376039942%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/model.html"><span><span>model</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1376039942%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-a-i-agent-l-l-m-session/model.html">model</a><span class="token operator">: </span><a href="../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Represents the active language model used within the session.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-476161965%2FProperties%2F643085981" anchor-label="prompt" id="-476161965%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/prompt.html"><span><span>prompt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-476161965%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-a-i-agent-l-l-m-session/prompt.html">prompt</a><span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.dsl/-prompt/index.html">Prompt</a></div><div class="brief "><p class="paragraph">Represents the current prompt associated with the LLM session. The prompt contains the input messages, model configuration, and parameters.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="507623890%2FProperties%2F643085981" anchor-label="responseProcessor" id="507623890%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/response-processor.html"><span>response</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="507623890%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-a-i-agent-l-l-m-session/response-processor.html">responseProcessor</a><span class="token operator">: </span><a href="../../../../prompt/prompt-processor/ai.koog.prompt.processor/-response-processor/index.html">ResponseProcessor</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Represents the active response processor within the session. The processor defines the post-processing of messages returned from the LLM.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1445459576%2FProperties%2F643085981" anchor-label="tools" id="-1445459576%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/tools.html"><span><span>tools</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1445459576%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-a-i-agent-l-l-m-session/tools.html">tools</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Provides a list of tools based on the current active state. This property holds a collection of <a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a> instances, which describe the tools available for use.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1715085301%2FFunctions%2F643085981" anchor-label="close" id="-1715085301%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/close.html"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1715085301%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../-a-i-agent-l-l-m-session/close.html"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-35046010%2FFunctions%2F643085981" anchor-label="parseResponseToStructuredResponse" id="-35046010%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/parse-response-to-structured-response.html"><span>parse</span><wbr><span>Response</span><wbr><span>To</span><wbr><span>Structured</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-35046010%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/parse-response-to-structured-response.html">T</a><span class="token operator">&gt; </span><a href="../-a-i-agent-l-l-m-session/parse-response-to-structured-response.html"><span class="token function">parseResponseToStructuredResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">response<span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-assistant/index.html">Message.Assistant</a><span class="token punctuation">, </span></span><span class="parameter ">config<span class="token operator">: </span><a href="../../../../prompt/prompt-structure/ai.koog.prompt.structure/-structured-request-config/index.html">StructuredRequestConfig</a><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/parse-response-to-structured-response.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-structure/ai.koog.prompt.structure/-structured-response/index.html">StructuredResponse</a><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/parse-response-to-structured-response.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Parses a structured response from the language model using the specified configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1404013593%2FFunctions%2F643085981" anchor-label="requestLLM" id="1404013593%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/request-l-l-m.html"><span>request</span><wbr><span><span>LLM</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1404013593%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m.html"><span class="token function">requestLLM</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a></div><div class="brief "><p class="paragraph">Sends a request to the underlying LLM and returns the first response. This method ensures the session is active before executing the request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-334199625%2FFunctions%2F643085981" anchor-label="requestLLMForceOneTool" id="-334199625%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/request-l-l-m-force-one-tool.html"><span>request</span><wbr><span>LLMForce</span><wbr><span>One</span><wbr><span><span>Tool</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-334199625%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-force-one-tool.html"><span class="token function">requestLLMForceOneTool</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tool<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-force-one-tool.html"><span class="token function">requestLLMForceOneTool</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tool<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a></div><div class="brief "><p class="paragraph">Sends a request to the language model while enforcing the use of a specific tool, and returns the response.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1214987241%2FFunctions%2F643085981" anchor-label="requestLLMMultiple" id="1214987241%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/request-l-l-m-multiple.html"><span>request</span><wbr><span><span>LLMMultiple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1214987241%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-multiple.html"><span class="token function">requestLLMMultiple</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Sends a request to the language model, potentially utilizing multiple tools, and returns a list of responses from the model.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-8141953%2FFunctions%2F643085981" anchor-label="requestLLMMultipleChoices" id="-8141953%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/request-l-l-m-multiple-choices.html"><span>request</span><wbr><span>LLMMultiple</span><wbr><span><span>Choices</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-8141953%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-multiple-choices.html"><span class="token function">requestLLMMultipleChoices</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-l-l-m-choice/index.html">LLMChoice</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Sends a request to the language model, potentially receiving multiple choices, and returns a list of choices from the model.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1786316826%2FFunctions%2F643085981" anchor-label="requestLLMMultipleOnlyCallingTools" id="-1786316826%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/request-l-l-m-multiple-only-calling-tools.html"><span>request</span><wbr><span>LLMMultiple</span><wbr><span>Only</span><wbr><span>Calling</span><wbr><span><span>Tools</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1786316826%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-multiple-only-calling-tools.html"><span class="token function">requestLLMMultipleOnlyCallingTools</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Sends a request to the language model that enforces the usage of tools and retrieves all responses.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1899387702%2FFunctions%2F643085981" anchor-label="requestLLMMultipleWithoutTools" id="1899387702%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/request-l-l-m-multiple-without-tools.html"><span>request</span><wbr><span>LLMMultiple</span><wbr><span>Without</span><wbr><span><span>Tools</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1899387702%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-multiple-without-tools.html"><span class="token function">requestLLMMultipleWithoutTools</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Sends a request to the language model without utilizing any tools and returns multiple responses.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-838539242%2FFunctions%2F643085981" anchor-label="requestLLMOnlyCallingTools" id="-838539242%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/request-l-l-m-only-calling-tools.html"><span>request</span><wbr><span>LLMOnly</span><wbr><span>Calling</span><wbr><span><span>Tools</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-838539242%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-only-calling-tools.html"><span class="token function">requestLLMOnlyCallingTools</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a></div><div class="brief "><p class="paragraph">Sends a request to the language model that enforces the usage of tools and retrieves the response.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1533175585%2FFunctions%2F643085981" anchor-label="requestLLMStreaming" id="-1533175585%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/request-l-l-m-streaming.html"><span>request</span><wbr><span><span>LLMStreaming</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1533175585%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-streaming.html"><span class="token function">requestLLMStreaming</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-model/ai.koog.prompt.streaming/-stream-frame/index.html">StreamFrame</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Sends a streaming request to the underlying LLM and returns the streamed response. This method ensures the session is active before executing the request.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-364468430%2FFunctions%2F643085981" anchor-label="requestLLMStructured" id="-364468430%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html"><span>request</span><wbr><span><span>LLMStructured</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-364468430%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html">T</a><span class="token operator">&gt; </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html"><span class="token function">requestLLMStructured</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">config<span class="token operator">: </span><a href="../../../../prompt/prompt-structure/ai.koog.prompt.structure/-structured-request-config/index.html">StructuredRequestConfig</a><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-result/index.html">Result</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-structure/ai.koog.prompt.structure/-structured-response/index.html">StructuredResponse</a><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html">T</a><span class="token operator">&gt; </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html"><span class="token function">requestLLMStructured</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">examples<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html">T</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter ">fixingParser<span class="token operator">: </span><a href="../../../../prompt/prompt-structure/ai.koog.prompt.structure/-structure-fixing-parser/index.html">StructureFixingParser</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-result/index.html">Result</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-structure/ai.koog.prompt.structure/-structured-response/index.html">StructuredResponse</a><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html">T</a><span class="token operator">&gt; </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html"><span class="token function">requestLLMStructured</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">serializer<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">examples<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html">T</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()<span class="token punctuation">, </span></span><span class="parameter ">fixingParser<span class="token operator">: </span><a href="../../../../prompt/prompt-structure/ai.koog.prompt.structure/-structure-fixing-parser/index.html">StructureFixingParser</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-result/index.html">Result</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-structure/ai.koog.prompt.structure/-structured-response/index.html">StructuredResponse</a><span class="token operator">&lt;</span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-structured.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Sends a request to LLM and gets a structured response.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1628693350%2FFunctions%2F643085981" anchor-label="requestLLMWithoutTools" id="1628693350%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/request-l-l-m-without-tools.html"><span>request</span><wbr><span>LLMWithout</span><wbr><span><span>Tools</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1628693350%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-a-i-agent-l-l-m-session/request-l-l-m-without-tools.html"><span class="token function">requestLLMWithoutTools</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a></div><div class="brief "><p class="paragraph">Sends a request to the language model without utilizing any tools and returns the response.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="242176383%2FFunctions%2F643085981" anchor-label="requestModeration" id="242176383%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-l-l-m-session/request-moderation.html"><span>request</span><wbr><span><span>Moderation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="242176383%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-a-i-agent-l-l-m-session/request-moderation.html"><span class="token function">requestModeration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">moderatingModel<span class="token operator">: </span><a href="../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.dsl/-moderation-result/index.html">ModerationResult</a></div><div class="brief "><p class="paragraph">Sends a moderation request to the specified or default large language model (LLM) for content moderation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

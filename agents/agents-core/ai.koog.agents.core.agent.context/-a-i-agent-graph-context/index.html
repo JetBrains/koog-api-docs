@@ -1,0 +1,600 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AIAgentGraphContext</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/commonMain" data-filter=":agents:agents-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-core::ai.koog.agents.core.agent.context/AIAgentGraphContext///PointingToDeclaration//643085981">
+  <div class="breadcrumbs"><a href="../../index.html">agents-core</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.core.agent.context</a><span class="delimiter">/</span><span class="current">AIAgentGraphContext</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>AIAgent</span><wbr><span>Graph</span><wbr><span><span>Context</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">AIAgentGraphContext</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">environment<span class="token operator">: </span><a href="../../ai.koog.agents.core.environment/-a-i-agent-environment/index.html">AIAgentEnvironment</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>agentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>agentInputType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-type/index.html">KType</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>agentInput<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>config<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.config/-a-i-agent-config/index.html">AIAgentConfig</a><span class="token punctuation">, </span></span><span class="parameter ">llm<span class="token operator">: </span><a href="../-a-i-agent-l-l-m-context/index.html">AIAgentLLMContext</a><span class="token punctuation">, </span></span><span class="parameter ">stateManager<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.entity/-a-i-agent-state-manager/index.html">AIAgentStateManager</a><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.entity/-a-i-agent-storage/index.html">AIAgentStorage</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>runId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>strategyName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pipeline<span class="token operator">: </span><a href="../../ai.koog.agents.core.feature.pipeline/-a-i-agent-graph-pipeline/index.html">AIAgentGraphPipeline</a><span class="token punctuation">, </span></span><span class="parameter ">executionInfo<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.execution/-agent-execution-info/index.html">AgentExecutionInfo</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>parentContext<span class="token operator">: </span><a href="../-a-i-agent-graph-context-base/index.html">AIAgentGraphContextBase</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="../-a-i-agent-graph-context-base/index.html">AIAgentGraphContextBase</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/agents/agents-core/src/commonMain/kotlin/ai/koog/agents/core/agent/context/AIAgentGraphContext.kt#L122">source</a>)</span></span></div><p class="paragraph">Implements the <a href="index.html">AIAgentGraphContext</a> interface, providing the context required for an AI agent's execution. This class encapsulates configurations, the execution pipeline, agent environment, and tools for handling agent lifecycles and interactions.</p><h4 class="tableheader">Parameters</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>environment</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The AI agent environment responsible for tool execution and problem reporting.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>agent</span><wbr><span><span>Input</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The input message to be used for the agent's interaction with the environment.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>config</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The configuration settings of the AI agent.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>llm</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The contextual data and execution utilities for the AI agent's interaction with LLMs.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>state</span><wbr><span><span>Manager</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Manages the internal state of the AI agent.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>storage</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Concurrent-safe storage for managing key-value data across the agent's lifecycle.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>run</span><wbr><span><span>Id</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The unique identifier for the agent session.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>strategy</span><wbr><span><span>Name</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The identifier for the selected strategy in the agent's lifecycle.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>pipeline</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The AI agent pipeline responsible for coordinating AI agent execution and processing.</p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="2000391699%2FConstructors%2F643085981" anchor-label="AIAgentGraphContext" id="2000391699%2FConstructors%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-i-agent-graph-context.html"><span>AIAgent</span><wbr><span>Graph</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2000391699%2FConstructors%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">environment<span class="token operator">: </span><a href="../../ai.koog.agents.core.environment/-a-i-agent-environment/index.html">AIAgentEnvironment</a><span class="token punctuation">, </span></span><span class="parameter ">agentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">agentInputType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-type/index.html">KType</a><span class="token punctuation">, </span></span><span class="parameter ">agentInput<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">config<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.config/-a-i-agent-config/index.html">AIAgentConfig</a><span class="token punctuation">, </span></span><span class="parameter ">llm<span class="token operator">: </span><a href="../-a-i-agent-l-l-m-context/index.html">AIAgentLLMContext</a><span class="token punctuation">, </span></span><span class="parameter ">stateManager<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.entity/-a-i-agent-state-manager/index.html">AIAgentStateManager</a><span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.entity/-a-i-agent-storage/index.html">AIAgentStorage</a><span class="token punctuation">, </span></span><span class="parameter ">runId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">strategyName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">pipeline<span class="token operator">: </span><a href="../../ai.koog.agents.core.feature.pipeline/-a-i-agent-graph-pipeline/index.html">AIAgentGraphPipeline</a><span class="token punctuation">, </span></span><span class="parameter ">executionInfo<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.execution/-agent-execution-info/index.html">AgentExecutionInfo</a><span class="token punctuation">, </span></span><span class="parameter ">parentContext<span class="token operator">: </span><a href="../-a-i-agent-graph-context-base/index.html">AIAgentGraphContextBase</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Creates an instance of the context with the given parameters.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-308571534%2FProperties%2F643085981" anchor-label="agentId" id="-308571534%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="agent-id.html"><span>agent</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-308571534%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="agent-id.html">agentId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">A unique identifier representing the current agent instance within the context.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="147830211%2FProperties%2F643085981" anchor-label="agentInput" id="147830211%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="agent-input.html"><span>agent</span><wbr><span><span>Input</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="147830211%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="agent-input.html">agentInput</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-100411223%2FProperties%2F643085981" anchor-label="agentInputType" id="-100411223%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="agent-input-type.html"><span>agent</span><wbr><span>Input</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-100411223%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="agent-input-type.html">agentInputType</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-type/index.html">KType</a></div><div class="brief "><p class="paragraph"><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-type/index.html">KType</a> representing the type of the <a href="../-a-i-agent-context/agent-input.html">agentInput</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-70502810%2FProperties%2F643085981" anchor-label="config" id="-70502810%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="config.html"><span><span>config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-70502810%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="config.html">config</a><span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.config/-a-i-agent-config/index.html">AIAgentConfig</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-730748865%2FProperties%2F643085981" anchor-label="environment" id="-730748865%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="environment.html"><span><span>environment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-730748865%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="environment.html">environment</a><span class="token operator">: </span><a href="../../ai.koog.agents.core.environment/-a-i-agent-environment/index.html">AIAgentEnvironment</a></div><div class="brief "><p class="paragraph">Represents the environment in which the agent operates.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-219714420%2FProperties%2F643085981" anchor-label="executionInfo" id="-219714420%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="execution-info.html"><span>execution</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-219714420%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="execution-info.html">executionInfo</a><span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.execution/-agent-execution-info/index.html">AgentExecutionInfo</a></div><div class="brief "><p class="paragraph">Represents the observability data associated with the AI Agent context.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-261814875%2FProperties%2F643085981" anchor-label="llm" id="-261814875%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="llm.html"><span><span>llm</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-261814875%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="llm.html">llm</a><span class="token operator">: </span><a href="../-a-i-agent-l-l-m-context/index.html">AIAgentLLMContext</a></div><div class="brief "><p class="paragraph">Represents the AI agent's LLM context, providing mechanisms for managing tools, prompts, and interaction with the execution environment. It ensures thread safety during concurrent read and write operations through the use of sessions.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1186752595%2FProperties%2F643085981" anchor-label="parentContext" id="-1186752595%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="parent-context.html"><span>parent</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1186752595%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="parent-context.html">parentContext</a><span class="token operator">: </span><a href="../-a-i-agent-graph-context-base/index.html">AIAgentGraphContextBase</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Represents the parent context of the AI Agent.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1712249926%2FProperties%2F643085981" anchor-label="pipeline" id="1712249926%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="pipeline.html"><span><span>pipeline</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1712249926%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="pipeline.html">pipeline</a><span class="token operator">: </span><a href="../../ai.koog.agents.core.feature.pipeline/-a-i-agent-graph-pipeline/index.html">AIAgentGraphPipeline</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-62750612%2FProperties%2F643085981" anchor-label="runId" id="-62750612%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="run-id.html"><span>run</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-62750612%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="run-id.html">runId</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-229998388%2FProperties%2F643085981" anchor-label="stateManager" id="-229998388%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="state-manager.html"><span>state</span><wbr><span><span>Manager</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-229998388%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="state-manager.html">stateManager</a><span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.entity/-a-i-agent-state-manager/index.html">AIAgentStateManager</a></div><div class="brief "><p class="paragraph">Manages and tracks the state of aт AI agent within the context of its execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="379993943%2FProperties%2F643085981" anchor-label="storage" id="379993943%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="storage.html"><span><span>storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="379993943%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="storage.html">storage</a><span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.entity/-a-i-agent-storage/index.html">AIAgentStorage</a></div><div class="brief "><p class="paragraph">Concurrent-safe key-value storage for an agent, used to manage and persist data within the context of the AI agent stage execution. The <code class="lang-kotlin">storage</code> property provides a thread-safe mechanism for sharing and storing data specific to the agent's operation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-485954486%2FProperties%2F643085981" anchor-label="strategyName" id="-485954486%2FProperties%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="strategy-name.html"><span>strategy</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-485954486%2FProperties%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="strategy-name.html">strategyName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1030023870%2FFunctions%2F643085981" anchor-label="agentInput" id="-1030023870%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../agent-input.html"><span>agent</span><wbr><span><span>Input</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1030023870%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../agent-input.html">T</a><span class="token operator">&gt; </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">.</span><a href="../agent-input.html"><span class="token function">agentInput</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../agent-input.html">T</a></div><div class="brief "><p class="paragraph">Utility function to get <a href="../agent-input.html">AIAgentContext.agentInput</a> and try to cast it to some expected type.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1442037763%2FFunctions%2F643085981" anchor-label="copy" id="-1442037763%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-a-i-agent-graph-context-base/copy.html"><span><span>copy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1442037763%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../-a-i-agent-graph-context-base/copy.html"><span class="token function">copy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">environment<span class="token operator">: </span><a href="../../ai.koog.agents.core.environment/-a-i-agent-environment/index.html">AIAgentEnvironment</a><span class="token operator"> = </span>this.environment<span class="token punctuation">, </span></span><span class="parameter ">agentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>this.agentId<span class="token punctuation">, </span></span><span class="parameter ">agentInput<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator"> = </span>this.agentInput<span class="token punctuation">, </span></span><span class="parameter ">agentInputType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-type/index.html">KType</a><span class="token operator"> = </span>this.agentInputType<span class="token punctuation">, </span></span><span class="parameter ">config<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.config/-a-i-agent-config/index.html">AIAgentConfig</a><span class="token operator"> = </span>this.config<span class="token punctuation">, </span></span><span class="parameter ">llm<span class="token operator">: </span><a href="../-a-i-agent-l-l-m-context/index.html">AIAgentLLMContext</a><span class="token operator"> = </span>this.llm<span class="token punctuation">, </span></span><span class="parameter ">stateManager<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.entity/-a-i-agent-state-manager/index.html">AIAgentStateManager</a><span class="token operator"> = </span>this.stateManager<span class="token punctuation">, </span></span><span class="parameter ">storage<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.entity/-a-i-agent-storage/index.html">AIAgentStorage</a><span class="token operator"> = </span>this.storage<span class="token punctuation">, </span></span><span class="parameter ">runId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>this.runId<span class="token punctuation">, </span></span><span class="parameter ">strategyName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>this.strategyName<span class="token punctuation">, </span></span><span class="parameter ">pipeline<span class="token operator">: </span><a href="../../ai.koog.agents.core.feature.pipeline/-a-i-agent-graph-pipeline/index.html">AIAgentGraphPipeline</a><span class="token operator"> = </span>this.pipeline<span class="token punctuation">, </span></span><span class="parameter ">executionInfo<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.execution/-agent-execution-info/index.html">AgentExecutionInfo</a><span class="token operator"> = </span>this.executionInfo<span class="token punctuation">, </span></span><span class="parameter ">parentContext<span class="token operator">: </span><a href="../-a-i-agent-graph-context-base/index.html">AIAgentGraphContextBase</a><span class="token operator">?</span><span class="token operator"> = </span>this</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-a-i-agent-graph-context-base/index.html">AIAgentGraphContextBase</a></div><div class="brief "><p class="paragraph">Creates a copy of the current <a href="index.html">AIAgentGraphContext</a>, allowing for selective overriding of its properties.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1360662433%2FFunctions%2F643085981" anchor-label="copyWithTools" id="-1360662433%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="copy-with-tools.html"><span>copy</span><wbr><span>With</span><wbr><span><span>Tools</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1360662433%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="copy-with-tools.html"><span class="token function">copyWithTools</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tools<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a></div><div class="brief "><p class="paragraph">Creates a new instance of <a href="../-a-i-agent-context/index.html">AIAgentContext</a> with an updated list of tools, replacing the current tools in the LLM context with the provided list.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1931602717%2FFunctions%2F643085981" anchor-label="debugger" id="1931602717%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.feature.debugger/debugger.html"><span><span>debugger</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1931602717%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">.</span><a href="../../ai.koog.agents.core.feature.debugger/debugger.html"><span class="token function">debugger</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ai.koog.agents.core.feature.debugger/-debugger/index.html">Debugger</a></div><div class="brief "><p class="paragraph">Extension function to access the Debugger feature from an agent context.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-259359197%2FFunctions%2F643085981" anchor-label="feature" id="-259359197%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../feature.html"><span><span>feature</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-259359197%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../feature.html">TFeature</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">.</span><a href="../feature.html"><span class="token function">feature</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">feature<span class="token operator">: </span><a href="../../ai.koog.agents.core.feature/-a-i-agent-feature/index.html">AIAgentFeature</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><a href="../feature.html">TFeature</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../feature.html">TFeature</a><span class="token operator">?</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../feature.html">TFeature</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">.</span><a href="../feature.html"><span class="token function">feature</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">featureClass<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-class/index.html">KClass</a><span class="token operator">&lt;</span><a href="../feature.html">TFeature</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">feature<span class="token operator">: </span><a href="../../ai.koog.agents.core.feature/-a-i-agent-feature/index.html">AIAgentFeature</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><a href="../feature.html">TFeature</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../feature.html">TFeature</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Retrieves a feature from the <a href="../-a-i-agent-context/pipeline.html">AIAgentContext.pipeline</a> associated with this context using the specified key.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="575956801%2FFunctions%2F643085981" anchor-label="featureOrThrow" id="575956801%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../feature-or-throw.html"><span>feature</span><wbr><span>Or</span><wbr><span><span>Throw</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="575956801%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../feature-or-throw.html">TFeature</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">.</span><a href="../feature-or-throw.html"><span class="token function">featureOrThrow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">feature<span class="token operator">: </span><a href="../../ai.koog.agents.core.feature/-a-i-agent-feature/index.html">AIAgentFeature</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token punctuation">, </span><a href="../feature-or-throw.html">TFeature</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../feature-or-throw.html">TFeature</a></div><div class="brief "><p class="paragraph">Retrieves a feature from the <a href="../-a-i-agent-context/pipeline.html">AIAgentContext.pipeline</a> associated with this context using the specified key or throws an exception if it is not available.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1677020070%2FFunctions%2F643085981" anchor-label="fork" id="1677020070%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="fork.html"><span><span>fork</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1677020070%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="fork.html"><span class="token function">fork</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-a-i-agent-graph-context-base/index.html">AIAgentGraphContextBase</a></div><div class="brief "><p class="paragraph">Creates a copy of the current <a href="index.html">AIAgentGraphContext</a> with deep copies of all mutable properties.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1375597778%2FFunctions%2F643085981" anchor-label="get" id="1375597778%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get.html"><span><span>get</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1375597778%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get.html">T</a><span class="token operator">&gt; </span><a href="get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.entity/-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Retrieves data from the agent's storage using the specified key.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1716979955%2FFunctions%2F643085981" anchor-label="getAgentContextData" id="1716979955%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../get-agent-context-data.html"><span>get</span><wbr><span>Agent</span><wbr><span>Context</span><wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1716979955%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">.</span><a href="../get-agent-context-data.html"><span class="token function">getAgentContextData</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-agent-context-data/index.html">AgentContextData</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Retrieves the agent-specific context data associated with the current instance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1161002166%2FFunctions%2F643085981" anchor-label="getHistory" id="-1161002166%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-history.html"><span>get</span><wbr><span><span>History</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1161002166%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="get-history.html"><span class="token function">getHistory</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/index.html">Message</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Retrieves the history of messages exchanged during the agent's execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-887845942%2FFunctions%2F643085981" anchor-label="remove" id="-887845942%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove.html"><span><span>remove</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-887845942%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="remove.html"><span class="token function">remove</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.entity/-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Removes a feature or data associated with the specified key from the agent's storage.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="760089743%2FFunctions%2F643085981" anchor-label="removeAgentContextData" id="760089743%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../remove-agent-context-data.html"><span>remove</span><wbr><span>Agent</span><wbr><span>Context</span><wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="760089743%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">.</span><a href="../remove-agent-context-data.html"><span class="token function">removeAgentContextData</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Removes the agent-specific context data associated with the current context.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-809468663%2FFunctions%2F643085981" anchor-label="replace" id="-809468663%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="replace.html"><span><span>replace</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-809468663%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="replace.html"><span class="token function">replace</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">context<span class="token operator">: </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Replaces the current context with the provided context. This method is used to update the current context with values from another context, particularly useful in scenarios like parallel node execution where contexts need to be merged.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1580105232%2FFunctions%2F643085981" anchor-label="rootContext" id="1580105232%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../root-context.html"><span>root</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1580105232%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">.</span><a href="../root-context.html"><span class="token function">rootContext</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a></div><div class="brief "><p class="paragraph">Provides the root context of the current agent. If the root context is not defined, this function defaults to returning the current instance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1892252227%2FFunctions%2F643085981" anchor-label="store" id="1892252227%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="store.html"><span><span>store</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1892252227%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="store.html"><span class="token function">store</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.entity/-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Stores a feature in the agent's storage using the specified key.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="155939653%2FFunctions%2F643085981" anchor-label="store" id="155939653%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../store.html"><span><span>store</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="155939653%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">.</span><a href="../store.html"><span class="token function">store</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="../-agent-context-data/index.html">AgentContextData</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Stores the given agent context data within the current AI agent context.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1289756181%2FFunctions%2F643085981" anchor-label="with" id="1289756181%2FFunctions%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../with.html"><span><span>with</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1289756181%2FFunctions%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../with.html">T</a><span class="token operator">&gt; </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">.</span><a href="../with.html"><span class="token function">with</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">executionInfo<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.execution/-agent-execution-info/index.html">AgentExecutionInfo</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span>executionInfo<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.execution/-agent-execution-info/index.html">AgentExecutionInfo</a><span class="token punctuation">, </span>eventId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../with.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../with.html">T</a></div><div class="brief "><p class="paragraph">Executes a block of code with a modified execution context.</p></div><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../with.html">T</a><span class="token operator">&gt; </span><a href="../-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">.</span><a href="../with.html"><span class="token function">with</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">partName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span>executionInfo<span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.execution/-agent-execution-info/index.html">AgentExecutionInfo</a><span class="token punctuation">, </span>eventId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="../with.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../with.html">T</a></div><div class="brief "><p class="paragraph">Executes a block of code with a modified execution context, creating a parent-child relationship between execution contexts for tracing purposes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

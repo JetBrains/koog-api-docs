@@ -1,0 +1,355 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>KoogAgentsConfig</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":koog-ktor/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":koog-ktor/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":koog-ktor/commonMain" data-filter=":koog-ktor/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":koog-ktor/jvmMain" data-filter=":koog-ktor/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="koog-ktor::ai.koog.ktor/KoogAgentsConfig///PointingToDeclaration//1687882422">
+  <div class="breadcrumbs"><a href="../../index.html">koog-ktor</a><span class="delimiter">/</span><a href="../index.html">ai.koog.ktor</a><span class="delimiter">/</span><span class="current">KoogAgentsConfig</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Koog</span><wbr><span>Agents</span><wbr><span><span>Config</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">KoogAgentsConfig</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a></span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/koog-ktor/src/commonMain/kotlin/ai/koog/ktor/KoogAgentsConfig.kt#L45">source</a>)</span></span></div><p class="paragraph">Configuration class for setting up a Koog agents server. Provides options to configure LLM connections, agent tools, features, and other related settings.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-848173339%2FConstructors%2F1687882422" anchor-label="KoogAgentsConfig" id="-848173339%2FConstructors%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-koog-agents-config.html"><span>Koog</span><wbr><span>Agents</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-848173339%2FConstructors%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-1740855499%2FClasslikes%2F1687882422" anchor-label="AgentConfig" id="-1740855499%2FClasslikes%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-config/index.html"><span>Agent</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1740855499%2FClasslikes%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">inner </span><span class="token keyword">class </span><a href="-agent-config/index.html">AgentConfig</a></div><div class="brief "><p class="paragraph">Configuration class for managing agent-specific settings and tools.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="622030958%2FClasslikes%2F1687882422" anchor-label="AnthropicConfig" id="622030958%2FClasslikes%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-config/index.html"><span>Anthropic</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="622030958%2FClasslikes%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-anthropic-config/index.html">AnthropicConfig</a></div><div class="brief "><p class="paragraph">AnthropicConfig is a configuration class for integrating with the Anthropic API. It allows for customization of base API URL, model versions, API version, timeout settings, and the HTTP client used for requests. This class facilitates specifying all necessary parameters and settings required to interact with Anthropic's LLM services.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-827148960%2FClasslikes%2F1687882422" anchor-label="DeepSeekConfig" id="-827148960%2FClasslikes%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-deep-seek-config/index.html"><span>Deep</span><wbr><span>Seek</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-827148960%2FClasslikes%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-deep-seek-config/index.html">DeepSeekConfig</a></div><div class="brief "><p class="paragraph">DeepSeekConfig is a configuration class for setting up the DeepSeek client. It manages essential parameters such as API key, base URL, connection timeout settings, and the HTTP client used for requests.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1071086411%2FClasslikes%2F1687882422" anchor-label="GoogleConfig" id="1071086411%2FClasslikes%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-google-config/index.html"><span>Google</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1071086411%2FClasslikes%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-google-config/index.html">GoogleConfig</a></div><div class="brief "><p class="paragraph">GoogleConfig is a configuration class for setting up and customizing integrations with the Google Generative Language API. It allows for specifying an API key, configuring timeouts, and setting the base URL used for API requests.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-77019891%2FClasslikes%2F1687882422" anchor-label="LLMConfig" id="-77019891%2FClasslikes%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-l-m-config/index.html"><span><span>LLMConfig</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-77019891%2FClasslikes%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">inner </span><span class="token keyword">class </span><a href="-l-l-m-config/index.html">LLMConfig</a></div><div class="brief "><p class="paragraph">Configuration class for managing various Language Learning Model (LLM) providers and their settings. This class allows integration with different LLM services such as OpenAI, Anthropic, Google, MistralAI, OpenRouter, DeepSeek, and Ollama. Users can also define fallback configurations and custom LLM clients.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-989083086%2FClasslikes%2F1687882422" anchor-label="MistralAIConfig" id="-989083086%2FClasslikes%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mistral-a-i-config/index.html"><span>Mistral</span><wbr><span><span>AIConfig</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-989083086%2FClasslikes%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-mistral-a-i-config/index.html">MistralAIConfig</a></div><div class="brief "><p class="paragraph">Configuration class for MistralAI integration, providing options to set API-specific paths, network timeouts, and base connection settings.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="975590078%2FClasslikes%2F1687882422" anchor-label="OllamaConfig" id="975590078%2FClasslikes%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ollama-config/index.html"><span>Ollama</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="975590078%2FClasslikes%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-ollama-config/index.html">OllamaConfig</a></div><div class="brief "><p class="paragraph">OllamaConfig is a configuration class for managing the settings required to connect and interact with an Ollama-based language model server. It includes properties for setting the server's base URL, connection timeouts, and an HTTP client for underlying network communication.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-264724878%2FClasslikes%2F1687882422" anchor-label="OpenAIConfig" id="-264724878%2FClasslikes%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-a-i-config/index.html"><span>Open</span><wbr><span><span>AIConfig</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-264724878%2FClasslikes%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-open-a-i-config/index.html">OpenAIConfig</a></div><div class="brief "><p class="paragraph">Configuration class for OpenAI integration, providing options to set API-specific paths, network timeouts, and base connection settings.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1078542959%2FClasslikes%2F1687882422" anchor-label="OpenRouterConfig" id="-1078542959%2FClasslikes%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-router-config/index.html"><span>Open</span><wbr><span>Router</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1078542959%2FClasslikes%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-open-router-config/index.html">OpenRouterConfig</a></div><div class="brief "><p class="paragraph">OpenRouterConfig is a configuration class for setting up the OpenRouter client. It manages essential parameters such as API key, base URL, connection timeout settings, and the HTTP client used for requests.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-878555823%2FClasslikes%2F1687882422" anchor-label="TimeoutConfiguration" id="-878555823%2FClasslikes%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-timeout-configuration/index.html"><span>Timeout</span><wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-878555823%2FClasslikes%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-timeout-configuration/index.html">TimeoutConfiguration</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>requestTimeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator"> = </span>DEFAULT_TIMEOUT<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>connectTimeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator"> = </span>DEFAULT_CONNECT_TIMEOUT<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>socketTimeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator"> = </span>DEFAULT_TIMEOUT</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configuration class for defining timeout durations in network requests. Used to set and customize the request, connection, and socket timeouts.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-814380236%2FFunctions%2F1687882422" anchor-label="agentConfig" id="-814380236%2FFunctions%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="agent-config.html"><span>agent</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-814380236%2FFunctions%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="agent-config.html"><span class="token function">agentConfig</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configure<span class="token operator">: </span><a href="-agent-config/index.html">KoogAgentsConfig.AgentConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures default configuration for all AI agents with the specified settings.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="335307675%2FFunctions%2F-1258927232" anchor-label="bedrock" id="335307675%2FFunctions%2F-1258927232" data-filterable-set=":koog-ktor/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":koog-ktor/jvmMain" data-filterable-set=":koog-ktor/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../bedrock.html"><span><span>bedrock</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="335307675%2FFunctions%2F-1258927232"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":koog-ktor/jvmMain" data-filterable-set=":koog-ktor/jvmMain" data-active="" data-toggle=":koog-ktor/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">KoogAgentsConfig</a><span class="token punctuation">.</span><a href="../bedrock.html"><span class="token function">bedrock</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">clock<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Clock///PointingToDeclaration/">Clock</span><span class="token operator"> = </span>kotlin.time.Clock.System<span class="token punctuation">, </span></span><span class="parameter ">moderationGuardrailsSettings<span class="token operator">: </span><a href="../../../prompt/prompt-executor/prompt-executor-clients/prompt-executor-bedrock-client/ai.koog.prompt.executor.clients.bedrock/-bedrock-guardrails-settings/index.html">BedrockGuardrailsSettings</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><span data-unresolved-link="aws.sdk.kotlin.services.bedrockruntime/BedrockRuntimeClient.Config.Builder///PointingToDeclaration/">BedrockRuntimeClient.Config.Builder</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures and initializes a Bedrock LLM client with AWS SDK builder</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">KoogAgentsConfig</a><span class="token punctuation">.</span><a href="../bedrock.html"><span class="token function">bedrock</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">apiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">clock<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Clock///PointingToDeclaration/">Clock</span><span class="token operator"> = </span>kotlin.time.Clock.System<span class="token punctuation">, </span></span><span class="parameter ">moderationGuardrailsSettings<span class="token operator">: </span><a href="../../../prompt/prompt-executor/prompt-executor-clients/prompt-executor-bedrock-client/ai.koog.prompt.executor.clients.bedrock/-bedrock-guardrails-settings/index.html">BedrockGuardrailsSettings</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><span data-unresolved-link="aws.sdk.kotlin.services.bedrockruntime/BedrockRuntimeClient.Config.Builder///PointingToDeclaration/">BedrockRuntimeClient.Config.Builder</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures and initializes a Bedrock LLM client with optional configuration.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="517500898%2FFunctions%2F1687882422" anchor-label="llm" id="517500898%2FFunctions%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="llm.html"><span><span>llm</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="517500898%2FFunctions%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="llm.html"><span class="token function">llm</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configure<span class="token operator">: </span><a href="-l-l-m-config/index.html">KoogAgentsConfig.LLMConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the properties and behavior of the large language model (LLM) within the server environment. Allows setting and customizing various aspects of LLM providers, fallbacks, and related configurations.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

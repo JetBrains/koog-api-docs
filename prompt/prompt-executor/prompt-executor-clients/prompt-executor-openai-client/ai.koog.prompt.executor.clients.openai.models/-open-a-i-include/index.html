@@ -1,0 +1,315 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>OpenAIInclude</title>
+<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-executor-openai-client::ai.koog.prompt.executor.clients.openai.models/OpenAIInclude///PointingToDeclaration//-731634551">
+  <div class="breadcrumbs"><a href="../../index.html">prompt-executor-openai-client</a><span class="delimiter">/</span><a href="../index.html">ai.koog.prompt.executor.clients.openai.models</a><span class="delimiter">/</span><span class="current">OpenAIInclude</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Open</span><wbr><span><span>AIInclude</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">enum </span><a href="index.html">OpenAIInclude</a> : <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><a href="index.html">OpenAIInclude</a><span class="token operator">&gt; </span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/prompt/prompt-executor/prompt-executor-clients/prompt-executor-openai-client/src/commonMain/kotlin/ai/koog/prompt/executor/clients/openai/models/OpenAIResponsesAPI.kt#L163">source</a>)</span></span></div><p class="paragraph">Specify additional output data to include in the model response. Currently supported values are:</p><p class="paragraph">web_search_call.action.sources: Include the sources of the web search tool call. code_interpreter_call.outputs: Includes the outputs of python code execution in code interpreter tool call items. computer_call_output.output.image_url: Include image urls from the computer call output. file_search_call.results: Include the search results of the file search tool call. message.input_image.image_url: Include image urls from the input message. message.output_text.logprobs: Include logprobs with assistant messages. reasoning.encrypted_content: Includes an encrypted version of reasoning tokens in reasoning item outputs. This enables reasoning items to be used in multi-turn conversations when using the Responses API statelessly (like when the store parameter is set to false, or when an organization is enrolled in the zero data retention program).</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="ENTRY">Entries</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="ENTRY">
+        <h2 class="tableheader">Entries</h2>
+        <div class="table"><a data-name="306626940%2FClasslikes%2F-731634551" anchor-label="WEB_SEARCH_CALL_ACTION_SOURCES" id="306626940%2FClasslikes%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-w-e-b_-s-e-a-r-c-h_-c-a-l-l_-a-c-t-i-o-n_-s-o-u-r-c-e-s/index.html">WEB_SEARCH_CALL_ACTION_SOURCES</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="306626940%2FClasslikes%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"web_search_call.action.sources"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-w-e-b_-s-e-a-r-c-h_-c-a-l-l_-a-c-t-i-o-n_-s-o-u-r-c-e-s/index.html">WEB_SEARCH_CALL_ACTION_SOURCES</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-480338952%2FClasslikes%2F-731634551" anchor-label="CODE_INTERPRETER_CALL_OUTPUTS" id="-480338952%2FClasslikes%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-o-d-e_-i-n-t-e-r-p-r-e-t-e-r_-c-a-l-l_-o-u-t-p-u-t-s/index.html">CODE_INTERPRETER_CALL_OUTPUTS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-480338952%2FClasslikes%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"code_interpreter_call.outputs"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-c-o-d-e_-i-n-t-e-r-p-r-e-t-e-r_-c-a-l-l_-o-u-t-p-u-t-s/index.html">CODE_INTERPRETER_CALL_OUTPUTS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1340821954%2FClasslikes%2F-731634551" anchor-label="COMPUTER_CALL_OUTPUT_IMAGE_URL" id="1340821954%2FClasslikes%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-c-o-m-p-u-t-e-r_-c-a-l-l_-o-u-t-p-u-t_-i-m-a-g-e_-u-r-l/index.html">COMPUTER_CALL_OUTPUT_IMAGE_URL</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1340821954%2FClasslikes%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"computer_call_output.output.image_url"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-c-o-m-p-u-t-e-r_-c-a-l-l_-o-u-t-p-u-t_-i-m-a-g-e_-u-r-l/index.html">COMPUTER_CALL_OUTPUT_IMAGE_URL</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-983195327%2FClasslikes%2F-731634551" anchor-label="FILE_SEARCH_CALL_RESULTS" id="-983195327%2FClasslikes%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-f-i-l-e_-s-e-a-r-c-h_-c-a-l-l_-r-e-s-u-l-t-s/index.html">FILE_SEARCH_CALL_RESULTS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-983195327%2FClasslikes%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"file_search_call.results"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-f-i-l-e_-s-e-a-r-c-h_-c-a-l-l_-r-e-s-u-l-t-s/index.html">FILE_SEARCH_CALL_RESULTS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1040670726%2FClasslikes%2F-731634551" anchor-label="INPUT_IMAGE_URL" id="1040670726%2FClasslikes%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-i-n-p-u-t_-i-m-a-g-e_-u-r-l/index.html">INPUT_IMAGE_URL</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1040670726%2FClasslikes%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"message.input_image.image_url"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-i-n-p-u-t_-i-m-a-g-e_-u-r-l/index.html">INPUT_IMAGE_URL</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1630966106%2FClasslikes%2F-731634551" anchor-label="OUTPUT_TEXT_LOGPROBS" id="-1630966106%2FClasslikes%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-u-t-p-u-t_-t-e-x-t_-l-o-g-p-r-o-b-s/index.html">OUTPUT_TEXT_LOGPROBS</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1630966106%2FClasslikes%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"message.output_text.logprobs"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-o-u-t-p-u-t_-t-e-x-t_-l-o-g-p-r-o-b-s/index.html">OUTPUT_TEXT_LOGPROBS</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2029136781%2FClasslikes%2F-731634551" anchor-label="REASONING_ENCRYPTED_CONTENT" id="2029136781%2FClasslikes%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="ENTRY" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-e-a-s-o-n-i-n-g_-e-n-c-r-y-p-t-e-d_-c-o-n-t-e-n-t/index.html">REASONING_ENCRYPTED_CONTENT</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2029136781%2FClasslikes%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serial-name/index.html"><span class="token annotation builtin">SerialName</span></a><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"reasoning.encrypted_content"</span></span></span><wbr><span class="token punctuation">)</span></div></div><a href="-r-e-a-s-o-n-i-n-g_-e-n-c-r-y-p-t-e-d_-c-o-n-t-e-n-t/index.html">REASONING_ENCRYPTED_CONTENT</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-487437646%2FProperties%2F-731634551" anchor-label="entries" id="-487437646%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="entries.html"><span><span>entries</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-487437646%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="entries.html">entries</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.enums/-enum-entries/index.html">EnumEntries</a><span class="token operator">&lt;</span><a href="index.html">OpenAIInclude</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns a representation of an immutable list of all enum entries, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-372974862%2FProperties%2F-731634551" anchor-label="name" id="-372974862%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-truncation/-d-i-s-a-b-l-e-d/index.html#-372974862%2FProperties%2F-731634551"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-372974862%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">val </span><a href="../-truncation/-d-i-s-a-b-l-e-d/index.html#-372974862%2FProperties%2F-731634551">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-739389684%2FProperties%2F-731634551" anchor-label="ordinal" id="-739389684%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-truncation/-d-i-s-a-b-l-e-d/index.html#-739389684%2FProperties%2F-731634551"><span><span>ordinal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-739389684%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">val </span><a href="../-truncation/-d-i-s-a-b-l-e-d/index.html#-739389684%2FProperties%2F-731634551">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="479724586%2FFunctions%2F-731634551" anchor-label="valueOf" id="479724586%2FFunctions%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="value-of.html"><span>value</span><wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="479724586%2FFunctions%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">OpenAIInclude</a></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="462553782%2FFunctions%2F-731634551" anchor-label="values" id="462553782%2FFunctions%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="462553782%2FFunctions%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><a href="index.html">OpenAIInclude</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,502 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ReadWrite</title>
+<link href="../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":rag:rag-base/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":rag:rag-base/commonMain" data-filter=":rag:rag-base/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="rag-base::ai.koog.rag.base.files/FileSystemProvider.ReadWrite///PointingToDeclaration//395681875">
+  <div class="breadcrumbs"><a href="../../../index.html">rag-base</a><span class="delimiter">/</span><a href="../../index.html">ai.koog.rag.base.files</a><span class="delimiter">/</span><a href="../index.html">FileSystemProvider</a><span class="delimiter">/</span><span class="current">ReadWrite</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Read</span><wbr><span><span>Write</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="index.html">ReadWrite</a><span class="token operator">&lt;</span><a href="index.html">Path</a><span class="token operator">&gt;</span> : <a href="../-read-only/index.html">FileSystemProvider.ReadOnly</a><span class="token operator">&lt;</span><a href="index.html">Path</a><span class="token operator">&gt; </span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/rag/rag-base/src/commonMain/kotlin/ai/koog/rag/base/files/FileSystemProvider.kt#L167">source</a>)</span></span></div><p class="paragraph">This is the most comprehensive interface, offering complete filesystem operations including reading, writing, and path manipulation.</p><h4 class="tableheader">Inheritors</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../-j-v-m-file-system-provider/-read-write/index.html#-187216724%2FMain%2F395681875">ReadWrite</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1511346938%2FFunctions%2F395681875" anchor-label="copy" id="1511346938%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="copy.html"><span><span>copy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1511346938%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="copy.html"><span class="token function">copy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">source<span class="token operator">: </span><a href="index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">target<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Copies a file or directory from <a href="copy.html">source</a> to <a href="copy.html">target</a>. If the <a href="copy.html">source</a> is a directory, all its contents are copied recursively. Parent directories of the <a href="copy.html">target</a> will be created if they don't exist.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="569292342%2FFunctions%2F395681875" anchor-label="create" id="569292342%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create.html"><span><span>create</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="569292342%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="create.html"><span class="token function">create</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">type<span class="token operator">: </span><a href="../../-file-metadata/-file-type/index.html">FileMetadata.FileType</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Creates a new file or directory denoted by the <a href="create.html">path</a> using the specified <a href="create.html">type</a>. Parent directories will be created if they don't exist.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-268135573%2FFunctions%2F395681875" anchor-label="createDirectory" id="-268135573%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../create-directory.html"><span>create</span><wbr><span><span>Directory</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-268135573%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../create-directory.html">Path</a><span class="token operator">&gt; </span><a href="index.html">FileSystemProvider.ReadWrite</a><span class="token operator">&lt;</span><a href="../../create-directory.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../create-directory.html"><span class="token function">createDirectory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="../../create-directory.html">Path</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Creates a directory at the specified <a href="../../create-directory.html">path</a>. Parent directories will be created automatically if they don't exist.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1224043862%2FFunctions%2F395681875" anchor-label="createFile" id="-1224043862%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../create-file.html"><span>create</span><wbr><span><span>File</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1224043862%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../create-file.html">Path</a><span class="token operator">&gt; </span><a href="index.html">FileSystemProvider.ReadWrite</a><span class="token operator">&lt;</span><a href="../../create-file.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../create-file.html"><span class="token function">createFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="../../create-file.html">Path</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Creates a file at the specified <a href="../../create-file.html">path</a>. Parent directories will be created automatically if they don't exist.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1953474129%2FFunctions%2F395681875" anchor-label="delete" id="1953474129%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="delete.html"><span><span>delete</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1953474129%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="delete.html"><span class="token function">delete</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Deletes a file or directory denoted by the <a href="delete.html">path</a>. If the item is a directory, it will be deleted recursively with all its contents.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-983647157%2FFunctions%2F395681875" anchor-label="exists" id="-983647157%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/exists.html"><span><span>exists</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-983647157%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-read-only/exists.html"><span class="token function">exists</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Checks if a <a href="../-read-only/exists.html">path</a> exists in the filesystem.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="99688914%2FFunctions%2F395681875" anchor-label="extension" id="99688914%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/extension.html"><span><span>extension</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="99688914%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-read-only/extension.html"><span class="token function">extension</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Gets the extension of a <a href="../-read-only/extension.html">path</a>. This method works with the path structure and doesn't check if the path actually exists in the filesystem.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2073417701%2FFunctions%2F395681875" anchor-label="filter" id="-2073417701%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../filter.html"><span><span>filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2073417701%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../filter.html">Path</a><span class="token operator">&gt; </span><a href="../-read-only/index.html">FileSystemProvider.ReadOnly</a><span class="token operator">&lt;</span><a href="../../filter.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../filter.html"><span class="token function">filter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filter<span class="token operator">: </span><a href="../../../ai.koog.rag.base.files.filter/-traversal-filter/index.html">TraversalFilter</a><span class="token operator">&lt;</span><a href="../../filter.html">Path</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-read-only/index.html">FileSystemProvider.ReadOnly</a><span class="token operator">&lt;</span><a href="../../filter.html">Path</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Filters the current read-only file system implementation such that only paths that are accepted by <a href="../../filter.html">filter</a> are visible and accessible.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../filter.html">Path</a><span class="token operator">&gt; </span><a href="index.html">FileSystemProvider.ReadWrite</a><span class="token operator">&lt;</span><a href="../../filter.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../filter.html"><span class="token function">filter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filter<span class="token operator">: </span><a href="../../../ai.koog.rag.base.files.filter/-traversal-filter/index.html">TraversalFilter</a><span class="token operator">&lt;</span><a href="../../filter.html">Path</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">FileSystemProvider.ReadWrite</a><span class="token operator">&lt;</span><a href="../../filter.html">Path</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Filters the current read-write file system implementation such that only paths that are accepted by <a href="../../filter.html">filter</a> are visible and accessible.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1887327572%2FFunctions%2F395681875" anchor-label="fromAbsolutePathString" id="-1887327572%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/from-absolute-path-string.html"><span>from</span><wbr><span>Absolute</span><wbr><span>Path</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1887327572%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-read-only/from-absolute-path-string.html"><span class="token function">fromAbsolutePathString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Path</a></div><div class="brief "><p class="paragraph">Creates a <a href="../-read-only/index.html">Path</a> object from an absolute path string. This method works with the path structure and doesn't check if the path actually exists in the filesystem.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="839442928%2FFunctions%2F395681875" anchor-label="getFileContentType" id="839442928%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/get-file-content-type.html"><span>get</span><wbr><span>File</span><wbr><span>Content</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="839442928%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-read-only/get-file-content-type.html"><span class="token function">getFileContentType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../-file-metadata/-file-content-type/index.html">FileMetadata.FileContentType</a></div><div class="brief "><p class="paragraph">Detects the type of content stored in a file using a <a href="../-read-only/get-file-content-type.html">path</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1869289475%2FFunctions%2F395681875" anchor-label="inputStream" id="-1869289475%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/input-stream.html"><span>input</span><wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1869289475%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-read-only/input-stream.html"><span class="token function">inputStream</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.io/Source///PointingToDeclaration/">Source</span></div><div class="brief "><p class="paragraph">Creates a <span data-unresolved-link="kotlinx.io/Source///PointingToDeclaration/">Source</span> for reading from a file at the specified <a href="../-read-only/input-stream.html">path</a>. The returned <span data-unresolved-link="kotlinx.io/Source///PointingToDeclaration/">Source</span> is buffered.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1385212995%2FFunctions%2F395681875" anchor-label="joinPath" id="1385212995%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/join-path.html"><span>join</span><wbr><span><span>Path</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1385212995%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-read-only/join-path.html"><span class="token function">joinPath</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">base<span class="token operator">: </span><a href="index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>parts<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Path</a></div><div class="brief "><p class="paragraph">Resolves strings from <a href="../-read-only/join-path.html">parts</a> against a <a href="../-read-only/join-path.html">base</a> path. This method works with the path structure and doesn't check if the path actually exists in the filesystem.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="988792333%2FFunctions%2F395681875" anchor-label="list" id="988792333%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/list.html"><span><span>list</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="988792333%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-read-only/list.html"><span class="token function">list</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">directory<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="index.html">Path</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Lists contents of a <a href="../-read-only/list.html">directory</a>. Children are sorted by name. The listing is not recursive.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-839740770%2FFunctions%2F395681875" anchor-label="metadata" id="-839740770%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/metadata.html"><span><span>metadata</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-839740770%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-read-only/metadata.html"><span class="token function">metadata</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../-file-metadata/index.html">FileMetadata</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Retrieves metadata for a file or directory using a <a href="../-read-only/metadata.html">path</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1822468950%2FFunctions%2F395681875" anchor-label="move" id="1822468950%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="move.html"><span><span>move</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1822468950%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="move.html"><span class="token function">move</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">source<span class="token operator">: </span><a href="index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">target<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Moves a file or directory from <a href="move.html">source</a> to <a href="move.html">target</a>. If the <a href="move.html">source</a> is a directory, all its contents are moved recursively. Parent directories of the <a href="move.html">target</a> will be created if they don't exist.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1074652410%2FFunctions%2F395681875" anchor-label="name" id="1074652410%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1074652410%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-read-only/name.html"><span class="token function">name</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Gets the name component of a <a href="../-read-only/name.html">path</a>. This method works with the path structure and doesn't check if the path actually exists in the filesystem.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-299528739%2FFunctions%2F395681875" anchor-label="outputStream" id="-299528739%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="output-stream.html"><span>output</span><wbr><span><span>Stream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-299528739%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="output-stream.html"><span class="token function">outputStream</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">append<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.io/Sink///PointingToDeclaration/">Sink</span></div><div class="brief "><p class="paragraph">Creates a <span data-unresolved-link="kotlinx.io/Sink///PointingToDeclaration/">Sink</span> for writing to a file. If the file doesn't exist, it will be created. If the parent directories don't exist, they will be created. The returned <span data-unresolved-link="kotlinx.io/Sink///PointingToDeclaration/">Sink</span> is buffered.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2018341223%2FFunctions%2F395681875" anchor-label="parent" id="-2018341223%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/parent.html"><span><span>parent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2018341223%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-read-only/parent.html"><span class="token function">parent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Path</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Gets the parent path of a given <a href="../-read-only/parent.html">path</a>. This method works with the path structure and doesn't check if the path actually exists in the filesystem.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-102633464%2FFunctions%2F395681875" anchor-label="readBytes" id="-102633464%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/read-bytes.html"><span>read</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-102633464%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-read-only/read-bytes.html"><span class="token function">readBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a></div><div class="brief "><p class="paragraph">Reads the content of a file at the specified <a href="../-read-only/read-bytes.html">path</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="383901514%2FFunctions%2F395681875" anchor-label="readText" id="383901514%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../read-text.html"><span>read</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="383901514%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../read-text.html">Path</a><span class="token operator">&gt; </span><a href="../-read-only/index.html">FileSystemProvider.ReadOnly</a><span class="token operator">&lt;</span><a href="../../read-text.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../read-text.html"><span class="token function">readText</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="../../read-text.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../read-text.html">Path</a><span class="token punctuation">, </span><a href="../../read-text.html">Document</a><span class="token operator">&gt; </span><a href="../-read-only/index.html">FileSystemProvider.ReadOnly</a><span class="token operator">&lt;</span><a href="../../read-text.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../read-text.html"><span class="token function">readText</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="../../read-text.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">documentProvider<span class="token operator">: </span><a href="../../-document-provider/index.html">DocumentProvider</a><span class="token operator">&lt;</span><a href="../../read-text.html">Path</a><span class="token punctuation">, </span><a href="../../read-text.html">Document</a><span class="token operator">&gt;</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Reads the entire content of a file as a string.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-492499575%2FFunctions%2F395681875" anchor-label="relativize" id="-492499575%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/relativize.html"><span><span>relativize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-492499575%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-read-only/relativize.html"><span class="token function">relativize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">root<span class="token operator">: </span><a href="index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Computes the relative path from a <a href="../-read-only/relativize.html">root</a> to a target <a href="../-read-only/relativize.html">path</a>. It doesn't check if the paths actually exist in the filesystem.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="198799472%2FFunctions%2F395681875" anchor-label="size" id="198799472%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/size.html"><span><span>size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="198799472%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-read-only/size.html"><span class="token function">size</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></div><div class="brief "><p class="paragraph">Gets the size of a file in bytes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-643893577%2FFunctions%2F395681875" anchor-label="toAbsolutePathString" id="-643893577%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-read-only/to-absolute-path-string.html"><span>to</span><wbr><span>Absolute</span><wbr><span>Path</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-643893577%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="../-read-only/to-absolute-path-string.html"><span class="token function">toAbsolutePathString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Converts a <a href="../-read-only/to-absolute-path-string.html">path</a> to its absolute path string representation. This method works with the path structure and doesn't check if the path actually exists in the filesystem.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1664596969%2FFunctions%2F395681875" anchor-label="writeBytes" id="1664596969%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="write-bytes.html"><span>write</span><wbr><span><span>Bytes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1664596969%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="write-bytes.html"><span class="token function">writeBytes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="index.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Writes content to a file. If the file doesn't exist, it will be created. If the file exists, its content will be overwritten. Parent directories will be created if they don't exist.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-463358677%2FFunctions%2F395681875" anchor-label="writeText" id="-463358677%2FFunctions%2F395681875" data-filterable-set=":rag:rag-base/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":rag:rag-base/commonMain" data-filterable-set=":rag:rag-base/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../write-text.html"><span>write</span><wbr><span><span>Text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-463358677%2FFunctions%2F395681875"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rag:rag-base/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../../write-text.html">Path</a><span class="token operator">&gt; </span><a href="index.html">FileSystemProvider.ReadWrite</a><span class="token operator">&lt;</span><a href="../../write-text.html">Path</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../write-text.html"><span class="token function">writeText</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="../../write-text.html">Path</a><span class="token punctuation">, </span></span><span class="parameter ">content<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Writes a string to a file, replacing any existing content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

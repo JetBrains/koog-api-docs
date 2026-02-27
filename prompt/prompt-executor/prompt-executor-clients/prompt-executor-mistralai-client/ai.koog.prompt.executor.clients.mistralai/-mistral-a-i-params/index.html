@@ -1,0 +1,585 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>MistralAIParams</title>
+<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-executor-mistralai-client::ai.koog.prompt.executor.clients.mistralai/MistralAIParams///PointingToDeclaration//1484460881">
+  <div class="breadcrumbs"><a href="../../index.html">prompt-executor-mistralai-client</a><span class="delimiter">/</span><a href="../index.html">ai.koog.prompt.executor.clients.mistralai</a><span class="delimiter">/</span><span class="current">MistralAIParams</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Mistral</span><wbr><span><span>AIParams</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">MistralAIParams</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">temperature<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">maxTokens<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">numberOfChoices<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">speculation<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">schema<span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/-schema/index.html">LLMParams.Schema</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">toolChoice<span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/-tool-choice/index.html">LLMParams.ToolChoice</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">user<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">additionalProperties<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-element/index.html">JsonElement</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>topP<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>stop<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>randomSeed<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>presencePenalty<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>frequencyPenalty<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>parallelToolCalls<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>promptMode<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>safePrompt<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span> : <a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/index.html">LLMParams</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/prompt/prompt-executor/prompt-executor-clients/prompt-executor-mistralai-client/src/commonMain/kotlin/ai/koog/prompt/executor/clients/mistralai/MistralAIParams.kt#L46">source</a>)</span></span></div><p class="paragraph">MistralAI chat-completions parameters layered on top of <a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/index.html">LLMParams</a>.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="536586884%2FConstructors%2F1484460881" anchor-label="MistralAIParams" id="536586884%2FConstructors%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mistral-a-i-params.html"><span>Mistral</span><wbr><span><span>AIParams</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="536586884%2FConstructors%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">temperature<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">maxTokens<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">numberOfChoices<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">speculation<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">schema<span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/-schema/index.html">LLMParams.Schema</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">toolChoice<span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/-tool-choice/index.html">LLMParams.ToolChoice</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">user<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">additionalProperties<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-element/index.html">JsonElement</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">topP<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">stop<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">randomSeed<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">presencePenalty<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">frequencyPenalty<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">parallelToolCalls<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">promptMode<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">safePrompt<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="2012563836%2FProperties%2F1484460881" anchor-label="additionalProperties" id="2012563836%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2012563836%2FProperties%2F1484460881"><span>additional</span><wbr><span><span>Properties</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2012563836%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#2012563836%2FProperties%2F1484460881">additionalProperties</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-element/index.html">JsonElement</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1223470683%2FProperties%2F1484460881" anchor-label="frequencyPenalty" id="-1223470683%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="frequency-penalty.html"><span>frequency</span><wbr><span><span>Penalty</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1223470683%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="frequency-penalty.html">frequencyPenalty</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Number in -2.0, 2.0—penalizes the repetition of words based on their frequency in the generated text.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1452207674%2FProperties%2F1484460881" anchor-label="maxTokens" id="-1452207674%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1452207674%2FProperties%2F1484460881"><span>max</span><wbr><span><span>Tokens</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1452207674%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-1452207674%2FProperties%2F1484460881">maxTokens</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1722244946%2FProperties%2F1484460881" anchor-label="numberOfChoices" id="1722244946%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1722244946%2FProperties%2F1484460881"><span>number</span><wbr><span>Of</span><wbr><span><span>Choices</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1722244946%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#1722244946%2FProperties%2F1484460881">numberOfChoices</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1121347954%2FProperties%2F1484460881" anchor-label="parallelToolCalls" id="1121347954%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="parallel-tool-calls.html"><span>parallel</span><wbr><span>Tool</span><wbr><span><span>Calls</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1121347954%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="parallel-tool-calls.html">parallelToolCalls</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Allow multiple tool calls in parallel.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1161650950%2FProperties%2F1484460881" anchor-label="presencePenalty" id="-1161650950%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="presence-penalty.html"><span>presence</span><wbr><span><span>Penalty</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1161650950%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="presence-penalty.html">presencePenalty</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Number in -2.0, 2.0—determines how much the model penalizes the repetition of words or phrases.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-588509941%2FProperties%2F1484460881" anchor-label="promptMode" id="-588509941%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="prompt-mode.html"><span>prompt</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-588509941%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="prompt-mode.html">promptMode</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Allows toggling between the reasoning mode and no system prompt. When set to <code class="lang-kotlin">reasoning</code> the system prompt for reasoning models will be used.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="25354494%2FProperties%2F1484460881" anchor-label="randomSeed" id="25354494%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="random-seed.html"><span>random</span><wbr><span><span>Seed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="25354494%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="random-seed.html">randomSeed</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The seed to use for random sampling. If set, different calls will generate deterministic results.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="475217441%2FProperties%2F1484460881" anchor-label="safePrompt" id="475217441%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="safe-prompt.html"><span>safe</span><wbr><span><span>Prompt</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="475217441%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="safe-prompt.html">safePrompt</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Whether to inject a safety prompt before all conversations.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1269343691%2FProperties%2F1484460881" anchor-label="schema" id="-1269343691%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1269343691%2FProperties%2F1484460881"><span><span>schema</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1269343691%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-1269343691%2FProperties%2F1484460881">schema</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/-schema/index.html">LLMParams.Schema</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="936992033%2FProperties%2F1484460881" anchor-label="speculation" id="936992033%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#936992033%2FProperties%2F1484460881"><span><span>speculation</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="936992033%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#936992033%2FProperties%2F1484460881">speculation</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1554552240%2FProperties%2F1484460881" anchor-label="stop" id="-1554552240%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="stop.html"><span><span>stop</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1554552240%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="stop.html">stop</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Stop sequences (0–4 items); generation halts before any of these.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1833391984%2FProperties%2F1484460881" anchor-label="temperature" id="1833391984%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1833391984%2FProperties%2F1484460881"><span><span>temperature</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1833391984%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#1833391984%2FProperties%2F1484460881">temperature</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="28600573%2FProperties%2F1484460881" anchor-label="toolChoice" id="28600573%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#28600573%2FProperties%2F1484460881"><span>tool</span><wbr><span><span>Choice</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="28600573%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#28600573%2FProperties%2F1484460881">toolChoice</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/-tool-choice/index.html">LLMParams.ToolChoice</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="381212375%2FProperties%2F1484460881" anchor-label="topP" id="381212375%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="top-p.html"><span>top</span><wbr><span><span>P</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="381212375%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="top-p.html">topP</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Nucleus sampling, where the model considers the results of the tokens with topP probability mass. So 0.1 means only the tokens comprising the top 10% probability mass are considered. We generally recommend altering this or <a href="../../../../../../prompt/prompt-executor/prompt-executor-clients/prompt-executor-mistralai-client/ai.koog.prompt.executor.clients.mistralai/-mistral-a-i-params/--root--.html">temperature</a> but not both.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1776349579%2FProperties%2F1484460881" anchor-label="user" id="1776349579%2FProperties%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1776349579%2FProperties%2F1484460881"><span><span>user</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1776349579%2FProperties%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#1776349579%2FProperties%2F1484460881">user</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1940068322%2FFunctions%2F1484460881" anchor-label="component1" id="1940068322%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1940068322%2FFunctions%2F1484460881"><span><span>component1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1940068322%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="index.html#1940068322%2FFunctions%2F1484460881"><span class="token function">component1</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-499496440%2FFunctions%2F1484460881" anchor-label="component10" id="-499496440%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-499496440%2FFunctions%2F1484460881"><span><span>component10</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-499496440%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="index.html#-499496440%2FFunctions%2F1484460881"><span class="token function">component10</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-element/index.html">JsonElement</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1971088129%2FFunctions%2F1484460881" anchor-label="component2" id="1971088129%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1971088129%2FFunctions%2F1484460881"><span><span>component2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1971088129%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="index.html#1971088129%2FFunctions%2F1484460881"><span class="token function">component2</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2002107936%2FFunctions%2F1484460881" anchor-label="component3" id="2002107936%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2002107936%2FFunctions%2F1484460881"><span><span>component3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2002107936%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="index.html#2002107936%2FFunctions%2F1484460881"><span class="token function">component3</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2033127743%2FFunctions%2F1484460881" anchor-label="component4" id="2033127743%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2033127743%2FFunctions%2F1484460881"><span><span>component4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2033127743%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="index.html#2033127743%2FFunctions%2F1484460881"><span class="token function">component4</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2064147550%2FFunctions%2F1484460881" anchor-label="component5" id="2064147550%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2064147550%2FFunctions%2F1484460881"><span><span>component5</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2064147550%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="index.html#2064147550%2FFunctions%2F1484460881"><span class="token function">component5</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/-schema/index.html">LLMParams.Schema</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2095167357%2FFunctions%2F1484460881" anchor-label="component6" id="2095167357%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2095167357%2FFunctions%2F1484460881"><span><span>component6</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2095167357%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="index.html#2095167357%2FFunctions%2F1484460881"><span class="token function">component6</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/-tool-choice/index.html">LLMParams.ToolChoice</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2126187164%2FFunctions%2F1484460881" anchor-label="component7" id="2126187164%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#2126187164%2FFunctions%2F1484460881"><span><span>component7</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2126187164%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="index.html#2126187164%2FFunctions%2F1484460881"><span class="token function">component7</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1362742160%2FFunctions%2F1484460881" anchor-label="copy" id="1362742160%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="copy.html"><span><span>copy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1362742160%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="copy.html"><span class="token function">copy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">temperature<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>this.temperature<span class="token punctuation">, </span></span><span class="parameter ">maxTokens<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>this.maxTokens<span class="token punctuation">, </span></span><span class="parameter ">numberOfChoices<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>this.numberOfChoices<span class="token punctuation">, </span></span><span class="parameter ">speculation<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>this.speculation<span class="token punctuation">, </span></span><span class="parameter ">schema<span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/-schema/index.html">LLMParams.Schema</a><span class="token operator">?</span><span class="token operator"> = </span>this.schema<span class="token punctuation">, </span></span><span class="parameter ">toolChoice<span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/-tool-choice/index.html">LLMParams.ToolChoice</a><span class="token operator">?</span><span class="token operator"> = </span>this.toolChoice<span class="token punctuation">, </span></span><span class="parameter ">user<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>this.user<span class="token punctuation">, </span></span><span class="parameter ">additionalProperties<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-element/index.html">JsonElement</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>this.additionalProperties<span class="token punctuation">, </span></span><span class="parameter ">topP<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>this.topP<span class="token punctuation">, </span></span><span class="parameter ">stop<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>this.stop<span class="token punctuation">, </span></span><span class="parameter ">randomSeed<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token operator"> = </span>this.randomSeed<span class="token punctuation">, </span></span><span class="parameter ">presencePenalty<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>this.presencePenalty<span class="token punctuation">, </span></span><span class="parameter ">frequencyPenalty<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token operator"> = </span>this.frequencyPenalty<span class="token punctuation">, </span></span><span class="parameter ">parallelToolCalls<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>this.parallelToolCalls<span class="token punctuation">, </span></span><span class="parameter ">promptMode<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>this.promptMode<span class="token punctuation">, </span></span><span class="parameter ">safePrompt<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span><span class="token operator"> = </span>this.safePrompt</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MistralAIParams</a></div><div class="brief "><p class="paragraph">Creates a copy of this instance with the ability to modify any of its properties.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#-10426549%2FFunctions%2F1484460881"><span class="token function">copy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">temperature<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">maxTokens<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">numberOfChoices<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">speculation<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">schema<span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/-schema/index.html">LLMParams.Schema</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">toolChoice<span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/-tool-choice/index.html">LLMParams.ToolChoice</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">user<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">additionalProperties<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-element/index.html">JsonElement</a><span class="token operator">&gt;</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/index.html">LLMParams</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1789671658%2FFunctions%2F1484460881" anchor-label="default" id="-1789671658%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1789671658%2FFunctions%2F1484460881"><span><span>default</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1789671658%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#-1789671658%2FFunctions%2F1484460881"><span class="token function">default</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">default<span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/index.html">LLMParams</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../../../prompt/prompt-model/ai.koog.prompt.params/-l-l-m-params/index.html">LLMParams</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1804765649%2FFunctions%2F1484460881" anchor-label="equals" id="-1804765649%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="equals.html"><span><span>equals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1804765649%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="equals.html"><span class="token function">equals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-579653161%2FFunctions%2F1484460881" anchor-label="hashCode" id="-579653161%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="hash-code.html"><span>hash</span><wbr><span><span>Code</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-579653161%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="hash-code.html"><span class="token function">hashCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-757819226%2FFunctions%2F1484460881" anchor-label="toString" id="-757819226%2FFunctions%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-757819226%2FFunctions%2F1484460881"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

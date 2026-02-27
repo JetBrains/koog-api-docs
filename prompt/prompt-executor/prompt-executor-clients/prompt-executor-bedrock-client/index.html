@@ -1,0 +1,192 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>prompt-executor-bedrock-client</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" id="content" pageids="prompt-executor-bedrock-client::////PointingToDeclaration//581635203">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>prompt-executor-bedrock-client</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><p class="paragraph">A Kotlin Multiplatform client implementation for executing prompts using AWS Bedrock's foundation models with comprehensive multimodal support, tool calling, and streaming capabilities.</p><h2 class="">Overview</h2><p class="paragraph">This module provides a client implementation for AWS Bedrock, Amazon's fully managed service that offers foundation models from leading AI companies including Anthropic, AI21 Labs, Cohere, Meta, Mistral, and Amazon. The client supports multimodal content (text and images), tool/function calling, streaming responses, and comprehensive error handling across multiple model providers.</p><h2 class="">Supported Models</h2><h3 class="">Anthropic Claude Models</h3><div class="table--container"><table><thead><tr><th>Model</th><th>Speed</th><th>Input Support</th><th>Output Support</th><th>Context</th><th>Pricing</th><th>Notes</th></tr></thead><tbody><tr><td>Claude 3 Opus</td><td>Medium</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>200K</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$15/$</p>75 per 1M</td><td>Most capable, best for complex</td></tr><tr><td>Claude 3 Sonnet</td><td>Fast</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>200K</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$3/$</p>15 per 1M</td><td>Balanced performance and cost</td></tr><tr><td>Claude 3 Haiku</td><td>Very Fast</td><td>Text, Images, Tools</td><td>Text, Tools</td><td>200K</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$0.25/$</p>1.25 per 1M</td><td>Fast and efficient</td></tr><tr><td>Claude 2.1</td><td>Medium</td><td>Text</td><td>Text</td><td>200K</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$8/$</p>24 per 1M</td><td>Previous gen, extended context</td></tr><tr><td>Claude 2.0</td><td>Medium</td><td>Text</td><td>Text</td><td>100K</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$8/$</p>24 per 1M</td><td>Previous generation</td></tr><tr><td>Claude Instant</td><td>Very Fast</td><td>Text</td><td>Text</td><td>100K</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$0.8/$</p>2.4 per 1M</td><td>Fast, cost-effective</td></tr></tbody></table></div><h3 class="">Amazon Titan Models</h3><div class="table--container"><table><thead><tr><th>Model</th><th>Speed</th><th>Input Support</th><th>Output Support</th><th>Pricing</th><th>Notes</th></tr></thead><tbody><tr><td>Titan Text Express</td><td>Fast</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$0.2/$</p>0.6 per 1M</td><td>Cost-effective, general</td></tr><tr><td>Titan Text Lite</td><td>Very Fast</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$0.15/$</p>0.2 per 1M</td><td>Lightweight, simple tasks</td></tr><tr><td>Titan Text Premier</td><td>Medium</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$0.5/$</p>1.5 per 1M</td><td>Advanced reasoning</td></tr></tbody></table></div><h3 class="">AI21 Labs Jurassic Models</h3><div class="table--container"><table><thead><tr><th>Model</th><th>Speed</th><th>Input Support</th><th>Output Support</th><th>Pricing</th><th>Notes</th></tr></thead><tbody><tr><td>Jurassic-2 Ultra</td><td>Medium</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$15/$</p>15 per 1M</td><td>Most powerful, complex</td></tr><tr><td>Jurassic-2 Mid</td><td>Fast</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$12.5/$</p>12.5 per 1M</td><td>Balanced performance</td></tr></tbody></table></div><h3 class="">Cohere Models</h3><div class="table--container"><table><thead><tr><th>Model</th><th>Speed</th><th>Input Support</th><th>Output Support</th><th>Pricing</th><th>Notes</th></tr></thead><tbody><tr><td>Command</td><td>Medium</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$0.75/$</p>2 per 1M</td><td>Instruction following</td></tr><tr><td>Command Light</td><td>Fast</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$0.3/$</p>0.6 per 1M</td><td>Lightweight version</td></tr></tbody></table></div><h3 class="">Meta Llama Models</h3><div class="table--container"><table><thead><tr><th>Model</th><th>Speed</th><th>Input Support</th><th>Output Support</th><th>Pricing</th><th>Notes</th></tr></thead><tbody><tr><td>Llama 3 70B Instruct</td><td>Medium</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$2.65/$</p>3.5 per 1M</td><td>Latest arch, 70B params</td></tr><tr><td>Llama 3 8B Instruct</td><td>Fast</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$0.3/$</p>0.6 per 1M</td><td>Latest arch, 8B params</td></tr><tr><td>Llama 2 70B Chat</td><td>Medium</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$1.95/$</p>2.56 per 1M</td><td>Dialogue optimized, 70B</td></tr><tr><td>Llama 2 13B Chat</td><td>Fast</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$0.75/$</p>1 per 1M</td><td>Dialogue optimized, 13B</td></tr></tbody></table></div><h3 class="">Mistral Models</h3><div class="table--container"><table><thead><tr><th>Model</th><th>Speed</th><th>Input Support</th><th>Output Support</th><th>Pricing</th><th>Notes</th></tr></thead><tbody><tr><td>Mistral Large</td><td>Medium</td><td>Text, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$4/$</p>12 per 1M</td><td>Most capable, multilingual</td></tr><tr><td>Mixtral 8x7B</td><td>Medium</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$0.45/$</p>0.7 per 1M</td><td>Mixture of experts</td></tr><tr><td>Mistral 7B</td><td>Fast</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$0.15/$</p>0.2 per 1M</td><td>Efficient, 7B params</td></tr><tr><td>Mistral Small</td><td>Fast</td><td>Text</td><td>Text</td><td><p class="org.jetbrains.dokka.pages.commenttable@fe2669a paragraph">$1/$</p>3 per 1M</td><td>Lightweight, cost-effective</td></tr></tbody></table></div><p class="paragraph">*Pricing shown as Input/Output per 1M tokens</p><h2 class="">Media Content Support</h2><div class="table--container"><table><thead><tr><th>Content Type</th><th>Supported Models</th><th>Formats</th><th>Max Size</th><th>Notes</th></tr></thead><tbody><tr><td>Images</td><td>Claude 3 (all variants)</td><td>PNG, JPEG, WebP, GIF</td><td>5MB</td><td>Base64 or URL supported</td></tr><tr><td>Audio</td><td>❌ Not supported</td><td>-</td><td>-</td><td>No audio models available</td></tr><tr><td>Documents</td><td>❌ Not supported</td><td>-</td><td>-</td><td>Extract text first</td></tr><tr><td>Video</td><td>❌ Not supported</td><td>-</td><td>-</td><td>-</td></tr></tbody></table></div><p class="paragraph"><strong>Important Notes:</strong></p><ul><li><p class="paragraph"><strong>Images</strong>: Only Claude 3 models support image input</p></li><li><p class="paragraph"><strong>Size limits</strong>: AWS Bedrock enforces a 5MB limit for image data</p></li><li><p class="paragraph"><strong>Tools</strong>: Only Claude 3 models and Mistral Large support function calling</p></li><li><p class="paragraph"><strong>Streaming</strong>: All models support token streaming</p></li></ul><h2 class="">Features</h2><ul><li><p class="paragraph"><strong>Multi-Model Support</strong>: Access to models from multiple providers through a single API</p></li><li><p class="paragraph"><strong>Tool/Function Calling</strong>: Supported for Claude 3 and Mistral Large models</p></li><li><p class="paragraph"><strong>Streaming Responses</strong>: Real-time token streaming for all supported models</p></li><li><p class="paragraph"><strong>Multimodal Input</strong>: Image support for Claude 3 models</p></li><li><p class="paragraph"><strong>Kotlin Multiplatform</strong>: Works on JVM and Android (JS/Native not supported due to AWS SDK limitations)</p></li><li><p class="paragraph"><strong>Comprehensive Error Handling</strong>: Model-specific error messages and validation</p></li><li><p class="paragraph"><strong>Token Usage Tracking</strong>: Detailed token consumption metrics</p></li><li><p class="paragraph"><strong>Region Support</strong>: Available across multiple AWS regions</p></li></ul><h2 class="">Installation</h2><p class="paragraph">Add the dependency to your project:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.prompt:prompt-executor-bedrock-client:$version")<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h2 class="">Configuration</h2><p class="paragraph">Configure the client with your AWS credentials:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val bedrockClient = createBedrockLLMClient(<br>    awsAccessKeyId = "your-access-key",<br>    awsSecretAccessKey = "your-secret-key",<br>    settings = BedrockClientSettings(<br>        region = "us-east-1",<br>        endpointUrl = null, // Optional custom endpoint<br>        maxRetries = 3,<br>        enableLogging = false,<br>        timeoutConfig = ConnectionTimeoutConfig(<br>            requestTimeoutMillis = 60_000,<br>            connectTimeoutMillis = 5_000,<br>            socketTimeoutMillis = 60_000<br>        )<br>    )<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h2 class="">Basic Usage</h2><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">suspend fun main() {<br>    val client = createBedrockLLMClient(<br>        awsAccessKeyId = ApiKeyService.awsAccessKey,<br>        awsSecretAccessKey = ApiKeyService.awsSecretAccessKey,<br>        settings = BedrockClientSettings(region = "us-west-2")<br>    )<br><br>    // Simple text generation<br>    val response = client.execute(<br>        prompt = prompt {<br>            system("You are a helpful assistant")<br>            user("What is the capital of France?")<br>        },<br>        model = BedrockModels.AnthropicClaude3Sonnet<br>    )<br><br>    println(response.first().content)<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h2 class="">Advanced Examples</h2><h3 class="">Multimodal Input (Images)</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Image analysis with Claude 3<br>val imageResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("What do you see in this image?")<br>            image("/path/to/image.jpg")<br>        }<br>    },<br>    model = BedrockModels.AnthropicClaude3Opus<br>)<br><br>// Multiple images with Claude 3<br>val multiImageResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Compare these images")<br>            image("/path/to/image1.jpg")<br>            image("/path/to/image2.jpg")<br>        }<br>    },<br>    model = BedrockModels.AnthropicClaude3Sonnet<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Tool/Function Calling</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Define a tool<br>val weatherTool = ToolDescriptor(<br>    name = "get_weather",<br>    description = "Get the weather for a location",<br>    requiredParameters = listOf(<br>        ToolParameterDescriptor(<br>            name = "location",<br>            description = "The city and state",<br>            type = ToolParameterType.String<br>        )<br>    )<br>)<br><br>// Use with Claude 3 or Mistral Large<br>val toolResponse = client.execute(<br>    prompt = prompt {<br>        user("What's the weather in New York?")<br>    },<br>    model = BedrockModels.AnthropicClaude3Sonnet,<br>    tools = listOf(weatherTool)<br>)<br><br>// Handle tool calls in response<br>toolResponse.forEach { message -&gt;<br>    when (message) {<br>        is Message.Tool.Call -&gt; {<br>            println("Tool called: ${message.tool}")<br>            println("Arguments: ${message.content}")<br>        }<br>        is Message.Assistant -&gt; {<br>            println("Assistant: ${message.content}")<br>        }<br>    }<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Streaming Responses</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Stream tokens as they're generated<br>val stream = client.executeStreaming(<br>    prompt = prompt {<br>        user("Write a haiku about clouds")<br>    },<br>    model = BedrockModels.AnthropicClaude3Haiku<br>)<br><br>stream.collect { token -&gt;<br>    print(token) // Print each token as it arrives<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Model-Specific Features</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Use extended context with Claude 2.1<br>val longContextResponse = client.execute(<br>    prompt = prompt {<br>        system("Analyze this document")<br>        user(veryLongDocument) // Up to 200K tokens<br>    },<br>    model = BedrockModels.AnthropicClaude21<br>)<br><br>// Use Mixtral's mixture of experts<br>val mixtralResponse = client.execute(<br>    prompt = prompt {<br>        user("Explain quantum computing")<br>    },<br>    model = BedrockModels.MistralMixtral8x7BInstruct<br>)<br><br>// Use Mistral Large with tools<br>val mistralToolResponse = client.execute(<br>    prompt = prompt {<br>        user("Search for recent AI news")<br>    },<br>    model = BedrockModels.MistralLarge,<br>    tools = listOf(searchTool)<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h2 class="">Testing</h2><p class="paragraph">For testing, you can use a mock implementation:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mockBedrockClient = MockBedrockClient(<br>    responses = listOf("Mocked response 1", "Mocked response 2")<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h2 class="">Platform Support</h2><ul><li><p class="paragraph">✅ <strong>JVM</strong>: Full support with all features</p></li><li><p class="paragraph">✅ <strong>Android</strong>: Full support (requires Java 8+ compatibility)</p></li><li><p class="paragraph">❌ <strong>JavaScript</strong>: Not supported (AWS SDK limitation)</p></li><li><p class="paragraph">❌ <strong>Native</strong>: Not supported (AWS SDK limitation)</p></li></ul><p class="paragraph">For non-JVM platforms, consider using a server-side proxy or the OpenRouter client as an alternative.</p><h2 class="">Region Availability</h2><p class="paragraph">Not all models are available in all AWS regions. Check the <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/models-regions.html">AWS documentation</a> for current availability.</p><p class="paragraph">Common regions with good model coverage:</p><ul><li><p class="paragraph"><code class="lang-kotlin">us-east-1</code> (N. Virginia) - Widest model selection</p></li><li><p class="paragraph"><code class="lang-kotlin">us-west-2</code> (Oregon) - Most models available</p></li><li><p class="paragraph"><code class="lang-kotlin">eu-west-1</code> (Ireland) - European deployment</p></li><li><p class="paragraph"><code class="lang-kotlin">ap-northeast-1</code> (Tokyo) - Asia Pacific deployment</p></li></ul><h2 class="">Security Best Practices</h2><ol><li><p class="paragraph"><strong>Never hardcode credentials</strong>: Use environment variables or AWS IAM roles</p></li><li><p class="paragraph"><strong>Use IAM policies</strong>: Restrict access to specific models and actions</p></li><li><p class="paragraph"><strong>Enable CloudTrail</strong>: Monitor API usage for security and cost tracking</p></li><li><p class="paragraph"><strong>Rotate credentials</strong>: Regularly update access keys</p></li><li><p class="paragraph"><strong>Use VPC endpoints</strong>: For enhanced security in production environments</p></li></ol><h2 class="">Error Handling</h2><p class="paragraph">The client provides detailed error messages for common issues:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">try {<br>    val response = client.execute(prompt, model)<br>} catch (e: IllegalArgumentException) {<br>    // Model doesn't support requested features (e.g., tools, vision)<br>    logger.error("Feature not supported: ${e.message}")<br>} catch (e: Exception) {<br>    // AWS API errors, network issues, rate limits, etc.<br>    logger.error("API error: ${e.message}")<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h2 class="">Cost Considerations</h2><p class="paragraph">AWS Bedrock charges per token for model usage. Monitor your usage and set up billing alerts:</p><ul><li><p class="paragraph"><strong>Claude 3/4 models</strong>: Higher cost, superior performance and capabilities</p></li><li><p class="paragraph"><strong>Titan models</strong>: Cost-effective for general-purpose tasks</p></li><li><p class="paragraph"><strong>Llama models</strong>: Good balance of cost and performance</p></li><li><p class="paragraph"><strong>Mistral models</strong>: Competitive pricing with tool support (Large model)</p></li></ul><h2 class="">Limitations</h2><ol><li><p class="paragraph"><strong>Model Availability</strong>: Not all models are available in all AWS regions</p></li><li><p class="paragraph"><strong>Rate Limits</strong>: AWS imposes rate limits per model and region</p></li><li><p class="paragraph"><strong>Context Windows</strong>: Vary by model (see tables above)</p></li><li><p class="paragraph"><strong>Feature Support</strong>: Not all models support all features (tools, vision, etc.)</p></li><li><p class="paragraph"><strong>Platform Support</strong>: Limited to JVM and Android due to AWS SDK constraints</p></li><li><p class="paragraph"><strong>Media Support</strong>: Only images supported, no audio/video/documents</p></li></ol><h2 class="">Performance Tips</h2><ol><li><p class="paragraph"><strong>Choose the right model</strong>: Balance cost, speed, and capability needs</p></li><li><p class="paragraph"><strong>Use streaming</strong>: For better user experience with long responses</p></li><li><p class="paragraph"><strong>Optimize prompts</strong>: Shorter prompts reduce costs and latency</p></li><li><p class="paragraph"><strong>Batch requests</strong>: When possible, combine multiple tasks</p></li><li><p class="paragraph"><strong>Monitor usage</strong>: Track token consumption and costs</p></li></ol><h2 class="">Contributing</h2><p class="paragraph">See the main project README for contribution guidelines.</p><h2 class="">License</h2><p class="paragraph">This module is part of the Koog project and follows the same license terms.</p></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="-1952588507%2FPackages%2F581635203" anchor-label="ai.koog.prompt.executor.clients.bedrock" id="-1952588507%2FPackages%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.executor.clients.bedrock/index.html">ai.koog.prompt.executor.clients.bedrock</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1952588507%2FPackages%2F581635203"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="424371168%2FPackages%2F581635203" anchor-label="ai.koog.prompt.executor.clients.bedrock.converse" id="424371168%2FPackages%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.executor.clients.bedrock.converse/index.html">ai.koog.prompt.executor.clients.bedrock.converse</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="424371168%2FPackages%2F581635203"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-520345246%2FPackages%2F581635203" anchor-label="ai.koog.prompt.executor.clients.bedrock.modelfamilies" id="-520345246%2FPackages%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.executor.clients.bedrock.modelfamilies/index.html">ai.koog.prompt.executor.clients.bedrock.modelfamilies</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-520345246%2FPackages%2F581635203"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1444429269%2FPackages%2F581635203" anchor-label="ai.koog.prompt.executor.clients.bedrock.modelfamilies.meta" id="1444429269%2FPackages%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.executor.clients.bedrock.modelfamilies.meta/index.html">ai.koog.prompt.executor.clients.bedrock.modelfamilies.meta</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1444429269%2FPackages%2F581635203"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

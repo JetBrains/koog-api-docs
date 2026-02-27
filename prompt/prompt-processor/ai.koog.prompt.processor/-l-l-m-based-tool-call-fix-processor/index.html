@@ -1,0 +1,176 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>LLMBasedToolCallFixProcessor</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-processor/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-processor/commonMain" data-filter=":prompt:prompt-processor/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-processor::ai.koog.prompt.processor/LLMBasedToolCallFixProcessor///PointingToDeclaration//127139896">
+  <div class="breadcrumbs"><a href="../../index.html">prompt-processor</a><span class="delimiter">/</span><a href="../index.html">ai.koog.prompt.processor</a><span class="delimiter">/</span><span class="current">LLMBasedToolCallFixProcessor</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>LLMBased</span><wbr><span>Tool</span><wbr><span>Call</span><wbr><span>Fix</span><wbr><span><span>Processor</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-processor/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">LLMBasedToolCallFixProcessor</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">toolRegistry<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-registry/index.html">ToolRegistry</a><span class="token punctuation">, </span></span><span class="parameter ">toolCallJsonConfig<span class="token operator">: </span><a href="../-tool-call-json-config/index.html">ToolCallJsonConfig</a><span class="token operator"> = </span>ToolCallJsonConfig()<span class="token punctuation">, </span></span><span class="parameter ">preprocessor<span class="token operator">: </span><a href="../-response-processor/index.html">ResponseProcessor</a><span class="token operator"> = </span>ManualToolCallFixProcessor(toolRegistry, toolCallJsonConfig)<span class="token punctuation">, </span></span><span class="parameter ">fallbackProcessor<span class="token operator">: </span><a href="../-response-processor/index.html">ResponseProcessor</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">assessToolCallIntentSystemMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Prompts.assessToolCallIntent<span class="token punctuation">, </span></span><span class="parameter ">fixToolCallSystemMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Prompts.fixToolCall<span class="token punctuation">, </span></span><span class="parameter ">invalidJsonFeedback<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Prompts::invalidJsonFeedback<span class="token punctuation">, </span></span><span class="parameter ">invalidNameFeedback<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Prompts::invalidNameFeedback<span class="token punctuation">, </span></span><span class="parameter ">invalidArgumentsFeedback<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Prompts::invalidArgumentsFeedback<span class="token punctuation">, </span></span><span class="parameter ">maxRetries<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span></span></span><span class="token punctuation">)</span> : <a href="../-tool-json-fix-processor/index.html">ToolJsonFixProcessor</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/prompt/prompt-processor/src/commonMain/kotlin/ai/koog/prompt/processor/LLMBasedToolCallFixProcessor.kt#L87">source</a>)</span></span></div><p class="paragraph">A response processor that fixes incorrectly communicated tool calls.</p><p class="paragraph">Applies an LLM-based approach to fix incorrectly generated tool calls. Iteratively asks the LLM to update a message until it is a correct tool call.</p><p class="paragraph">The first step is to identify if the corrections are needed. It is done by (a) Asking the LLM if the message intends to call a tool if the message is <a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-assistant/index.html">Message.Assistant</a> (b) Trying to parse the name and parameters if the message is <a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-tool/-call/index.html">Message.Tool.Call</a></p><p class="paragraph">The main step is to fix the message (if needed). The processor runs a loop asking the LLM to fix the message. On every iteration, the processor provides the LLM with the current message and the feedback on it. If the LLM fails to return a correct tool call message in <a href="../../../../prompt/prompt-processor/ai.koog.prompt.processor/-l-l-m-based-tool-call-fix-processor/--root--.html">maxRetries</a> iterations, the fallback processor is used. If no fallback processor is provided, the original message is returned.</p><p class="paragraph">Some use-cases:</p><ol><li><p class="paragraph">Simple usage:</p></li></ol><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val processor = LLMBasedToolCallFixProcessor(toolRegistry) // Tool registry is required</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><ol><li><p class="paragraph">Customizing the json keys:</p></li></ol><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val processor = LLMBasedToolCallFixProcessor(<br>    toolRegistry,<br>    ToolCallJsonConfig(<br>        idJsonKeys = ToolCallJsonConfig.defaultIdJsonKeys + listOf("custom_id_keys", ...),<br>        nameJsonKeys = ToolCallJsonConfig.defaultNameJsonKeys + listOf("custom_name_keys", ...),<br>        argsJsonKeys = ToolCallJsonConfig.defaultArgsJsonKeys + listOf("custom_args_keys", ...),,<br>    ), // Add custom json keys produced by your LLM<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><ol><li><p class="paragraph">Using a fallback processor. Here the fallback processor calls another (e.g. better but more expensive) LLM to fix the message:</p></li></ol><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val betterModel = OpenAIModels.Chat.GPT4o<br>val fallbackProcessor = object : ResponseProcessor() {<br>    override suspend fun process(<br>        executor: PromptExecutor,<br>        prompt: Prompt,<br>        model: LLModel,<br>        tools: List&lt;ToolDescriptor&gt;,<br>        responses: List&lt;Message.Response&gt;<br>    ): List&lt;Message.Response&gt; {<br>        val promptFixing = prompt(prompt) {<br>            user("please fix the following incorrectly generated tool call messages: $responses")<br>        }<br>        return executor.execute(promptFixing, betterModel, tools) // use a better LLM<br>    }<br>}<br><br>val processor = LLMBasedToolCallFixProcessor(<br>    toolRegistry,<br>    fallbackProcessor = fallbackProcessor<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h4 class="tableheader">Parameters</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>tool</span><wbr><span><span>Registry</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The tool registry with available tools</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>tool</span><wbr><span>Call</span><wbr><span>Json</span><wbr><span><span>Config</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Configuration for parsing and fixing tool call json</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>preprocessor</span></span></u></div></span></div><div><div class="title"><p class="paragraph">A processor applied to all responses from the LLM. Defaults to <a href="../-manual-tool-call-fix-processor/index.html">ManualToolCallFixProcessor</a></p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>assess</span><wbr><span>Tool</span><wbr><span>Call</span><wbr><span>Intent</span><wbr><span>System</span><wbr><span><span>Message</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The system message to ask LLM if a tool call was intended</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>fix</span><wbr><span>Tool</span><wbr><span>Call</span><wbr><span>System</span><wbr><span><span>Message</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The system message to ask LLM to fix a tool call</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>invalid</span><wbr><span>Json</span><wbr><span><span>Feedback</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The message sent to the LLM when tool call json is invalid</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>invalid</span><wbr><span>Name</span><wbr><span><span>Feedback</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The message sent to the LLM when the tool name is invalid</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>invalid</span><wbr><span>Arguments</span><wbr><span><span>Feedback</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The message sent to the LLM when tool arguments are invalid</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>fallback</span><wbr><span><span>Processor</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The fallback processor to use if LLM fails to fix a tool call. Defaults to null, meaning that the original message is returned if the LLM fails to fix a tool call.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>max</span><wbr><span><span>Retries</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The maximum number of iterations in the main loop</p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="583518205%2FConstructors%2F127139896" anchor-label="LLMBasedToolCallFixProcessor" id="583518205%2FConstructors%2F127139896" data-filterable-set=":prompt:prompt-processor/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-l-m-based-tool-call-fix-processor.html"><span>LLMBased</span><wbr><span>Tool</span><wbr><span>Call</span><wbr><span>Fix</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="583518205%2FConstructors%2F127139896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-processor/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">toolRegistry<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-registry/index.html">ToolRegistry</a><span class="token punctuation">, </span></span><span class="parameter ">toolCallJsonConfig<span class="token operator">: </span><a href="../-tool-call-json-config/index.html">ToolCallJsonConfig</a><span class="token operator"> = </span>ToolCallJsonConfig()<span class="token punctuation">, </span></span><span class="parameter ">preprocessor<span class="token operator">: </span><a href="../-response-processor/index.html">ResponseProcessor</a><span class="token operator"> = </span>ManualToolCallFixProcessor(toolRegistry, toolCallJsonConfig)<span class="token punctuation">, </span></span><span class="parameter ">fallbackProcessor<span class="token operator">: </span><a href="../-response-processor/index.html">ResponseProcessor</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">assessToolCallIntentSystemMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Prompts.assessToolCallIntent<span class="token punctuation">, </span></span><span class="parameter ">fixToolCallSystemMessage<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Prompts.fixToolCall<span class="token punctuation">, </span></span><span class="parameter ">invalidJsonFeedback<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Prompts::invalidJsonFeedback<span class="token punctuation">, </span></span><span class="parameter ">invalidNameFeedback<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Prompts::invalidNameFeedback<span class="token punctuation">, </span></span><span class="parameter ">invalidArgumentsFeedback<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>Prompts::invalidArgumentsFeedback<span class="token punctuation">, </span></span><span class="parameter ">maxRetries<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">3</span></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-588116973%2FFunctions%2F127139896" anchor-label="plus" id="-588116973%2FFunctions%2F127139896" data-filterable-set=":prompt:prompt-processor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-response-processor/plus.html"><span><span>plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-588116973%2FFunctions%2F127139896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-processor/commonMain"><div class="symbol monospace"><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="../-response-processor/plus.html"><span class="token function">plus</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="../-response-processor/index.html">ResponseProcessor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-response-processor/index.html">ResponseProcessor</a></div><div class="brief "><p class="paragraph">Chains two processors together.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1491752188%2FFunctions%2F127139896" anchor-label="process" id="-1491752188%2FFunctions%2F127139896" data-filterable-set=":prompt:prompt-processor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-processor/commonMain" data-filterable-set=":prompt:prompt-processor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="process.html"><span><span>process</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1491752188%2FFunctions%2F127139896"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-processor/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="process.html"><span class="token function">process</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">executor<span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-model/ai.koog.prompt.executor.model/-prompt-executor/index.html">PromptExecutor</a><span class="token punctuation">, </span></span><span class="parameter ">prompt<span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.dsl/-prompt/index.html">Prompt</a><span class="token punctuation">, </span></span><span class="parameter ">model<span class="token operator">: </span><a href="../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a><span class="token punctuation">, </span></span><span class="parameter ">tools<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">responses<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Processes the given LLM responses. These responses were received using <a href="../-response-processor/process.html">executor</a>, <a href="../-response-processor/process.html">prompt</a>, <a href="../-response-processor/process.html">model</a>, <a href="../-response-processor/process.html">tools</a>.</p></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-response-processor/process.html"><span class="token function">process</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">executor<span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-model/ai.koog.prompt.executor.model/-prompt-executor/index.html">PromptExecutor</a><span class="token punctuation">, </span></span><span class="parameter ">prompt<span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.dsl/-prompt/index.html">Prompt</a><span class="token punctuation">, </span></span><span class="parameter ">model<span class="token operator">: </span><a href="../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a><span class="token punctuation">, </span></span><span class="parameter ">tools<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">response<span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.message/-message/-response/index.html">Message.Response</a></div><div class="brief "><p class="paragraph">Processes a single LLM response.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

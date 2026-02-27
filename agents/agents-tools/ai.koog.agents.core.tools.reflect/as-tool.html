@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>asTool</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":agents:agents-tools/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-tools/jvmMain" data-filter=":agents:agents-tools/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="member" id="content" pageids="agents-tools::ai.koog.agents.core.tools.reflect//asTool/kotlin.reflect.KFunction[TypeParam(bounds=[kotlin.Any?])]#kotlinx.serialization.json.Json#kotlin.Any?#kotlin.String?#kotlin.String?/PointingToDeclaration//546169621">
+  <div class="breadcrumbs"><a href="../index.html">agents-tools</a><span class="delimiter">/</span><a href="index.html">ai.koog.agents.core.tools.reflect</a><span class="delimiter">/</span><span class="current">asTool</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>as</span><wbr><span><span>Tool</span></span></h1>
+  </div>
+  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="as-tool.html">A</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-function/index.html">KFunction</a><span class="token operator">&lt;</span><a href="as-tool.html">A</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="as-tool.html"><span class="token function">asTool</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">json<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a><span class="token operator"> = </span>ToolJson<span class="token punctuation">, </span></span><span class="parameter ">thisRef<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">description<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="-tool-from-callable/-var-args/index.html">ToolFromCallable.VarArgs</a><span class="token punctuation">, </span><a href="as-tool.html">A</a><span class="token operator">&gt;</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/agents/agents-tools/src/jvmMain/kotlin/ai/koog/agents/core/tools/reflect/util.kt#L190">source</a>)</span></span></div><p class="paragraph">Converts a KFunction into a code-engine tool that works by reflection.</p><p class="paragraph">The function can be annotated with <a href="../ai.koog.agents.core.tools.annotations/-tool/index.html">Tool</a> annotation where the name of the tool can be overridden. If the custom name is not provided, the name of the function is used.</p><p class="paragraph">The function can be annotated with <a href="../ai.koog.agents.core.tools.annotations/-l-l-m-description/index.html">LLMDescription</a> annotation to provide a description of the tool. If not provided, the name of the function is used as a description.</p><p class="paragraph">The callable parameters can be annotated with <a href="../ai.koog.agents.core.tools.annotations/-l-l-m-description/index.html">LLMDescription</a> annotation to provide a description of the parameter. If not provided, the name of the parameter is used.</p><p class="paragraph">If the function is a method that overrides or implements another method from a base class or an interface, <a href="../ai.koog.agents.core.tools.annotations/-tool/index.html">Tool</a> annotation can be extracted from one of the base methods in the case when it's missing on this method. In this case <a href="../ai.koog.agents.core.tools.annotations/-l-l-m-description/index.html">LLMDescription</a>` annotation will be also extracted from the base method where <a href="../ai.koog.agents.core.tools.annotations/-tool/index.html">Tool</a> annotation was found.</p><p class="paragraph">Both suspend and non-suspend functions are supported</p><p class="paragraph">Default parameters are supported (calling site can omit them in the argument Json)</p><h4 class="tableheader">Parameters</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>json</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The Json instance to use for serialization.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span>this</span><wbr><span><span>Ref</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The object instance to use as the 'this' object for the callable.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>name</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The name of the tool. If not provided, the name will be obtained from <a href="../ai.koog.agents.core.tools.annotations/-tool/custom-name.html">Tool.customName</a> property. In the case of the missing attribute or empty name the name of the function is used.</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>description</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The description of the tool. If not provided, the description will be obtained from <a href="../ai.koog.agents.core.tools.annotations/-l-l-m-description/description.html">LLMDescription.description</a> property. In the case of the missing attribute or empty description the name of the function is used as a description.</p><h1 class="">Note</h1><p class="paragraph">If you get the callable as a reference to an instance method like <code class="lang-kotlin">myTools::my_best_tool</code> you don't need to pass <a href="as-tool.html">thisRef</a> argument, but if the callable is a reference to an instance method obtained via class you have to provide the proper value (<code class="lang-kotlin">MyTools::my_best_tool</code>])</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">class MyTools {<br>    @Tool<br>    fun my_best_tool(arg1: String, arg2: Int) {<br>        // ...<br>    }<br>}<br><br>val myTools = MyTools()<br>val tool = myTools::my_best_tool.asTool(json = Json)<br>// or<br><br>val tool = MyTools::my_best_tool.asTool(json = Json, thisRef = myTools)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div></div></div></div></div></div></div>  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

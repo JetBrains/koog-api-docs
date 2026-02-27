@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>prompt-executor-dashscope-client</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-dashscope-client/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-dashscope-client/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-dashscope-client/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" id="content" pageids="prompt-executor-dashscope-client::////PointingToDeclaration//184127799">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>prompt-executor-dashscope-client</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-dashscope-client/commonMain"><p class="paragraph">A client implementation for executing prompts using Alibaba Cloud's DashScope API with Qwen models. Provides OpenAI-compatible interface for seamless integration.</p><h3 class="">Overview</h3><p class="paragraph">This module provides a client implementation for the DashScope API, allowing you to execute prompts using Alibaba's Qwen models. It leverages OpenAI-compatible endpoints and handles authentication, request formatting, response parsing, and tool integration specific to DashScope's API requirements.</p><h3 class="">Model-Specific Parameters Support</h3><h4 class="">DashScope Parameters</h4><p class="paragraph">The client supports DashScope-specific parameters through <code class="lang-kotlin">DashscopeParams</code> class:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val dashscopeParams = DashscopeParams(<br>    temperature = 0.7,        // Controls randomness (0.0 to 2.0)<br>    maxTokens = 1000,         // Maximum tokens to generate<br>    toolChoice = LLMParams.ToolChoice.AUTO  // Tool usage control<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">API Endpoints</h3><p class="paragraph">The client connects to DashScope using OpenAI-compatible endpoints:</p><ul><li><p class="paragraph"><strong>China mainland</strong>: <code class="lang-kotlin">https://dashscope.aliyuncs.com/compatible-mode/v1</code></p></li><li><p class="paragraph"><strong>International</strong>: <code class="lang-kotlin">https://dashscope-intl.aliyuncs.com/compatible-mode/v1</code></p></li></ul><h3 class="">Using in your project</h3><p class="paragraph">Add the dependency to your project:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.prompt:prompt-executor-dashscope-client:$version")<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">Configure the client with your API key:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val dashscopeClient = DashscopeLLMClient(<br>    apiKey = "your-dashscope-api-key",<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Configuration Options</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Default configuration (China mainland)<br>val client = DashscopeLLMClient(<br>    apiKey = "your-api-key"<br>)<br><br>// International configuration<br>val internationalClient = DashscopeLLMClient(<br>    apiKey = "your-api-key",<br>    settings = DashscopeClientSettings(<br>        baseUrl = "https://dashscope-intl.aliyuncs.com/",<br>        timeoutConfig = ConnectionTimeoutConfig(<br>            requestTimeoutMillis = 60_000,<br>            connectTimeoutMillis = 30_000,<br>            socketTimeoutMillis = 60_000<br>        )<br>    )<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Example of usage</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">suspend fun main() {<br>    val client = DashscopeLLMClient(<br>        apiKey = System.getenv("DASHSCOPE_API_KEY"),<br>    )<br><br>    // Basic text completion<br>    val response = client.execute(<br>        prompt = prompt {<br>            system("你是一个有用的AI助手")<br>            user("你好，请介绍一下自己")<br>        },<br>        model = DashscopeModels.QWEN_PLUS,<br>        params = LLMParams(<br>            temperature = 0.7,<br>            maxTokens = 1000<br>        )<br>    )<br><br>    println(response)<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Tool Usage Examples</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Using tools with DashScope<br>val responseWithTools = client.execute(<br>    prompt = prompt {<br>        system("You are a helpful assistant with access to tools")<br>        user("What's the weather like in Beijing?")<br>    },<br>    model = DashscopeModels.QWEN_PLUS,<br>    params = LLMParams(<br>        temperature = 0.5,<br>        toolChoice = LLMParams.ToolChoice.AUTO<br>    ),<br>    tools = listOf(weatherTool) // Your defined tools<br>)<br><br>// Streaming response<br>val streamingResponse = client.executeStream(<br>    prompt = prompt {<br>        user("Write a short story about a robot learning to paint")<br>    },<br>    model = DashscopeModels.QWEN_FLASH,<br>    params = LLMParams(<br>        temperature = 0.8,<br>        maxTokens = 2000<br>    )<br>)<br><br>streamingResponse.collect { chunk -&gt;<br>    print(chunk)<br>}<br><br>// Using speculation for complex reasoning<br>val speculationResponse = client.execute(<br>    prompt = prompt {<br>        system("Analyze the following problem step by step")<br>        user("How can we optimize database query performance for a social media platform?")<br>    },<br>    model = DashscopeModels.QWEN_PLUS, // Supports speculation capability<br>    params = LLMParams(<br>        temperature = 0.3,<br>        maxTokens = 3000<br>    )<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Advanced Configuration</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Custom timeout configuration<br>val customClient = DashscopeLLMClient(<br>    apiKey = "your-api-key",<br>    settings = DashscopeClientSettings(<br>        baseUrl = "https://dashscope.aliyuncs.com/",<br>        chatCompletionsPath = "compatible-mode/v1/chat/completions",<br>        timeoutConfig = ConnectionTimeoutConfig(<br>            requestTimeoutMillis = 120_000, // 2 minutes<br>            connectTimeoutMillis = 30_000,  // 30 seconds<br>            socketTimeoutMillis = 120_000   // 2 minutes<br>        )<br>    ),<br>    baseClient = HttpClient {<br>        // Custom HTTP client configuration<br>    }<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="-442280575%2FPackages%2F184127799" anchor-label="ai.koog.prompt.executor.clients.dashscope" id="-442280575%2FPackages%2F184127799" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-dashscope-client/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-dashscope-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-dashscope-client/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.executor.clients.dashscope/index.html">ai.koog.prompt.executor.clients.dashscope</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-442280575%2FPackages%2F184127799"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-279126661%2FPackages%2F184127799" anchor-label="ai.koog.prompt.executor.clients.dashscope.models" id="-279126661%2FPackages%2F184127799" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-dashscope-client/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-dashscope-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-dashscope-client/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.executor.clients.dashscope.models/index.html">ai.koog.prompt.executor.clients.dashscope.models</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-279126661%2FPackages%2F184127799"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

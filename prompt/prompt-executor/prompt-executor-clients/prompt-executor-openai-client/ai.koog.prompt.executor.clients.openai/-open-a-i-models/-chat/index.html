@@ -1,0 +1,397 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Chat</title>
+<link href="../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-executor-openai-client::ai.koog.prompt.executor.clients.openai/OpenAIModels.Chat///PointingToDeclaration//-731634551">
+  <div class="breadcrumbs"><a href="../../../index.html">prompt-executor-openai-client</a><span class="delimiter">/</span><a href="../../index.html">ai.koog.prompt.executor.clients.openai</a><span class="delimiter">/</span><a href="../index.html">OpenAIModels</a><span class="delimiter">/</span><span class="current">Chat</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Chat</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Chat</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/prompt/prompt-executor/prompt-executor-clients/prompt-executor-openai-client/src/commonMain/kotlin/ai/koog/prompt/executor/clients/openai/OpenAIModels.kt#L78">source</a>)</span></span></div><p class="paragraph">Object that provides pre-configured instances of advanced GPT models for different use cases. These instances represent versatile and high-performance large language models capable of handling various tasks like text completion, image input processing, structured outputs, and interfacing with tools.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="463890115%2FProperties%2F-731634551" anchor-label="GPT4_1" id="463890115%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t4_1.html"><span>GPT4_</span><wbr><span>1</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="463890115%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t4_1.html">GPT4_1</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-4.1 is a model for complex tasks. It is well suited for problem solving across domains.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-694321364%2FProperties%2F-731634551" anchor-label="GPT4_1Mini" id="-694321364%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t4_1-mini.html"><span>GPT4_</span><wbr><span>1Mini</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-694321364%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t4_1-mini.html">GPT4_1Mini</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-4.1 mini provides a balance between intelligence, speed, and cost that makes it an attractive model for many use cases.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2072175761%2FProperties%2F-731634551" anchor-label="GPT4_1Nano" id="-2072175761%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t4_1-nano.html"><span>GPT4_</span><wbr><span>1Nano</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2072175761%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t4_1-nano.html">GPT4_1Nano</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-4.1-nano is the smallest and most affordable model in the GPT-4.1 family. It's designed for tasks that require basic capabilities at the lowest possible cost.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-443032394%2FProperties%2F-731634551" anchor-label="GPT4o" id="-443032394%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t4o.html"><span><span>GPT4o</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-443032394%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t4o.html">GPT4o</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GGPT-4o (“o” for “omni”) is a versatile, high-intelligence flagship model. It accepts both text and image inputs, and produces text outputs (including Structured Outputs). It is the best model for most tasks, and is currently the most capable model outside of the o-series models.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1104362593%2FProperties%2F-731634551" anchor-label="GPT4oMini" id="-1104362593%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t4o-mini.html"><span>GPT4o</span><wbr><span><span>Mini</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1104362593%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t4o-mini.html">GPT4oMini</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-4o mini is a smaller, more affordable version of GPT-4o that maintains high quality while being more cost-effective. It's designed for tasks that don't require the full capabilities of GPT-4o.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="940037972%2FProperties%2F-731634551" anchor-label="GPT5" id="940037972%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t5.html"><span><span>GPT5</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="940037972%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t5.html">GPT5</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-5 is a flagship model for coding, reasoning, and agentic tasks across domains.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="209153570%2FProperties%2F-731634551" anchor-label="GPT5_1" id="209153570%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t5_1.html"><span>GPT5_</span><wbr><span>1</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="209153570%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t5_1.html">GPT5_1</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-5.1 is a flagship model for coding and agentic tasks with configurable reasoning and non-reasoning effort.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2060057907%2FProperties%2F-731634551" anchor-label="GPT5_1Codex" id="-2060057907%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t5_1-codex.html"><span>GPT5_</span><wbr><span>1Codex</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2060057907%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t5_1-codex.html">GPT5_1Codex</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-5.1-Codex is a version of GPT-5 optimized for agentic coding tasks in Codex or similar environments. It's available in the <strong>Responses API</strong> only, and the underlying model snapshot will be regularly updated.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="240173377%2FProperties%2F-731634551" anchor-label="GPT5_2" id="240173377%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t5_2.html"><span>GPT5_</span><wbr><span>2</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="240173377%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t5_2.html">GPT5_2</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-5.2 is OpenAI's flagship model for coding and agentic tasks across industries. Supports both reasoning and chat completions endpoints.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-657443380%2FProperties%2F-731634551" anchor-label="GPT5_2Pro" id="-657443380%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t5_2-pro.html"><span>GPT5_</span><wbr><span>2Pro</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-657443380%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t5_2-pro.html">GPT5_2Pro</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-5.2 pro is available in the Responses API only to enable support for multi-turn model interactions before responding to API requests, and other advanced API features in the future. Supports reasoning.effort: medium, high, xhigh.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1781430053%2FProperties%2F-731634551" anchor-label="GPT5Codex" id="-1781430053%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t5-codex.html"><span><span>GPT5Codex</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1781430053%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t5-codex.html">GPT5Codex</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-5-Codex is a version of GPT-5 optimized for agentic coding tasks in agents. It's available in the <strong>Responses API</strong> only, and the underlying model snapshot will be regularly updated.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="214056765%2FProperties%2F-731634551" anchor-label="GPT5Mini" id="214056765%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t5-mini.html"><span><span>GPT5Mini</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="214056765%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t5-mini.html">GPT5Mini</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-5 mini is a faster, cost-efficient version of GPT-5 for well-defined tasks.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1163797632%2FProperties%2F-731634551" anchor-label="GPT5Nano" id="-1163797632%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t5-nano.html"><span><span>GPT5Nano</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1163797632%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t5-nano.html">GPT5Nano</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-5 nano is the fastest, most cost-efficient version of GPT-5. Great for summarization and classification tasks.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1237451481%2FProperties%2F-731634551" anchor-label="GPT5Pro" id="1237451481%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-g-p-t5-pro.html"><span><span>GPT5Pro</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1237451481%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-p-t5-pro.html">GPT5Pro</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">GPT-5 pro uses more compute to think harder and provide consistently better answers. GPT-5 pro is available in the Responses API only to enable support for multi-turn model interactions before responding to API requests, and other advanced API features in the future. As the most advanced reasoning model, GPT-5 pro defaults to (and only supports) reasoning.effort: high. GPT-5 pro does not support code interpreter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-437686820%2FProperties%2F-731634551" anchor-label="O1" id="-437686820%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o1.html"><span><span>O1</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-437686820%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-o1.html">O1</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">The o1 series of models are trained with reinforcement learning to perform complex reasoning. o1 models think before they answer, producing a long internal chain of thought before responding to the user.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-375647206%2FProperties%2F-731634551" anchor-label="O3" id="-375647206%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o3.html"><span><span>O3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-375647206%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-o3.html">O3</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">o3 is a well-rounded and powerful model across domains. It is capable of math, science, coding, and visual reasoning tasks. It also excels at technical writing and instruction-following. Use it to think through multi-step problems that involve analysis across text, code, and images.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="750692611%2FProperties%2F-731634551" anchor-label="O3Mini" id="750692611%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o3-mini.html"><span><span>O3Mini</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="750692611%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-o3-mini.html">O3Mini</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">o3-mini is a smaller, more affordable version of o3. It's a small reasoning model, providing high intelligence at the same cost and latency targets of o1-mini. o3-mini supports key developer features, like Structured Outputs, function calling, and Batch API.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="762008738%2FProperties%2F-731634551" anchor-label="O4Mini" id="762008738%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o4-mini.html"><span><span>O4Mini</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="762008738%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-o4-mini.html">O4Mini</a><span class="token operator">: </span><a href="../../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">o4-mini is a smaller, more affordable version of o4 that maintains high quality while being more cost-effective. It's optimized for fast, effective reasoning with exceptionally efficient performance in coding and visual tasks.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

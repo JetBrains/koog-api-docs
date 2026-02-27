@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>prompt-executor-anthropic-client</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-anthropic-client/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-anthropic-client/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-anthropic-client/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" id="content" pageids="prompt-executor-anthropic-client::////PointingToDeclaration//799262605">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>prompt-executor-anthropic-client</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-anthropic-client/commonMain"><p class="paragraph">A client implementation for executing prompts using Anthropic's Claude models with support for images and documents.</p><h3 class="">Overview</h3><p class="paragraph">This module provides a client implementation for the Anthropic API, allowing you to execute prompts using Claude models. It handles authentication, request formatting, response parsing, and multimodal content encoding specific to Anthropic's API requirements.</p><h3 class="">Supported Models</h3><div class="table--container"><table><thead><tr><th>Model</th><th>Speed</th><th>Context</th><th>Input Support</th><th>Output Support</th><th>Pricing (per 1M tokens)</th></tr></thead><tbody><tr><td>Claude 3 Opus</td><td>Moderately fast</td><td>200K</td><td>Text, Images, PDF</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@1e4fdc91 paragraph">$15.00 / $</p>75.00</td></tr><tr><td>Claude 3 Haiku</td><td>Fast</td><td>200K</td><td>Text, Images, PDF</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@1e4fdc91 paragraph">$0.25 / $</p>1.25</td></tr><tr><td>Claude 3.5 Haiku</td><td>Fastest</td><td>200K</td><td>Text, Images, PDF</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@1e4fdc91 paragraph">$0.8 / $</p>4.0</td></tr><tr><td>Claude 3.5 Sonnet</td><td>Fast</td><td>200K</td><td>Text, Images, PDF</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@1e4fdc91 paragraph">$3.00 / $</p>15.00</td></tr><tr><td>Claude 3.7 Sonnet</td><td>Fast</td><td>200K</td><td>Text, Images, PDF</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@1e4fdc91 paragraph">$3.00 / $</p>15.00</td></tr><tr><td>Claude Sonnet 4</td><td>Fast</td><td>200K</td><td>Text, Images, PDF</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@1e4fdc91 paragraph">$3.00 / $</p>15.00</td></tr><tr><td>Claude Opus 4</td><td>Moderately fast</td><td>200K</td><td>Text, Images, PDF</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@1e4fdc91 paragraph">$15.00 / $</p>75.00</td></tr></tbody></table></div><h3 class="">Media Content Support</h3><div class="table--container"><table><thead><tr><th>Content Type</th><th>Supported Formats</th><th>Max Size</th><th>Notes</th></tr></thead><tbody><tr><td>Images</td><td>PNG, JPEG, WebP, GIF</td><td>5MB</td><td>Base64 encoded or URL</td></tr><tr><td>Documents</td><td>PDF (URL/local), TXT, MD</td><td>5MB</td><td>PDF passed directly, TXT/MD as plain text</td></tr><tr><td>Audio</td><td>❌ Not supported</td><td>-</td><td>-</td></tr><tr><td>Video</td><td>❌ Not supported</td><td>-</td><td>-</td></tr></tbody></table></div><p class="paragraph"><strong>Document Support Details:</strong></p><ul><li><p class="paragraph"><strong>PDF</strong>: Supported via URL or local file (base64 encoded)</p></li><li><p class="paragraph"><strong>TXT/MD</strong>: Read as plain text content</p></li><li><p class="paragraph"><strong>Other formats</strong>: Not supported (HTML, CSV, XML, etc.)</p></li></ul><h3 class="">Using in your project</h3><p class="paragraph">Add the dependency to your project:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.prompt:prompt-executor-anthropic-client:$version")<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">Configure the client with your API key:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val anthropicClient = AnthropicLLMClient(<br>    apiKey = "your-anthropic-api-key",<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Using in tests</h3><p class="paragraph">For testing, you can use a mock implementation:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mockAnthropicClient = MockAnthropicClient(<br>    responses = listOf("Mocked response 1", "Mocked response 2")<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Example of usage</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">suspend fun main() {<br>    val client = AnthropicLLMClient(<br>        apiKey = System.getenv("ANTHROPIC_API_KEY"),<br>    )<br><br>    // Text-only example<br>    val response = client.execute(<br>        prompt = prompt {<br>            system("You are helpful assistant")<br>            user("What time is it now?")<br>        },<br>        model = AnthropicModels.Sonnet_3_5<br>    )<br><br>    println(response)<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Multimodal Examples</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Image analysis<br>val imageResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("What do you see in this image?")<br>            image("/path/to/image.jpg")<br>        }<br>    },<br>    model = AnthropicModels.Sonnet_3_5<br>)<br><br>// PDF document processing<br>val pdfResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Summarize this PDF document")<br>            document("/path/to/document.pdf")<br>        }<br>    },<br>    model = AnthropicModels.Sonnet_3_5<br>)<br><br>// PDF from URL<br>val pdfUrlResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Analyze this research paper")<br>            document("https://example.com/paper.pdf")<br>        }<br>    },<br>    model = AnthropicModels.Sonnet_3_5<br>)<br><br>// Text file processing<br>val textResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Review this markdown file")<br>            document("/path/to/readme.md")<br>        }<br>    },<br>    model = AnthropicModels.Sonnet_3_5<br>)<br><br>// Mixed content<br>val mixedResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Compare this image with the PDF:")<br>            image("/path/to/chart.png")<br>            document("/path/to/report.pdf")<br>            text("What insights can you provide?")<br>        }<br>    },<br>    model = AnthropicModels.Sonnet_3_5<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="1572051563%2FPackages%2F799262605" anchor-label="ai.koog.prompt.executor.clients.anthropic" id="1572051563%2FPackages%2F799262605" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-anthropic-client/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-anthropic-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-anthropic-client/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.executor.clients.anthropic/index.html">ai.koog.prompt.executor.clients.anthropic</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1572051563%2FPackages%2F799262605"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="151723345%2FPackages%2F799262605" anchor-label="ai.koog.prompt.executor.clients.anthropic.models" id="151723345%2FPackages%2F799262605" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-anthropic-client/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-anthropic-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-anthropic-client/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.executor.clients.anthropic.models/index.html">ai.koog.prompt.executor.clients.anthropic.models</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="151723345%2FPackages%2F799262605"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ai.koog.ktor</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":koog-ktor/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":koog-ktor/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":koog-ktor/commonMain" data-filter=":koog-ktor/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":koog-ktor/jvmMain" data-filter=":koog-ktor/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="koog-ktor::ai.koog.ktor////PointingToDeclaration//-402767446">
+  <div class="breadcrumbs"><a href="../index.html">koog-ktor</a><span class="delimiter">/</span><span class="current">ai.koog.ktor</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1191130549%2FClasslikes%2F-1258927232" anchor-label="BedrockClientConfig" id="1191130549%2FClasslikes%2F-1258927232" data-filterable-set=":koog-ktor/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/jvmMain" data-filterable-set=":koog-ktor/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bedrock-client-config/index.html"><span>Bedrock</span><wbr><span>Client</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1191130549%2FClasslikes%2F-1258927232"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":koog-ktor/jvmMain" data-filterable-set=":koog-ktor/jvmMain" data-active="" data-toggle=":koog-ktor/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-bedrock-client-config/index.html">BedrockClientConfig</a></div><div class="brief "><p class="paragraph">Configuration to create a new Bedrock LLM client configured with the specified identity provider and settings.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2091376318%2FClasslikes%2F1687882422" anchor-label="Koog" id="2091376318%2FClasslikes%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-koog/index.html"><span><span>Koog</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2091376318%2FClasslikes%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-koog/index.html">Koog</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>application<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client/ktor-server-core/io.ktor.server.application/-application/index.html">Application</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>promptExecutor<span class="token operator">: </span><a href="../../prompt/prompt-executor/prompt-executor-model/ai.koog.prompt.executor.model/-prompt-executor/index.html">PromptExecutor</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>agentConfig<span class="token operator">: </span><a href="-koog-agents-config/-agent-config/index.html">KoogAgentsConfig.AgentConfig</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>agentFeatures<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../agents/agents-core/ai.koog.agents.core.agent/-graph-a-i-agent/-feature-context/index.html">GraphAIAgent.FeatureContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">job<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-completable-job/index.html">CompletableJob</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Represents an instance of Koog with configuration for prompt execution, language model, tool management, agent setup, and features.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-930945490%2FClasslikes%2F1687882422" anchor-label="KoogAgentsConfig" id="-930945490%2FClasslikes%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-koog-agents-config/index.html"><span>Koog</span><wbr><span>Agents</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-930945490%2FClasslikes%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-koog-agents-config/index.html">KoogAgentsConfig</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">scope<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-scope/index.html">CoroutineScope</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configuration class for setting up a Koog agents server. Provides options to configure LLM connections, agent tools, features, and other related settings.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-589673%2FClasslikes%2F-1258927232" anchor-label="McpToolsConfig" id="-589673%2FClasslikes%2F-1258927232" data-filterable-set=":koog-ktor/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/jvmMain" data-filterable-set=":koog-ktor/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mcp-tools-config/index.html"><span>Mcp</span><wbr><span>Tools</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-589673%2FClasslikes%2F-1258927232"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":koog-ktor/jvmMain" data-filterable-set=":koog-ktor/jvmMain" data-active="" data-toggle=":koog-ktor/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-mcp-tools-config/index.html">McpToolsConfig</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">agentConfig<span class="token operator">: </span><a href="-koog-agents-config/-agent-config/index.html">KoogAgentsConfig.AgentConfig</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configuration class for MCPTools that manages the integration of various tool registries into the system. Provides methods to process tools using different transport mechanisms.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1013574346%2FFunctions%2F1687882422" anchor-label="aiAgent" id="-1013574346%2FFunctions%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ai-agent.html"><span>ai</span><wbr><span><span>Agent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1013574346%2FFunctions%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="ai-agent.html">Result</a><span class="token operator">&gt; </span><a href="https://api.ktor.io/ktor-client/ktor-server-core/io.ktor.server.routing/-routing-context/index.html">RoutingContext</a><span class="token punctuation">.</span><a href="ai-agent.html"><span class="token function">aiAgent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">runMode<span class="token operator">: </span><a href="../../agents/agents-core/ai.koog.agents.core.agent/-tool-calls/index.html">ToolCalls</a><span class="token operator"> = </span>ToolCalls.SINGLE_RUN_SEQUENTIAL<span class="token punctuation">, </span></span><span class="parameter ">model<span class="token operator">: </span><a href="../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>agent<span class="token operator">: </span><a href="../../agents/agents-core/ai.koog.agents.core.agent/-a-i-agent/index.html">AIAgent</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="ai-agent.html">Result</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="ai-agent.html">Result</a></div><div class="brief "><p class="paragraph">A default <code class="lang-kotlin">aiAgent</code> is an agent that runs using <a href="../../agents/agents-core/ai.koog.agents.core.agent/index.html">singleRunStrategy</a>, by default, it relies on sequential <a href="../../agents/agents-core/ai.koog.agents.core.agent/-tool-calls/index.html">ToolCalls</a>. Inside the <a href="ai-agent.html">block</a> lambda you can use the agent to perform tasks, and calculate a result, such as <a href="../../agents/agents-core/ai.koog.agents.core.agent/-graph-a-i-agent/run.html">GraphAIAgent.run</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="ai-agent.html">Input</a><span class="token punctuation">, </span><a href="ai-agent.html">Output</a><span class="token operator">&gt; </span><a href="https://api.ktor.io/ktor-client/ktor-server-core/io.ktor.server.routing/-routing-context/index.html">RoutingContext</a><span class="token punctuation">.</span><a href="ai-agent.html"><span class="token function">aiAgent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">strategy<span class="token operator">: </span><a href="../../agents/agents-core/ai.koog.agents.core.agent.entity/-a-i-agent-graph-strategy/index.html">AIAgentGraphStrategy</a><span class="token operator">&lt;</span><a href="ai-agent.html">Input</a><span class="token punctuation">, </span><a href="ai-agent.html">Output</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">model<span class="token operator">: </span><a href="../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a><span class="token punctuation">, </span></span><span class="parameter ">input<span class="token operator">: </span><a href="ai-agent.html">Input</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="ai-agent.html">Output</a></div><div class="brief "><p class="paragraph">Creates an agent using <a href="ai-agent.html">aiAgent</a>, and immediately runs it given the <a href="ai-agent.html">input</a>. When the agent is completed it provides the final <a href="ai-agent.html">Output</a>.</p></div><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="ai-agent.html">Input</a><span class="token punctuation">, </span><a href="ai-agent.html">Output</a><span class="token operator">&gt; </span><a href="https://api.ktor.io/ktor-client/ktor-server-core/io.ktor.server.routing/-routing-context/index.html">RoutingContext</a><span class="token punctuation">.</span><a href="ai-agent.html"><span class="token function">aiAgent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">strategy<span class="token operator">: </span><a href="../../agents/agents-core/ai.koog.agents.core.agent.entity/-a-i-agent-graph-strategy/index.html">AIAgentGraphStrategy</a><span class="token operator">&lt;</span><a href="ai-agent.html">Input</a><span class="token punctuation">, </span><a href="ai-agent.html">Output</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">model<span class="token operator">: </span><a href="../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a><span class="token punctuation">, </span></span><span class="parameter ">tools<span class="token operator">: </span><a href="../../agents/agents-tools/ai.koog.agents.core.tools/-tool-registry/index.html">ToolRegistry</a><span class="token operator"> = </span>ToolRegistry.EMPTY</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../agents/agents-core/ai.koog.agents.core.agent/-a-i-agent/index.html">AIAgent</a><span class="token operator">&lt;</span><a href="ai-agent.html">Input</a><span class="token punctuation">, </span><a href="ai-agent.html">Output</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="ai-agent.html">Input</a><span class="token punctuation">, </span><a href="ai-agent.html">Output</a><span class="token punctuation">, </span><a href="ai-agent.html">Result</a><span class="token operator">&gt; </span><a href="https://api.ktor.io/ktor-client/ktor-server-core/io.ktor.server.routing/-routing-context/index.html">RoutingContext</a><span class="token punctuation">.</span><a href="ai-agent.html"><span class="token function">aiAgent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">strategy<span class="token operator">: </span><a href="../../agents/agents-core/ai.koog.agents.core.agent.entity/-a-i-agent-graph-strategy/index.html">AIAgentGraphStrategy</a><span class="token operator">&lt;</span><a href="ai-agent.html">Input</a><span class="token punctuation">, </span><a href="ai-agent.html">Output</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">model<span class="token operator">: </span><a href="../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a><span class="token punctuation">, </span></span><span class="parameter ">block<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span>agent<span class="token operator">: </span><a href="../../agents/agents-core/ai.koog.agents.core.agent/-a-i-agent/index.html">AIAgent</a><span class="token operator">&lt;</span><a href="ai-agent.html">Input</a><span class="token punctuation">, </span><a href="ai-agent.html">Output</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="ai-agent.html">Result</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="ai-agent.html">Result</a></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="ai-agent.html">Input</a><span class="token punctuation">, </span><a href="ai-agent.html">Output</a><span class="token operator">&gt; </span><a href="https://api.ktor.io/ktor-client/ktor-server-core/io.ktor.server.routing/-routing-context/index.html">RoutingContext</a><span class="token punctuation">.</span><a href="ai-agent.html"><span class="token function">aiAgent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">inputType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-type/index.html">KType</a><span class="token punctuation">, </span></span><span class="parameter ">outputType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-type/index.html">KType</a><span class="token punctuation">, </span></span><span class="parameter ">strategy<span class="token operator">: </span><a href="../../agents/agents-core/ai.koog.agents.core.agent.entity/-a-i-agent-graph-strategy/index.html">AIAgentGraphStrategy</a><span class="token operator">&lt;</span><a href="ai-agent.html">Input</a><span class="token punctuation">, </span><a href="ai-agent.html">Output</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">model<span class="token operator">: </span><a href="../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a><span class="token punctuation">, </span></span><span class="parameter ">tools<span class="token operator">: </span><a href="../../agents/agents-tools/ai.koog.agents.core.tools/-tool-registry/index.html">ToolRegistry</a><span class="token operator"> = </span>ToolRegistry.EMPTY</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../agents/agents-core/ai.koog.agents.core.agent/-a-i-agent/index.html">AIAgent</a><span class="token operator">&lt;</span><a href="ai-agent.html">Input</a><span class="token punctuation">, </span><a href="ai-agent.html">Output</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates an AI agent using the provided AI agent strategy within the specified route.</p></div><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="https://api.ktor.io/ktor-client/ktor-server-core/io.ktor.server.routing/-routing-context/index.html">RoutingContext</a><span class="token punctuation">.</span><a href="ai-agent.html"><span class="token function">aiAgent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">input<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">model<span class="token operator">: </span><a href="../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a><span class="token punctuation">, </span></span><span class="parameter ">runMode<span class="token operator">: </span><a href="../../agents/agents-core/ai.koog.agents.core.agent/-tool-calls/index.html">ToolCalls</a><span class="token operator"> = </span>ToolCalls.SINGLE_RUN_SEQUENTIAL</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">A default <code class="lang-kotlin">aiAgent</code> is an agent that runs using <a href="../../agents/agents-core/ai.koog.agents.core.agent/index.html">singleRunStrategy</a>, by default, it relies on sequential <a href="../../agents/agents-core/ai.koog.agents.core.agent/-tool-calls/index.html">ToolCalls</a>. It takes an <a href="ai-agent.html">input</a>, and when the agent finishes running provides a final result <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="335307675%2FFunctions%2F-1258927232" anchor-label="bedrock" id="335307675%2FFunctions%2F-1258927232" data-filterable-set=":koog-ktor/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/jvmMain" data-filterable-set=":koog-ktor/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="bedrock.html"><span><span>bedrock</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="335307675%2FFunctions%2F-1258927232"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":koog-ktor/jvmMain" data-filterable-set=":koog-ktor/jvmMain" data-active="" data-toggle=":koog-ktor/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-koog-agents-config/index.html">KoogAgentsConfig</a><span class="token punctuation">.</span><a href="bedrock.html"><span class="token function">bedrock</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">clock<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Clock///PointingToDeclaration/">Clock</span><span class="token operator"> = </span>kotlin.time.Clock.System<span class="token punctuation">, </span></span><span class="parameter ">moderationGuardrailsSettings<span class="token operator">: </span><a href="../../prompt/prompt-executor/prompt-executor-clients/prompt-executor-bedrock-client/ai.koog.prompt.executor.clients.bedrock/-bedrock-guardrails-settings/index.html">BedrockGuardrailsSettings</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><span data-unresolved-link="aws.sdk.kotlin.services.bedrockruntime/BedrockRuntimeClient.Config.Builder///PointingToDeclaration/">BedrockRuntimeClient.Config.Builder</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures and initializes a Bedrock LLM client with AWS SDK builder</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="-koog-agents-config/index.html">KoogAgentsConfig</a><span class="token punctuation">.</span><a href="bedrock.html"><span class="token function">bedrock</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">apiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">clock<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Clock///PointingToDeclaration/">Clock</span><span class="token operator"> = </span>kotlin.time.Clock.System<span class="token punctuation">, </span></span><span class="parameter ">moderationGuardrailsSettings<span class="token operator">: </span><a href="../../prompt/prompt-executor/prompt-executor-clients/prompt-executor-bedrock-client/ai.koog.prompt.executor.clients.bedrock/-bedrock-guardrails-settings/index.html">BedrockGuardrailsSettings</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">configure<span class="token operator">: </span><span data-unresolved-link="aws.sdk.kotlin.services.bedrockruntime/BedrockRuntimeClient.Config.Builder///PointingToDeclaration/">BedrockRuntimeClient.Config.Builder</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures and initializes a Bedrock LLM client with optional configuration.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="113867414%2FFunctions%2F1687882422" anchor-label="llm" id="113867414%2FFunctions%2F1687882422" data-filterable-set=":koog-ktor/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/commonMain" data-filterable-set=":koog-ktor/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="llm.html"><span><span>llm</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="113867414%2FFunctions%2F1687882422"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://api.ktor.io/ktor-client/ktor-server-core/io.ktor.server.routing/-routing-context/index.html">RoutingContext</a><span class="token punctuation">.</span><a href="llm.html"><span class="token function">llm</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../prompt/prompt-executor/prompt-executor-model/ai.koog.prompt.executor.model/-prompt-executor/index.html">PromptExecutor</a></div><div class="brief "><p class="paragraph">Retrieve the configured llm, or <a href="../../prompt/prompt-executor/prompt-executor-model/ai.koog.prompt.executor.model/-prompt-executor/index.html">PromptExecutor</a> instance from the underlying <a href="-koog/index.html">Koog</a> plugin.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="991401464%2FFunctions%2F-1258927232" anchor-label="mcp" id="991401464%2FFunctions%2F-1258927232" data-filterable-set=":koog-ktor/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-ktor/jvmMain" data-filterable-set=":koog-ktor/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mcp.html"><span><span>mcp</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="991401464%2FFunctions%2F-1258927232"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":koog-ktor/jvmMain" data-filterable-set=":koog-ktor/jvmMain" data-active="" data-toggle=":koog-ktor/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-ktor/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="-koog-agents-config/-agent-config/index.html">KoogAgentsConfig.AgentConfig</a><span class="token punctuation">.</span><a href="mcp.html"><span class="token function">mcp</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">configure<span class="token operator">: </span><a href="-mcp-tools-config/index.html">McpToolsConfig</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the MCP (Modular Configuration Protocol) tools for the agent with the provided configuration block.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

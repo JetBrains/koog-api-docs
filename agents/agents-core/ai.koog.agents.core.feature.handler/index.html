@@ -1,0 +1,531 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ai.koog.agents.core.feature.handler</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/commonMain" data-filter=":agents:agents-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="agents-core::ai.koog.agents.core.feature.handler////PointingToDeclaration//643085981">
+  <div class="breadcrumbs"><a href="../index.html">agents-core</a><span class="delimiter">/</span><span class="current">ai.koog.agents.core.feature.handler</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-1264558103%2FClasslikes%2F643085981" anchor-label="AfterLLMCallContext" id="-1264558103%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-after-l-l-m-call-context/index.html"><span>After</span><wbr><span>LLMCall</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1264558103%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-after-l-l-m-call-context/index.html"><strike>AfterLLMCallContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.llm/-l-l-m-call-completed-context/index.html">LLMCallCompletedContext</a></div><div class="brief "><p class="paragraph">Represents the context for handling an after LLM call event.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1959509010%2FClasslikes%2F643085981" anchor-label="AgentBeforeCloseContext" id="-1959509010%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-before-close-context/index.html"><span>Agent</span><wbr><span>Before</span><wbr><span>Close</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1959509010%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-agent-before-close-context/index.html"><strike>AgentBeforeCloseContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.agent/-agent-closing-context/index.html">AgentClosingContext</a></div><div class="brief "><p class="paragraph">Represents the context passed to the handler that is executed before an agent is closed.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1534747009%2FClasslikes%2F643085981" anchor-label="AgentEventHandlerContext" id="-1534747009%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-event-handler-context/index.html"><span>Agent</span><wbr><span>Event</span><wbr><span>Handler</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1534747009%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-agent-event-handler-context/index.html"><strike>AgentEventHandlerContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.agent/-agent-event-context/index.html">AgentEventContext</a></div><div class="brief "><p class="paragraph">Provides the context for handling events specific to AI agents. This interface extends the foundational event handling context, <code class="lang-kotlin">EventHandlerContext</code>, and is specialized for scenarios involving agents and their associated workflows or features.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-179439071%2FClasslikes%2F643085981" anchor-label="AgentFinishedContext" id="-179439071%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-finished-context/index.html"><span>Agent</span><wbr><span>Finished</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-179439071%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-agent-finished-context/index.html"><strike>AgentFinishedContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.agent/-agent-completed-context/index.html">AgentCompletedContext</a></div><div class="brief "><p class="paragraph">Represents the context for handling the completion of an agent's execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1671918609%2FClasslikes%2F643085981" anchor-label="AgentLifecycleContextEventHandler" id="-1671918609%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-lifecycle-context-event-handler/index.html"><span>Agent</span><wbr><span>Lifecycle</span><wbr><span>Context</span><wbr><span>Event</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1671918609%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-agent-lifecycle-context-event-handler/index.html">AgentLifecycleContextEventHandler</a><span class="token operator">&lt;</span><a href="-agent-lifecycle-context-event-handler/index.html">TContext</a><span class="token operator"> : </span><a href="-agent-lifecycle-event-context/index.html">AgentLifecycleEventContext</a><span class="token operator">&gt;</span> : <a href="-agent-lifecycle-event-handler/index.html">AgentLifecycleEventHandler</a><span class="token operator">&lt;</span><a href="-agent-lifecycle-context-event-handler/index.html">TContext</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="731765055%2FClasslikes%2F643085981" anchor-label="AgentLifecycleEventContext" id="731765055%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-lifecycle-event-context/index.html"><span>Agent</span><wbr><span>Lifecycle</span><wbr><span>Event</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="731765055%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-agent-lifecycle-event-context/index.html">AgentLifecycleEventContext</a></div><div class="brief "><p class="paragraph">Represents the context in which event handlers operate, providing a foundational interface for all event handling activities within the AI Agent framework.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1809198084%2FClasslikes%2F643085981" anchor-label="AgentLifecycleEventHandler" id="1809198084%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-lifecycle-event-handler/index.html"><span>Agent</span><wbr><span>Lifecycle</span><wbr><span>Event</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1809198084%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-agent-lifecycle-event-handler/index.html">AgentLifecycleEventHandler</a><span class="token operator">&lt;</span><a href="-agent-lifecycle-event-handler/index.html">TContext</a><span class="token operator"> : </span><a href="-agent-lifecycle-event-context/index.html">AgentLifecycleEventContext</a><span class="token punctuation">, </span><a href="-agent-lifecycle-event-handler/index.html">TResult</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1621996678%2FClasslikes%2F643085981" anchor-label="AgentLifecycleEventType" id="-1621996678%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-lifecycle-event-type/index.html"><span>Agent</span><wbr><span>Lifecycle</span><wbr><span>Event</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1621996678%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">interface </span><a href="-agent-lifecycle-event-type/index.html">AgentLifecycleEventType</a></div><div class="brief "><p class="paragraph">Represents different types of events that can occur during the execution of an agent or its related processes.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="199699730%2FClasslikes%2F643085981" anchor-label="AgentLifecycleTransformEventHandler" id="199699730%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-lifecycle-transform-event-handler/index.html"><span>Agent</span><wbr><span>Lifecycle</span><wbr><span>Transform</span><wbr><span>Event</span><wbr><span><span>Handler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="199699730%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-agent-lifecycle-transform-event-handler/index.html">AgentLifecycleTransformEventHandler</a><span class="token operator">&lt;</span><a href="-agent-lifecycle-transform-event-handler/index.html">TContext</a><span class="token operator"> : </span><a href="-agent-lifecycle-event-context/index.html">AgentLifecycleEventContext</a><span class="token punctuation">, </span><a href="-agent-lifecycle-transform-event-handler/index.html">TResult</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span> : <a href="-agent-lifecycle-event-handler/index.html">AgentLifecycleEventHandler</a><span class="token operator">&lt;</span><a href="-agent-lifecycle-transform-event-handler/index.html">TContext</a><span class="token punctuation">, </span><a href="-agent-lifecycle-transform-event-handler/index.html">TResult</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2006363156%2FClasslikes%2F643085981" anchor-label="AgentRunErrorContext" id="-2006363156%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-run-error-context/index.html"><span>Agent</span><wbr><span>Run</span><wbr><span>Error</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2006363156%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-agent-run-error-context/index.html"><strike>AgentRunErrorContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.agent/-agent-execution-failed-context/index.html">AgentExecutionFailedContext</a></div><div class="brief "><p class="paragraph">Represents the context for handling errors that occur during the execution of an agent run.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-164536105%2FClasslikes%2F643085981" anchor-label="AgentStartContext" id="-164536105%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-start-context/index.html"><span>Agent</span><wbr><span>Start</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-164536105%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-agent-start-context/index.html"><strike>AgentStartContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.agent/-agent-starting-context/index.html">AgentStartingContext</a></div><div class="brief "><p class="paragraph">Represents the context available during the start of an AI agent.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-686547658%2FClasslikes%2F643085981" anchor-label="AgentTransformEnvironmentContext" id="-686547658%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-agent-transform-environment-context/index.html"><span>Agent</span><wbr><span>Transform</span><wbr><span>Environment</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-686547658%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-agent-transform-environment-context/index.html"><strike>AgentTransformEnvironmentContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.agent/-agent-environment-transforming-context/index.html">AgentEnvironmentTransformingContext</a></div><div class="brief "><p class="paragraph">Provides a context for executing transformations and operations within an AI agent's environment.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1870602762%2FClasslikes%2F643085981" anchor-label="BeforeLLMCallContext" id="-1870602762%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-before-l-l-m-call-context/index.html"><span>Before</span><wbr><span>LLMCall</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1870602762%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-before-l-l-m-call-context/index.html"><strike>BeforeLLMCallContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.llm/-l-l-m-call-starting-context/index.html">LLMCallStartingContext</a></div><div class="brief "><p class="paragraph">Represents the context for handling a before LLM call event.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1415841226%2FClasslikes%2F643085981" anchor-label="EventHandlerContext" id="1415841226%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-event-handler-context/index.html"><span>Event</span><wbr><span>Handler</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1415841226%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-event-handler-context/index.html"><strike>EventHandlerContext</strike></a><span class="token operator"> = </span><a href="-agent-lifecycle-event-context/index.html">AgentLifecycleEventContext</a></div><div class="brief "><p class="paragraph">Represents the context in which event handlers operate, providing a foundational interface for all event handling activities within the AI Agent framework.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1444011929%2FClasslikes%2F643085981" anchor-label="LLMEventHandlerContext" id="-1444011929%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-l-l-m-event-handler-context/index.html"><span>LLMEvent</span><wbr><span>Handler</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1444011929%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-l-l-m-event-handler-context/index.html">LLMEventHandlerContext</a> : <a href="-agent-lifecycle-event-context/index.html">AgentLifecycleEventContext</a></div><div class="brief "><p class="paragraph">Represents the context for handling LLM-specific events within the framework.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1563372437%2FClasslikes%2F643085981" anchor-label="NodeAfterExecuteContext" id="1563372437%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-node-after-execute-context/index.html"><span>Node</span><wbr><span>After</span><wbr><span>Execute</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1563372437%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-node-after-execute-context/index.html"><strike>NodeAfterExecuteContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.node/-node-execution-completed-context/index.html">NodeExecutionCompletedContext</a></div><div class="brief "><p class="paragraph">Represents the context for handling an after node execution event.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1229490274%2FClasslikes%2F643085981" anchor-label="NodeBeforeExecuteContext" id="-1229490274%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-node-before-execute-context/index.html"><span>Node</span><wbr><span>Before</span><wbr><span>Execute</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1229490274%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-node-before-execute-context/index.html"><strike>NodeBeforeExecuteContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.node/-node-execution-starting-context/index.html">NodeExecutionStartingContext</a></div><div class="brief "><p class="paragraph">Represents the context for handling a before node execution event.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-518205204%2FClasslikes%2F643085981" anchor-label="NodeEventHandlerContext" id="-518205204%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-node-event-handler-context/index.html"><span>Node</span><wbr><span>Event</span><wbr><span>Handler</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-518205204%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-node-event-handler-context/index.html"><strike>NodeEventHandlerContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.node/-node-execution-event-context/index.html">NodeExecutionEventContext</a></div><div class="brief "><p class="paragraph">Represents the context for handling node-specific events within the framework.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1341750508%2FClasslikes%2F643085981" anchor-label="NodeExecutionErrorContext" id="1341750508%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-node-execution-error-context/index.html"><span>Node</span><wbr><span>Execution</span><wbr><span>Error</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1341750508%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-node-execution-error-context/index.html"><strike>NodeExecutionErrorContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.node/-node-execution-failed-context/index.html">NodeExecutionFailedContext</a></div><div class="brief "><p class="paragraph">Represents the context for handling errors during the execution of an AI agent node.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="783213789%2FClasslikes%2F643085981" anchor-label="StrategyEventHandlerContext" id="783213789%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-strategy-event-handler-context/index.html"><span>Strategy</span><wbr><span>Event</span><wbr><span>Handler</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="783213789%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-strategy-event-handler-context/index.html"><strike>StrategyEventHandlerContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.strategy/-strategy-event-context/index.html">StrategyEventContext</a></div><div class="brief "><p class="paragraph">Defines the context specifically for handling strategy-related events within the AI agent framework. Extends the base event handler context to include functionality and behavior dedicated to managing the lifecycle and operations of strategies associated with AI agents.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-731570305%2FClasslikes%2F643085981" anchor-label="StrategyFinishedContext" id="-731570305%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-strategy-finished-context/index.html"><span>Strategy</span><wbr><span>Finished</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-731570305%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-strategy-finished-context/index.html"><strike>StrategyFinishedContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.strategy/-strategy-completed-context/index.html">StrategyCompletedContext</a></div><div class="brief "><p class="paragraph">Represents the context associated with the completion of an AI agent strategy execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="334850105%2FClasslikes%2F643085981" anchor-label="StrategyStartContext" id="334850105%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-strategy-start-context/index.html"><span>Strategy</span><wbr><span>Start</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="334850105%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-strategy-start-context/index.html"><strike>StrategyStartContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.strategy/-strategy-starting-context/index.html">StrategyStartingContext</a></div><div class="brief "><p class="paragraph">Represents the context for starting AI agent strategies during execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="910768784%2FClasslikes%2F643085981" anchor-label="ToolCallContext" id="910768784%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tool-call-context/index.html"><span>Tool</span><wbr><span>Call</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="910768784%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tool-call-context/index.html"><strike>ToolCallContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.tool/-tool-call-starting-context/index.html">ToolCallStartingContext</a></div><div class="brief "><p class="paragraph">Represents the context for handling a tool call event.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1386195486%2FClasslikes%2F643085981" anchor-label="ToolCallFailureContext" id="1386195486%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tool-call-failure-context/index.html"><span>Tool</span><wbr><span>Call</span><wbr><span>Failure</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1386195486%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tool-call-failure-context/index.html"><strike>ToolCallFailureContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.tool/-tool-call-failed-context/index.html">ToolCallFailedContext</a></div><div class="brief "><p class="paragraph">Represents the context provided to handle a failure during the execution of a tool.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1360742323%2FClasslikes%2F643085981" anchor-label="ToolCallResultContext" id="-1360742323%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tool-call-result-context/index.html"><span>Tool</span><wbr><span>Call</span><wbr><span>Result</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1360742323%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tool-call-result-context/index.html"><strike>ToolCallResultContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.tool/-tool-call-completed-context/index.html">ToolCallCompletedContext</a></div><div class="brief "><p class="paragraph">Represents the context used when handling the result of a tool call.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1852113794%2FClasslikes%2F643085981" anchor-label="ToolEventHandlerContext" id="1852113794%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tool-event-handler-context/index.html"><span>Tool</span><wbr><span>Event</span><wbr><span>Handler</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1852113794%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tool-event-handler-context/index.html"><strike>ToolEventHandlerContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.tool/-tool-call-event-context/index.html">ToolCallEventContext</a></div><div class="brief "><p class="paragraph">Represents the context for handling tool-specific events within the framework.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1760220703%2FClasslikes%2F643085981" anchor-label="ToolValidationErrorContext" id="-1760220703%2FClasslikes%2F643085981" data-filterable-set=":agents:agents-core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tool-validation-error-context/index.html"><span>Tool</span><wbr><span>Validation</span><wbr><span>Error</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1760220703%2FClasslikes%2F643085981"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tool-validation-error-context/index.html"><strike>ToolValidationErrorContext</strike></a><span class="token operator"> = </span><a href="../ai.koog.agents.core.feature.handler.tool/-tool-validation-failed-context/index.html">ToolValidationFailedContext</a></div><div class="brief "><p class="paragraph">Represents the context for handling validation errors that occur during the execution of a tool.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

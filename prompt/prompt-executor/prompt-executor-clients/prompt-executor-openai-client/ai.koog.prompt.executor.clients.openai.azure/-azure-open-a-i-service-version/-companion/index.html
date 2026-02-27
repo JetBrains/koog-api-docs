@@ -1,0 +1,461 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Companion</title>
+<link href="../../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-executor-openai-client::ai.koog.prompt.executor.clients.openai.azure/AzureOpenAIServiceVersion.Companion///PointingToDeclaration//-731634551">
+  <div class="breadcrumbs"><a href="../../../index.html">prompt-executor-openai-client</a><span class="delimiter">/</span><a href="../../index.html">ai.koog.prompt.executor.clients.openai.azure</a><span class="delimiter">/</span><a href="../index.html">AzureOpenAIServiceVersion</a><span class="delimiter">/</span><span class="current">Companion</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Companion</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Companion</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/prompt/prompt-executor/prompt-executor-clients/prompt-executor-openai-client/src/commonMain/kotlin/ai/koog/prompt/executor/clients/openai/azure/AzureOpenAIServiceVersion.kt#L18">source</a>)</span></span></div><p class="paragraph">Companion object to hold predefined versions and utility methods.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-1125012913%2FProperties%2F-731634551" anchor-label="V2022_12_01" id="-1125012913%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2022_12_01.html"><span>V2022_</span><wbr><span>12_</span><wbr><span>01</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1125012913%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2022_12_01.html">V2022_12_01</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2022-12-01 of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="18565455%2FProperties%2F-731634551" anchor-label="V2023_05_15" id="18565455%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2023_05_15.html"><span>V2023_</span><wbr><span>05_</span><wbr><span>15</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="18565455%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2023_05_15.html">V2023_05_15</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2023-05-15 of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="878795850%2FProperties%2F-731634551" anchor-label="V2023_06_01_PREVIEW" id="878795850%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2023_06_01_-p-r-e-v-i-e-w.html"><span>V2023_</span><wbr><span>06_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="878795850%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2023_06_01_-p-r-e-v-i-e-w.html">V2023_06_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2023-06-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1208561611%2FProperties%2F-731634551" anchor-label="V2023_07_01_PREVIEW" id="1208561611%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2023_07_01_-p-r-e-v-i-e-w.html"><span>V2023_</span><wbr><span>07_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1208561611%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2023_07_01_-p-r-e-v-i-e-w.html">V2023_07_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2023-07-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-861569426%2FProperties%2F-731634551" anchor-label="V2024_02_01" id="-861569426%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2024_02_01.html"><span>V2024_</span><wbr><span>02_</span><wbr><span>01</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-861569426%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2024_02_01.html">V2024_02_01</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2024-02-01 of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1741172894%2FProperties%2F-731634551" anchor-label="V2024_02_15_PREVIEW" id="-1741172894%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2024_02_15_-p-r-e-v-i-e-w.html"><span>V2024_</span><wbr><span>02_</span><wbr><span>15_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1741172894%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2024_02_15_-p-r-e-v-i-e-w.html">V2024_02_15_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2024-02-15-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1351078566%2FProperties%2F-731634551" anchor-label="V2024_03_01_PREVIEW" id="1351078566%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2024_03_01_-p-r-e-v-i-e-w.html"><span>V2024_</span><wbr><span>03_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1351078566%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2024_03_01_-p-r-e-v-i-e-w.html">V2024_03_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2024-03-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1680844327%2FProperties%2F-731634551" anchor-label="V2024_04_01_PREVIEW" id="1680844327%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2024_04_01_-p-r-e-v-i-e-w.html"><span>V2024_</span><wbr><span>04_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1680844327%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2024_04_01_-p-r-e-v-i-e-w.html">V2024_04_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2024-04-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2010610088%2FProperties%2F-731634551" anchor-label="V2024_05_01_PREVIEW" id="2010610088%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2024_05_01_-p-r-e-v-i-e-w.html"><span>V2024_</span><wbr><span>05_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2010610088%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2024_05_01_-p-r-e-v-i-e-w.html">V2024_05_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2024-05-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1910837362%2FProperties%2F-731634551" anchor-label="V2024_06_01" id="1910837362%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2024_06_01.html"><span>V2024_</span><wbr><span>06_</span><wbr><span>01</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1910837362%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2024_06_01.html">V2024_06_01</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2024-06-01 of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1624825686%2FProperties%2F-731634551" anchor-label="V2024_07_01_PREVIEW" id="-1624825686%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2024_07_01_-p-r-e-v-i-e-w.html"><span>V2024_</span><wbr><span>07_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1624825686%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2024_07_01_-p-r-e-v-i-e-w.html">V2024_07_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2024-07-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1295059925%2FProperties%2F-731634551" anchor-label="V2024_08_01_PREVIEW" id="-1295059925%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2024_08_01_-p-r-e-v-i-e-w.html"><span>V2024_</span><wbr><span>08_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1295059925%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2024_08_01_-p-r-e-v-i-e-w.html">V2024_08_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2024-08-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-965294164%2FProperties%2F-731634551" anchor-label="V2024_09_01_PREVIEW" id="-965294164%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2024_09_01_-p-r-e-v-i-e-w.html"><span>V2024_</span><wbr><span>09_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-965294164%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2024_09_01_-p-r-e-v-i-e-w.html">V2024_09_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2024-09-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1994585282%2FProperties%2F-731634551" anchor-label="V2024_10_01_PREVIEW" id="1994585282%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2024_10_01_-p-r-e-v-i-e-w.html"><span>V2024_</span><wbr><span>10_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1994585282%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2024_10_01_-p-r-e-v-i-e-w.html">V2024_10_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2024-10-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-313228659%2FProperties%2F-731634551" anchor-label="V2024_10_21" id="-313228659%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2024_10_21.html"><span>V2024_</span><wbr><span>10_</span><wbr><span>21</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-313228659%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2024_10_21.html">V2024_10_21</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2024-10-21 of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1640850492%2FProperties%2F-731634551" anchor-label="V2024_12_01_PREVIEW" id="-1640850492%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2024_12_01_-p-r-e-v-i-e-w.html"><span>V2024_</span><wbr><span>12_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1640850492%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2024_12_01_-p-r-e-v-i-e-w.html">V2024_12_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2024-12-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2141840253%2FProperties%2F-731634551" anchor-label="V2025_01_01_PREVIEW" id="-2141840253%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2025_01_01_-p-r-e-v-i-e-w.html"><span>V2025_</span><wbr><span>01_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2141840253%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2025_01_01_-p-r-e-v-i-e-w.html">V2025_01_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2025-01-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1812074492%2FProperties%2F-731634551" anchor-label="V2025_02_01_PREVIEW" id="-1812074492%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2025_02_01_-p-r-e-v-i-e-w.html"><span>V2025_</span><wbr><span>02_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1812074492%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2025_02_01_-p-r-e-v-i-e-w.html">V2025_02_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2025-02-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1482308731%2FProperties%2F-731634551" anchor-label="V2025_03_01_PREVIEW" id="-1482308731%2FProperties%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-v2025_03_01_-p-r-e-v-i-e-w.html"><span>V2025_</span><wbr><span>03_</span><wbr><span>01_</span><wbr><span>PREVIEW</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1482308731%2FProperties%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">val </span><a href="-v2025_03_01_-p-r-e-v-i-e-w.html">V2025_03_01_PREVIEW</a><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Version 2025-03-01-preview of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1316755768%2FFunctions%2F-731634551" anchor-label="fromString" id="-1316755768%2FFunctions%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="from-string.html"><span>from</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1316755768%2FFunctions%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">fun </span><a href="from-string.html"><span class="token function">fromString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">version<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Creates an instance of <a href="../index.html">AzureOpenAIServiceVersion</a> from a version string.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2001053760%2FFunctions%2F-731634551" anchor-label="latestPreviewVersion" id="-2001053760%2FFunctions%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="latest-preview-version.html"><span>latest</span><wbr><span>Preview</span><wbr><span><span>Version</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2001053760%2FFunctions%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">fun </span><a href="latest-preview-version.html"><span class="token function">latestPreviewVersion</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Returns the latest preview version of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1694917395%2FFunctions%2F-731634551" anchor-label="latestStableVersion" id="-1694917395%2FFunctions%2F-731634551" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="latest-stable-version.html"><span>latest</span><wbr><span>Stable</span><wbr><span><span>Version</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1694917395%2FFunctions%2F-731634551"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-openai-client/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-static/index.html"><span class="token annotation builtin">JvmStatic</span></a></div></div><span class="token keyword">fun </span><a href="latest-stable-version.html"><span class="token function">latestStableVersion</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">AzureOpenAIServiceVersion</a></div><div class="brief "><p class="paragraph">Returns the latest stable version of the Azure OpenAI Service.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

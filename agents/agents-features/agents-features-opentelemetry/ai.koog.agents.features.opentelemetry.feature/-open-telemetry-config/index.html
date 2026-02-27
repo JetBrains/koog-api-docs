@@ -1,0 +1,420 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>OpenTelemetryConfig</title>
+<link href="../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":agents:agents-features:agents-features-opentelemetry/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filter=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-features-opentelemetry::ai.koog.agents.features.opentelemetry.feature/OpenTelemetryConfig///PointingToDeclaration//1252976599">
+  <div class="breadcrumbs"><a href="../../index.html">agents-features-opentelemetry</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.features.opentelemetry.feature</a><span class="delimiter">/</span><span class="current">OpenTelemetryConfig</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Open</span><wbr><span>Telemetry</span><wbr><span><span>Config</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">OpenTelemetryConfig</a> : <a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.config/-feature-config/index.html">FeatureConfig</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/agents/agents-features/agents-features-opentelemetry/src/jvmMain/kotlin/ai/koog/agents/features/opentelemetry/feature/OpenTelemetryConfig.kt#L32">source</a>)</span></span></div><p class="paragraph">Configuration class for OpenTelemetry integration.</p><p class="paragraph">Provides seamless integration with the OpenTelemetry SDK, allowing initialization and customization of various components such as the tracer, meter, exporters, etc.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="2035890047%2FConstructors%2F1252976599" anchor-label="OpenTelemetryConfig" id="2035890047%2FConstructors%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-telemetry-config.html"><span>Open</span><wbr><span>Telemetry</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2035890047%2FConstructors%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-1008240932%2FProperties%2F1252976599" anchor-label="eventFilter" id="-1008240932%2FProperties%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#-1008240932%2FProperties%2F1252976599"><span>event</span><wbr><span><span>Filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1008240932%2FProperties%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#-1008240932%2FProperties%2F1252976599">eventFilter</a><span class="token operator">: </span><span class="token punctuation">(</span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-agent-lifecycle-event-context/index.html">AgentLifecycleEventContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1539990344%2FProperties%2F1252976599" anchor-label="isVerbose" id="-1539990344%2FProperties%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-verbose.html"><span>is</span><wbr><span><span>Verbose</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1539990344%2FProperties%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="is-verbose.html">isVerbose</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Indicates whether verbose telemetry data is enabled.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="308136966%2FProperties%2F1252976599" anchor-label="messageProcessors" id="308136966%2FProperties%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#308136966%2FProperties%2F1252976599"><span>message</span><wbr><span><span>Processors</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="308136966%2FProperties%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#308136966%2FProperties%2F1252976599">messageProcessors</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.message/-feature-message-processor/index.html">FeatureMessageProcessor</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-378773002%2FProperties%2F1252976599" anchor-label="sdk" id="-378773002%2FProperties%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="sdk.html"><span><span>sdk</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-378773002%2FProperties%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="sdk.html">sdk</a><span class="token operator">: </span><span data-unresolved-link="io.opentelemetry.sdk/OpenTelemetrySdk///PointingToDeclaration/">OpenTelemetrySdk</span></div><div class="brief "><p class="paragraph">Provides an instance of the <code class="lang-kotlin">OpenTelemetrySdk</code>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="619679504%2FProperties%2F1252976599" anchor-label="serviceName" id="619679504%2FProperties%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="service-name.html"><span>service</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="619679504%2FProperties%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="service-name.html">serviceName</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The name of the service associated with this OpenTelemetry configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-461337177%2FProperties%2F1252976599" anchor-label="serviceVersion" id="-461337177%2FProperties%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="service-version.html"><span>service</span><wbr><span><span>Version</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-461337177%2FProperties%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="service-version.html">serviceVersion</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The version of the service used in the OpenTelemetry configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="705676925%2FProperties%2F1252976599" anchor-label="tracer" id="705676925%2FProperties%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tracer.html"><span><span>tracer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="705676925%2FProperties%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="tracer.html">tracer</a><span class="token operator">: </span><span data-unresolved-link="io.opentelemetry.api.trace/Tracer///PointingToDeclaration/">Tracer</span></div><div class="brief "><p class="paragraph">Provides access to the <code class="lang-kotlin">Tracer</code> instance for tracking and recording tracing data.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-55614632%2FFunctions%2F1252976599" anchor-label="addLangfuseExporter" id="-55614632%2FFunctions%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.features.opentelemetry.integration.langfuse/add-langfuse-exporter.html"><span>add</span><wbr><span>Langfuse</span><wbr><span><span>Exporter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-55614632%2FFunctions%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">OpenTelemetryConfig</a><span class="token punctuation">.</span><a href="../../ai.koog.agents.features.opentelemetry.integration.langfuse/add-langfuse-exporter.html"><span class="token function">addLangfuseExporter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">langfuseUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">langfusePublicKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">langfuseSecretKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">timeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator"> = </span>10.seconds<span class="token punctuation">, </span></span><span class="parameter ">traceAttributes<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../ai.koog.agents.features.opentelemetry.attribute/-custom-attribute/index.html">CustomAttribute</a><span class="token operator">&gt;</span><span class="token operator"> = </span>emptyList()</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configure an OpenTelemetry span exporter that sends data to <a href="https://langfuse.com/">Langfuse</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1540276889%2FFunctions%2F1252976599" anchor-label="addMessageProcessor" id="1540276889%2FFunctions%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="index.html#1540276889%2FFunctions%2F1252976599"><span>add</span><wbr><span>Message</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1540276889%2FFunctions%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html#1540276889%2FFunctions%2F1252976599"><span class="token function">addMessageProcessor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">processor<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.message/-feature-message-processor/index.html">FeatureMessageProcessor</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-975352165%2FFunctions%2F1252976599" anchor-label="addResourceAttributes" id="-975352165%2FFunctions%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-resource-attributes.html"><span>add</span><wbr><span>Resource</span><wbr><span><span>Attributes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-975352165%2FFunctions%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="add-resource-attributes.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="add-resource-attributes.html"><span class="token function">addResourceAttributes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">attributes<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span data-unresolved-link="io.opentelemetry.api.common/AttributeKey///PointingToDeclaration/">AttributeKey</span><span class="token operator">&lt;</span><a href="add-resource-attributes.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="add-resource-attributes.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds resource attributes to the OpenTelemetry configuration. Resource attributes are key-value pairs that provide metadata describing the entity producing telemetry data.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-226423997%2FFunctions%2F1252976599" anchor-label="addSpanExporter" id="-226423997%2FFunctions%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-span-exporter.html"><span>add</span><wbr><span>Span</span><wbr><span><span>Exporter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-226423997%2FFunctions%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="add-span-exporter.html"><span class="token function">addSpanExporter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">exporter<span class="token operator">: </span><span data-unresolved-link="io.opentelemetry.sdk.trace.export/SpanExporter///PointingToDeclaration/">SpanExporter</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a SpanExporter to the OpenTelemetry configuration. This exporter will be used to export spans collected during the application's execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="711131874%2FFunctions%2F1252976599" anchor-label="addSpanProcessor" id="711131874%2FFunctions%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-span-processor.html"><span>add</span><wbr><span>Span</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="711131874%2FFunctions%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="add-span-processor.html"><span class="token function">addSpanProcessor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">processor<span class="token operator">: </span><span class="token punctuation">(</span><span data-unresolved-link="io.opentelemetry.sdk.trace.export/SpanExporter///PointingToDeclaration/">SpanExporter</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="io.opentelemetry.sdk.trace/SpanProcessor///PointingToDeclaration/">SpanProcessor</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a <span data-unresolved-link="io.opentelemetry.sdk.trace/SpanProcessor///PointingToDeclaration/">SpanProcessor</span> creator function to the OpenTelemetry configuration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2048493698%2FFunctions%2F1252976599" anchor-label="addWeaveExporter" id="2048493698%2FFunctions%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.features.opentelemetry.integration.weave/add-weave-exporter.html"><span>add</span><wbr><span>Weave</span><wbr><span><span>Exporter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2048493698%2FFunctions%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">OpenTelemetryConfig</a><span class="token punctuation">.</span><a href="../../ai.koog.agents.features.opentelemetry.integration.weave/add-weave-exporter.html"><span class="token function">addWeaveExporter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">weaveOtelBaseUrl<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">weaveEntity<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">weaveProjectName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">weaveApiKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">timeout<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator"> = </span>10.seconds</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configure an OpenTelemetry span exporter that sends data to <a href="https://wandb.ai/site/weave/">W&amp;B Weave</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-286778606%2FFunctions%2F1252976599" anchor-label="setEventFilter" id="-286778606%2FFunctions%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-event-filter.html"><span>set</span><wbr><span>Event</span><wbr><span><span>Filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-286778606%2FFunctions%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="set-event-filter.html"><span class="token function">setEventFilter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filter<span class="token operator">: </span><span class="token punctuation">(</span><a href="../../../../../agents/agents-core/ai.koog.agents.core.feature.handler/-agent-lifecycle-event-context/index.html">AgentLifecycleEventContext</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="285670133%2FFunctions%2F1252976599" anchor-label="setSampler" id="285670133%2FFunctions%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-sampler.html"><span>set</span><wbr><span><span>Sampler</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="285670133%2FFunctions%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-sampler.html"><span class="token function">setSampler</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sampler<span class="token operator">: </span><span data-unresolved-link="io.opentelemetry.sdk.trace.samplers/Sampler///PointingToDeclaration/">Sampler</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the sampler to be used by the OpenTelemetry configuration. The sampler determines which spans are sampled and exported during application execution.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-709237846%2FFunctions%2F1252976599" anchor-label="setSdk" id="-709237846%2FFunctions%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-sdk.html"><span>set</span><wbr><span><span>Sdk</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-709237846%2FFunctions%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-sdk.html"><span class="token function">setSdk</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sdk<span class="token operator">: </span><span data-unresolved-link="io.opentelemetry.sdk/OpenTelemetrySdk///PointingToDeclaration/">OpenTelemetrySdk</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Manually sets the <span data-unresolved-link="io.opentelemetry.sdk/OpenTelemetrySdk///PointingToDeclaration/">OpenTelemetrySdk</span> instance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="818247872%2FFunctions%2F1252976599" anchor-label="setServiceInfo" id="818247872%2FFunctions%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-service-info.html"><span>set</span><wbr><span>Service</span><wbr><span><span>Info</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="818247872%2FFunctions%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-service-info.html"><span class="token function">setServiceInfo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">serviceName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">serviceVersion<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the service information for the OpenTelemetry configuration. This information is used to identify the service in telemetry data.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2030127663%2FFunctions%2F1252976599" anchor-label="setVerbose" id="2030127663%2FFunctions%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-verbose.html"><span>set</span><wbr><span><span>Verbose</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2030127663%2FFunctions%2F1252976599"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-verbose.html"><span class="token function">setVerbose</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">verbose<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Controls whether verbose telemetry data should be captured during application execution. When set to <code class="lang-kotlin">true</code>, the application collects more detailed telemetry data. This option can be useful for debugging and fine-grained monitoring but may impact performance.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

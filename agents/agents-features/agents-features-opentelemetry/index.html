@@ -1,0 +1,192 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>agents-features-opentelemetry</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":agents:agents-features:agents-features-opentelemetry/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filter=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" id="content" pageids="agents-features-opentelemetry::////PointingToDeclaration//1252976599">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>agents-features-opentelemetry</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-opentelemetry/jvmMain"><p class="paragraph">Provides <a href="https://opentelemetry.io">OpenTelemetry</a> integration for monitoring and tracing AI agents in the Koog framework.</p><h3 class="">Overview</h3><p class="paragraph">The agents-features-opentelemetry module enables observability for AI agents by integrating with OpenTelemetry, allowing you to:</p><ul><li><p class="paragraph">Monitor agent performance and behavior</p></li><li><p class="paragraph">Debug issues in complex agent workflows</p></li><li><p class="paragraph">Visualize the execution flow of your agents</p></li><li><p class="paragraph">Track LLM calls and tool usage</p></li><li><p class="paragraph">Analyze agent behavior patterns</p></li></ul><p class="paragraph">Key features include:</p><ul><li><p class="paragraph">Automatic span creation for agent events (agent execution, node execution, LLM calls, tool calls)</p></li><li><p class="paragraph">Support for various exporters (OTLP, Logging)</p></li><li><p class="paragraph">Customizable sampling strategies</p></li><li><p class="paragraph">Resource attributes following <a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/">OpenTelemetry Semantic Convention for GenAI</a></p></li><li><p class="paragraph">Integration with observability systems like Jaeger</p></li></ul><h3 class="">Using in your project</h3><p class="paragraph">To use the OpenTelemetry feature in your project, add the following dependency:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.agents:agents-features-opentelemetry:$version")<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">Then, install the OpenTelemetry feature when creating your agent:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val agent = AIAgent(<br>    executor = simpleOpenAIExecutor(apiKey),<br>    llmModel = OpenAIModels.Chat.GPT4o,<br>    systemPrompt = "You are a helpful assistant.",<br>    installFeatures = {<br>        install(OpenTelemetry) {<br>            setServiceInfo("my-agent-service", "1.0.0")   // Set your service configuration<br>            addSpanExporter(LoggingSpanExporter.create()) // Add Logging exporter<br>        }<br>    }<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Using in tests</h3><p class="paragraph">For testing agents with OpenTelemetry, you can use a mock span exporter:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Create a mock span exporter for testing<br>val mockSpanExporter = MockSpanExporter()<br><br>// Create a test agent with OpenTelemetry<br>val testAgent = AIAgent(<br>    // other test configuration<br>) {<br>    install(OpenTelemetry) {<br>        setServiceInfo("test-agent", "1.0.0")<br>        addSpanExporter(mockSpanExporter)<br>    }<br>    <br>    // Enable testing mode<br>    withTesting()<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Example of usage</h3><p class="paragraph">Here's an example of using OpenTelemetry with an OTLP exporter for Jaeger integration:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val agent = AIAgent(<br>    executor = simpleOpenAIExecutor(apiKey),<br>    llmModel = OpenAIModels.Chat.GPT4o,<br>    systemPrompt = "You are a helpful assistant.",<br>    installFeatures = {<br>        install(OpenTelemetry) {<br>            // Configure service info<br>            setServiceInfo("my-otlp-agent", "1.0.0")<br>            <br>            // Add OTLP exporter for Jaeger<br>            addSpanExporter(<br>                OtlpGrpcSpanExporter.builder()<br>                    .setEndpoint("http://localhost:4317")<br>                    .build()<br>            )<br>            <br>            // Add resource attributes<br>            addResourceAttributes(mapOf(<br>                AttributeKey.stringKey("deployment.environment") to "production"<br>            ))<br>        }<br>    }<br>)<br><br>// Run the agent<br>val result = agent.run("Tell me about OpenTelemetry")<br>println(result)<br><br>// Wait for telemetry data to be exported<br>delay(5.seconds)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">This example demonstrates configuring an agent with OpenTelemetry, running it, and ensuring that telemetry data is exported before the application terminates.</p></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="1854682242%2FPackages%2F1252976599" anchor-label="ai.koog.agents.features.opentelemetry.attribute" id="1854682242%2FPackages%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.features.opentelemetry.attribute/index.html">ai.koog.agents.features.opentelemetry.attribute</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1854682242%2FPackages%2F1252976599"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="1521097052%2FPackages%2F1252976599" anchor-label="ai.koog.agents.features.opentelemetry.feature" id="1521097052%2FPackages%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.features.opentelemetry.feature/index.html">ai.koog.agents.features.opentelemetry.feature</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1521097052%2FPackages%2F1252976599"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="-204817849%2FPackages%2F1252976599" anchor-label="ai.koog.agents.features.opentelemetry.integration.langfuse" id="-204817849%2FPackages%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.features.opentelemetry.integration.langfuse/index.html">ai.koog.agents.features.opentelemetry.integration.langfuse</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-204817849%2FPackages%2F1252976599"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="288330638%2FPackages%2F1252976599" anchor-label="ai.koog.agents.features.opentelemetry.integration.weave" id="288330638%2FPackages%2F1252976599" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":agents:agents-features:agents-features-opentelemetry/jvmMain" data-filterable-set=":agents:agents-features:agents-features-opentelemetry/jvmMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.agents.features.opentelemetry.integration.weave/index.html">ai.koog.agents.features.opentelemetry.integration.weave</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="288330638%2FPackages%2F1252976599"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

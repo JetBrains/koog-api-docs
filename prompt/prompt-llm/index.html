@@ -1,0 +1,138 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>prompt-llm</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-llm/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-llm/commonMain" data-filter=":prompt:prompt-llm/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" id="content" pageids="prompt-llm::////PointingToDeclaration//547389715">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>prompt-llm</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><p class="paragraph">A module that provides abstractions and implementations for working with Large Language Models (LLMs) from various providers.</p><h3 class="">Overview</h3><p class="paragraph">The prompt-llm module defines core abstractions for working with Large Language Models (LLMs) in a provider-agnostic way. It includes:</p><ul><li><p class="paragraph"><strong>LLMCapability</strong>: A sealed class hierarchy that defines various capabilities that LLMs can support, such as:</p></li><ul><li><p class="paragraph">Temperature adjustment for controlling response randomness</p></li><li><p class="paragraph">Tools integration for external system interaction</p></li><li><p class="paragraph">Vision processing for handling visual data</p></li><li><p class="paragraph">Embedding generation for vector representations</p></li><li><p class="paragraph">Completion for text generation tasks</p></li><li><p class="paragraph">Schema support for structured data (JSON with Simple and Full variants)</p></li><li><p class="paragraph">Speculation for exploratory responses</p></li></ul><li><p class="paragraph"><strong>LLMProvider</strong>: A sealed class hierarchy that defines supported LLM providers, including:</p></li><ul><li><p class="paragraph">Google</p></li><li><p class="paragraph">OpenAI</p></li><li><p class="paragraph">Anthropic</p></li><li><p class="paragraph">Meta</p></li><li><p class="paragraph">Alibaba</p></li><li><p class="paragraph">OpenRouter</p></li></ul><li><p class="paragraph"><strong>LLModel</strong>: A data class that represents a specific LLM with its provider, unique identifier, and supported capabilities.</p></li><li><p class="paragraph"><strong>OllamaModels</strong>: A collection of predefined LLM configurations for specific models from providers like Meta and Alibaba, with their respective capabilities.</p></li></ul><p class="paragraph">This module serves as a foundation for interacting with different LLM providers in a unified way, allowing applications to work with various models while abstracting away provider-specific details.</p><h3 class="">Example of usage</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Creating a custom LLM configuration<br>val myCustomModel = LLModel(<br>    provider = LLMProvider.OpenAI,<br>    id = "gpt-4-turbo",<br>    capabilities = listOf(<br>        LLMCapability.Temperature,<br>        LLMCapability.Tools,<br>        LLMCapability.Schema.JSON.Full<br>    )<br>)<br><br>// Using a predefined model<br>val metaModel = OllamaModels.Meta.LLAMA_3_2<br><br>// Checking if a model supports a specific capability<br>val supportsTools = myCustomModel.capabilities.contains(LLMCapability.Tools) // true</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="2113695921%2FPackages%2F547389715" anchor-label="ai.koog.prompt.llm" id="2113695921%2FPackages%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.llm/index.html">ai.koog.prompt.llm</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2113695921%2FPackages%2F547389715"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

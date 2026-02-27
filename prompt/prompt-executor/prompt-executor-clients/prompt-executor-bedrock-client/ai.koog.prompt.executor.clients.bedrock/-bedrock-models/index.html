@@ -1,0 +1,615 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>BedrockModels</title>
+<link href="../../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-executor-bedrock-client::ai.koog.prompt.executor.clients.bedrock/BedrockModels///PointingToDeclaration//581635203">
+  <div class="breadcrumbs"><a href="../../index.html">prompt-executor-bedrock-client</a><span class="delimiter">/</span><a href="../index.html">ai.koog.prompt.executor.clients.bedrock</a><span class="delimiter">/</span><span class="current">BedrockModels</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Bedrock</span><wbr><span><span>Models</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">BedrockModels</a> : <a href="../../../../../../prompt/prompt-executor/prompt-executor-clients/ai.koog.prompt.executor.clients/-l-l-model-definitions/index.html">LLModelDefinitions</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/prompt/prompt-executor/prompt-executor-clients/prompt-executor-bedrock-client/src/jvmMain/kotlin/ai/koog/prompt/executor/clients/bedrock/BedrockModels.kt#L105">source</a>)</span></span></div><p class="paragraph">Bedrock models available through the AWS Bedrock API</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-987281685%2FClasslikes%2F581635203" anchor-label="Embeddings" id="-987281685%2FClasslikes%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-embeddings/index.html"><span><span>Embeddings</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-987281685%2FClasslikes%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-embeddings/index.html">Embeddings</a></div><div class="brief "><p class="paragraph">Embedding models available through the AWS Bedrock API.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-248294299%2FProperties%2F581635203" anchor-label="AI21JambaLarge" id="-248294299%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-i21-jamba-large.html"><span>AI21Jamba</span><wbr><span><span>Large</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-248294299%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-a-i21-jamba-large.html">AI21JambaLarge</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Jamba Large - AI21's most powerful hybrid SSM-Transformer model</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-324575389%2FProperties%2F581635203" anchor-label="AI21JambaMini" id="-324575389%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-i21-jamba-mini.html"><span>AI21Jamba</span><wbr><span><span>Mini</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-324575389%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-a-i21-jamba-mini.html">AI21JambaMini</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Jamba Mini - AI21's efficient hybrid SSM-Transformer model</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-614087820%2FProperties%2F581635203" anchor-label="AmazonNovaLite" id="-614087820%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-amazon-nova-lite.html"><span>Amazon</span><wbr><span>Nova</span><wbr><span><span>Lite</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-614087820%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-amazon-nova-lite.html">AmazonNovaLite</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Amazon Nova Lite - Balanced performance and cost</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-751727244%2FProperties%2F581635203" anchor-label="AmazonNovaMicro" id="-751727244%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-amazon-nova-micro.html"><span>Amazon</span><wbr><span>Nova</span><wbr><span><span>Micro</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-751727244%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-amazon-nova-micro.html">AmazonNovaMicro</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Amazon Nova Micro - Ultra-fast, low-cost model for simple tasks</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="918821388%2FProperties%2F581635203" anchor-label="AmazonNovaPremier" id="918821388%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-amazon-nova-premier.html"><span>Amazon</span><wbr><span>Nova</span><wbr><span><span>Premier</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="918821388%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-amazon-nova-premier.html">AmazonNovaPremier</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Amazon Nova Premier - Amazon's most capable model</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-611589013%2FProperties%2F581635203" anchor-label="AmazonNovaPro" id="-611589013%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-amazon-nova-pro.html"><span>Amazon</span><wbr><span>Nova</span><wbr><span><span>Pro</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-611589013%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-amazon-nova-pro.html">AmazonNovaPro</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Amazon Nova Pro - High-performance model for complex tasks</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2129811777%2FProperties%2F581635203" anchor-label="AnthropicClaude21" id="-2129811777%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude21.html"><span>Anthropic</span><wbr><span><span>Claude21</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2129811777%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude21.html">AnthropicClaude21</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude 2.1 - Previous generation Claude model with 200K context window</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1125158844%2FProperties%2F581635203" anchor-label="AnthropicClaude35Haiku" id="-1125158844%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude35-haiku.html"><span>Anthropic</span><wbr><span><span>Claude35Haiku</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1125158844%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude35-haiku.html">AnthropicClaude35Haiku</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude 3.5 Haiku - Fast model with improved reasoning capabilities</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1698373653%2FProperties%2F581635203" anchor-label="AnthropicClaude35SonnetV2" id="1698373653%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude35-sonnet-v2.html"><span>Anthropic</span><wbr><span>Claude35Sonnet</span><wbr><span><span>V2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1698373653%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude35-sonnet-v2.html">AnthropicClaude35SonnetV2</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude 3.5 Sonnet v2 - Upgraded model with improved intelligence and capabilities</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2131960311%2FProperties%2F581635203" anchor-label="AnthropicClaude3Haiku" id="2131960311%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude3-haiku.html"><span>Anthropic</span><wbr><span><span>Claude3Haiku</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2131960311%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude3-haiku.html">AnthropicClaude3Haiku</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude 3 Haiku - Fast and efficient model for high-volume, simple tasks</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1435937558%2FProperties%2F581635203" anchor-label="AnthropicClaude3Opus" id="-1435937558%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude3-opus.html"><span>Anthropic</span><wbr><span><span>Claude3Opus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1435937558%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude3-opus.html">AnthropicClaude3Opus</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude 3 Opus - Anthropic's most powerful model with superior performance on complex tasks</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1108798242%2FProperties%2F581635203" anchor-label="AnthropicClaude3Sonnet" id="-1108798242%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude3-sonnet.html"><span>Anthropic</span><wbr><span><span>Claude3Sonnet</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1108798242%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude3-sonnet.html">AnthropicClaude3Sonnet</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude 3 Sonnet - Balanced performance model ideal for most use cases</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1812570818%2FProperties%2F581635203" anchor-label="AnthropicClaude41Opus" id="1812570818%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude41-opus.html"><span>Anthropic</span><wbr><span><span>Claude41Opus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1812570818%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude41-opus.html">AnthropicClaude41Opus</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude 4.1 Opus sets new standards in:</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1857835326%2FProperties%2F581635203" anchor-label="AnthropicClaude45Opus" id="1857835326%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude45-opus.html"><span>Anthropic</span><wbr><span><span>Claude45Opus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1857835326%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude45-opus.html">AnthropicClaude45Opus</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude 4.5 Opus - Anthropic's intelligent, efficient, and the best model in the world for coding, agents, and computer use. It’s also meaningfully better at everyday tasks like deep research and working with slides and spreadsheets. Opus 4.5 is a step forward in what AI systems can do, and a preview of larger changes to how work gets done.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="274670126%2FProperties%2F581635203" anchor-label="AnthropicClaude4_5Haiku" id="274670126%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude4_5-haiku.html"><span>Anthropic</span><wbr><span>Claude4_</span><wbr><span>5Haiku</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="274670126%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude4_5-haiku.html">AnthropicClaude4_5Haiku</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude Haiku 4.5 - Anthropic's most powerful model for powering real-world agents, with industry-leading capabilities around coding, and computer use.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1444748167%2FProperties%2F581635203" anchor-label="AnthropicClaude4_5Sonnet" id="1444748167%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude4_5-sonnet.html"><span>Anthropic</span><wbr><span>Claude4_</span><wbr><span>5Sonnet</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1444748167%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude4_5-sonnet.html">AnthropicClaude4_5Sonnet</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude 4.5 Sonnet - High-performance model with enhanced capabilities</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1424621431%2FProperties%2F581635203" anchor-label="AnthropicClaude4Opus" id="-1424621431%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude4-opus.html"><span>Anthropic</span><wbr><span><span>Claude4Opus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1424621431%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude4-opus.html">AnthropicClaude4Opus</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude 4 Opus - Anthropic's previous flagship model</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1176065213%2FProperties%2F581635203" anchor-label="AnthropicClaude4Sonnet" id="1176065213%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude4-sonnet.html"><span>Anthropic</span><wbr><span><span>Claude4Sonnet</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1176065213%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude4-sonnet.html">AnthropicClaude4Sonnet</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude 4 Sonnet - High-performance model with exceptional reasoning and efficiency</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1785327963%2FProperties%2F581635203" anchor-label="AnthropicClaudeInstant" id="1785327963%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic-claude-instant.html"><span>Anthropic</span><wbr><span>Claude</span><wbr><span><span>Instant</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1785327963%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-anthropic-claude-instant.html">AnthropicClaudeInstant</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Claude Instant - Fast, affordable model for simple tasks</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="530717306%2FProperties%2F581635203" anchor-label="MetaLlama3_0_70BInstruct" id="530717306%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-meta-llama3_0_70-b-instruct.html"><span>MetaLlama3_</span><wbr><span>0_</span><wbr><span><span>70BInstruct</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="530717306%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-meta-llama3_0_70-b-instruct.html">MetaLlama3_0_70BInstruct</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Meta's Llama 3 70B Instruct</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1301094297%2FProperties%2F581635203" anchor-label="MetaLlama3_0_8BInstruct" id="1301094297%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-meta-llama3_0_8-b-instruct.html"><span>MetaLlama3_</span><wbr><span>0_</span><wbr><span>8BInstruct</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1301094297%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-meta-llama3_0_8-b-instruct.html">MetaLlama3_0_8BInstruct</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Meta's Llama 3 8B Instruct</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1800343653%2FProperties%2F581635203" anchor-label="MetaLlama3_1_405BInstruct" id="-1800343653%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-meta-llama3_1_405-b-instruct.html"><span>MetaLlama3_</span><wbr><span>1_</span><wbr><span><span>405BInstruct</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1800343653%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-meta-llama3_1_405-b-instruct.html">MetaLlama3_1_405BInstruct</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Meta's Llama 3.1 405B Instruct</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2131445991%2FProperties%2F581635203" anchor-label="MetaLlama3_1_70BInstruct" id="-2131445991%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-meta-llama3_1_70-b-instruct.html"><span>MetaLlama3_</span><wbr><span>1_</span><wbr><span><span>70BInstruct</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2131445991%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-meta-llama3_1_70-b-instruct.html">MetaLlama3_1_70BInstruct</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Meta's Llama 3.1 70B Instruct</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1630860058%2FProperties%2F581635203" anchor-label="MetaLlama3_1_8BInstruct" id="1630860058%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-meta-llama3_1_8-b-instruct.html"><span>MetaLlama3_</span><wbr><span>1_</span><wbr><span>8BInstruct</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1630860058%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-meta-llama3_1_8-b-instruct.html">MetaLlama3_1_8BInstruct</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Meta's Llama 3.1 8B Instruct</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1885028033%2FProperties%2F581635203" anchor-label="MetaLlama3_2_11BInstruct" id="-1885028033%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-meta-llama3_2_11-b-instruct.html"><span>MetaLlama3_</span><wbr><span>2_</span><wbr><span><span>11BInstruct</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1885028033%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-meta-llama3_2_11-b-instruct.html">MetaLlama3_2_11BInstruct</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Meta's Llama 3.2 11B Instruct</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1527805868%2FProperties%2F581635203" anchor-label="MetaLlama3_2_1BInstruct" id="-1527805868%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-meta-llama3_2_1-b-instruct.html"><span>MetaLlama3_</span><wbr><span>2_</span><wbr><span>1BInstruct</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1527805868%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-meta-llama3_2_1-b-instruct.html">MetaLlama3_2_1BInstruct</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Meta's Llama 3.2 1B Instruct</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1923155926%2FProperties%2F581635203" anchor-label="MetaLlama3_2_3BInstruct" id="1923155926%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-meta-llama3_2_3-b-instruct.html"><span>MetaLlama3_</span><wbr><span>2_</span><wbr><span>3BInstruct</span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1923155926%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-meta-llama3_2_3-b-instruct.html">MetaLlama3_2_3BInstruct</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Meta's Llama 3.2 3B Instruct</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-893008778%2FProperties%2F581635203" anchor-label="MetaLlama3_2_90BInstruct" id="-893008778%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-meta-llama3_2_90-b-instruct.html"><span>MetaLlama3_</span><wbr><span>2_</span><wbr><span><span>90BInstruct</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-893008778%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-meta-llama3_2_90-b-instruct.html">MetaLlama3_2_90BInstruct</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Meta's Llama 3.2 90B Instruct</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1134162007%2FProperties%2F581635203" anchor-label="MetaLlama3_3_70BInstruct" id="1134162007%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-meta-llama3_3_70-b-instruct.html"><span>MetaLlama3_</span><wbr><span>3_</span><wbr><span><span>70BInstruct</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1134162007%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-meta-llama3_3_70-b-instruct.html">MetaLlama3_3_70BInstruct</a><span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></div><div class="brief "><p class="paragraph">Meta's Llama 3.3 70B Instruct</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1248290616%2FProperties%2F581635203" anchor-label="models" id="-1248290616%2FProperties%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="models.html"><span><span>models</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1248290616%2FProperties%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="models.html">models</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-562604783%2FFunctions%2F581635203" anchor-label="addCustomModel" id="-562604783%2FFunctions%2F581635203" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-custom-model.html"><span>add</span><wbr><span>Custom</span><wbr><span><span>Model</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-562604783%2FFunctions%2F581635203"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-bedrock-client/jvmMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="add-custom-model.html"><span class="token function">addCustomModel</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">model<span class="token operator">: </span><a href="../../../../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-model/index.html">LLModel</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

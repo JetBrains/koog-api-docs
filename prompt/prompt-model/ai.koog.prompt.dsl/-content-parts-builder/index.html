@@ -1,0 +1,435 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ContentPartsBuilder</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-model/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-model/commonMain" data-filter=":prompt:prompt-model/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-model::ai.koog.prompt.dsl/ContentPartsBuilder///PointingToDeclaration//1262518863">
+  <div class="breadcrumbs"><a href="../../index.html">prompt-model</a><span class="delimiter">/</span><a href="../index.html">ai.koog.prompt.dsl</a><span class="delimiter">/</span><span class="current">ContentPartsBuilder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Content</span><wbr><span>Parts</span><wbr><span><span>Builder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">ContentPartsBuilder</a> : <a href="../../ai.koog.prompt.text/-text-content-builder-base/index.html">TextContentBuilderBase</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../ai.koog.prompt.message/-content-part/index.html">ContentPart</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/prompt/prompt-model/src/commonMain/kotlin/ai/koog/prompt/dsl/ContentPartsBuilder.kt#L28">source</a>)</span></span></div><p class="paragraph">A builder for constructing parts for prompt messages. All parts are added to a list in declaration order and can be retrieved through the <a href="build.html">build</a> method.</p><p class="paragraph">Example usage:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val parts = ContentPartsBuilder().apply {<br>    text("Hello!")<br>    image("screenshot.png")<br>    binaryFile("report.pdf")<br>}.build()</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h4 class="tableheader">See also</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../ai.koog.prompt.message/-content-part/index.html"><span>Content</span><wbr><span><span>Part</span></span></a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-1061032460%2FConstructors%2F1262518863" anchor-label="ContentPartsBuilder" id="-1061032460%2FConstructors%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-content-parts-builder.html"><span>Content</span><wbr><span>Parts</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1061032460%2FConstructors%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="873358149%2FProperties%2F1262518863" anchor-label="caret" id="873358149%2FProperties%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.prompt.text/-text-content-builder-base/caret.html"><span><span>caret</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="873358149%2FProperties%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../ai.koog.prompt.text/-text-content-builder-base/caret.html">caret</a><span class="token operator">: </span><a href="../../ai.koog.prompt.text/-text-content-builder-base/-caret/index.html">TextContentBuilderBase.Caret</a></div><div class="brief "><p class="paragraph">Represents the current caret position in the text being built.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1177862092%2FFunctions%2F1262518863" anchor-label="attachments" id="-1177862092%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="attachments.html"><span><span>attachments</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1177862092%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="attachments.html"><span class="token function"><strike>attachments</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">body<span class="token operator">: </span><a href="index.html">ContentPartsBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures media attachments for this content builder.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1580307200%2FFunctions%2F1262518863" anchor-label="audio" id="-1580307200%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="audio.html"><span><span>audio</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1580307200%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="audio.html"><span class="token function">audio</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">audio<span class="token operator">: </span><a href="../../ai.koog.prompt.message/-content-part/-audio/index.html">ContentPart.Audio</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-audio/index.html">ContentPart.Audio</a> to the list of parts.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="audio.html"><span class="token function">audio</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-audio/index.html">ContentPart.Audio</a> with <a href="../../ai.koog.prompt.message/-attachment-content/-u-r-l/index.html">AttachmentContent.URL</a> content from the provided URL.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="audio.html"><span class="token function">audio</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><span data-unresolved-link="kotlinx.io.files/Path///PointingToDeclaration/">Path</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-audio/index.html">ContentPart.Audio</a> with <a href="../../ai.koog.prompt.message/-attachment-content/-binary/-bytes/index.html">AttachmentContent.Binary.Bytes</a> content from the provided local file path.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1640731067%2FFunctions%2F1262518863" anchor-label="binaryFile" id="-1640731067%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="binary-file.html"><span>binary</span><wbr><span><span>File</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1640731067%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="binary-file.html"><span class="token function">binaryFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><span data-unresolved-link="kotlinx.io.files/Path///PointingToDeclaration/">Path</span><span class="token punctuation">, </span></span><span class="parameter ">mimeType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-file/index.html">ContentPart.File</a> with <a href="../../ai.koog.prompt.message/-attachment-content/-binary/-bytes/index.html">AttachmentContent.Binary.Bytes</a> content from the provided local file path.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-109007966%2FFunctions%2F1262518863" anchor-label="br" id="-109007966%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.prompt.text/-text-content-builder-base/br.html"><span><span>br</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-109007966%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.prompt.text/-text-content-builder-base/br.html"><span class="token function">br</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds two consecutive newline characters to the text content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="630051738%2FFunctions%2F1262518863" anchor-label="build" id="630051738%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="build.html"><span><span>build</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="630051738%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="build.html"><span class="token function">build</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../ai.koog.prompt.message/-content-part/index.html">ContentPart</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Constructs and returns the accumulated list of attachment items.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-655890890%2FFunctions%2F1262518863" anchor-label="file" id="-655890890%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="file.html"><span><span>file</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-655890890%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="file.html"><span class="token function">file</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">file<span class="token operator">: </span><a href="../../ai.koog.prompt.message/-content-part/-file/index.html">ContentPart.File</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-file/index.html">ContentPart.File</a> to the list of parts.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="file.html"><span class="token function">file</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">mimeType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-file/index.html">ContentPart.File</a> with <a href="../../ai.koog.prompt.message/-attachment-content/-u-r-l/index.html">AttachmentContent.URL</a> content from the provided URL.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-916095488%2FFunctions%2F1262518863" anchor-label="image" id="-916095488%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="image.html"><span><span>image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-916095488%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="image.html"><span class="token function">image</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">image<span class="token operator">: </span><a href="../../ai.koog.prompt.message/-content-part/-image/index.html">ContentPart.Image</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-image/index.html">ContentPart.Image</a> to the list of parts.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="image.html"><span class="token function">image</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-image/index.html">ContentPart.Image</a> with <a href="../../ai.koog.prompt.message/-attachment-content/-u-r-l/index.html">AttachmentContent.URL</a> content from the provided URL.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="image.html"><span class="token function">image</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><span data-unresolved-link="kotlinx.io.files/Path///PointingToDeclaration/">Path</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-image/index.html">ContentPart.Image</a> with <a href="../../ai.koog.prompt.message/-attachment-content/-binary/-bytes/index.html">AttachmentContent.Binary.Bytes</a> content from the provided local file path.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-700921964%2FFunctions%2F1262518863" anchor-label="newline" id="-700921964%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.prompt.text/-text-content-builder-base/newline.html"><span><span>newline</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-700921964%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.prompt.text/-text-content-builder-base/newline.html"><span class="token function">newline</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends a newline character to the underlying text builder.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="257973125%2FFunctions%2F1262518863" anchor-label="not" id="257973125%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.prompt.text/-text-content-builder-base/not.html"><span><span>not</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="257973125%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="../../ai.koog.prompt.text/-text-content-builder-base/not.html"><span class="token function">not</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Defines a custom operator function for the String class. This unary <code class="lang-kotlin">not</code> operator (<code class="lang-kotlin">!</code>) is invoked on a String instance and performs a custom action defined by the <code class="lang-kotlin">text</code> function.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-651290878%2FFunctions%2F1262518863" anchor-label="numbered" id="-651290878%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.prompt.text/numbered.html"><span><span>numbered</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-651290878%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.prompt.text/-text-content-builder-base/index.html">TextContentBuilderBase</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../ai.koog.prompt.text/numbered.html"><span class="token function">numbered</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">startLineNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span><span class="token punctuation">, </span></span><span class="parameter ">body<span class="token operator">: </span><a href="../../ai.koog.prompt.text/-text-content-builder-base/index.html">TextContentBuilderBase</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ai.koog.prompt.text/-text-content-builder-base/index.html">TextContentBuilderBase</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Extension function for <a href="../../ai.koog.prompt.text/-text-content-builder/index.html">TextContentBuilder</a> that adds line numbering to the content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1772507685%2FFunctions%2F1262518863" anchor-label="padding" id="-1772507685%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.prompt.text/-text-content-builder-base/padding.html"><span><span>padding</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1772507685%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.prompt.text/-text-content-builder-base/padding.html"><span class="token function">padding</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">padding<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">body<span class="token operator">: </span><a href="../../ai.koog.prompt.text/-text-content-builder/index.html">TextContentBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds padding to each line of the content produced by the provided builder block.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2003191368%2FFunctions%2F1262518863" anchor-label="part" id="-2003191368%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="part.html"><span><span>part</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2003191368%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="part.html"><span class="token function">part</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">contentPart<span class="token operator">: </span><a href="../../ai.koog.prompt.message/-content-part/index.html">ContentPart</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/index.html">ContentPart</a> to the list of parts.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="120070850%2FFunctions%2F1262518863" anchor-label="text" id="120070850%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="text.html"><span><span>text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="120070850%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="text.html"><span class="token function">text</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">part<span class="token operator">: </span><a href="../../ai.koog.prompt.message/-content-part/-text/index.html">ContentPart.Text</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-text/index.html">ContentPart.Text</a> to the list of parts.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../ai.koog.prompt.text/-text-content-builder-base/text.html"><span class="token function">text</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Appends the given text to the current content.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1416805013%2FFunctions%2F1262518863" anchor-label="text" id="-1416805013%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.prompt.text/text.html"><span><span>text</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1416805013%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../../ai.koog.prompt.text/-text-content-builder-base/index.html">TextContentBuilderBase</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="../../ai.koog.prompt.text/text.html"><span class="token function">text</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">init<span class="token operator">: </span><a href="../../ai.koog.prompt.text/-text-content-builder/index.html">TextContentBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Extension function to add text content to a TextContentBuilder.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="707505713%2FFunctions%2F1262518863" anchor-label="textFile" id="707505713%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="text-file.html"><span>text</span><wbr><span><span>File</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="707505713%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="text-file.html"><span class="token function">textFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><span data-unresolved-link="kotlinx.io.files/Path///PointingToDeclaration/">Path</span><span class="token punctuation">, </span></span><span class="parameter ">mimeType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-file/index.html">ContentPart.File</a> with <a href="../../ai.koog.prompt.message/-attachment-content/-plain-text/index.html">AttachmentContent.PlainText</a> content from the provided local file path.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1681020867%2FFunctions%2F1262518863" anchor-label="textWithNewLine" id="-1681020867%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.prompt.text/-text-content-builder-base/text-with-new-line.html"><span>text</span><wbr><span>With</span><wbr><span>New</span><wbr><span><span>Line</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1681020867%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.prompt.text/-text-content-builder-base/text-with-new-line.html"><span class="token function">textWithNewLine</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds the given text to the content. If the caret is not at the beginning of the line, a newline is added before appending the text.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2047209435%2FFunctions%2F1262518863" anchor-label="unaryPlus" id="2047209435%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.prompt.text/-text-content-builder-base/unary-plus.html"><span>unary</span><wbr><span><span>Plus</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2047209435%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="../../ai.koog.prompt.text/-text-content-builder-base/unary-plus.html"><span class="token function">unaryPlus</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds the given string as a new line of text to the content being built by the <a href="../../ai.koog.prompt.text/-text-content-builder/index.html">TextContentBuilder</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1743265280%2FFunctions%2F1262518863" anchor-label="video" id="1743265280%2FFunctions%2F1262518863" data-filterable-set=":prompt:prompt-model/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-model/commonMain" data-filterable-set=":prompt:prompt-model/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="video.html"><span><span>video</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1743265280%2FFunctions%2F1262518863"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-model/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="video.html"><span class="token function">video</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">video<span class="token operator">: </span><a href="../../ai.koog.prompt.message/-content-part/-video/index.html">ContentPart.Video</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-video/index.html">ContentPart.Video</a> to the list of parts.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="video.html"><span class="token function">video</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">url<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-video/index.html">ContentPart.Video</a> with <a href="../../ai.koog.prompt.message/-attachment-content/-u-r-l/index.html">AttachmentContent.URL</a> content from the provided URL.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="video.html"><span class="token function">video</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><span data-unresolved-link="kotlinx.io.files/Path///PointingToDeclaration/">Path</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds <a href="../../ai.koog.prompt.message/-content-part/-video/index.html">ContentPart.Video</a> with <a href="../../ai.koog.prompt.message/-attachment-content/-binary/-bytes/index.html">AttachmentContent.Binary.Bytes</a> content from the provided local file path.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

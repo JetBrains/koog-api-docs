@@ -1,0 +1,319 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Persistence</title>
+<link href="../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-features:agents-features-snapshot/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-features:agents-features-snapshot/commonMain" data-filter=":agents:agents-features:agents-features-snapshot/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-features-snapshot::ai.koog.agents.snapshot.feature/Persistence///PointingToDeclaration//500629592">
+  <div class="breadcrumbs"><a href="../../index.html">agents-features-snapshot</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.snapshot.feature</a><span class="delimiter">/</span><span class="current">Persistence</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Persistence</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Persistence</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">persistenceStorageProvider<span class="token operator">: </span><a href="../../ai.koog.agents.snapshot.providers/-persistence-storage-provider/index.html">PersistenceStorageProvider</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">clock<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-clock/index.html">Clock</a><span class="token operator"> = </span>Clock.System</span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/agents/agents-features/agents-features-snapshot/src/commonMain/kotlin/ai/koog/agents/snapshot/feature/Persistence.kt#L57">source</a>)</span></span></div><p class="paragraph">A feature that provides checkpoint functionality for AI agents.</p><p class="paragraph">This class allows saving and restoring the state of an agent at specific points during execution. Checkpoints capture the agent's message history, current node, and input data, enabling:</p><ul><li><p class="paragraph">Resuming agent execution from a specific point</p></li><li><p class="paragraph">Rolling back to previous states</p></li><li><p class="paragraph">Persisting agent state across sessions</p></li></ul><p class="paragraph">The feature can be configured to automatically create checkpoints after each node execution using the <a href="../-persistence-feature-config/enable-automatic-persistence.html">PersistenceFeatureConfig.enableAutomaticPersistence</a> option.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="609405519%2FConstructors%2F500629592" anchor-label="Persistence" id="609405519%2FConstructors%2F500629592" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-features:agents-features-snapshot/commonMain" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-persistence.html"><span><span>Persistence</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="609405519%2FConstructors%2F500629592"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">persistenceStorageProvider<span class="token operator">: </span><a href="../../ai.koog.agents.snapshot.providers/-persistence-storage-provider/index.html">PersistenceStorageProvider</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">clock<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-clock/index.html">Clock</a><span class="token operator"> = </span>Clock.System</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1090445401%2FClasslikes%2F500629592" anchor-label="Feature" id="1090445401%2FClasslikes%2F500629592" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-snapshot/commonMain" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-feature/index.html"><span><span>Feature</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1090445401%2FClasslikes%2F500629592"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-feature/index.html">Feature</a> : <a href="../../../../../agents/agents-core/ai.koog.agents.core.feature/-a-i-agent-graph-feature/index.html">AIAgentGraphFeature</a><span class="token operator">&lt;</span><a href="../-persistence-feature-config/index.html">PersistenceFeatureConfig</a><span class="token punctuation">, </span><a href="index.html">Persistence</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Companion object implementing agent feature, handling <a href="index.html">Persistence</a> creation and installation.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="1293574087%2FProperties%2F500629592" anchor-label="rollbackStrategy" id="1293574087%2FProperties%2F500629592" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-snapshot/commonMain" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rollback-strategy.html"><span>rollback</span><wbr><span><span>Strategy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1293574087%2FProperties%2F500629592"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="rollback-strategy.html">rollbackStrategy</a><span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent.context/-rollback-strategy/index.html">RollbackStrategy</a></div><div class="brief "><p class="paragraph">Determines the strategy to use during rollback operations for the agent's state.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1037878011%2FProperties%2F500629592" anchor-label="rollbackToolRegistry" id="-1037878011%2FProperties%2F500629592" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-snapshot/commonMain" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rollback-tool-registry.html"><span>rollback</span><wbr><span>Tool</span><wbr><span><span>Registry</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1037878011%2FProperties%2F500629592"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="rollback-tool-registry.html">rollbackToolRegistry</a><span class="token operator">: </span><a href="../-rollback-tool-registry/index.html">RollbackToolRegistry</a></div><div class="brief "><p class="paragraph">A registry for managing rollback tools within the persistence system.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1670667975%2FFunctions%2F500629592" anchor-label="createCheckpoint" id="-1670667975%2FFunctions%2F500629592" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-snapshot/commonMain" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-checkpoint.html"><span>create</span><wbr><span><span>Checkpoint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1670667975%2FFunctions%2F500629592"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="create-checkpoint.html"><span class="token function">createCheckpoint</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">agentContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent.context/-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">, </span></span><span class="parameter ">nodePath<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">lastInput<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">lastInputType<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-type/index.html">KType</a><span class="token punctuation">, </span></span><span class="parameter ">version<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a><span class="token punctuation">, </span></span><span class="parameter ">checkpointId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-agent-checkpoint-data/index.html">AgentCheckpointData</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Creates a checkpoint of the agent's current state.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2078934169%2FFunctions%2F500629592" anchor-label="createTombstoneCheckpoint" id="2078934169%2FFunctions%2F500629592" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-snapshot/commonMain" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-tombstone-checkpoint.html"><span>create</span><wbr><span>Tombstone</span><wbr><span><span>Checkpoint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2078934169%2FFunctions%2F500629592"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="create-tombstone-checkpoint.html"><span class="token function">createTombstoneCheckpoint</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">agentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">time<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token punctuation">, </span></span><span class="parameter ">parentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-long/index.html">Long</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-agent-checkpoint-data/index.html">AgentCheckpointData</a></div><div class="brief "><p class="paragraph">Creates and saves a tombstone checkpoint for an agent's session.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-214348131%2FFunctions%2F500629592" anchor-label="getCheckpointById" id="-214348131%2FFunctions%2F500629592" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-snapshot/commonMain" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-checkpoint-by-id.html"><span>get</span><wbr><span>Checkpoint</span><wbr><span>By</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-214348131%2FFunctions%2F500629592"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-checkpoint-by-id.html"><span class="token function">getCheckpointById</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">agentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">checkpointId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-agent-checkpoint-data/index.html">AgentCheckpointData</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Retrieves a specific checkpoint by ID for the specified agent.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-286910163%2FFunctions%2F500629592" anchor-label="getLatestCheckpoint" id="-286910163%2FFunctions%2F500629592" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-snapshot/commonMain" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-latest-checkpoint.html"><span>get</span><wbr><span>Latest</span><wbr><span><span>Checkpoint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-286910163%2FFunctions%2F500629592"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="get-latest-checkpoint.html"><span class="token function">getLatestCheckpoint</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">agentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-agent-checkpoint-data/index.html">AgentCheckpointData</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Retrieves the latest checkpoint for the specified agent.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-247525923%2FFunctions%2F500629592" anchor-label="rollbackToCheckpoint" id="-247525923%2FFunctions%2F500629592" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-snapshot/commonMain" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rollback-to-checkpoint.html"><span>rollback</span><wbr><span>To</span><wbr><span><span>Checkpoint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-247525923%2FFunctions%2F500629592"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="rollback-to-checkpoint.html"><span class="token function">rollbackToCheckpoint</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">checkpointId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">agentContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent.context/-a-i-agent-context/index.html">AIAgentContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-agent-checkpoint-data/index.html">AgentCheckpointData</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Rolls back an agent's state to a specific checkpoint.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1554885019%2FFunctions%2F500629592" anchor-label="rollbackToLatestCheckpoint" id="1554885019%2FFunctions%2F500629592" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-snapshot/commonMain" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="rollback-to-latest-checkpoint.html"><span>rollback</span><wbr><span>To</span><wbr><span>Latest</span><wbr><span><span>Checkpoint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1554885019%2FFunctions%2F500629592"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="rollback-to-latest-checkpoint.html"><span class="token function">rollbackToLatestCheckpoint</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">agentContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent.context/-a-i-agent-context/index.html">AIAgentContext</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-agent-checkpoint-data/index.html">AgentCheckpointData</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Rolls back an agent's state to the latest checkpoint.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1802710043%2FFunctions%2F500629592" anchor-label="saveCheckpoint" id="-1802710043%2FFunctions%2F500629592" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-snapshot/commonMain" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="save-checkpoint.html"><span>save</span><wbr><span><span>Checkpoint</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1802710043%2FFunctions%2F500629592"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="save-checkpoint.html"><span class="token function">saveCheckpoint</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">agentId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">checkpointData<span class="token operator">: </span><a href="../-agent-checkpoint-data/index.html">AgentCheckpointData</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Saves a checkpoint using the configured storage provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-898384437%2FFunctions%2F500629592" anchor-label="setExecutionPoint" id="-898384437%2FFunctions%2F500629592" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-features:agents-features-snapshot/commonMain" data-filterable-set=":agents:agents-features:agents-features-snapshot/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-execution-point.html"><span>set</span><wbr><span>Execution</span><wbr><span><span>Point</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-898384437%2FFunctions%2F500629592"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-features:agents-features-snapshot/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-execution-point.html"><span class="token function">setExecutionPoint</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">agentContext<span class="token operator">: </span><a href="../../../../../agents/agents-core/ai.koog.agents.core.agent.context/-a-i-agent-context/index.html">AIAgentContext</a><span class="token punctuation">, </span></span><span class="parameter ">nodePath<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">messageHistory<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../../../prompt/prompt-model/ai.koog.prompt.message/-message/index.html">Message</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">input<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-element/index.html">JsonElement</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the execution point of an agent to a specific state.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

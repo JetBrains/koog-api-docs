@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>prompt-executor-mistralai-client</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filter=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" id="content" pageids="prompt-executor-mistralai-client::////PointingToDeclaration//1484460881">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>prompt-executor-mistralai-client</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"><p class="paragraph">A client implementation for executing prompts using Mistral AI models with support for vision, embeddings, moderation, and custom parameters.</p><h3 class="">Overview</h3><p class="paragraph">This module provides a client implementation for the Mistral AI API, allowing you to execute prompts using Mistral AI models with full control over generation parameters, structured outputs, and multimodal content.</p><h3 class="">Supported Models</h3><h4 class="">Chat Models</h4><div class="table--container"><table><thead><tr><th>Name</th><th>Speed</th><th>Context</th><th>Input Support</th><th>Output Support</th><th>Price (per 1M tokens)</th></tr></thead><tbody><tr><td>MistralMedium31</td><td>Medium</td><td>128K</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@2b5668e3 paragraph">$0.4-$</p>2</td></tr><tr><td>MistralLarge21</td><td>Medium</td><td>128K</td><td>Text, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@2b5668e3 paragraph">$2-$</p>8</td></tr><tr><td>MistralSmall2</td><td>Fast</td><td>32K</td><td>Text, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@2b5668e3 paragraph">$0.2-$</p>0.6</td></tr><tr><td>MagistralMedium12</td><td>Medium</td><td>128K</td><td>Text, Images, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@2b5668e3 paragraph">$0.4-$</p>2</td></tr><tr><td>Codestral</td><td>Fast</td><td>256K</td><td>Text, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@2b5668e3 paragraph">$0.2-$</p>0.6</td></tr><tr><td>DevstralMedium</td><td>Medium</td><td>128K</td><td>Text, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@2b5668e3 paragraph">$0.4-$</p>2</td></tr><tr><td>Ministral3B</td><td>Fast</td><td>128K</td><td>Text, Tools</td><td>Text, Tools</td><td><p class="org.jetbrains.dokka.pages.commenttable@2b5668e3 paragraph">$0.04-$</p>0.16</td></tr></tbody></table></div><h4 class="">Embedding Models</h4><div class="table--container"><table><thead><tr><th>Model</th><th>Speed</th><th>Dimensions</th><th>Context</th><th>Input Support</th><th>Price (per 1M tokens)</th></tr></thead><tbody><tr><td>MistralEmbed</td><td>Medium</td><td>1024</td><td>8K</td><td>Text</td><td>$0.1</td></tr><tr><td>CodestralEmbed</td><td>Medium</td><td>1024</td><td>8K</td><td>Text, Code</td><td>$0.1</td></tr></tbody></table></div><h4 class="">Moderation Models</h4><div class="table--container"><table><thead><tr><th>Model</th><th>Speed</th><th>Context</th><th>Input Support</th><th>Output Support</th><th>Price (per 1M tokens)</th></tr></thead><tbody><tr><td>MistralModeration</td><td>Fast</td><td>8K</td><td>Text</td><td>Categories</td><td>$0.01</td></tr></tbody></table></div><h3 class="">Media Content Support</h3><div class="table--container"><table><thead><tr><th>Content Type</th><th>Supported Formats</th><th>Max Size</th><th>Notes</th></tr></thead><tbody><tr><td>Images</td><td>PNG, JPEG, WebP</td><td>20MB</td><td>Base64 encoded or URL (vision models)</td></tr><tr><td>Documents</td><td>PDF</td><td>20MB</td><td>Base64 encoded only (vision models)</td></tr><tr><td>Audio</td><td>❌ Not supported</td><td>-</td><td>-</td></tr><tr><td>Video</td><td>❌ Not supported</td><td>-</td><td>-</td></tr></tbody></table></div><p class="paragraph"><strong>Important Details:</strong></p><ul><li><p class="paragraph"><strong>Images </strong>&amp;<strong> Documents</strong>: Supported by MistralMedium31 and MagistralMedium12 models</p></li><li><p class="paragraph"><strong>Vision</strong>: Requires models with Vision.Image capability</p></li><li><p class="paragraph"><strong>Embeddings</strong>: Text and code embedding support through dedicated models</p></li><li><p class="paragraph"><strong>Moderation</strong>: Content safety detection for text content</p></li></ul><h3 class="">Model-Specific Parameters Support</h3><p class="paragraph">The client supports Mistral AI-specific parameters through <code class="lang-kotlin">MistralAIParams</code> class:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mistralParams = MistralAIParams(<br>    temperature = 0.7,<br>    maxTokens = 1000,<br>    topP = 0.9,<br>    frequencyPenalty = 0.5,<br>    presencePenalty = 0.5,<br>    stop = listOf("\n", "END"),<br>    randomSeed = 42,<br>    parallelToolCalls = true,<br>    safePrompt = false,<br>    promptMode = "reasoning"<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph"><strong>Key Parameters:</strong></p><ul><li><p class="paragraph"><strong>temperature</strong> (0.0-2.0): Controls randomness in generation</p></li><li><p class="paragraph"><strong>topP</strong> (0.0-1.0): Nucleus sampling parameter</p></li><li><p class="paragraph"><strong>frequencyPenalty</strong> (-2.0-2.0): Reduces repetition of frequent tokens</p></li><li><p class="paragraph"><strong>presencePenalty</strong> (-2.0-2.0): Encourages new topics/tokens</p></li><li><p class="paragraph"><strong>stop</strong>: Stop sequences (0-4 items) to halt generation</p></li><li><p class="paragraph"><strong>randomSeed</strong>: Seed for deterministic generation</p></li><li><p class="paragraph"><strong>parallelToolCalls</strong>: Allow multiple tool calls in parallel</p></li><li><p class="paragraph"><strong>safePrompt</strong>: Inject safety prompt before conversations</p></li><li><p class="paragraph"><strong>promptMode</strong>: Toggle reasoning mode and system prompt behavior</p></li></ul><h3 class="">Using in your project</h3><p class="paragraph">Add the dependency to your project:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">dependencies {<br>    implementation("ai.koog.prompt:prompt-executor-mistralai-client:$version")<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">Configure the client with your API key:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mistralClient = MistralAILLMClient(<br>    apiKey = "your-mistral-api-key",<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Example of usage</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">suspend fun main() {<br>    val client = MistralAILLMClient(<br>        apiKey = System.getenv("MISTRAL_API_KEY"),<br>    )<br><br>    // Basic example<br>    val response = client.execute(<br>        prompt = prompt {<br>            system("You are helpful assistant")<br>            user("What time is it now?")<br>        },<br>        model = MistralAIModels.Chat.MistralMedium31,<br>    )<br><br>    // Advanced example with custom parameters<br>    val advancedResponse = client.execute(<br>        prompt = prompt {<br>            system("You are a helpful coding assistant")<br>            user("Write a Python function to calculate factorial")<br>        },<br>        model = MistralAIModels.Chat.Codestral,<br>        params = MistralAIParams(<br>            temperature = 0.3,<br>            maxTokens = 2000,<br>            frequencyPenalty = 0.1,<br>            topP = 0.95,<br>            stop = listOf("```\n\n"),<br>            randomSeed = 42<br>        )<br>    )<br><br>    println(response)<br>    println(advancedResponse)<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Multimodal Examples</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Vision: Image analysis with MistralMedium31<br>val imageResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("What do you see in this image?")<br>            image("/path/to/image.jpg")<br>        }<br>    },<br>    model = MistralAIModels.Chat.MistralMedium31,<br>    params = MistralAIParams(<br>        temperature = 0.3,<br>        maxTokens = 1000<br>    )<br>)<br><br>// Document processing with MagistralMedium12<br>val documentResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Summarize this document")<br>            document("/path/to/document.pdf")<br>        }<br>    },<br>    model = MistralAIModels.Chat.MagistralMedium12,<br>    params = MistralAIParams(<br>        temperature = 0.5,<br>        maxTokens = 2000,<br>        promptMode = "reasoning"<br>    )<br>)<br><br>// Mixed content with vision model<br>val mixedResponse = client.execute(<br>    prompt = prompt {<br>        user {<br>            text("Compare this image with the document:")<br>            image("/path/to/chart.png")<br>            document("/path/to/report.pdf")<br>            text("What are the key differences?")<br>        }<br>    },<br>    model = MistralAIModels.Chat.MagistralMedium12,<br>    params = MistralAIParams(<br>        temperature = 0.5,<br>        maxTokens = 4000<br>    )<br>)</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><h3 class="">Additional Examples</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// Structured output with JSON schema<br>val structuredResponse = client.execute(<br>    prompt = prompt {<br>        system("Extract key information as JSON")<br>        user("John Doe, age 30, works as software engineer at TechCorp")<br>    },<br>    model = MistralAIModels.Chat.MistralMedium31,<br>    params = MistralAIParams(<br>        temperature = 0.1,<br>        schema = jsonSchema {<br>            object {<br>                property("name", string())<br>                property("age", integer())<br>                property("occupation", string())<br>                property("company", string())<br>            }<br>        }<br>    )<br>)<br><br>// Multiple choices generation<br>val choices = client.executeMultipleChoices(<br>    prompt = prompt {<br>        system("You are a creative assistant")<br>        user("Give me three different opening lines for a story")<br>    }.withUpdatedParams {<br>        numberOfChoices = 3<br>        temperature = 0.8<br>    },<br>    model = MistralAIModels.Chat.MistralLarge21<br>)<br><br>// Embedding example<br>val embedding = client.embed(<br>    text = "This is a sample text for embedding",<br>    model = MistralAIModels.Embeddings.MistralEmbed<br>)<br><br>// Code embedding<br>val codeEmbedding = client.embed(<br>    text = "function factorial(n) { return n &lt;= 1 ? 1 : n * factorial(n-1); }",<br>    model = MistralAIModels.Embeddings.CodestralEmbed<br>)<br><br>// Moderation example<br>val moderationResult = client.moderate(<br>    prompt = prompt {<br>        user("This is a test message for content safety check")<br>    },<br>    model = MistralAIModels.Moderation.MistralModeration<br>)<br><br>if (moderationResult.isHarmful) {<br>    println("Content flagged as harmful")<br>    moderationResult.categories.forEach { (category, result) -&gt;<br>        if (result.detected) {<br>            println("Category: $category, Score: ${result.confidenceScore}")<br>        }<br>    }<br>}<br><br>// Coding with Devstral Medium (enterprise coding model)<br>val codingResponse = client.execute(<br>    prompt = prompt {<br>        system("You are an expert software engineer")<br>        user("Refactor this code to use async/await pattern:\n\n$codeSnippet")<br>    },<br>    model = MistralAIModels.Chat.DevstralMedium,<br>    params = MistralAIParams(<br>        temperature = 0.2,<br>        maxTokens = 3000<br>    )<br>)<br><br>// Edge deployment with Ministral 3B<br>val edgeResponse = client.execute(<br>    prompt = prompt {<br>        system("You are a helpful assistant")<br>        user("What is the capital of France?")<br>    },<br>    model = MistralAIModels.Chat.Ministral3B,<br>    params = MistralAIParams(<br>        temperature = 0.5,<br>        maxTokens = 100<br>    )<br>)<br><br>// Reasoning with MagistralMedium12<br>val reasoningResponse = client.execute(<br>    prompt = prompt {<br>        system("Solve this step by step")<br>        user("If a train travels 120 km in 2 hours, what's its average speed?")<br>    },<br>    model = MistralAIModels.Chat.MagistralMedium12,<br>    params = MistralAIParams(<br>        temperature = 0.5,<br>        promptMode = "reasoning"<br>    )<br>)<br><br>// Streaming example<br>client.executeStreaming(<br>    prompt = prompt {<br>        user("Write a short story about AI")<br>    },<br>    model = MistralAIModels.Chat.MistralLarge21<br>).collect { chunk -&gt;<br>    print(chunk)<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="89537063%2FPackages%2F1484460881" anchor-label="ai.koog.prompt.executor.clients.mistralai" id="89537063%2FPackages%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.executor.clients.mistralai/index.html">ai.koog.prompt.executor.clients.mistralai</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="89537063%2FPackages%2F1484460881"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+<a data-name="191140373%2FPackages%2F1484460881" anchor-label="ai.koog.prompt.executor.clients.mistralai.models" id="191140373%2FPackages%2F1484460881" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients:prompt-executor-mistralai-client/commonMain">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.prompt.executor.clients.mistralai.models/index.html">ai.koog.prompt.executor.clients.mistralai.models</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="191140373%2FPackages%2F1484460881"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag common-like">common</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

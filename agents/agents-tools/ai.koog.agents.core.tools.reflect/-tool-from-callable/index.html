@@ -1,0 +1,447 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ToolFromCallable</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">0.6.3-SNAPSHOT
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":agents:agents-tools/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-tools/jvmMain" data-filter=":agents:agents-tools/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-tools::ai.koog.agents.core.tools.reflect/ToolFromCallable///PointingToDeclaration//546169621">
+  <div class="breadcrumbs"><a href="../../index.html">agents-tools</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.core.tools.reflect</a><span class="delimiter">/</span><span class="current">ToolFromCallable</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Tool</span><wbr><span>From</span><wbr><span><span>Callable</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">ToolFromCallable</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callable<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-callable/index.html">KCallable</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">thisRef<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">descriptor<span class="token operator">: </span><a href="../../ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token punctuation">, </span></span><span class="parameter ">json<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a><span class="token operator"> = </span>ToolJson<span class="token punctuation">, </span></span><span class="parameter ">resultSerializer<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="../../ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="-var-args/index.html">ToolFromCallable.VarArgs</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt; </span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/develop/agents/agents-tools/src/jvmMain/kotlin/ai/koog/agents/core/tools/reflect/ToolFromCallable.kt#L38">source</a>)</span></span></div><p class="paragraph">A tool implementation that wraps a Kotlin callable (function, method, etc.).</p><h4 class="tableheader">See also</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../as-tool.html"><span>as</span><wbr><span><span>Tool</span></span></a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../as-tools.html"><span>as</span><wbr><span><span>Tools</span></span></a></div></span></div><div></div></div></div></div></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-1113017303%2FConstructors%2F546169621" anchor-label="ToolFromCallable" id="-1113017303%2FConstructors%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tool-from-callable.html"><span>Tool</span><wbr><span>From</span><wbr><span><span>Callable</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1113017303%2FConstructors%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">callable<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-callable/index.html">KCallable</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">thisRef<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">descriptor<span class="token operator">: </span><a href="../../ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a><span class="token punctuation">, </span></span><span class="parameter ">json<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json/index.html">Json</a><span class="token operator"> = </span>ToolJson<span class="token punctuation">, </span></span><span class="parameter ">resultSerializer<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="477550081%2FClasslikes%2F546169621" anchor-label="VarArgs" id="477550081%2FClasslikes%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-var-args/index.html"><span>Var</span><wbr><span><span>Args</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="477550081%2FClasslikes%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-var-args/index.html">VarArgs</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>args<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-parameter/index.html">KParameter</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Represents a data structure to hold arguments conforming to the Args interface.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2117014385%2FClasslikes%2F546169621" anchor-label="VarArgsSerializer" id="-2117014385%2FClasslikes%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-var-args-serializer/index.html"><span>Var</span><wbr><span>Args</span><wbr><span><span>Serializer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2117014385%2FClasslikes%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-var-args-serializer/index.html">VarArgsSerializer</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>kCallable<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-callable/index.html">KCallable</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><a href="-var-args/index.html">ToolFromCallable.VarArgs</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A serializer for the <code class="lang-kotlin">VarArgs</code> class, enabling Kotlin serialization for arguments provided dynamically to a callable function (<code class="lang-kotlin">KCallable</code>). This serializer facilitates encoding and decoding of arguments via their corresponding <code class="lang-kotlin">KParameter</code> mappings.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="902455462%2FProperties%2F546169621" anchor-label="argsSerializer" id="902455462%2FProperties%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/args-serializer.html"><span>args</span><wbr><span><span>Serializer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="902455462%2FProperties%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../ai.koog.agents.core.tools/-tool/args-serializer.html">argsSerializer</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><a href="-var-args/index.html">ToolFromCallable.VarArgs</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A <a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a> responsible for encoding and decoding the arguments required for the tool execution.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1771466630%2FProperties%2F546169621" anchor-label="descriptor" id="1771466630%2FProperties%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/descriptor.html"><span><span>descriptor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1771466630%2FProperties%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../ai.koog.agents.core.tools/-tool/descriptor.html">descriptor</a><span class="token operator">: </span><a href="../../ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a></div><div class="brief "><p class="paragraph">A <a href="../../ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a> representing the tool's schema, including its name, description, and parameters.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1765466602%2FProperties%2F546169621" anchor-label="name" id="1765466602%2FProperties%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1765466602%2FProperties%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../ai.koog.agents.core.tools/-tool/name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">The name of the tool from the <a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/--root--.html">descriptor</a></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="483158886%2FProperties%2F546169621" anchor-label="resultSerializer" id="483158886%2FProperties%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/result-serializer.html"><span>result</span><wbr><span><span>Serializer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="483158886%2FProperties%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="../../ai.koog.agents.core.tools/-tool/result-serializer.html">resultSerializer</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A <a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a> responsible for encoding and decoding the result returned by the tool execution.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1718412576%2FFunctions%2F546169621" anchor-label="decodeArgs" id="1718412576%2FFunctions%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/decode-args.html"><span>decode</span><wbr><span><span>Args</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1718412576%2FFunctions%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.agents.core.tools/-tool/decode-args.html"><span class="token function">decodeArgs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rawArgs<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-object/index.html">JsonObject</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-var-args/index.html">ToolFromCallable.VarArgs</a></div><div class="brief "><p class="paragraph">Decodes the provided raw JSON arguments into an instance of the specified arguments type.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-687226265%2FFunctions%2F546169621" anchor-label="decodeResult" id="-687226265%2FFunctions%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/decode-result.html"><span>decode</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-687226265%2FFunctions%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.agents.core.tools/-tool/decode-result.html"><span class="token function">decodeResult</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">rawResult<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-element/index.html">JsonElement</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Decodes the provided raw JSON element into an instance of the specified result type.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1200600668%2FFunctions%2F546169621" anchor-label="encodeArgs" id="1200600668%2FFunctions%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/encode-args.html"><span>encode</span><wbr><span><span>Args</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1200600668%2FFunctions%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.agents.core.tools/-tool/encode-args.html"><span class="token function">encodeArgs</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">args<span class="token operator">: </span><a href="-var-args/index.html">ToolFromCallable.VarArgs</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-object/index.html">JsonObject</a></div><div class="brief "><p class="paragraph">Encodes the given arguments into a JSON representation.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1917489688%2FFunctions%2F546169621" anchor-label="encodeArgsToString" id="-1917489688%2FFunctions%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/encode-args-to-string.html"><span>encode</span><wbr><span>Args</span><wbr><span>To</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1917489688%2FFunctions%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.agents.core.tools/-tool/encode-args-to-string.html"><span class="token function">encodeArgsToString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">args<span class="token operator">: </span><a href="-var-args/index.html">ToolFromCallable.VarArgs</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Encodes the provided arguments into a JSON string representation using the configured serializer.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1112859022%2FFunctions%2F546169621" anchor-label="encodeArgsToStringUnsafe" id="-1112859022%2FFunctions%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/encode-args-to-string-unsafe.html"><span>encode</span><wbr><span>Args</span><wbr><span>To</span><wbr><span>String</span><wbr><span><span>Unsafe</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1112859022%2FFunctions%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.agents.core.tools/-tool/encode-args-to-string-unsafe.html"><span class="token function">encodeArgsToStringUnsafe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">args<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Encodes the provided arguments into a JSON string representation without type safety checks.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="977437158%2FFunctions%2F546169621" anchor-label="encodeArgsUnsafe" id="977437158%2FFunctions%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/encode-args-unsafe.html"><span>encode</span><wbr><span>Args</span><wbr><span><span>Unsafe</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="977437158%2FFunctions%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.agents.core.tools/-tool/encode-args-unsafe.html"><span class="token function">encodeArgsUnsafe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">args<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-object/index.html">JsonObject</a></div><div class="brief "><p class="paragraph">Encodes the given arguments into a JSON representation without type safety checks.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="526446108%2FFunctions%2F546169621" anchor-label="encodeResult" id="526446108%2FFunctions%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/encode-result.html"><span>encode</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="526446108%2FFunctions%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.agents.core.tools/-tool/encode-result.html"><span class="token function">encodeResult</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">result<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-element/index.html">JsonElement</a></div><div class="brief "><p class="paragraph">Encodes the given result into a JSON representation using the configured result serializer.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-340597336%2FFunctions%2F546169621" anchor-label="encodeResultToString" id="-340597336%2FFunctions%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/encode-result-to-string.html"><span>encode</span><wbr><span>Result</span><wbr><span>To</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-340597336%2FFunctions%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../../ai.koog.agents.core.tools/-tool/encode-result-to-string.html"><span class="token function">encodeResultToString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">result<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Encodes the given result of type TResult to its string representation for the LLM.s</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="967910962%2FFunctions%2F546169621" anchor-label="encodeResultToStringUnsafe" id="967910962%2FFunctions%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/encode-result-to-string-unsafe.html"><span>encode</span><wbr><span>Result</span><wbr><span>To</span><wbr><span>String</span><wbr><span><span>Unsafe</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="967910962%2FFunctions%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.agents.core.tools/-tool/encode-result-to-string-unsafe.html"><span class="token function">encodeResultToStringUnsafe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">result<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Encodes the provided result object into a JSON string representation without type safety checks.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-911455834%2FFunctions%2F546169621" anchor-label="encodeResultUnsafe" id="-911455834%2FFunctions%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../ai.koog.agents.core.tools/-tool/encode-result-unsafe.html"><span>encode</span><wbr><span>Result</span><wbr><span><span>Unsafe</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-911455834%2FFunctions%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../../ai.koog.agents.core.tools/-tool/encode-result-unsafe.html"><span class="token function">encodeResultUnsafe</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">result<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-json/kotlinx.serialization.json/-json-element/index.html">JsonElement</a></div><div class="brief "><p class="paragraph">Encodes the given result object into a JSON representation without type safety checks. This method casts the provided result to the expected <code class="lang-kotlin">TResult</code> type and leverages the <code class="lang-kotlin">encodeResult</code> method to produce the JSON output.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1901036718%2FFunctions%2F546169621" anchor-label="execute" id="1901036718%2FFunctions%2F546169621" data-filterable-set=":agents:agents-tools/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="execute.html"><span><span>execute</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1901036718%2FFunctions%2F546169621"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-tools/jvmMain" data-filterable-set=":agents:agents-tools/jvmMain" data-active="" data-toggle=":agents:agents-tools/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-tools/jvmMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="execute.html"><span class="token function">execute</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">args<span class="token operator">: </span><a href="-var-args/index.html">ToolFromCallable.VarArgs</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Executes the tool's logic with the provided arguments.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
