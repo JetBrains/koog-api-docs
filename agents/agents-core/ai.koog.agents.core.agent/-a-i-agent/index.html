@@ -1,0 +1,292 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AIAgent</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">1.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/jvmCommonMain">jvmCommon</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/commonMain" data-filter=":agents:agents-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/jvmCommonMain" data-filter=":agents:agents-core/jvmCommonMain">
+                                <span class="checkbox--icon"></span>
+                                jvmCommon
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/nonJvmCommonMain" data-filter=":agents:agents-core/nonJvmCommonMain">
+                                <span class="checkbox--icon"></span>
+                                nonJvmCommon
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-core::ai.koog.agents.core.agent/AIAgent///PointingToDeclaration//-1140963005">
+  <div class="breadcrumbs"><a href="../../index.html">agents-core</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.core.agent</a><span class="delimiter">/</span><span class="current">AIAgent</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>AIAgent</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">AIAgent</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span> : <a href="../../../../utils/ai.koog.utils.io/-closeable/index.html">Closeable</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/agents/agents-core/src/commonMain/kotlin/ai/koog/agents/core/agent/AIAgent.kt#L15">source</a>)</span></span></div><p class="paragraph">Represents a basic interface for AI agent.</p><h4 class="tableheader">Inheritors</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-a-i-agent-base/index.html">AIAgentBase</a></div></span></div><div></div></div></div></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">AIAgent</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span> : <span data-unresolved-link="/<ERROR CLASS> ERROR CLASS: Symbol not found for Closeable///PointingToDeclaration/">&lt;ERROR CLASS&gt; ERROR CLASS: Symbol not found for Closeable</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/agents/agents-core/src/jvmCommonMain/kotlin/ai/koog/agents/core/agent/AIAgent.kt#L16">source</a>)</span></span></div><p class="paragraph">Represents a basic interface for AI agent.</p></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">AIAgent</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span> : <a href="../../../../utils/ai.koog.utils.io/-closeable/index.html">Closeable</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/agents/agents-core/src/nonJvmCommonMain/kotlin/ai/koog/agents/core/agent/AIAgent.kt#L11">source</a>)</span></span></div><p class="paragraph">Represents a basic interface for AI agent.</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="971219447%2FConstructors%2F-1140963005" anchor-label="AIAgent" id="971219447%2FConstructors%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-i-agent.html"><span><span>AIAgent</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="971219447%2FConstructors%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1722834587%2FClasslikes%2F-1140963005" anchor-label="Companion" id="1722834587%2FClasslikes%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1722834587%2FClasslikes%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div><div class="brief "><p class="paragraph">Companion object with builder for <a href="index.html">AIAgent</a></p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div><div class="brief "><p class="paragraph">Companion object with builder for <a href="index.html">AIAgent</a></p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div><div class="brief "><p class="paragraph">Companion object with builder for <a href="index.html">AIAgent</a></p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="1111057101%2FProperties%2F-1140963005" anchor-label="agentConfig" id="1111057101%2FProperties%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="agent-config.html"><span>agent</span><wbr><span><span>Config</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1111057101%2FProperties%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="agent-config.html">agentConfig</a><span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.config/-a-i-agent-config/index.html">AIAgentConfig</a></div><div class="brief "><p class="paragraph">The configuration for the AI agent.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="agent-config.html">agentConfig</a><span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.config/-a-i-agent-config/index.html">AIAgentConfig</a></div><div class="brief "><p class="paragraph">The configuration for the AI agent.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="agent-config.html">agentConfig</a><span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.config/-a-i-agent-config/index.html">AIAgentConfig</a></div><div class="brief "><p class="paragraph">The configuration for the AI agent.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-446980789%2FProperties%2F-1140963005" anchor-label="id" id="-446980789%2FProperties%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="id.html"><span><span>id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-446980789%2FProperties%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Represents the unique identifier for the AI agent.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Represents the unique identifier for the AI agent.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">Represents the unique identifier for the AI agent.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="930981282%2FFunctions%2F-868316050" anchor-label="close" id="930981282%2FFunctions%2F-868316050" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../../../../utils/ai.koog.utils.io/-closeable/close.html"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="930981282%2FFunctions%2F-868316050"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../ai.koog.agents.core.feature.remote.server/-feature-message-server/index.html#930981282%2FFunctions%2F643085981"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="index.html#930981282%2FFunctions%2F-1930136419"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1264303623%2FFunctions%2F-1140963005" anchor-label="createSession" id="-1264303623%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="create-session.html"><span>create</span><wbr><span><span>Session</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1264303623%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="create-session.html"><span class="token function">createSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.session/-a-i-agent-run-session/index.html">AIAgentRunSession</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="../../ai.koog.agents.core.agent.context/-a-i-agent-context/index.html">AIAgentContext</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates a new session for executing the agent with the given input.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="create-session.html"><span class="token function">createSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.session/-a-i-agent-run-session/index.html">AIAgentRunSession</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="../../ai.koog.agents.core.agent.context/-a-i-agent-context/index.html">AIAgentContext</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates a new session for executing the agent with the given input.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword">fun </span><a href="create-session.html"><span class="token function">createSession</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sessionId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../ai.koog.agents.core.agent.session/-a-i-agent-run-session/index.html">AIAgentRunSession</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="../../ai.koog.agents.core.agent.context/-a-i-agent-context/index.html">AIAgentContext</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates a new session for executing the agent with the given input.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1568496521%2FFunctions%2F-1140963005" anchor-label="run" id="1568496521%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="run.html"><span><span>run</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1568496521%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="run.html"><span class="token function">run</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">agentInput<span class="token operator">: </span><a href="index.html">Input</a><span class="token punctuation">, </span></span><span class="parameter ">sessionId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Output</a></div><div class="brief "><p class="paragraph">Executes the AI agent with the given input and retrieves the resulting output.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="run.html"><span class="token function">run</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">agentInput<span class="token operator">: </span><a href="index.html">Input</a><span class="token punctuation">, </span></span><span class="parameter ">sessionId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Output</a></div><div class="brief "><p class="paragraph">Executes the AI agent with the given input and retrieves the resulting output.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="run.html"><span class="token function">run</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">agentInput<span class="token operator">: </span><a href="index.html">Input</a><span class="token punctuation">, </span></span><span class="parameter ">sessionId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Output</a></div><div class="brief "><p class="paragraph">Executes the AI agent with the given input and retrieves the resulting output.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-917688940%2FFunctions%2F816984227" anchor-label="runBlocking" id="-917688940%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="run-blocking.html"><span>run</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-917688940%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="run-blocking.html"><span class="token function">runBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">agentInput<span class="token operator">: </span><a href="index.html">Input</a><span class="token punctuation">, </span></span><span class="parameter ">sessionId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">Output</a></div><div class="brief "><p class="paragraph">Executes the AI agent task based on the provided input.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

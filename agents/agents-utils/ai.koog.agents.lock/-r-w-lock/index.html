@@ -1,0 +1,175 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>RWLock</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">1.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-utils/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-utils/commonMain" data-filter=":agents:agents-utils/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-utils::ai.koog.agents.lock/RWLock///PointingToDeclaration//-218232681">
+  <div class="breadcrumbs"><a href="../../index.html">agents-utils</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.lock</a><span class="delimiter">/</span><span class="current">RWLock</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>RWLock</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-utils/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">RWLock</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/agents/agents-utils/src/commonMain/kotlin/ai/koog/agents/lock/RWLock.kt#L34">source</a>)</span></span></div><p class="paragraph">A Kotlin Multiplatform read-write lock that allows concurrent read access while guaranteeing exclusive write access.</p><p class="paragraph">The implementation uses two <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/index.html">Mutex</a> instances:</p><ul><li><p class="paragraph"><a href="../../../../agents/agents-utils/ai.koog.agents.lock/-r-w-lock/write-mutex.html">writeMutex</a> is held while a writer runs, or while there is at least one active reader. The first reader acquires it, and the last reader releases it.</p></li><li><p class="paragraph"><a href="../../../../agents/agents-utils/ai.koog.agents.lock/-r-w-lock/readers-count-mutex.html">readersCountMutex</a> protects <a href="../../../../agents/agents-utils/ai.koog.agents.lock/-r-w-lock/readers-count.html">readersCount</a> so that reader acquisition/release is atomic.</p></li></ul><p class="paragraph">Concurrency warnings:</p><ol><li><p class="paragraph"><strong>Not reentrant.</strong> The underlying <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.sync/-mutex/index.html">Mutex</a> has no notion of an owning coroutine, and this     lock does not track owners either. Calling <a href="with-write-lock.html">withWriteLock</a> from inside another     <a href="with-write-lock.html">withWriteLock</a>, or calling <a href="with-write-lock.html">withWriteLock</a> from inside <a href="with-read-lock.html">withReadLock</a> on the same instance,     will deadlock. Nested <a href="with-read-lock.html">withReadLock</a> calls from the same coroutine do not deadlock but     still serialize briefly on <a href="../../../../agents/agents-utils/ai.koog.agents.lock/-r-w-lock/readers-count-mutex.html">readersCountMutex</a> at entry and exit.</p></li><li><p class="paragraph"><strong>Fairness / writer starvation.</strong> A writer suspended on <a href="../../../../agents/agents-utils/ai.koog.agents.lock/-r-w-lock/write-mutex.html">writeMutex</a> does not block new     readers from joining an already active read section — new readers only contend for     <a href="../../../../agents/agents-utils/ai.koog.agents.lock/-r-w-lock/write-mutex.html">writeMutex</a> on the first-reader transition. Steady overlapping reader traffic can therefore     delay a pending writer.</p></li><li><p class="paragraph"><strong>Cancellation safety.</strong> The reader path uses <code class="lang-kotlin">try { ... } finally { ... }</code>, so cancellation     or exceptions inside the block still decrement <a href="../../../../agents/agents-utils/ai.koog.agents.lock/-r-w-lock/readers-count.html">readersCount</a> and release <a href="../../../../agents/agents-utils/ai.koog.agents.lock/-r-w-lock/write-mutex.html">writeMutex</a>.     Cancellation while suspended on either mutex is propagated and the lock is not acquired.</p></li><li><p class="paragraph"><strong>Suspension inside critical sections.</strong> The <code class="lang-kotlin">block</code> may suspend; keep critical sections     short and avoid launching child coroutines that re-acquire the same lock.</p></li><li><p class="paragraph"><strong>Suspend-only.</strong> There is no blocking or <code class="lang-kotlin">tryLock</code> API; this lock is usable only from     coroutine code.</p></li></ol></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="1616044638%2FConstructors%2F-218232681" anchor-label="RWLock" id="1616044638%2FConstructors%2F-218232681" data-filterable-set=":agents:agents-utils/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-utils/commonMain" data-filterable-set=":agents:agents-utils/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-r-w-lock.html"><span><span>RWLock</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1616044638%2FConstructors%2F-218232681"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-utils/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="2142302921%2FFunctions%2F-218232681" anchor-label="withReadLock" id="2142302921%2FFunctions%2F-218232681" data-filterable-set=":agents:agents-utils/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-utils/commonMain" data-filterable-set=":agents:agents-utils/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="with-read-lock.html"><span>with</span><wbr><span>Read</span><wbr><span><span>Lock</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2142302921%2FFunctions%2F-218232681"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-utils/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="with-read-lock.html">T</a><span class="token operator">&gt; </span><a href="with-read-lock.html"><span class="token function">withReadLock</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="with-read-lock.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="with-read-lock.html">T</a></div><div class="brief "><p class="paragraph">Run the given <a href="with-read-lock.html">block</a> of code while holding the read lock. Multiple coroutines may run their read blocks concurrently. See the class-level KDoc for reentrancy and cancellation warnings.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="309029128%2FFunctions%2F-218232681" anchor-label="withWriteLock" id="309029128%2FFunctions%2F-218232681" data-filterable-set=":agents:agents-utils/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-utils/commonMain" data-filterable-set=":agents:agents-utils/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="with-write-lock.html"><span>with</span><wbr><span>Write</span><wbr><span><span>Lock</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="309029128%2FFunctions%2F-218232681"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-utils/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="with-write-lock.html">T</a><span class="token operator">&gt; </span><a href="with-write-lock.html"><span class="token function">withWriteLock</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="with-write-lock.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="with-write-lock.html">T</a></div><div class="brief "><p class="paragraph">Run the given <a href="with-write-lock.html">block</a> of code while holding the write lock. Only one coroutine at a time may run under the write lock, and no readers are active while it runs. Must not be called from a coroutine that already holds the read or write lock on this instance — see the class-level KDoc for reentrancy warnings.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

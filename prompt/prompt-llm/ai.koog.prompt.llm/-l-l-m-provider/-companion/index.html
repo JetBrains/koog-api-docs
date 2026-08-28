@@ -1,0 +1,366 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Companion</title>
+<link href="../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">1.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-llm/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-llm/commonMain" data-filter=":prompt:prompt-llm/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-llm::ai.koog.prompt.llm/LLMProvider.Companion///PointingToDeclaration//547389715">
+  <div class="breadcrumbs"><a href="../../../index.html">prompt-llm</a><span class="delimiter">/</span><a href="../../index.html">ai.koog.prompt.llm</a><span class="delimiter">/</span><a href="../index.html">LLMProvider</a><span class="delimiter">/</span><span class="current">Companion</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Companion</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Companion</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/prompt/prompt-llm/src/commonMain/kotlin/ai/koog/prompt/llm/LLMProvider.kt#L34">source</a>)</span></span></div><p class="paragraph">Companion object for the <code class="lang-kotlin">LLMProvider</code> class, providing predefined instances of large language model providers.</p><p class="paragraph">The companion object acts as a container for multiple constant providers, allowing standardized access to specific implementations of LLM providers.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="318791764%2FProperties%2F547389715" anchor-label="Alibaba" id="318791764%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-alibaba.html"><span><span>Alibaba</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="318791764%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-alibaba.html">Alibaba</a><span class="token operator">: </span><a href="../../-alibaba-l-l-m-provider/index.html">AlibabaLLMProvider</a></div><div class="brief "><p class="paragraph">Represents the Alibaba Large Language Model (LLM) provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="957018500%2FProperties%2F547389715" anchor-label="Anthropic" id="957018500%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-anthropic.html"><span><span>Anthropic</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="957018500%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-anthropic.html">Anthropic</a><span class="token operator">: </span><a href="../../-anthropic-l-l-m-provider/index.html">AnthropicLLMProvider</a></div><div class="brief "><p class="paragraph">Represents the Anthropic Large Language Model (LLM) provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="334572865%2FProperties%2F547389715" anchor-label="Azure" id="334572865%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-azure.html"><span><span>Azure</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="334572865%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-azure.html">Azure</a><span class="token operator">: </span><a href="../../-azure-l-l-m-provider/index.html">AzureLLMProvider</a></div><div class="brief "><p class="paragraph">Represents the Azure OpenAI provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="296668042%2FProperties%2F547389715" anchor-label="Bedrock" id="296668042%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-bedrock.html"><span><span>Bedrock</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="296668042%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-bedrock.html">Bedrock</a><span class="token operator">: </span><a href="../../-bedrock-l-l-m-provider/index.html">BedrockLLMProvider</a></div><div class="brief "><p class="paragraph">Represents the Bedrock provider for Large Language Models (LLMs).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2030516058%2FProperties%2F547389715" anchor-label="DeepSeek" id="-2030516058%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-deep-seek.html"><span>Deep</span><wbr><span><span>Seek</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2030516058%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-deep-seek.html">DeepSeek</a><span class="token operator">: </span><a href="../../-deep-seek-l-l-m-provider/index.html">DeepSeekLLMProvider</a></div><div class="brief "><p class="paragraph">Represents the DeepSeek LLM provider, a predefined member of the <a href="../index.html">LLMProvider</a> class.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1678979281%2FProperties%2F547389715" anchor-label="Google" id="1678979281%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-google.html"><span><span>Google</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1678979281%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-google.html">Google</a><span class="token operator">: </span><a href="../../-google-l-l-m-provider/index.html">GoogleLLMProvider</a></div><div class="brief "><p class="paragraph">Represents the Google provider for Large Language Models (LLMs).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="394108126%2FProperties%2F547389715" anchor-label="HuggingFace" id="394108126%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-hugging-face.html"><span>Hugging</span><wbr><span><span>Face</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="394108126%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-hugging-face.html">HuggingFace</a><span class="token operator">: </span><a href="../../-hugging-face-l-l-m-provider/index.html">HuggingFaceLLMProvider</a></div><div class="brief "><p class="paragraph">Represents the Hugging Face Large Language Model provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1345322437%2FProperties%2F547389715" anchor-label="Meta" id="1345322437%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-meta.html"><span><span>Meta</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1345322437%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-meta.html">Meta</a><span class="token operator">: </span><a href="../../-meta-l-l-m-provider/index.html">MetaLLMProvider</a></div><div class="brief "><p class="paragraph">Represents the Meta large language model (LLM) provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2079880003%2FProperties%2F547389715" anchor-label="MiniMax" id="2079880003%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mini-max.html"><span>Mini</span><wbr><span><span>Max</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2079880003%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-mini-max.html">MiniMax</a><span class="token operator">: </span><a href="../../-mini-max-l-l-m-provider/index.html">MiniMaxLLMProvider</a></div><div class="brief "><p class="paragraph">Represents the MiniMax Large Language Model provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-374673848%2FProperties%2F547389715" anchor-label="MistralAI" id="-374673848%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mistral-a-i.html"><span>Mistral</span><wbr><span><span>AI</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-374673848%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-mistral-a-i.html">MistralAI</a><span class="token operator">: </span><a href="../../-mistral-a-i-l-l-m-provider/index.html">MistralAILLMProvider</a></div><div class="brief "><p class="paragraph">Represents the MistralAI Large Language Model (LLM) provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1217894971%2FProperties%2F547389715" anchor-label="OCI" id="1217894971%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-o-c-i.html"><span><span>OCI</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1217894971%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-o-c-i.html">OCI</a><span class="token operator">: </span><a href="../../-o-c-i-l-l-m-provider/index.html">OCILLMProvider</a></div><div class="brief "><p class="paragraph">Represents the Oracle Cloud Infrastructure (OCI) Generative AI provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="443112068%2FProperties%2F547389715" anchor-label="Ollama" id="443112068%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-ollama.html"><span><span>Ollama</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="443112068%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-ollama.html">Ollama</a><span class="token operator">: </span><a href="../../-ollama-l-l-m-provider/index.html">OllamaLLMProvider</a></div><div class="brief "><p class="paragraph">Represents the Ollama provider for a Large Language Model (LLM).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="809205048%2FProperties%2F547389715" anchor-label="OpenAI" id="809205048%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-a-i.html"><span>Open</span><wbr><span><span>AI</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="809205048%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-open-a-i.html">OpenAI</a><span class="token operator">: </span><a href="../../-open-a-i-l-l-m-provider/index.html">OpenAILLMProvider</a></div><div class="brief "><p class="paragraph">Represents the OpenAI provider instance of the Large Language Model (LLM).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="746615703%2FProperties%2F547389715" anchor-label="OpenRouter" id="746615703%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-open-router.html"><span>Open</span><wbr><span><span>Router</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="746615703%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-open-router.html">OpenRouter</a><span class="token operator">: </span><a href="../../-open-router-l-l-m-provider/index.html">OpenRouterLLMProvider</a></div><div class="brief "><p class="paragraph">Represents the OpenRouter provider for large language models (LLMs). This constant is part of the available LLM providers within the <a href="../index.html">LLMProvider</a> enumeration.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-546374714%2FProperties%2F547389715" anchor-label="Vertex" id="-546374714%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-vertex.html"><span><span>Vertex</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-546374714%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-vertex.html">Vertex</a><span class="token operator">: </span><a href="../../-vertex-l-l-m-provider/index.html">VertexLLMProvider</a></div><div class="brief "><p class="paragraph">Represents the Google VertexAI provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1896637752%2FProperties%2F547389715" anchor-label="ZhipuAI" id="-1896637752%2FProperties%2F547389715" data-filterable-set=":prompt:prompt-llm/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-llm/commonMain" data-filterable-set=":prompt:prompt-llm/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-zhipu-a-i.html"><span>Zhipu</span><wbr><span><span>AI</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1896637752%2FProperties%2F547389715"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-llm/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-field/index.html"><span class="token annotation builtin">JvmField</span></a></div></div><span class="token keyword">val </span><a href="-zhipu-a-i.html">ZhipuAI</a><span class="token operator">: </span><a href="../../-zhipu-a-i-l-l-m-provider/index.html">ZhipuAILLMProvider</a></div><div class="brief "><p class="paragraph">Represents the ZhipuAI (智谱AI) Large Language Model provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

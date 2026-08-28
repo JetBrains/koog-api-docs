@@ -1,0 +1,264 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>ai.koog.spring.ai.chat</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">1.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main" data-filter=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="package" id="content" pageids="koog-spring-ai-v2-starter-model-chat::ai.koog.spring.ai.chat////PointingToDeclaration//2139686013">
+  <div class="breadcrumbs"><a href="../index.html">koog-spring-ai-v2-starter-model-chat</a><span class="delimiter">/</span><span class="current">ai.koog.spring.ai.chat</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="-1250106430%2FClasslikes%2F2139686013" anchor-label="ChatOptionsCustomizer" id="-1250106430%2FClasslikes%2F2139686013" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-chat-options-customizer/index.html"><span>Chat</span><wbr><span>Options</span><wbr><span><span>Customizer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1250106430%2FClasslikes%2F2139686013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token keyword">interface </span><a href="-chat-options-customizer/index.html">ChatOptionsCustomizer</a></div><div class="brief "><p class="paragraph">Extension point for provider-specific <span data-unresolved-link="org.springframework.ai.chat.prompt/ChatOptions///PointingToDeclaration/">org.springframework.ai.chat.prompt.ChatOptions</span> customization.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-362819153%2FClasslikes%2F2139686013" anchor-label="KoogSpringAiChatProperties" id="-362819153%2FClasslikes%2F2139686013" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-koog-spring-ai-chat-properties/index.html"><span>Koog</span><wbr><span>Spring</span><wbr><span>Ai</span><wbr><span>Chat</span><wbr><span><span>Properties</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-362819153%2FClasslikes%2F2139686013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.springframework.boot.context.properties/ConfigurationProperties///PointingToDeclaration/"><span class="token annotation builtin">ConfigurationProperties</span></span><span class="token punctuation">(</span><span>prefix<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"koog.spring.ai.chat"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-koog-spring-ai-chat-properties/index.html">KoogSpringAiChatProperties</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>enabled<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>chatModelBeanName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>moderationModelBeanName<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>provider<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>dispatcher<span class="token operator">: </span><span data-unresolved-link="ai.koog.spring.ai.common/DispatcherConfig///PointingToDeclaration/">DispatcherConfig</span><span class="token operator"> = </span>DispatcherConfig()</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configuration properties for the Koog Spring AI Chat Model adapter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-914152515%2FClasslikes%2F2139686013" anchor-label="SpringAiChatAutoConfiguration" id="-914152515%2FClasslikes%2F2139686013" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-spring-ai-chat-auto-configuration/index.html"><span>Spring</span><wbr><span>Ai</span><wbr><span>Chat</span><wbr><span>Auto</span><wbr><span><span>Configuration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-914152515%2FClasslikes%2F2139686013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.springframework.boot.autoconfigure/AutoConfiguration///PointingToDeclaration/"><span class="token annotation builtin">AutoConfiguration</span></span><span class="token punctuation">(</span><span>afterName<span class="token operator"> = </span><span class="token punctuation">[</span><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.anthropic.autoconfigure.AnthropicChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.azure.openai.autoconfigure.AzureOpenAiChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.bedrock.converse.autoconfigure.BedrockConverseProxyChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.deepseek.autoconfigure.DeepSeekChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.google.genai.autoconfigure.chat.GoogleGenAiChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.huggingface.autoconfigure.HuggingfaceChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.minimax.autoconfigure.MiniMaxChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.mistralai.autoconfigure.MistralAiChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.oci.genai.autoconfigure.OCIGenAiChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.ollama.autoconfigure.OllamaChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.openai.autoconfigure.OpenAiChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.openaisdk.autoconfigure.OpenAiSdkChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.vertexai.autoconfigure.gemini.VertexAiGeminiChatAutoConfiguration"</span></span><span class="token punctuation">, </span></span><wbr><span><span class="breakable-word"><span class="token string">"org.springframework.ai.model.zhipuai.autoconfigure.ZhiPuAiChatAutoConfiguration"</span></span></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.springframework.boot.context.properties/EnableConfigurationProperties///PointingToDeclaration/"><span class="token annotation builtin">EnableConfigurationProperties</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="token punctuation">[</span><span><a href="-koog-spring-ai-chat-properties/index.html">KoogSpringAiChatProperties::class</a></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.springframework.boot.autoconfigure.condition/ConditionalOnClass///PointingToDeclaration/"><span class="token annotation builtin">ConditionalOnClass</span></span><span class="token punctuation">(</span><span>value<span class="token operator"> = </span><span class="token punctuation">[</span><span><span data-unresolved-link="org.springframework.ai.chat.model/ChatModel///PointingToDeclaration/">ChatModel::class</span></span><wbr><span class="token punctuation">]</span></span><wbr><span class="token punctuation">)</span></div><div class="block"><span class="token annotation builtin">@</span><span data-unresolved-link="org.springframework.boot.autoconfigure.condition/ConditionalOnProperty///PointingToDeclaration/"><span class="token annotation builtin">ConditionalOnProperty</span></span><span class="token punctuation">(</span><span>prefix<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"koog.spring.ai.chat"</span></span><span class="token punctuation">, </span></span><wbr><span>name<span class="token operator"> = </span><span class="token punctuation">[</span><span><span class="breakable-word"><span class="token string">"enabled"</span></span></span><wbr><span class="token punctuation">]</span><span class="token punctuation">, </span></span><wbr><span>havingValue<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"true"</span></span><span class="token punctuation">, </span></span><wbr><span>matchIfMissing<span class="token operator"> = </span><span class="breakable-word"><span class="token boolean">true</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">open </span><span class="token keyword">class </span><a href="-spring-ai-chat-auto-configuration/index.html">SpringAiChatAutoConfiguration</a></div><div class="brief "><p class="paragraph">Auto-configuration for the Koog Spring AI Chat Model adapter.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1205926484%2FClasslikes%2F2139686013" anchor-label="SpringAiLLMClient" id="1205926484%2FClasslikes%2F2139686013" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-spring-ai-l-l-m-client/index.html"><span>Spring</span><wbr><span>Ai</span><wbr><span><span>LLMClient</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1205926484%2FClasslikes%2F2139686013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-spring-ai-l-l-m-client/index.html">SpringAiLLMClient</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">chatModel<span class="token operator">: </span><span data-unresolved-link="org.springframework.ai.chat.model/ChatModel///PointingToDeclaration/">ChatModel</span><span class="token punctuation">, </span></span><span class="parameter ">provider<span class="token operator">: </span><a href="../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-m-provider/index.html">LLMProvider</a><span class="token punctuation">, </span></span><span class="parameter ">clock<span class="token operator">: </span><a href="../../../utils/ai.koog.utils.time/-koog-clock/index.html">KoogClock</a><span class="token punctuation">, </span></span><span class="parameter ">dispatcher<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-coroutine-dispatcher/index.html">CoroutineDispatcher</a><span class="token punctuation">, </span></span><span class="parameter ">chatOptionsCustomizer<span class="token operator">: </span><a href="-chat-options-customizer/index.html">ChatOptionsCustomizer</a><span class="token punctuation">, </span></span><span class="parameter ">moderationModel<span class="token operator">: </span><span data-unresolved-link="org.springframework.ai.moderation/ModerationModel///PointingToDeclaration/">ModerationModel</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="../../../prompt/prompt-executor/prompt-executor-clients/ai.koog.prompt.executor.clients/-l-l-m-client/index.html">LLMClient</a></div><div class="brief "><p class="paragraph">An <a href="../../../prompt/prompt-executor/prompt-executor-clients/ai.koog.prompt.executor.clients/-l-l-m-client/index.html">LLMClient</a> implementation that delegates to a Spring AI <span data-unresolved-link="org.springframework.ai.chat.model/ChatModel///PointingToDeclaration/">ChatModel</span>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1458393966%2FClasslikes%2F2139686013" anchor-label="SpringAiLLMProvider" id="1458393966%2FClasslikes%2F2139686013" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-spring-ai-l-l-m-provider/index.html"><span>Spring</span><wbr><span>Ai</span><wbr><span><span>LLMProvider</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1458393966%2FClasslikes%2F2139686013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-spring-ai-l-l-m-provider/index.html">SpringAiLLMProvider</a> : <a href="../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-m-provider/index.html">LLMProvider</a></div><div class="brief "><p class="paragraph">An <a href="../../../prompt/prompt-llm/ai.koog.prompt.llm/-l-l-m-provider/index.html">ai.koog.prompt.llm.LLMProvider</a> representing a Spring AI-backed provider.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="1104231952%2FFunctions%2F2139686013" anchor-label="koogMessageToSpringMessage" id="1104231952%2FFunctions%2F2139686013" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="koog-message-to-spring-message.html"><span>koog</span><wbr><span>Message</span><wbr><span>To</span><wbr><span>Spring</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1104231952%2FFunctions%2F2139686013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="koog-message-to-spring-message.html"><span class="token function">koogMessageToSpringMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="../../../prompt/prompt-model/ai.koog.prompt.message/-message/index.html">Message</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="org.springframework.ai.chat.messages/Message///PointingToDeclaration/">Message</span></div><div class="brief "><p class="paragraph">Converts a single Koog <a href="../../../prompt/prompt-model/ai.koog.prompt.message/-message/index.html">Message</a> to a Spring AI <span data-unresolved-link="org.springframework.ai.chat.messages/Message///PointingToDeclaration/">SpringMessage</span>.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="koog-message-to-spring-message.html"><span class="token function">koogMessageToSpringMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">messages<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../prompt/prompt-model/ai.koog.prompt.message/-message/index.html">Message</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span data-unresolved-link="org.springframework.ai.chat.messages/Message///PointingToDeclaration/">Message</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Converts a list of Koog <a href="../../../prompt/prompt-model/ai.koog.prompt.message/-message/index.html">Message</a>s to a list of Spring AI <span data-unresolved-link="org.springframework.ai.chat.messages/Message///PointingToDeclaration/">SpringMessage</span>s.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-216946460%2FFunctions%2F2139686013" anchor-label="koogToolDescriptorToToolCallback" id="-216946460%2FFunctions%2F2139686013" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="koog-tool-descriptor-to-tool-callback.html"><span>koog</span><wbr><span>Tool</span><wbr><span>Descriptor</span><wbr><span>To</span><wbr><span>Tool</span><wbr><span><span>Callback</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-216946460%2FFunctions%2F2139686013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="koog-tool-descriptor-to-tool-callback.html"><span class="token function">koogToolDescriptorToToolCallback</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">descriptor<span class="token operator">: </span><a href="../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="org.springframework.ai.tool/ToolCallback///PointingToDeclaration/">ToolCallback</span></div><div class="brief "><p class="paragraph">Converts a Koog <a href="../../../agents/agents-tools/ai.koog.agents.core.tools/-tool-descriptor/index.html">ToolDescriptor</a> to a Spring AI <span data-unresolved-link="org.springframework.ai.tool/ToolCallback///PointingToDeclaration/">ToolCallback</span>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-55615738%2FFunctions%2F2139686013" anchor-label="springGenerationToKoogResponses" id="-55615738%2FFunctions%2F2139686013" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="spring-generation-to-koog-responses.html"><span>spring</span><wbr><span>Generation</span><wbr><span>To</span><wbr><span>Koog</span><wbr><span><span>Responses</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-55615738%2FFunctions%2F2139686013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="spring-generation-to-koog-responses.html"><span class="token function">springGenerationToKoogResponses</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">generation<span class="token operator">: </span><span data-unresolved-link="org.springframework.ai.chat.model/Generation///PointingToDeclaration/">Generation</span><span class="token punctuation">, </span></span><span class="parameter ">clock<span class="token operator">: </span><a href="../../../utils/ai.koog.utils.time/-koog-clock/index.html">KoogClock</a><span class="token operator"> = </span>KoogClock.System<span class="token punctuation">, </span></span><span class="parameter ">usage<span class="token operator">: </span><span data-unresolved-link="org.springframework.ai.chat.metadata/Usage///PointingToDeclaration/">Usage</span><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../prompt/prompt-model/ai.koog.prompt.message/-message/-assistant/index.html">Message.Assistant</a></div><div class="brief "><p class="paragraph">Converts a Spring AI <span data-unresolved-link="org.springframework.ai.chat.model/Generation///PointingToDeclaration/">Generation</span> (from a <span data-unresolved-link="org.springframework.ai.chat.model/ChatResponse///PointingToDeclaration/">org.springframework.ai.chat.model.ChatResponse</span>) to a Koog <a href="../../../prompt/prompt-model/ai.koog.prompt.message/-message/-assistant/index.html">Message.Assistant</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-298519781%2FFunctions%2F2139686013" anchor-label="springModerationResultToKoogModerationResult" id="-298519781%2FFunctions%2F2139686013" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"></a>
+          <div class="table-row table-row_content" data-filterable-current=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main" data-filterable-set=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="spring-moderation-result-to-koog-moderation-result.html"><span>spring</span><wbr><span>Moderation</span><wbr><span>Result</span><wbr><span>To</span><wbr><span>Koog</span><wbr><span>Moderation</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-298519781%2FFunctions%2F2139686013"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-spring-ai-v2:koog-spring-ai-v2-starter-model-chat/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="spring-moderation-result-to-koog-moderation-result.html"><span class="token function">springModerationResultToKoogModerationResult</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">springResult<span class="token operator">: </span><span data-unresolved-link="org.springframework.ai.moderation/Moderation///PointingToDeclaration/">Moderation</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../prompt/prompt-model/ai.koog.prompt.dsl/-moderation-result/index.html">ModerationResult</a></div><div class="brief "><p class="paragraph">Converts a Spring AI <span data-unresolved-link="org.springframework.ai.moderation/Moderation///PointingToDeclaration/">SpringModeration</span> to a Koog <a href="../../../prompt/prompt-model/ai.koog.prompt.dsl/-moderation-result/index.html">ModerationResult</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

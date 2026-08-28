@@ -1,0 +1,322 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>FeatureMessageProcessor</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">1.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/jvmCommonMain">jvmCommon</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/commonMain" data-filter=":agents:agents-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/jvmCommonMain" data-filter=":agents:agents-core/jvmCommonMain">
+                                <span class="checkbox--icon"></span>
+                                jvmCommon
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/nonJvmCommonMain" data-filter=":agents:agents-core/nonJvmCommonMain">
+                                <span class="checkbox--icon"></span>
+                                nonJvmCommon
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-core::ai.koog.agents.core.feature.message/FeatureMessageProcessor///PointingToDeclaration//-1140963005">
+  <div class="breadcrumbs"><a href="../../index.html">agents-core</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.core.feature.message</a><span class="delimiter">/</span><span class="current">FeatureMessageProcessor</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Feature</span><wbr><span>Message</span><wbr><span><span>Processor</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">FeatureMessageProcessor</a> : <a href="../../../../utils/ai.koog.utils.io/-closeable/index.html">Closeable</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/agents/agents-core/src/commonMain/kotlin/ai/koog/agents/core/feature/message/FeatureMessageProcessor.kt#L22">source</a>)</span></span></div><p class="paragraph">Represents a provider responsible for handling outbound feature messages or events.</p><p class="paragraph">Feature processors are used to encapsulate feature-related logic and provide a common interface for handling feature messages and events, such as</p><ul><li><p class="paragraph">Node started</p></li><li><p class="paragraph">Node finished</p></li><li><p class="paragraph">Strategy started, etc.</p></li></ul><p class="paragraph">Implementations of this interface are designed to process feature messages, which are encapsulated in the <a href="../-feature-message/index.html">FeatureMessage</a> type and presented as a model for an event to be sent to a target stream. These messages carry information about various events or updates related to features in the system.</p><h4 class="tableheader">Inheritors</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../ai.koog.agents.core.feature.writer/-feature-message-file-writer/index.html">FeatureMessageFileWriter</a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../ai.koog.agents.core.feature.writer/-feature-message-log-writer/index.html">FeatureMessageLogWriter</a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../ai.koog.agents.core.feature.writer/-feature-message-remote-writer/index.html">FeatureMessageRemoteWriter</a></div></span></div><div></div></div></div></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">FeatureMessageProcessor</a> : <span data-unresolved-link="/<ERROR CLASS> ERROR CLASS: Symbol not found for Closeable///PointingToDeclaration/">&lt;ERROR CLASS&gt; ERROR CLASS: Symbol not found for Closeable</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/agents/agents-core/src/jvmCommonMain/kotlin/ai/koog/agents/core/feature/message/FeatureMessageProcessor.kt#L25">source</a>)</span></span></div><p class="paragraph">Abstract class responsible for processing feature messages within the system.</p><p class="paragraph">The <code class="lang-kotlin">FeatureMessageProcessor</code> provides functionality for filtering and handling incoming feature messages. Classes inheriting from this abstract class are expected to implement the necessary logic for processing messages.</p><p class="paragraph">This class provides Java-friendly APIs for initializing and processing messages synchronously, in addition to its coroutine-based methods for use in Kotlin.</p><p class="paragraph">Java subclasses should override <a href="../../../../agents/agents-core/ai.koog.agents.core.feature.message/-feature-message-processor/handle-message.html">handleMessage</a> and <a href="handle-close.html">handleClose</a> instead of the suspend <a href="../../../../agents/agents-core/ai.koog.agents.core.feature.message/-feature-message-processor/process-message.html">processMessage</a> and <a href="close.html">close</a> methods to avoid dealing with Kotlin coroutine internals.</p></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="index.html">FeatureMessageProcessor</a> : <a href="../../../../utils/ai.koog.utils.io/-closeable/index.html">Closeable</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/agents/agents-core/src/nonJvmCommonMain/kotlin/ai/koog/agents/core/feature/message/FeatureMessageProcessor.kt#L19">source</a>)</span></span></div><p class="paragraph">Abstract class responsible for processing feature messages or events within the system.</p><p class="paragraph">The <code class="lang-kotlin">FeatureMessageProcessor</code> serves as a foundational interface for implementing processors that handle various feature-related messages. These messages, represented by the <a href="../-feature-message/index.html">FeatureMessage</a> type, encapsulate relevant information about events or updates in the system.</p><p class="paragraph">This class provides mechanisms to filter incoming messages, manage processing states, and ensure proper handling through a defined workflow.</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-932134043%2FConstructors%2F-1140963005" anchor-label="FeatureMessageProcessor" id="-932134043%2FConstructors%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-feature-message-processor.html"><span>Feature</span><wbr><span>Message</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-932134043%2FConstructors%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="1717062848%2FProperties%2F-1140963005" anchor-label="isOpen" id="1717062848%2FProperties%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="is-open.html"><span>is</span><wbr><span><span>Open</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1717062848%2FProperties%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">val </span><a href="is-open.html">isOpen</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-state-flow/index.html">StateFlow</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-state-flow/index.html">StateFlow</a> representing the current open state of the processor.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword">val </span><a href="is-open.html">isOpen</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-state-flow/index.html">StateFlow</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A StateFlow representing the current open state of the processor.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword">val </span><a href="is-open.html">isOpen</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-state-flow/index.html">StateFlow</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">A <a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-state-flow/index.html">StateFlow</a> representing the current open state of the processor.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2070999367%2FProperties%2F-1140963005" anchor-label="messageFilter" id="2070999367%2FProperties%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="message-filter.html"><span>message</span><wbr><span><span>Filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2070999367%2FProperties%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">var </span><a href="message-filter.html">messageFilter</a><span class="token operator">: </span><span class="token punctuation">(</span><a href="../-feature-message/index.html">FeatureMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">A filter for messages to be sent to message processors.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">var </span><a href="message-filter.html">messageFilter</a><span class="token operator">: </span><span class="token punctuation">(</span><a href="../-feature-message/index.html">FeatureMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">A filter for messages to be sent to message processors.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">var </span><a href="message-filter.html">messageFilter</a><span class="token operator">: </span><span class="token punctuation">(</span><a href="../-feature-message/index.html">FeatureMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">A filter for messages to be sent to message processors.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-201060146%2FFunctions%2F-1140963005" anchor-label="close" id="-201060146%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="close.html"><span><span>close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-201060146%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="close.html"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Releases resources held by this processor.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="close.html"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Releases resources held by this processor. The default implementation delegates to <a href="handle-close.html">handleClose</a>.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="close.html"><span class="token function">close</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Releases resources held by this processor.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-477566378%2FFunctions%2F816984227" anchor-label="handleClose" id="-477566378%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="handle-close.html"><span>handle</span><wbr><span><span>Close</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-477566378%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="handle-close.html"><span class="token function">handleClose</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Releases resources held by this processor. This is a non-suspend version of <a href="close.html">close</a> for overriding from Java code.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1262488636%2FFunctions%2F-1140963005" anchor-label="initialize" id="-1262488636%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="initialize.html"><span><span>initialize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1262488636%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="initialize.html"><span class="token function">initialize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Initializes the feature output stream provider to ensure it is ready for use.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="initialize.html"><span class="token function">initialize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Initializes the feature output stream provider to ensure it is ready for use.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="initialize.html"><span class="token function">initialize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Initializes the feature output stream provider to ensure it is ready for use.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1617151503%2FFunctions%2F816984227" anchor-label="initializeBlocking" id="1617151503%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="initialize-blocking.html"><span>initialize</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1617151503%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="initialize-blocking.html"><span class="token function">initializeBlocking</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Initializes the feature output stream provider to ensure it is ready for use. This is a blocking version of <a href="initialize.html">initialize</a> for use from Java code.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2077188339%2FFunctions%2F-1140963005" anchor-label="onMessage" id="2077188339%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-message.html"><span>on</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2077188339%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="on-message.html"><span class="token function">onMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="../-feature-message/index.html">FeatureMessage</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Receives and processes an incoming feature message.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="on-message.html"><span class="token function">onMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="../-feature-message/index.html">FeatureMessage</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Receives and processes an incoming feature message.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="on-message.html"><span class="token function">onMessage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="../-feature-message/index.html">FeatureMessage</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Receives and processes an incoming feature message.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="590016638%2FFunctions%2F816984227" anchor-label="onMessageBlocking" id="590016638%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-message-blocking.html"><span>on</span><wbr><span>Message</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="590016638%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="on-message-blocking.html"><span class="token function">onMessageBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">message<span class="token operator">: </span><a href="../-feature-message/index.html">FeatureMessage</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Receives and processes an incoming feature message. This is a blocking version of <a href="on-message.html">onMessage</a> for use from Java code.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1368635717%2FFunctions%2F-1140963005" anchor-label="setMessageFilter" id="-1368635717%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-message-filter.html"><span>set</span><wbr><span>Message</span><wbr><span><span>Filter</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1368635717%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">fun </span><a href="set-message-filter.html"><span class="token function">setMessageFilter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filter<span class="token operator">: </span><span class="token punctuation">(</span><a href="../-feature-message/index.html">FeatureMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the message filter used to determine which feature messages should be processed.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="set-message-filter.html"><span class="token function">setMessageFilter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filter<span class="token operator">: </span><span class="token punctuation">(</span><a href="../-feature-message/index.html">FeatureMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the message filter used to determine which feature messages should be processed.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">fun </span><a href="set-message-filter.html"><span class="token function">setMessageFilter</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">filter<span class="token operator">: </span><span class="token punctuation">(</span><a href="../-feature-message/index.html">FeatureMessage</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the message filter used to determine which feature messages should be processed.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>RetryConfigBuilder</title>
+<link href="../../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">1.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":prompt:prompt-executor:prompt-executor-clients/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filter=":prompt:prompt-executor:prompt-executor-clients/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="prompt-executor-clients::ai.koog.prompt.executor.clients.retry/RetryConfigBuilder///PointingToDeclaration//684051528">
+  <div class="breadcrumbs"><a href="../../index.html">prompt-executor-clients</a><span class="delimiter">/</span><a href="../index.html">ai.koog.prompt.executor.clients.retry</a><span class="delimiter">/</span><span class="current">RetryConfigBuilder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Retry</span><wbr><span>Config</span><wbr><span><span>Builder</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-clients/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients/jvmMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">RetryConfigBuilder</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/prompt/prompt-executor/prompt-executor-clients/src/jvmMain/kotlin/ai/koog/prompt/executor/clients/retry/RetryConfigBuilder.kt#L50">source</a>)</span></span></div><p class="paragraph">Creates a new <a href="index.html">RetryConfigBuilder</a> for constructing <a href="../-retry-config/index.html">RetryConfig</a> instances.</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="1067760280%2FConstructors%2F684051528" anchor-label="RetryConfigBuilder" id="1067760280%2FConstructors%2F684051528" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-retry-config-builder.html"><span>Retry</span><wbr><span>Config</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1067760280%2FConstructors%2F684051528"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-clients/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients/jvmMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-913792772%2FFunctions%2F684051528" anchor-label="backoffMultiplier" id="-913792772%2FFunctions%2F684051528" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="backoff-multiplier.html"><span>backoff</span><wbr><span><span>Multiplier</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-913792772%2FFunctions%2F684051528"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-clients/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="backoff-multiplier.html"><span class="token function">backoffMultiplier</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">backoffMultiplier<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RetryConfigBuilder</a></div><div class="brief "><p class="paragraph">Sets the backoff multiplier for subsequent retry attempts.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="509187971%2FFunctions%2F684051528" anchor-label="build" id="509187971%2FFunctions%2F684051528" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="build.html"><span><span>build</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="509187971%2FFunctions%2F684051528"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-clients/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="build.html"><span class="token function">build</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-retry-config/index.html">RetryConfig</a></div><div class="brief "><p class="paragraph">Builds a new <a href="../-retry-config/index.html">RetryConfig</a> instance with the configured values. Any unset values will use <a href="../-retry-config/index.html">RetryConfig</a> defaults.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="987873207%2FFunctions%2F684051528" anchor-label="initialDelay" id="987873207%2FFunctions%2F684051528" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="initial-delay.html"><span>initial</span><wbr><span><span>Delay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="987873207%2FFunctions%2F684051528"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-clients/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="initial-delay.html"><span class="token function">initialDelay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">initialDelay<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/Duration.html">Duration</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RetryConfigBuilder</a></div><div class="brief "><p class="paragraph">Sets the initial delay before the first retry attempt using <a href="https://developer.android.com/reference/kotlin/java/time/Duration.html">java.time.Duration</a>.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="initial-delay.html"><span class="token function">initialDelay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">initialDelay<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RetryConfigBuilder</a></div><div class="brief "><p class="paragraph">Sets the initial delay before the first retry attempt using <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">kotlin.time.Duration</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1509215798%2FFunctions%2F684051528" anchor-label="jitterFactor" id="1509215798%2FFunctions%2F684051528" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="jitter-factor.html"><span>jitter</span><wbr><span><span>Factor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1509215798%2FFunctions%2F684051528"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-clients/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="jitter-factor.html"><span class="token function">jitterFactor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">jitterFactor<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-double/index.html">Double</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RetryConfigBuilder</a></div><div class="brief "><p class="paragraph">Sets the jitter factor to introduce randomness in delay calculations.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1806352005%2FFunctions%2F684051528" anchor-label="maxAttempts" id="1806352005%2FFunctions%2F684051528" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="max-attempts.html"><span>max</span><wbr><span><span>Attempts</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1806352005%2FFunctions%2F684051528"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-clients/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="max-attempts.html"><span class="token function">maxAttempts</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">maxAttempts<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RetryConfigBuilder</a></div><div class="brief "><p class="paragraph">Sets the maximum number of attempts (including initial).</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="864911991%2FFunctions%2F684051528" anchor-label="maxDelay" id="864911991%2FFunctions%2F684051528" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="max-delay.html"><span>max</span><wbr><span><span>Delay</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="864911991%2FFunctions%2F684051528"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-clients/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="max-delay.html"><span class="token function">maxDelay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">maxDelay<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/time/Duration.html">Duration</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RetryConfigBuilder</a></div><div class="brief "><p class="paragraph">Sets the maximum delay allowed between retry attempts using <a href="https://developer.android.com/reference/kotlin/java/time/Duration.html">java.time.Duration</a>.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="max-delay.html"><span class="token function">maxDelay</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">maxDelay<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">Duration</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RetryConfigBuilder</a></div><div class="brief "><p class="paragraph">Sets the maximum delay allowed between retry attempts using <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.time/-duration/index.html">kotlin.time.Duration</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-251286681%2FFunctions%2F684051528" anchor-label="retryablePatterns" id="-251286681%2FFunctions%2F684051528" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="retryable-patterns.html"><span>retryable</span><wbr><span><span>Patterns</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-251286681%2FFunctions%2F684051528"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-clients/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="retryable-patterns.html"><span class="token function">retryablePatterns</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">retryablePatterns<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-retryable-pattern/index.html">RetryablePattern</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RetryConfigBuilder</a></div><div class="brief "><p class="paragraph">Sets the retryable patterns for identifying retryable errors.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1633062409%2FFunctions%2F684051528" anchor-label="retryAfterExtractor" id="1633062409%2FFunctions%2F684051528" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="retry-after-extractor.html"><span>retry</span><wbr><span>After</span><wbr><span><span>Extractor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1633062409%2FFunctions%2F684051528"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-filterable-set=":prompt:prompt-executor:prompt-executor-clients/jvmMain" data-active="" data-toggle=":prompt:prompt-executor:prompt-executor-clients/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":prompt:prompt-executor:prompt-executor-clients/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="retry-after-extractor.html"><span class="token function">retryAfterExtractor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">retryAfterExtractor<span class="token operator">: </span><a href="../-retry-after-extractor/index.html">RetryAfterExtractor</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">RetryConfigBuilder</a></div><div class="brief "><p class="paragraph">Sets the retry-after extractor for extracting retry-after hints from error messages.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

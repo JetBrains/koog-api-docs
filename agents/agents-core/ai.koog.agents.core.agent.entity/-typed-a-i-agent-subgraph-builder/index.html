@@ -1,0 +1,302 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>TypedAIAgentSubgraphBuilder</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">1.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/jvmCommonMain">jvmCommon</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/jvmCommonMain" data-filter=":agents:agents-core/jvmCommonMain">
+                                <span class="checkbox--icon"></span>
+                                jvmCommon
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-core::ai.koog.agents.core.agent.entity/TypedAIAgentSubgraphBuilder///PointingToDeclaration//816984227">
+  <div class="breadcrumbs"><a href="../../index.html">agents-core</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.core.agent.entity</a><span class="delimiter">/</span><span class="current">TypedAIAgentSubgraphBuilder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Typed</span><wbr><span>AIAgent</span><wbr><span>Subgraph</span><wbr><span><span>Builder</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">TypedAIAgentSubgraphBuilder</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">toolSelectionStrategy<span class="token operator">: </span><a href="../-tool-selection-strategy/index.html">ToolSelectionStrategy</a><span class="token operator"> = </span>ToolSelectionStrategy.ALL<span class="token punctuation">, </span></span><span class="parameter ">llmModel<span class="token operator">: </span>ERROR CLASS: Symbol not found for LLModel?<span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">llmParams<span class="token operator">: </span>ERROR CLASS: Symbol not found for LLMParams?<span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">responseProcessor<span class="token operator">: </span>ERROR CLASS: Symbol not found for ResponseProcessor?<span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">inputClass<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">outputClass<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><a href="index.html">Output</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">freshHistory<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span> : <a href="../-typed-a-i-agent-subgraph-builder-base/index.html">TypedAIAgentSubgraphBuilderBase</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token punctuation">, </span><a href="index.html">TypedAIAgentSubgraphBuilder</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/agents/agents-core/src/jvmCommonMain/kotlin/ai/koog/agents/core/agent/entity/AgentSubgraphBuilder.kt#L344">source</a>)</span></span></div><p class="paragraph">Builder class for creating and configuring a typed AI agent subgraph.</p><p class="paragraph">This class facilitates the construction of a subgraph within an AI agent graph strategy by providing methods to define graph structures,</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-1040361654%2FConstructors%2F816984227" anchor-label="TypedAIAgentSubgraphBuilder" id="-1040361654%2FConstructors%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-typed-a-i-agent-subgraph-builder.html"><span>Typed</span><wbr><span>AIAgent</span><wbr><span>Subgraph</span><wbr><span><span>Builder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1040361654%2FConstructors%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">toolSelectionStrategy<span class="token operator">: </span><a href="../-tool-selection-strategy/index.html">ToolSelectionStrategy</a><span class="token operator"> = </span>ToolSelectionStrategy.ALL<span class="token punctuation">, </span></span><span class="parameter ">llmModel<span class="token operator">: </span>ERROR CLASS: Symbol not found for LLModel?<span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">llmParams<span class="token operator">: </span>ERROR CLASS: Symbol not found for LLMParams?<span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">responseProcessor<span class="token operator">: </span>ERROR CLASS: Symbol not found for ResponseProcessor?<span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">inputClass<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">outputClass<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><a href="index.html">Output</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">freshHistory<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-945872765%2FFunctions%2F816984227" anchor-label="define" id="-945872765%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="define.html"><span><span>define</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-945872765%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="define.html"><span class="token function">define</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">buildSubgraph<span class="token operator">: </span><a href="../-graph-builder-action/index.html">GraphBuilderAction</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-defined-a-i-agent-subgraph-builder/index.html">DefinedAIAgentSubgraphBuilder</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Defines an AI Agent subgraph by applying the provided graph building action.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1935714657%2FFunctions%2F816984227" anchor-label="limitedTools" id="-1935714657%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-agent-subgraph-builder/limited-tools.html"><span>limited</span><wbr><span><span>Tools</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1935714657%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-agent-subgraph-builder/limited-tools.html"><span class="token function">limitedTools</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tools<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span>ERROR CLASS: Symbol not found for ToolBase&lt;*, *&gt;<span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">TypedAIAgentSubgraphBuilder</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Configures the builder to use a specific list of tools for the AI agent's subgraph.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-agent-subgraph-builder/limited-tools.html"><span class="token function">limitedTools</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>toolSets<span class="token operator">: </span>ERROR CLASS: Symbol not found for ToolSet</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">TypedAIAgentSubgraphBuilder</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Configures the builder with a selection of tools defined by the provided tool sets. The tools will be extracted from each <code class="lang-kotlin">ToolSet</code> and applied to the builder's tool selection strategy.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1679327506%2FFunctions%2F816984227" anchor-label="usingLLM" id="-1679327506%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-agent-subgraph-builder/using-l-l-m.html"><span>using</span><wbr><span><span>LLM</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1679327506%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-agent-subgraph-builder/using-l-l-m.html"><span class="token function">usingLLM</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">llmModel<span class="token operator">: </span>ERROR CLASS: Symbol not found for LLModel</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">TypedAIAgentSubgraphBuilder</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Sets the specified Large Language Model (LLM) for the agent subgraph builder.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1444999479%2FFunctions%2F816984227" anchor-label="withFreshHistory" id="1444999479%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-agent-subgraph-builder/with-fresh-history.html"><span>with</span><wbr><span>Fresh</span><wbr><span><span>History</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1444999479%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-agent-subgraph-builder/with-fresh-history.html"><span class="token function">withFreshHistory</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">freshHistory<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">TypedAIAgentSubgraphBuilder</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Configures the subgraph to start with only the parent's system messages, discarding inherited user/assistant conversation turns. The subgraph's own history is discarded upon completion, so it does not affect the parent's conversation.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1288252521%2FFunctions%2F816984227" anchor-label="withInput" id="-1288252521%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-agent-subgraph-builder/with-input.html"><span>with</span><wbr><span><span>Input</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1288252521%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-agent-subgraph-builder/with-input.html">Input</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-agent-subgraph-builder/with-input.html"><span class="token function">withInput</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">outputClass<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/java/lang/Class.html">Class</a><span class="token operator">&lt;</span><a href="../-agent-subgraph-builder/with-input.html">Input</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-a-i-agent-subgraph-builder-with-input/index.html">AIAgentSubgraphBuilderWithInput</a><span class="token operator">&lt;</span><a href="../-agent-subgraph-builder/with-input.html">Input</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Configures the builder with the specified input type and returns a new instance of AIAgentSubgraphBuilderWithInput, allowing further configuration for the specified input type.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-863489206%2FFunctions%2F816984227" anchor-label="withLLMParams" id="-863489206%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-agent-subgraph-builder/with-l-l-m-params.html"><span>with</span><wbr><span><span>LLMParams</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-863489206%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-agent-subgraph-builder/with-l-l-m-params.html"><span class="token function">withLLMParams</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">llmParams<span class="token operator">: </span>ERROR CLASS: Symbol not found for LLMParams</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">TypedAIAgentSubgraphBuilder</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Sets the parameters for the Language Learning Model (LLM) in the current builder.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1288011018%2FFunctions%2F816984227" anchor-label="withResponseProcessor" id="1288011018%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-agent-subgraph-builder/with-response-processor.html"><span>with</span><wbr><span>Response</span><wbr><span><span>Processor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1288011018%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-agent-subgraph-builder/with-response-processor.html"><span class="token function">withResponseProcessor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">responseProcessor<span class="token operator">: </span>ERROR CLASS: Symbol not found for ResponseProcessor</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">TypedAIAgentSubgraphBuilder</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Sets the specified response processor to handle and modify LLM responses.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="490734923%2FFunctions%2F816984227" anchor-label="withTask" id="490734923%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="with-task.html"><span>with</span><wbr><span><span>Task</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="490734923%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="with-task.html"><span class="token function">withTask</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">defineTask<span class="token operator">: </span><a href="../-contextual-action/index.html">ContextualAction</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-subgraph-with-task-builder/index.html">SubgraphWithTaskBuilder</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Configures a task to be executed as part of the subgraph.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="with-task.html"><span class="token function">withTask</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">defineTask<span class="token operator">: </span><a href="../-simple-action/index.html">SimpleAction</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-subgraph-with-task-builder/index.html">SubgraphWithTaskBuilder</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Defines a task within the subgraph using the provided task implementation.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1595709733%2FFunctions%2F816984227" anchor-label="withToolSelectionStrategy" id="-1595709733%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-agent-subgraph-builder/with-tool-selection-strategy.html"><span>with</span><wbr><span>Tool</span><wbr><span>Selection</span><wbr><span><span>Strategy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1595709733%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-agent-subgraph-builder/with-tool-selection-strategy.html"><span class="token function">withToolSelectionStrategy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">strategy<span class="token operator">: </span><a href="../-tool-selection-strategy/index.html">ToolSelectionStrategy</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">TypedAIAgentSubgraphBuilder</a><span class="token operator">&lt;</span><a href="index.html">Input</a><span class="token punctuation">, </span><a href="index.html">Output</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Sets the tool selection strategy for the subgraph builder and returns the updated builder instance.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

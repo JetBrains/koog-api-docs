@@ -1,0 +1,137 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>koog-spring-ai-starter-model-chat</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">1.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":koog-spring-ai:koog-spring-ai-starter-model-chat/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":koog-spring-ai:koog-spring-ai-starter-model-chat/main" data-filter=":koog-spring-ai:koog-spring-ai-starter-model-chat/main">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" id="content" pageids="koog-spring-ai-starter-model-chat::////PointingToDeclaration//-2001108275">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>koog-spring-ai-starter-model-chat</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":koog-spring-ai:koog-spring-ai-starter-model-chat/main"><p class="paragraph">Adapts a Spring AI <code class="lang-kotlin">ChatModel</code> (with optional <code class="lang-kotlin">ModerationModel</code>) into a Koog <code class="lang-kotlin">LLMClient</code> and <code class="lang-kotlin">PromptExecutor</code>.</p><h3 class="">Overview</h3><p class="paragraph">This starter bridges Spring AI's chat model abstraction with the Koog agent framework. It auto-configures:</p><ul><li><p class="paragraph">A Koog <code class="lang-kotlin">LLMClient</code> (<code class="lang-kotlin">SpringAiLLMClient</code>) that delegates to a Spring AI <code class="lang-kotlin">ChatModel</code></p></li><li><p class="paragraph">A <code class="lang-kotlin">PromptExecutor</code> (<code class="lang-kotlin">MultiLLMPromptExecutor</code>) assembled from all available <code class="lang-kotlin">LLMClient</code> beans</p></li></ul><p class="paragraph">Tools are always executed by the Koog agent framework — Spring AI receives only tool definitions/schema. The <code class="lang-kotlin">internalToolExecutionEnabled</code> flag is set to <code class="lang-kotlin">false</code> on all tool-carrying requests.</p><h3 class="">Using in your project</h3><p class="paragraph">Add the dependency alongside any Spring AI model starter (e.g., for Ollama):</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// build.gradle.kts<br>dependencies {<br>    implementation("ai.koog:koog-agents-jvm:$koogVersion")<br>    implementation("ai.koog:koog-spring-ai-starter-model-chat:$koogVersion")<br>    implementation("org.springframework.ai:spring-ai-starter-model-ollama")<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">Modifying your Spring Boot properties is not necessary, below are the default settings:</p><div class="sample-container"><pre><code class="block lang-properties" theme="idea"># application.properties defaults<br>spring.ai.model.chat=ollama<br>koog.spring.ai.chat.enabled=true<br>koog.spring.ai.chat.dispatcher.type=AUTO</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">If you have a single <code class="lang-kotlin">ChatModel</code> bean, everything works automatically — the adapter wraps it into a Koog <code class="lang-kotlin">LLMClient</code> and creates a ready-to-use <code class="lang-kotlin">PromptExecutor</code>.</p><h3 class="">Example of usage</h3><p class="paragraph">Inject the <code class="lang-kotlin">PromptExecutor</code> and use it to run a Koog agent:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">@Service<br>class MyAgentService(private val promptExecutor: PromptExecutor) {<br><br>    suspend fun askAgent(userMessage: String): String {<br>        val agent = AIAgent(<br>            promptExecutor = promptExecutor,<br>            llmModel = OllamaModels.Meta.LLAMA_3_2,<br>            systemPrompt = "You are a helpful assistant."<br>        )<br><br>        return agent.run(userMessage)<br>    }<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">Or provide your own <code class="lang-kotlin">PromptExecutor</code> bean to override the auto-configured one entirely.</p><h3 class="">Configuration properties (<code class="lang-kotlin">koog.spring.ai.chat</code>)</h3><div class="table--container"><table><thead><tr><th>Property</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">enabled</code></td><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">Boolean</code></td><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">true</code></td><td>Enable/disable the chat auto-configuration</td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">chat-model-bean-name</code></td><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">String?</code></td><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">null</code></td><td>Bean name of the <code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">ChatModel</code> to use (for multi-model contexts)</td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">moderation-model-bean-name</code></td><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">String?</code></td><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">null</code></td><td>Bean name of the <code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">ModerationModel</code> to use (for multi-model contexts)</td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">provider</code></td><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">String?</code></td><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">null</code></td><td>LLM provider id (e.g. <code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">openai</code>, <code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">anthropic</code>, <code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">google</code>). When set, overrides auto-detection from the <code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">ChatModel</code> class name. Falls back to <code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">spring-ai</code> if auto-detection fails.</td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">dispatcher.type</code></td><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">AUTO</code> / <code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">IO</code></td><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">AUTO</code></td><td>Dispatcher for blocking model calls</td></tr><tr><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">dispatcher.parallelism</code></td><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">Int</code></td><td><code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">0</code> (= unbounded)</td><td>Max concurrency for <code class="org.jetbrains.dokka.pages.commenttable@3c4e56cd lang-kotlin">IO</code> dispatcher (0 = no limit)</td></tr></tbody></table></div><h3 class="">Dispatcher types</h3><ul><li><p class="paragraph"><code class="strong lang-kotlin"><strong>AUTO</strong></code> (default): Uses a Spring-managed <code class="lang-kotlin">AsyncTaskExecutor</code> if available (e.g., when <code class="lang-kotlin">spring.threads.virtual.enabled=true</code> in Spring Boot 3.2+), otherwise falls back to <code class="lang-kotlin">Dispatchers.IO</code>. This lets you opt into virtual threads with a single standard Spring Boot property.</p></li><li><p class="paragraph"><code class="strong lang-kotlin"><strong>IO</strong></code>: Always uses <code class="lang-kotlin">Dispatchers.IO</code>. When <code class="lang-kotlin">dispatcher.parallelism</code> is greater than 0, uses <code class="lang-kotlin">Dispatchers.IO.limitedParallelism(parallelism)</code> to cap concurrency.</p></li></ul><h3 class="">Multi-model contexts</h3><p class="paragraph">When multiple <code class="lang-kotlin">ChatModel</code> or <code class="lang-kotlin">ModerationModel</code> beans are registered, specify which one to use:</p><div class="sample-container"><pre><code class="block lang-properties" theme="idea">koog.spring.ai.chat.chat-model-bean-name=openAiChatModel<br>koog.spring.ai.chat.moderation-model-bean-name=openAiModerationModel</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">Without a selector, the auto-configuration activates only when a single candidate exists.</p><h3 class="">Extension points</h3><ul><li><p class="paragraph"><code class="strong lang-kotlin"><strong>ChatOptionsCustomizer</strong></code>: Register a Spring bean implementing this functional interface to apply provider-specific <code class="lang-kotlin">ChatOptions</code> tuning:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">@Bean<br>fun chatOptionsCustomizer() = ChatOptionsCustomizer { options, params, model -&gt;<br>    // Apply custom options based on the model or request parameters<br>    options<br>}</code></pre><span class="copy-tooltip"><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div><span class="copy-icon"></span></span></div><p class="paragraph">The auto-configuration picks it up automatically via optional injection.</p></li><li><p class="paragraph"><strong>Custom </strong><code class="strong lang-kotlin"><strong>LLMClient</strong></code>: Register your own <code class="lang-kotlin">LLMClient</code> bean(s) — they will be composed together with the auto-configured adapter into the <code class="lang-kotlin">MultiLLMPromptExecutor</code>. To suppress the auto-configured adapter, register a bean named <code class="lang-kotlin">springAiChatModelLLMClient</code>.</p></li><li><p class="paragraph"><strong>Custom </strong><code class="strong lang-kotlin"><strong>PromptExecutor</strong></code>: Register your own <code class="lang-kotlin">PromptExecutor</code> bean to override the auto-configured <code class="lang-kotlin">MultiLLMPromptExecutor</code>.</p></li></ul></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="366586187%2FPackages%2F-2001108275" anchor-label="ai.koog.spring.ai.chat" id="366586187%2FPackages%2F-2001108275" data-filterable-set=":koog-spring-ai:koog-spring-ai-starter-model-chat/main"></a>
+    <div class="table-row table-row_platform-tagged" data-filterable-current=":koog-spring-ai:koog-spring-ai-starter-model-chat/main" data-filterable-set=":koog-spring-ai:koog-spring-ai-starter-model-chat/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="ai.koog.spring.ai.chat/index.html">ai.koog.spring.ai.chat</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="366586187%2FPackages%2F-2001108275"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right platform-tags--wrapper">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

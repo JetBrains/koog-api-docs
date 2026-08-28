@@ -1,0 +1,441 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AIAgentStorage</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">1.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/jvmCommonMain">jvmCommon</button>
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/commonMain" data-filter=":agents:agents-core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/jvmCommonMain" data-filter=":agents:agents-core/jvmCommonMain">
+                                <span class="checkbox--icon"></span>
+                                jvmCommon
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-core/nonJvmCommonMain" data-filter=":agents:agents-core/nonJvmCommonMain">
+                                <span class="checkbox--icon"></span>
+                                nonJvmCommon
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-core::ai.koog.agents.core.agent.entity/AIAgentStorage///PointingToDeclaration//-1140963005">
+  <div class="breadcrumbs"><a href="../../index.html">agents-core</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.core.agent.entity</a><span class="delimiter">/</span><span class="current">AIAgentStorage</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>AIAgent</span><wbr><span><span>Storage</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">class </span><a href="index.html">AIAgentStorage</a> : <a href="../-a-i-agent-storage-a-p-i/index.html">AIAgentStorageAPI</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/agents/agents-core/src/commonMain/kotlin/ai/koog/agents/core/agent/entity/AIAgentStorage.kt#L60">source</a>)</span></span></div><p class="paragraph">Concurrent-safe key-value storage for an agent. You can create typed keys for your data using the <a href="../create-storage-key.html">createStorageKey</a> function and set and retrieve data using it by calling <a href="set.html">set</a> and <a href="get.html">get</a>.</p></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="index.html">AIAgentStorage</a> : <a href="../-a-i-agent-storage-a-p-i/index.html">AIAgentStorageAPI</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/agents/agents-core/src/jvmCommonMain/kotlin/ai/koog/agents/core/agent/entity/AIAgentStorage.kt#L11">source</a>)</span></span></div><p class="paragraph">Concurrent-safe key-value storage for an agent. You can create typed keys for your data using the <a href="../create-storage-key.html">createStorageKey</a> function and set and retrieve data using it by calling <a href="set.html">set</a> and <a href="get.html">get</a>.</p></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">class </span><a href="index.html">AIAgentStorage</a> : <a href="../-a-i-agent-storage-a-p-i/index.html">AIAgentStorageAPI</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/agents/agents-core/src/nonJvmCommonMain/kotlin/ai/koog/agents/core/agent/entity/AIAgentStorage.kt#L6">source</a>)</span></span></div><p class="paragraph">Concurrent-safe key-value storage for an agent. You can create typed keys for your data using the <a href="../create-storage-key.html">createStorageKey</a> function and set and retrieve data using it by calling <a href="set.html">set</a> and <a href="get.html">get</a>.</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="-41383092%2FConstructors%2F-1140963005" anchor-label="AIAgentStorage" id="-41383092%2FConstructors%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-a-i-agent-storage.html"><span>AIAgent</span><wbr><span><span>Storage</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-41383092%2FConstructors%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">serializer<span class="token operator">: </span><span data-unresolved-link="ai.koog.serialization/JSONSerializer///PointingToDeclaration/">JSONSerializer</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Creates an instance of <a href="-a-i-agent-storage.html">AIAgentStorage</a>.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">serializer<span class="token operator">: </span>ERROR CLASS: Symbol not found for JSONSerializer</span></span><span class="token punctuation">)</span></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">actual </span><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">serializer<span class="token operator">: </span><span data-unresolved-link="ai.koog.serialization/JSONSerializer///PointingToDeclaration/">JSONSerializer</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Creates an instance of <a href="-a-i-agent-storage.html">AIAgentStorage</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="424241613%2FClasslikes%2F816984227" anchor-label="Companion" id="424241613%2FClasslikes%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="424241613%2FClasslikes%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="438022718%2FFunctions%2F-1140963005" anchor-label="clear" id="438022718%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clear.html"><span><span>clear</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="438022718%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="clear.html"><span class="token function">clear</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Clears all data from the storage.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-a-i-agent-storage-a-p-i/clear.html"><span class="token function">clear</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Clears all data from the storage.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-a-i-agent-storage-a-p-i/clear.html"><span class="token function">clear</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Clears all data from the storage.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="240049316%2FFunctions%2F816984227" anchor-label="clearBlocking" id="240049316%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="clear-blocking.html"><span>clear</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="240049316%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="clear-blocking.html"><span class="token function">clearBlocking</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1307855200%2FFunctions%2F-1140963005" anchor-label="copy" id="-1307855200%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="copy.html"><span><span>copy</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1307855200%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="copy.html"><span class="token function">copy</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">AIAgentStorage</a></div><div class="brief "><p class="paragraph">Creates a copy of the current storage.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-a-i-agent-storage-a-p-i/copy.html"><span class="token function">copy</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">AIAgentStorage</a></div><div class="brief "><p class="paragraph">Creates a copy of the current storage.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-a-i-agent-storage-a-p-i/copy.html"><span class="token function">copy</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">AIAgentStorage</a></div><div class="brief "><p class="paragraph">Creates a copy of the current storage.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1544976766%2FFunctions%2F-1140963005" anchor-label="get" id="1544976766%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get.html"><span><span>get</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1544976766%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="get.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Retrieves the value associated with the given key from the storage.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-a-i-agent-storage-a-p-i/get.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-a-i-agent-storage-a-p-i/get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="get.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Retrieves the value associated with the given key from the storage.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-a-i-agent-storage-a-p-i/get.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-a-i-agent-storage-a-p-i/get.html"><span class="token function">get</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="get.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Retrieves the value associated with the given key from the storage.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-611714222%2FFunctions%2F816984227" anchor-label="getBlocking" id="-611714222%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-blocking.html"><span>get</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-611714222%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-blocking.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="get-blocking.html"><span class="token function">getBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="get-blocking.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-blocking.html">T</a><span class="token operator">?</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="447191682%2FFunctions%2F-1140963005" anchor-label="getValue" id="447191682%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-value.html"><span>get</span><wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="447191682%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-value.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="get-value.html"><span class="token function">getValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="get-value.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-value.html">T</a></div><div class="brief "><p class="paragraph">Retrieves the non-null value associated with the given key from the storage. If the key does not exist in the storage, a <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-no-such-element-exception/index.html">NoSuchElementException</a> is thrown.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-a-i-agent-storage-a-p-i/get-value.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-a-i-agent-storage-a-p-i/get-value.html"><span class="token function">getValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="get-value.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-value.html">T</a></div><div class="brief "><p class="paragraph">Retrieves the non-null value associated with the given key from the storage. If the key does not exist in the storage, a <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-no-such-element-exception/index.html">NoSuchElementException</a> is thrown.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-a-i-agent-storage-a-p-i/get-value.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-a-i-agent-storage-a-p-i/get-value.html"><span class="token function">getValue</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="get-value.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-value.html">T</a></div><div class="brief "><p class="paragraph">Retrieves the non-null value associated with the given key from the storage. If the key does not exist in the storage, a <a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-no-such-element-exception/index.html">NoSuchElementException</a> is thrown.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1458009125%2FFunctions%2F816984227" anchor-label="getValueBlocking" id="-1458009125%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="get-value-blocking.html"><span>get</span><wbr><span>Value</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1458009125%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="get-value-blocking.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="get-value-blocking.html"><span class="token function">getValueBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="get-value-blocking.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="get-value-blocking.html">T</a></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1415934346%2FFunctions%2F-1140963005" anchor-label="putAll" id="1415934346%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="put-all.html"><span>put</span><wbr><span><span>All</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1415934346%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="put-all.html"><span class="token function">putAll</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">AIAgentStorage</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Puts the contents of the <a href="../-a-i-agent-storage-a-p-i/put-all.html">other</a> storage instance into the current storage. This method combines key-value pairs from the specified storage with the current one. If a key exists in both storages, the value from the given storage will overwrite the existing value.</p></div><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="put-all.html"><span class="token function">putAll</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">map<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds all key-value pairs from the given map to the storage.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-a-i-agent-storage-a-p-i/put-all.html"><span class="token function">putAll</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">AIAgentStorage</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Puts the contents of the <a href="../-a-i-agent-storage-a-p-i/put-all.html">other</a> storage instance into the current storage. This method combines key-value pairs from the specified storage with the current one. If a key exists in both storages, the value from the given storage will overwrite the existing value.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-a-i-agent-storage-a-p-i/put-all.html"><span class="token function">putAll</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">map<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds all key-value pairs from the given map to the storage.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-a-i-agent-storage-a-p-i/put-all.html"><span class="token function">putAll</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="index.html">AIAgentStorage</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Puts the contents of the <a href="../-a-i-agent-storage-a-p-i/put-all.html">other</a> storage instance into the current storage. This method combines key-value pairs from the specified storage with the current one. If a key exists in both storages, the value from the given storage will overwrite the existing value.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-a-i-agent-storage-a-p-i/put-all.html"><span class="token function">putAll</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">map<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds all key-value pairs from the given map to the storage.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-371543188%2FFunctions%2F816984227" anchor-label="putAllBlocking" id="-371543188%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="put-all-blocking.html"><span>put</span><wbr><span>All</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-371543188%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="put-all-blocking.html"><span class="token function">putAllBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">map<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="446206437%2FFunctions%2F-1140963005" anchor-label="putAllSerialized" id="446206437%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="put-all-serialized.html"><span>put</span><wbr><span>All</span><wbr><span><span>Serialized</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="446206437%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="put-all-serialized.html"><span class="token function">putAllSerialized</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">map<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="ai.koog.serialization/JSONElement///PointingToDeclaration/">JSONElement</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds serialized storage entries from the given map.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="index.html#-1414973175%2FFunctions%2F816984227"><span class="token function">putAllSerialized</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">map<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>ai/koog/serialization/JSONElement<span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds serialized storage entries from the given map.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-a-i-agent-storage-a-p-i/put-all-serialized.html"><span class="token function">putAllSerialized</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">map<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="ai.koog.serialization/JSONElement///PointingToDeclaration/">JSONElement</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds serialized storage entries from the given map.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1820561296%2FFunctions%2F-1140963005" anchor-label="remove" id="-1820561296%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove.html"><span><span>remove</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1820561296%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="remove.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="remove.html"><span class="token function">remove</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="remove.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="remove.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Removes the value associated with the given key from the storage.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-a-i-agent-storage-a-p-i/remove.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-a-i-agent-storage-a-p-i/remove.html"><span class="token function">remove</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="remove.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="remove.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Removes the value associated with the given key from the storage.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-a-i-agent-storage-a-p-i/remove.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-a-i-agent-storage-a-p-i/remove.html"><span class="token function">remove</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="remove.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="remove.html">T</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Removes the value associated with the given key from the storage.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-929254862%2FFunctions%2F816984227" anchor-label="removeBlocking" id="-929254862%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="remove-blocking.html"><span>remove</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-929254862%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="remove-blocking.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="remove-blocking.html"><span class="token function">removeBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="remove-blocking.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="remove-blocking.html">T</a><span class="token operator">?</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1402637244%2FFunctions%2F-1140963005" anchor-label="set" id="-1402637244%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set.html"><span><span>set</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1402637244%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="set.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="set.html">T</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the value associated with the given key in the storage.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-a-i-agent-storage-a-p-i/set.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-a-i-agent-storage-a-p-i/set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="set.html">T</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the value associated with the given key in the storage.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../-a-i-agent-storage-a-p-i/set.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="../-a-i-agent-storage-a-p-i/set.html"><span class="token function">set</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="set.html">T</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the value associated with the given key in the storage.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-620199770%2FFunctions%2F816984227" anchor-label="setBlocking" id="-620199770%2FFunctions%2F816984227" data-filterable-set=":agents:agents-core/jvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-blocking.html"><span>set</span><wbr><span><span>Blocking</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-620199770%2FFunctions%2F816984227"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-active="" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="set-blocking.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="set-blocking.html"><span class="token function">setBlocking</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">key<span class="token operator">: </span><a href="../-a-i-agent-storage-key/index.html">AIAgentStorageKey</a><span class="token operator">&lt;</span><a href="set-blocking.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="set-blocking.html">T</a></span></span><span class="token punctuation">)</span></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1948622338%2FFunctions%2F-1140963005" anchor-label="toSerializedMap" id="-1948622338%2FFunctions%2F-1140963005" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/commonMain,:agents:agents-core/jvmCommonMain,:agents:agents-core/nonJvmCommonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-serialized-map.html"><span>to</span><wbr><span>Serialized</span><wbr><span><span>Map</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1948622338%2FFunctions%2F-1140963005"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-core/commonMain" data-filterable-set=":agents:agents-core/commonMain" data-active="" data-toggle=":agents:agents-core/commonMain">common</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/jvmCommonMain" data-filterable-set=":agents:agents-core/jvmCommonMain" data-toggle=":agents:agents-core/jvmCommonMain">jvmCommon</button><button class="platform-bookmark" data-filterable-current=":agents:agents-core/nonJvmCommonMain" data-filterable-set=":agents:agents-core/nonJvmCommonMain" data-toggle=":agents:agents-core/nonJvmCommonMain">nonJvmCommon</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-core/commonMain"><div class="symbol monospace"><span class="token keyword">expect </span><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="to-serialized-map.html"><span class="token function">toSerializedMap</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="ai.koog.serialization/JSONElement///PointingToDeclaration/">JSONElement</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns serialized storage entries keyed by <a href="../-a-i-agent-storage-key/name.html">AIAgentStorageKey.name</a>.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/jvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-a-i-agent-storage-a-p-i/to-serialized-map.html"><span class="token function">toSerializedMap</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span>ai/koog/serialization/JSONElement<span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns serialized storage entries keyed by <a href="../-a-i-agent-storage-key/name.html">AIAgentStorageKey.name</a>.</p></div></div><div class="content sourceset-dependent-content" data-togglable=":agents:agents-core/nonJvmCommonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend override </span><span class="token keyword">fun </span><a href="../-a-i-agent-storage-a-p-i/to-serialized-map.html"><span class="token function">toSerializedMap</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span data-unresolved-link="ai.koog.serialization/JSONElement///PointingToDeclaration/">JSONElement</span><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns serialized storage entries keyed by <a href="../-a-i-agent-storage-key/name.html">AIAgentStorageKey.name</a>.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

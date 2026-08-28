@@ -1,0 +1,630 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>MockExecutorDSLBuilder</title>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+      if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      } else {
+        const savedDarkMode = JSON.parse(storage)
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+      }
+    </script>
+<script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../../styles/style.css" rel="Stylesheet">
+<link href="../../../../styles/main.css" rel="Stylesheet">
+<link href="../../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
+<script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
+<body>
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    koog
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">1.2.0
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":agents:agents-test/commonMain">common</button>
+                <button class="platform-tag platform-selector jvm-like" data-active="" aria-pressed="true" data-filter=":agents:agents-test/jvmMain">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-test/commonMain" data-filter=":agents:agents-test/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":agents:agents-test/jvmMain" data-filter=":agents:agents-test/jvmMain">
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    koog
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
+<div class="main-content" data-page-type="classlike" id="content" pageids="agents-test::ai.koog.agents.testing.tools/MockExecutorDSLBuilder///PointingToDeclaration//786885392">
+  <div class="breadcrumbs"><a href="../../index.html">agents-test</a><span class="delimiter">/</span><a href="../index.html">ai.koog.agents.testing.tools</a><span class="delimiter">/</span><span class="current">MockExecutorDSLBuilder</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Mock</span><wbr><span>Executor</span><wbr><span><span>DSLBuilder</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">MockExecutorDSLBuilder</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">clock<span class="token operator">: </span><a href="../../../../utils/ai.koog.utils.time/-koog-clock/index.html">KoogClock</a><span class="token punctuation">, </span></span><span class="parameter ">serializer<span class="token operator">: </span><span data-unresolved-link="ai.koog.serialization/JSONSerializer///PointingToDeclaration/">JSONSerializer</span><span class="token punctuation">, </span></span><span class="parameter ">tokenizer<span class="token operator">: </span><a href="../../../../prompt/prompt-tokenizer/ai.koog.prompt.tokenizer/-tokenizer/index.html">Tokenizer</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/JetBrains/koog/tree/1.2.0/agents/agents-test/src/commonMain/kotlin/ai/koog/agents/testing/tools/MockExecutorDSLBuilder.kt#L83">source</a>)</span></span></div><p class="paragraph">Builder class for creating mock LLM executors for testing.</p><p class="paragraph">This class provides a fluent API for configuring mock responses for LLM requests and tool calls. It allows you to define how the LLM should respond to different inputs and how tools should behave when called during testing.</p><h4 class="tableheader">Parameters</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>clock</span></span></u></div></span></div><div><div class="title"><p class="paragraph">A clock that is used for mock message timestamps</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>serializer</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Serializer used to serialize and deserialize tool arguments and results</p></div></div></div></div><div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>tokenizer</span></span></u></div></span></div><div><div class="title"><p class="paragraph">Optional tokenizer that will be used to estimate token counts in mock messages</p></div></div></div></div></div><h4 class="tableheader">See also</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../get-mock-executor.html"><span>get</span><wbr><span>Mock</span><wbr><span><span>Executor</span></span></a></div></span></div><div><div class="title"><p class="paragraph">Prefer it for creating and configuring mock LLM executors.</p></div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="tableheader">Constructors</h2>
+        <div class="table"><a data-name="262507623%2FConstructors%2F786885392" anchor-label="MockExecutorDSLBuilder" id="262507623%2FConstructors%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mock-executor-d-s-l-builder.html"><span>Mock</span><wbr><span>Executor</span><wbr><span><span>DSLBuilder</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="262507623%2FConstructors%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">clock<span class="token operator">: </span><a href="../../../../utils/ai.koog.utils.time/-koog-clock/index.html">KoogClock</a><span class="token punctuation">, </span></span><span class="parameter ">serializer<span class="token operator">: </span><span data-unresolved-link="ai.koog.serialization/JSONSerializer///PointingToDeclaration/">JSONSerializer</span><span class="token punctuation">, </span></span><span class="parameter ">tokenizer<span class="token operator">: </span><a href="../../../../prompt/prompt-tokenizer/ai.koog.prompt.tokenizer/-tokenizer/index.html">Tokenizer</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="TYPE">
+        <h2 class="tableheader">Types</h2>
+        <div class="table"><a data-name="1758001466%2FClasslikes%2F786885392" anchor-label="MixedResultsReceiver" id="1758001466%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mixed-results-receiver/index.html"><span>Mixed</span><wbr><span>Results</span><wbr><span><span>Receiver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1758001466%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-mixed-results-receiver/index.html">MixedResultsReceiver</a><span class="token operator">&lt;</span><a href="-mixed-results-receiver/index.html">Args</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">toolCalls<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="-mixed-results-receiver/index.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="-mixed-results-receiver/index.html">Args</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">responses<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><a href="index.html">MockExecutorDSLBuilder</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Represents a class responsible for handling and managing mixed tool call results based on mock responses and predefined configurations.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="147813587%2FClasslikes%2F786885392" anchor-label="MockToolReceiver" id="147813587%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mock-tool-receiver/index.html"><span>Mock</span><wbr><span>Tool</span><wbr><span><span>Receiver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="147813587%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-mock-tool-receiver/index.html">MockToolReceiver</a><span class="token operator">&lt;</span><a href="-mock-tool-receiver/index.html">Args</a><span class="token punctuation">, </span><a href="-mock-tool-receiver/index.html">Result</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tool<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="-mock-tool-receiver/index.html">Args</a><span class="token punctuation">, </span><a href="-mock-tool-receiver/index.html">Result</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><a href="index.html">MockExecutorDSLBuilder</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Receiver class for configuring tool behavior during testing.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1907630208%2FClasslikes%2F786885392" anchor-label="MultiToolCallReceiver" id="1907630208%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-multi-tool-call-receiver/index.html"><span>Multi</span><wbr><span>Tool</span><wbr><span>Call</span><wbr><span><span>Receiver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1907630208%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-multi-tool-call-receiver/index.html">MultiToolCallReceiver</a><span class="token operator">&lt;</span><a href="-multi-tool-call-receiver/index.html">Args</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">toolCalls<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="-multi-tool-call-receiver/index.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="-multi-tool-call-receiver/index.html">Args</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><a href="index.html">MockExecutorDSLBuilder</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Receiver class for configuring tool call responses from the LLM. This class is part of the fluent API for configuring how the LLM should respond with tool calls when it receives specific inputs.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1228670942%2FClasslikes%2F786885392" anchor-label="TextToolResult" id="-1228670942%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-text-tool-result/index.html"><span>Text</span><wbr><span>Tool</span><wbr><span><span>Result</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1228670942%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-serializable/index.html"><span class="token annotation builtin">Serializable</span></a></div></div><span class="token keyword">data </span><span class="token keyword">class </span><a href="-text-tool-result/index.html">TextToolResult</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>text<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A data class representing the tool result that is just text (String).</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-798329473%2FClasslikes%2F786885392" anchor-label="ToolCallReceiver" id="-798329473%2FClasslikes%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tool-call-receiver/index.html"><span>Tool</span><wbr><span>Call</span><wbr><span><span>Receiver</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-798329473%2FClasslikes%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-tool-call-receiver/index.html">ToolCallReceiver</a><span class="token operator">&lt;</span><a href="-tool-call-receiver/index.html">Args</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tool<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="-tool-call-receiver/index.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">args<span class="token operator">: </span><a href="-tool-call-receiver/index.html">Args</a><span class="token punctuation">, </span></span><span class="parameter ">toolCallId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><a href="index.html">MockExecutorDSLBuilder</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Receiver class for configuring tool call responses from the LLM.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="tableheader">Properties</h2>
+        <div class="table"><a data-name="-1232134168%2FProperties%2F786885392" anchor-label="handleLastAssistantMessage" id="-1232134168%2FProperties%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="handle-last-assistant-message.html"><span>handle</span><wbr><span>Last</span><wbr><span>Assistant</span><wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1232134168%2FProperties%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">var </span><a href="handle-last-assistant-message.html">handleLastAssistantMessage</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">Determines whether the last message handled in a sequence should focus specifically on the most recent message categorized as <code class="lang-kotlin">Message.Assistant</code> when resolving mock responses.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="tableheader">Functions</h2>
+        <div class="table"><a data-name="-1580410647%2FFunctions%2F786885392" anchor-label="addLLMAnswerConditionalMatches" id="-1580410647%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-l-l-m-answer-conditional-matches.html"><span>add</span><wbr><span>LLMAnswer</span><wbr><span>Conditional</span><wbr><span><span>Matches</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1580410647%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="add-l-l-m-answer-conditional-matches.html">Args</a><span class="token operator">&gt; </span><a href="add-l-l-m-answer-conditional-matches.html"><span class="token function">addLLMAnswerConditionalMatches</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">condition<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">tool<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="add-l-l-m-answer-conditional-matches.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">args<span class="token operator">: </span><a href="add-l-l-m-answer-conditional-matches.html">Args</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a conditional match for a tool call to the LLM answer processing system. This method associates a condition with a tool and its arguments, allowing conditional execution of the tool when the specified condition matches.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="add-l-l-m-answer-conditional-matches.html">Args</a><span class="token operator">&gt; </span><a href="add-l-l-m-answer-conditional-matches.html"><span class="token function">addLLMAnswerConditionalMatches</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">condition<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">toolCalls<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="add-l-l-m-answer-conditional-matches.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="add-l-l-m-answer-conditional-matches.html">Args</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">responses<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Registers conditional matches linking logical conditions to tool calls and corresponding responses.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1976012173%2FFunctions%2F786885392" anchor-label="addLLMAnswerExactPattern" id="1976012173%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-l-l-m-answer-exact-pattern.html"><span>add</span><wbr><span>LLMAnswer</span><wbr><span>Exact</span><wbr><span><span>Pattern</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1976012173%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="add-l-l-m-answer-exact-pattern.html">Args</a><span class="token operator">&gt; </span><a href="add-l-l-m-answer-exact-pattern.html"><span class="token function">addLLMAnswerExactPattern</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">toolCalls<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="add-l-l-m-answer-exact-pattern.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="add-l-l-m-answer-exact-pattern.html">Args</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds an exact pattern match for an LLM answer that triggers a set of tool calls.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="add-l-l-m-answer-exact-pattern.html">Args</a><span class="token operator">&gt; </span><a href="add-l-l-m-answer-exact-pattern.html"><span class="token function">addLLMAnswerExactPattern</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">toolCalls<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="add-l-l-m-answer-exact-pattern.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="add-l-l-m-answer-exact-pattern.html">Args</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">responses<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds an exact pattern match for an LLM answer that triggers a set of tool calls with predefined responses.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="add-l-l-m-answer-exact-pattern.html">Args</a><span class="token operator">&gt; </span><a href="add-l-l-m-answer-exact-pattern.html"><span class="token function">addLLMAnswerExactPattern</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">tool<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="add-l-l-m-answer-exact-pattern.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">args<span class="token operator">: </span><a href="add-l-l-m-answer-exact-pattern.html">Args</a><span class="token punctuation">, </span></span><span class="parameter ">toolCallId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds an exact pattern match for an LLM answer that triggers a tool call.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-561920279%2FFunctions%2F786885392" anchor-label="addLLMAnswerPartialPattern" id="-561920279%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-l-l-m-answer-partial-pattern.html"><span>add</span><wbr><span>LLMAnswer</span><wbr><span>Partial</span><wbr><span><span>Pattern</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-561920279%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="add-l-l-m-answer-partial-pattern.html">Args</a><span class="token operator">&gt; </span><a href="add-l-l-m-answer-partial-pattern.html"><span class="token function">addLLMAnswerPartialPattern</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">toolCalls<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="add-l-l-m-answer-partial-pattern.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="add-l-l-m-answer-partial-pattern.html">Args</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a partial pattern match for an LLM answer that triggers a set of tool calls.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="add-l-l-m-answer-partial-pattern.html">Args</a><span class="token operator">&gt; </span><a href="add-l-l-m-answer-partial-pattern.html"><span class="token function">addLLMAnswerPartialPattern</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">tool<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="add-l-l-m-answer-partial-pattern.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">args<span class="token operator">: </span><a href="add-l-l-m-answer-partial-pattern.html">Args</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a partial pattern match for an LLM answer that triggers a tool call.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="add-l-l-m-answer-partial-pattern.html">Args</a><span class="token operator">&gt; </span><a href="add-l-l-m-answer-partial-pattern.html"><span class="token function">addLLMAnswerPartialPattern</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">toolCalls<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="add-l-l-m-answer-partial-pattern.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="add-l-l-m-answer-partial-pattern.html">Args</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">responses<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a partial pattern match for an LLM answer that triggers a set of tool calls with predefined responses.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-264037661%2FFunctions%2F786885392" anchor-label="addModerationResponseExactPattern" id="-264037661%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-moderation-response-exact-pattern.html"><span>add</span><wbr><span>Moderation</span><wbr><span>Response</span><wbr><span>Exact</span><wbr><span><span>Pattern</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-264037661%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="add-moderation-response-exact-pattern.html"><span class="token function">addModerationResponseExactPattern</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">response<span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.dsl/-moderation-result/index.html">ModerationResult</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a specific moderation response for an exact pattern match.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="796064289%2FFunctions%2F786885392" anchor-label="addModerationResponsePartialPattern" id="796064289%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-moderation-response-partial-pattern.html"><span>add</span><wbr><span>Moderation</span><wbr><span>Response</span><wbr><span>Partial</span><wbr><span><span>Pattern</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="796064289%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="add-moderation-response-partial-pattern.html"><span class="token function">addModerationResponsePartialPattern</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">response<span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.dsl/-moderation-result/index.html">ModerationResult</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Associates a given moderation response with a specific partial pattern.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2069378601%2FFunctions%2F786885392" anchor-label="addToolAction" id="-2069378601%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="add-tool-action.html"><span>add</span><wbr><span>Tool</span><wbr><span><span>Action</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2069378601%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="add-tool-action.html">Args</a><span class="token punctuation">, </span><a href="add-tool-action.html">Result</a><span class="token operator">&gt; </span><a href="add-tool-action.html"><span class="token function">addToolAction</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tool<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="add-tool-action.html">Args</a><span class="token punctuation">, </span><a href="add-tool-action.html">Result</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">argsCondition<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="add-tool-action.html">Args</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span>{ true }<span class="token punctuation">, </span></span><span class="parameter ">action<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><a href="add-tool-action.html">Args</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="add-tool-action.html">Result</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Adds a tool action to be executed when a tool call matches the specified condition.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="834617468%2FFunctions%2F786885392" anchor-label="alwaysReturns" id="834617468%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="always-returns.html"><span>always</span><wbr><span><span>Returns</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="834617468%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="always-returns.html">Args</a><span class="token operator">&gt; </span><a href="-mock-tool-receiver/index.html">MockExecutorDSLBuilder.MockToolReceiver</a><span class="token operator">&lt;</span><a href="always-returns.html">Args</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="always-returns.html"><span class="token function">alwaysReturns</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">response<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Convenience extension function for configuring a text tool to always return the specified string.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1116689216%2FFunctions%2F786885392" anchor-label="alwaysTells" id="-1116689216%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="always-tells.html"><span>always</span><wbr><span><span>Tells</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1116689216%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.jvm/-jvm-name/index.html"><span class="token annotation builtin">JvmName</span></a><span class="token punctuation">(</span><span>name<span class="token operator"> = </span><span class="breakable-word"><span class="token string">"alwaysTellsText"</span></span></span><wbr><span class="token punctuation">)</span></div></div><span class="token keyword">infix </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="always-tells.html">Args</a><span class="token operator">&gt; </span><a href="-mock-tool-receiver/index.html">MockExecutorDSLBuilder.MockToolReceiver</a><span class="token operator">&lt;</span><a href="always-tells.html">Args</a><span class="token punctuation">, </span><a href="-text-tool-result/index.html">MockExecutorDSLBuilder.TextToolResult</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="always-tells.html"><span class="token function">alwaysTells</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="always-tells.html">Args</a><span class="token operator">&gt; </span><a href="-mock-tool-receiver/index.html">MockExecutorDSLBuilder.MockToolReceiver</a><span class="token operator">&lt;</span><a href="always-tells.html">Args</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="always-tells.html"><span class="token function">alwaysTells</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Convenience extension function for configuring a text tool to always execute the specified action and return its string result.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="629536573%2FFunctions%2F786885392" anchor-label="build" id="629536573%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="build.html"><span><span>build</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="629536573%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="build.html"><span class="token function">build</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../../prompt/prompt-executor/prompt-executor-model/ai.koog.prompt.executor.model/-prompt-executor/index.html">PromptExecutor</a></div><div class="brief "><p class="paragraph">Builds and returns a PromptExecutor configured with the mock responses and tool actions.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1174543282%2FFunctions%2F786885392" anchor-label="doesStr" id="-1174543282%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="does-str.html"><span>does</span><wbr><span><span>Str</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1174543282%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="does-str.html">Args</a><span class="token operator">&gt; </span><a href="-mock-tool-receiver/index.html">MockExecutorDSLBuilder.MockToolReceiver</a><span class="token operator">&lt;</span><a href="does-str.html">Args</a><span class="token punctuation">, </span><a href="-text-tool-result/index.html">MockExecutorDSLBuilder.TextToolResult</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="does-str.html"><span class="token function">doesStr</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">action<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-mock-tool-receiver/-mock-tool-response-builder/index.html">MockExecutorDSLBuilder.MockToolReceiver.MockToolResponseBuilder</a><span class="token operator">&lt;</span><a href="does-str.html">Args</a><span class="token punctuation">, </span><a href="-text-tool-result/index.html">MockExecutorDSLBuilder.TextToolResult</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Convenience extension function for configuring a text tool to execute the specified action and return its string result when it receives matching arguments.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-589138726%2FFunctions%2F786885392" anchor-label="mockLLMAnswer" id="-589138726%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mock-l-l-m-answer.html"><span>mock</span><wbr><span><span>LLMAnswer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-589138726%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="mock-l-l-m-answer.html"><span class="token function">mockLLMAnswer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">response<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-default-response-receiver/index.html">DefaultResponseReceiver</a></div><div class="brief "><p class="paragraph">Creates a mock LLM text response.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1539710419%2FFunctions%2F786885392" anchor-label="mockLLMAnswer" id="-1539710419%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../mock-l-l-m-answer.html"><span>mock</span><wbr><span><span>LLMAnswer</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1539710419%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">MockExecutorDSLBuilder</a><span class="token punctuation">.</span><a href="../mock-l-l-m-answer.html"><span class="token function">mockLLMAnswer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">response<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-default-response-receiver/index.html">DefaultResponseReceiver</a></div><div class="brief "><p class="paragraph">Top-level wrapper for importing <code class="lang-kotlin">mockLLMAnswer</code> into DSL-based tests.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="10035514%2FFunctions%2F786885392" anchor-label="mockLLMMixedResponse" id="10035514%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mock-l-l-m-mixed-response.html"><span>mock</span><wbr><span>LLMMixed</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="10035514%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="mock-l-l-m-mixed-response.html">Args</a><span class="token operator">&gt; </span><a href="mock-l-l-m-mixed-response.html"><span class="token function">mockLLMMixedResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">toolCalls<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="mock-l-l-m-mixed-response.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="mock-l-l-m-mixed-response.html">Args</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">responses<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-mixed-results-receiver/index.html">MockExecutorDSLBuilder.MixedResultsReceiver</a><span class="token operator">&lt;</span><a href="mock-l-l-m-mixed-response.html">Args</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates a mock response with a combination of tool calls and predefined string responses.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1140981527%2FFunctions%2F786885392" anchor-label="mockLLMStream" id="1140981527%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mock-l-l-m-stream.html"><span>mock</span><wbr><span><span>LLMStream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1140981527%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="mock-l-l-m-stream.html"><span class="token function">mockLLMStream</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stream<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-model/ai.koog.prompt.streaming/-stream-frame/index.html">StreamFrame</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-stream-response-receiver/index.html">StreamResponseReceiver</a></div><div class="brief "><p class="paragraph">Creates a mock LLM streaming response.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-630211352%2FFunctions%2F786885392" anchor-label="mockLLMStream" id="-630211352%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../mock-l-l-m-stream.html"><span>mock</span><wbr><span><span>LLMStream</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-630211352%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">MockExecutorDSLBuilder</a><span class="token punctuation">.</span><a href="../mock-l-l-m-stream.html"><span class="token function">mockLLMStream</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stream<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-model/ai.koog.prompt.streaming/-stream-frame/index.html">StreamFrame</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-stream-response-receiver/index.html">StreamResponseReceiver</a></div><div class="brief "><p class="paragraph">Top-level wrapper for importing <code class="lang-kotlin">mockLLMStream</code> into DSL-based tests.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2065332448%2FFunctions%2F786885392" anchor-label="mockLLMToolCall" id="2065332448%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mock-l-l-m-tool-call.html"><span>mock</span><wbr><span>LLMTool</span><wbr><span><span>Call</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2065332448%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="mock-l-l-m-tool-call.html">Args</a><span class="token operator">&gt; </span><a href="mock-l-l-m-tool-call.html"><span class="token function">mockLLMToolCall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">toolCalls<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="mock-l-l-m-tool-call.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><a href="mock-l-l-m-tool-call.html">Args</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-multi-tool-call-receiver/index.html">MockExecutorDSLBuilder.MultiToolCallReceiver</a><span class="token operator">&lt;</span><a href="mock-l-l-m-tool-call.html">Args</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates a mock for a list of LLM tool calls.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="mock-l-l-m-tool-call.html">Args</a><span class="token operator">&gt; </span><a href="mock-l-l-m-tool-call.html"><span class="token function">mockLLMToolCall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tool<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="mock-l-l-m-tool-call.html">Args</a><span class="token punctuation">, </span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">args<span class="token operator">: </span><a href="mock-l-l-m-tool-call.html">Args</a><span class="token punctuation">, </span></span><span class="parameter ">toolCallId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-tool-call-receiver/index.html">MockExecutorDSLBuilder.ToolCallReceiver</a><span class="token operator">&lt;</span><a href="mock-l-l-m-tool-call.html">Args</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates a mock for an LLM tool call.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2127604179%2FFunctions%2F-500318746" anchor-label="mockLLMToolCall" id="2127604179%2FFunctions%2F-500318746" data-filterable-set=":agents:agents-test/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-test/jvmMain" data-filterable-set=":agents:agents-test/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../mock-l-l-m-tool-call.html"><span>mock</span><wbr><span>LLMTool</span><wbr><span><span>Call</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2127604179%2FFunctions%2F-500318746"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-test/jvmMain" data-filterable-set=":agents:agents-test/jvmMain" data-active="" data-toggle=":agents:agents-test/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/jvmMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">MockExecutorDSLBuilder</a><span class="token punctuation">.</span><a href="../mock-l-l-m-tool-call.html"><span class="token function">mockLLMToolCall</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tool<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-function/index.html">KFunction</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">vararg </span>args<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter ">toolCallId<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-tool-call-receiver/index.html">MockExecutorDSLBuilder.ToolCallReceiver</a><span class="token operator">&lt;</span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools.reflect/-tool-from-callable/-args/index.html">ToolFromCallable.Args</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Mocks a tool call for the provided tool function and arguments.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1146824481%2FFunctions%2F786885392" anchor-label="mockTool" id="-1146824481%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mock-tool.html"><span>mock</span><wbr><span><span>Tool</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1146824481%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="mock-tool.html">Args</a><span class="token punctuation">, </span><a href="mock-tool.html">Result</a><span class="token operator">&gt; </span><a href="mock-tool.html"><span class="token function">mockTool</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tool<span class="token operator">: </span><a href="../../../../agents/agents-tools/ai.koog.agents.core.tools/-tool/index.html">Tool</a><span class="token operator">&lt;</span><a href="mock-tool.html">Args</a><span class="token punctuation">, </span><a href="mock-tool.html">Result</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-mock-tool-receiver/index.html">MockExecutorDSLBuilder.MockToolReceiver</a><span class="token operator">&lt;</span><a href="mock-tool.html">Args</a><span class="token punctuation">, </span><a href="mock-tool.html">Result</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates a mock for a tool.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-395133335%2FFunctions%2F-500318746" anchor-label="mockTool" id="-395133335%2FFunctions%2F-500318746" data-filterable-set=":agents:agents-test/jvmMain"></a>
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":agents:agents-test/jvmMain" data-filterable-set=":agents:agents-test/jvmMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../mock-tool.html"><span>mock</span><wbr><span><span>Tool</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-395133335%2FFunctions%2F-500318746"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                    <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark" data-filterable-current=":agents:agents-test/jvmMain" data-filterable-set=":agents:agents-test/jvmMain" data-active="" data-toggle=":agents:agents-test/jvmMain">jvm</button></div>
+<div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/jvmMain"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="../mock-tool.html">Result</a><span class="token operator">&gt; </span><a href="index.html">MockExecutorDSLBuilder</a><span class="token punctuation">.</span><a href="../mock-tool.html"><span class="token function">mockTool</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">tool<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.reflect/-k-function/index.html">KFunction</a><span class="token operator">&lt;</span><a href="../mock-tool.html">Result</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-mock-tool-from-callable-receiver/index.html">MockToolFromCallableReceiver</a><span class="token operator">&lt;</span><a href="../mock-tool.html">Result</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Associates a tool function with the MockLLMBuilder to create a MockToolFromCallableReceiver instance.</p></div></div>                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="404433830%2FFunctions%2F786885392" anchor-label="onCondition" id="404433830%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-condition.html"><span>on</span><wbr><span><span>Condition</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="404433830%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="on-condition.html"><span class="token function">onCondition</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">condition<span class="token operator">: </span><span class="token punctuation">(</span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MockExecutorDSLBuilder</a></div><div class="brief "><p class="paragraph">Configures the LLM to respond with this string when the user request satisfies the specified condition.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="275272369%2FFunctions%2F786885392" anchor-label="onUserRequestContains" id="275272369%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-user-request-contains.html"><span>on</span><wbr><span>User</span><wbr><span>Request</span><wbr><span><span>Contains</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="275272369%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="on-user-request-contains.html"><span class="token function">onUserRequestContains</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MockExecutorDSLBuilder</a></div><div class="brief "><p class="paragraph">Configures the LLM to respond with this string when the user request contains the specified pattern.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1082372945%2FFunctions%2F786885392" anchor-label="onUserRequestEquals" id="1082372945%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="on-user-request-equals.html"><span>on</span><wbr><span>User</span><wbr><span>Request</span><wbr><span><span>Equals</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1082372945%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">infix </span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">.</span><a href="on-user-request-equals.html"><span class="token function">onUserRequestEquals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">pattern<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">MockExecutorDSLBuilder</a></div><div class="brief "><p class="paragraph">Configures the LLM to respond with this string when the user request exactly matches the specified pattern.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-572547577%2FFunctions%2F786885392" anchor-label="setDefaultModerationResponse" id="-572547577%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-default-moderation-response.html"><span>set</span><wbr><span>Default</span><wbr><span>Moderation</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-572547577%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-default-moderation-response.html"><span class="token function">setDefaultModerationResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">result<span class="token operator">: </span><a href="../../../../prompt/prompt-model/ai.koog.prompt.dsl/-moderation-result/index.html">ModerationResult</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the default moderation response to the provided result.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1855819253%2FFunctions%2F786885392" anchor-label="setDefaultResponse" id="1855819253%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-default-response.html"><span>set</span><wbr><span>Default</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1855819253%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-default-response.html"><span class="token function">setDefaultResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">response<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the default response to be returned when no other response matches.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1403230206%2FFunctions%2F786885392" anchor-label="setDefaultStreamResponse" id="1403230206%2FFunctions%2F786885392" data-filterable-set=":agents:agents-test/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":agents:agents-test/commonMain" data-filterable-set=":agents:agents-test/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-default-stream-response.html"><span>set</span><wbr><span>Default</span><wbr><span>Stream</span><wbr><span><span>Response</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1403230206%2FFunctions%2F786885392"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":agents:agents-test/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="set-default-stream-response.html"><span class="token function">setDefaultStreamResponse</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">stream<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a><span class="token operator">&lt;</span><a href="../../../../prompt/prompt-model/ai.koog.prompt.streaming/-stream-frame/index.html">StreamFrame</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the default stream response to be returned when no other stream response matches.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>Copyright © 2000-2025 JetBrains s.r.o.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
